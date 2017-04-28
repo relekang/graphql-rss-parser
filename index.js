@@ -28,7 +28,7 @@ module.exports = async (req, res) => {
   } catch (error) {
     if (process.env.RAVEN_DSN) {
       Raven.captureException(error, {
-        extra: {query}
+        extra: {query, url: req.url}
       })
     }
     send(res, error.statusCode || 500, { error: error.constructor.name })
