@@ -15,6 +15,12 @@ class EmptyParseOutputError extends BaseError { }
 
 class EmptyHttpResponseError extends BaseError { }
 
+class InvalidInputError extends BaseError {
+  constructor (message, statusCode) {
+    super(message, statusCode || 400)
+  }
+}
+
 class ParserError extends BaseError {
   constructor (cause, statusCode) {
     super(cause.message, statusCode)
@@ -31,6 +37,7 @@ class NotAFeedError extends ParserError {
 module.exports = {
   EmptyHttpResponseError,
   EmptyParseOutputError,
+  InvalidInputError,
   ParserError,
   NotAFeedError
 }

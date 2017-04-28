@@ -7,17 +7,23 @@ if (process.env.RAVEN_DSN) {
 
 const url = require('url')
 const { send } = require('micro')
+
 const { parse } = require('./parser')
+const { InvalidInputError } = require('./errors')
 
 const exampleLink = (host) => `http://${host}/?feed=https://rolflekang.com/feed.xml`
 
 module.exports = async (req, res) => {
   const { query } = url.parse(req.url, true)
-  if (!query.feed) {
-    return { usage: exampleLink(req.headers.host) }
-  }
-
   try {
+    if (!query.feed) {
+      return { usage: exampleLink(req.headers.host) }
+    }
+
+    if (typeof query.feed !== 'string') {
+      throw new InvalidInputError()
+    }
+
     return await parse(query.feed)
   } catch (error) {
     if (process.env.RAVEN_DSN) {
