@@ -29,6 +29,7 @@
   "devDependencies": {
     "jest": "^19.0.2",
     "nodemon": "^1.11.0",
-    "prettier": "^1.2.2"
+    "prettier": "^1.2.2",
+    "standard": "^10.0.2"
   }
 }

@@ -23,4 +23,4 @@ module.exports = `
 <item><title>Readable Wikipedia</title><description></description><pubDate>Sun, 02 Dec 2012 00:00:00 GMT</pubDate><link>http://rolflekang.com/reading-wikipedia</link><guid isPermaLink="true">http://rolflekang.com/reading-wikipedia</guid></item>
 <item><title>django-nopassword</title><description></description><pubDate>Fri, 28 Sep 2012 00:00:00 GMT</pubDate><link>http://rolflekang.com/django-nopassword</link><guid isPermaLink="true">http://rolflekang.com/django-nopassword</guid></item>
 <item><title>The Github lamp</title><description></description><pubDate>Sun, 16 Sep 2012 00:00:00 GMT</pubDate><link>http://rolflekang.com/the-github-lamp</link><guid isPermaLink="true">http://rolflekang.com/the-github-lamp</guid></item></channel></rss>
-`;
+`
