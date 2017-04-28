@@ -5,9 +5,9 @@ if (process.env.RAVEN_DSN) {
   Raven.config(process.env.RAVEN_DSN, {release}).install()
 }
 
-const url = require('url');
-const { sendError } = require('micro');
-const { parse } = require('./parser');
+const url = require('url')
+const { send } = require('micro')
+const { parse } = require('./parser')
 
 const exampleLink = (host) => `http://${host}/?feed=https://rolflekang.com/feed.xml`
 
@@ -20,11 +20,11 @@ module.exports = async (req, res) => {
   try {
     return await parse(query.feed)
   } catch (error) {
-    sendError(req, res, error);
     if (process.env.RAVEN_DSN) {
       Raven.captureException(error, {
         extra: {query}
       })
     }
+    send(res, 500, { error: error.constructor.name })
   }
 }
