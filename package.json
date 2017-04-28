@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "micro -p ${PORT:-3000} index.js",
+    "dev": "nodemon --exec micro index.js",
     "test": "jest"
   },
   "repository": {
