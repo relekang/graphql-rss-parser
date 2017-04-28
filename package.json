@@ -7,9 +7,6 @@
     "start": "micro -p ${PORT:-3000} index.js",
     "test": "jest"
   },
-  "now": {
-    "alias": "rss-parser.now.sh"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/relekang/micro-rss-parser.git"
@@ -26,6 +23,7 @@
   "dependencies": {
     "micro": "^7.3.2",
     "node-feedparser": "^1.0.1",
+    "raven": "^1.2.1",
     "superagent": "^3.5.2"
   },
   "devDependencies": {
