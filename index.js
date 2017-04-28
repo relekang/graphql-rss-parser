@@ -25,6 +25,7 @@ module.exports = async (req, res) => {
         extra: {query}
       })
     }
-    send(res, 500, { error: error.constructor.name })
+    send(res, error.statusCode || 500, { error: error.constructor.name })
+    console.error(error)
   }
 }
