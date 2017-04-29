@@ -21,6 +21,13 @@ class InvalidInputError extends BaseError {
   }
 }
 
+class NotFoundError extends BaseError {
+  constructor (url) {
+    super('Could not find feed', 404)
+    this.url = url
+  }
+}
+
 class ParserError extends BaseError {
   constructor (cause, statusCode) {
     super(cause.message, statusCode)
@@ -39,5 +46,6 @@ module.exports = {
   EmptyParseOutputError,
   InvalidInputError,
   ParserError,
-  NotAFeedError
+  NotAFeedError,
+  NotFoundError
 }

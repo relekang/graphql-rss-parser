@@ -2,7 +2,7 @@ const Readable = require('stream').Readable
 const FeedParser = require('feedparser')
 const request = require('superagent')
 
-const { EmptyHttpResponseError, EmptyParseOutputError, ParserError, NotAFeedError } = require('./errors')
+const { EmptyHttpResponseError, EmptyParseOutputError, ParserError, NotAFeedError, NotFoundError } = require('./errors')
 
 function transform (feed) {
   return Object.keys(feed).reduce(
@@ -62,6 +62,7 @@ function parseString (feed) {
 async function parse (url) {
   const response = await request(url).buffer()
   if (!response.text) throw new EmptyHttpResponseError()
+  if (response.notFound) throw new NotFoundError(url)
 
   const parsed = await parseString(response.text)
   if (!parsed) throw new EmptyParseOutputError()
