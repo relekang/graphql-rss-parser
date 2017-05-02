@@ -7,8 +7,8 @@
     "micro-rss-parser": "./cli.js"
   },
   "scripts": {
-    "start": "micro -p ${PORT:-3000} index.js",
-    "dev": "nodemon --exec micro index.js",
+    "start": "./cli.js",
+    "dev": "nodemon cli.js",
     "test": "jest"
   },
   "repository": {
