@@ -4,8 +4,8 @@ const FeedParser = require('feedparser')
 const { ParserError, NotAFeedError } = require('../errors')
 
 function transform (parsed, options) {
+  if (!parsed) return null
   const {title, link, feedUrl} = parsed
-  console.log(parsed)
   const entries = parsed.items.map(entry => ({
     title: entry.title,
     pubDate: entry.pubDate,

@@ -1,6 +1,7 @@
-var parser = require('rss-parser')
+const parser = require('rss-parser')
 
 function transform (parsed, options) {
+  if (!parsed) return null
   const {title, link, feedUrl} = parsed.feed
   const entries = parsed.feed.entries.map(entry => ({
     title: entry.title,

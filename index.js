@@ -1,7 +1,8 @@
 const release = require('./package.json').version
+let Raven
 
 if (process.env.RAVEN_DSN) {
-  var Raven = require('raven')
+  Raven = require('raven')
   Raven.config(process.env.RAVEN_DSN, {release}).install()
 }
 
