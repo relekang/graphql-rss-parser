@@ -1,6 +1,6 @@
 {
   "name": "micro-rss-parser",
-  "version": "1.0.0-4",
+  "version": "1.0.0-5",
   "description": "A microservice that parses rss feeds and returns JSON",
   "main": "index.js",
   "scripts": {
