@@ -14,8 +14,7 @@ const options = args
       .option(['R', 'raven-dsn'], 'Raven DSN', process.env.RAVEN_DSN)
       .parse(process.argv, { name: 'micro-rss-parser' })
 
-console.log(options)
 
 const server = micro(createHandler(options))
 
-server.listen(3000)
+server.listen(options.port)
