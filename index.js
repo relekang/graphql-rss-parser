@@ -11,6 +11,7 @@ const url = require('url')
 const { send } = require('micro')
 
 const parsers = require('./parsers')
+const transform = require('./transform')
 const { EmptyHttpResponseError, EmptyParseOutputError, InvalidInputError, NotFoundError } = require('./errors')
 
 const exampleLink = (host) => `http://${host}/?feed=https://rolflekang.com/feed.xml`
@@ -18,7 +19,7 @@ const exampleLink = (host) => `http://${host}/?feed=https://rolflekang.com/feed.
 async function parse (index, text) {
   const parsed = await parsers[index](text)
   if (!parsed) throw new EmptyParseOutputError()
-  return parsed
+  return transform(parsed)
 }
 
 function handleError (res, error, extra) {
@@ -33,7 +34,6 @@ function handleError (res, error, extra) {
 
 module.exports = async (req, res) => {
   const { query } = url.parse(req.url, true)
-  console.log({query})
   try {
     if (!query.feed) {
       return { usage: exampleLink(req.headers.host) }
