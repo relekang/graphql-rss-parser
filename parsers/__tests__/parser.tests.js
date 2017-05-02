@@ -1,5 +1,5 @@
 /* eslint-env jest */
-const {parse, parseString} = require('../parser')
+const {parse, parseString} = require('../feedparser')
 const rolflekangCom = require('./__fixtures__/rolflekang.com')
 
 test('should parse rolflekang.com/feed.xml', async () => {

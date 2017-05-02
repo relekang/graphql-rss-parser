@@ -1,22 +1,20 @@
 const Readable = require('stream').Readable
 const FeedParser = require('feedparser')
-const request = require('superagent')
 
-const { EmptyHttpResponseError, EmptyParseOutputError, ParserError, NotAFeedError, NotFoundError } = require('./errors')
+const { ParserError, NotAFeedError } = require('../errors')
 
-function transform (feed) {
-  return Object.keys(feed).reduce(
-    (lastValue, key) =>
-      Object.assign(
-        {},
-        lastValue,
-        !/rss|@|#|atom/.test(key) && { [key]: feed[key] }
-      ),
-    {}
-  )
+function transform (parsed, options) {
+  const {title, link, feedUrl} = parsed
+  console.log(parsed)
+  const entries = parsed.items.map(entry => ({
+    title: entry.title,
+    pubDate: entry.pubDate,
+    link: entry.link
+  }))
+  return { title, link, feedUrl, entries }
 }
 
-function parseString (feed) {
+module.exports = function parseString (feed) {
   return new Promise((resolve, reject) => {
     try {
       const feedparser = new FeedParser()
@@ -34,12 +32,12 @@ function parseString (feed) {
         let item
         while ((item = this.read())) {
           delete item.meta
-          parsedFeed.items.push(transform(item))
+          parsedFeed.items.push(item)
         }
       })
 
       feedparser.on('end', function () {
-        resolve(parsedFeed)
+        resolve(transform(parsedFeed))
       })
 
       const stream = new Readable()
@@ -58,16 +56,3 @@ function parseString (feed) {
     throw error
   })
 }
-
-async function parse (url) {
-  const response = await request(url).buffer()
-  if (!response.text) throw new EmptyHttpResponseError()
-  if (response.notFound) throw new NotFoundError(url)
-
-  const parsed = await parseString(response.text)
-  if (!parsed) throw new EmptyParseOutputError()
-
-  return transform(parsed)
-}
-
-module.exports = { parse, parseString }
