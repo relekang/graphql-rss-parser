@@ -4,7 +4,7 @@ const args = require('args')
 const micro = require('micro')
 
 const pkg = require('./package.json')
-const createHandler = require('./index')
+const createHandler = require('./src/index')
 
 updateNotifier({ pkg }).notify()
 
@@ -14,6 +14,7 @@ const options = args
       .option(['R', 'raven-dsn'], 'Raven DSN', process.env.RAVEN_DSN)
       .parse(process.argv, { name: 'micro-rss-parser' })
 
+options.version = pkg.version
 
 const server = micro(createHandler(options))
 

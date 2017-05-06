@@ -1,10 +1,9 @@
 module.exports = function createHandler (options) {
-  const release = require('./package.json').version
   let Raven
 
   if (options.ravenDsn) {
     Raven = require('raven')
-    Raven.config(process.env.RAVEN_DSN, {release}).install()
+    Raven.config(process.env.RAVEN_DSN, {release: options.version}).install()
   }
 
   const request = require('superagent')
