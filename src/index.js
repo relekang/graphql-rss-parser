@@ -16,8 +16,8 @@ module.exports = function createHandler (options) {
 
   const exampleLink = (host) => `http://${host}/?feed=https://rolflekang.com/feed.xml`
 
-  async function parse (index, text) {
-    const parsed = await parsers[index](text)
+  async function parse (parser, text) {
+    const parsed = await parsers[parser](text)
     if (!parsed) throw new EmptyParseOutputError()
     return transform(parsed)
   }
@@ -49,9 +49,9 @@ module.exports = function createHandler (options) {
 
       let parsed
       try {
-        parsed = await parse(0, response.text)
+        parsed = await parse('rss-parser', response.text)
       } catch (error) {
-        parsed = await parse(1, response.text)
+        parsed = await parse('feedparser', response.text)
       }
 
       return parsed
