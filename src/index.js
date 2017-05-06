@@ -48,10 +48,14 @@ module.exports = function createHandler (options) {
       if (response.notFound) throw new NotFoundError(query.feed)
 
       let parsed
-      try {
-        parsed = await parse('rss-parser', response.text)
-      } catch (error) {
-        parsed = await parse('feedparser', response.text)
+      if (query.parser) {
+        parsed = await parse(query.parser, response.text)
+      } else {
+        try {
+          parsed = await parse('feedparser', response.text)
+        } catch (error) {
+          parsed = await parse('rss-parser', response.text)
+        }
       }
 
       return parsed
