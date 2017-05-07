@@ -1,7 +1,9 @@
 # micro-rss-parser
 
-A microservice that parses rss feeds and returns a JSON representation of the
+A [graphql][] microservice that parses rss feeds and returns a JSON representation of the
 given feed.
+
+[graphql]: http://graphql.org/
 
 ## Installation
 
@@ -11,6 +13,7 @@ npm i -g micro-rss-parser
 
 ## Usage
 
+### CLI for starting the server
 
 ```shell
 $ micro-rss-parser --help
@@ -26,3 +29,18 @@ $ micro-rss-parser --help
     -v, --version       Output the version number
 
 ```
+
+### Example query
+```graphql
+{
+  feed(url: "https://rolflekang.com/feed.xml") {
+    title
+    entries {
+      title
+      pubDate
+      link
+    }
+  }
+}
+```
+
