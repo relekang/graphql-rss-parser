@@ -8,11 +8,15 @@ const Schema = buildSchema(`
     title: String
     link: String
     pubDate: String
+    guid: String
   }
 
   type Feed {
     title: String
     link: String
+    feedUrl: String
+    author: String
+    guid: String
     entries: [FeedItem]
   }
 
@@ -22,9 +26,8 @@ const Schema = buildSchema(`
 `)
 
 const root = {
-  feed: (...args) => {
-    console.log(args)
-    return parseFromUrl('https://rolflekang.com/feed.xml')
+  feed: (query) => {
+    return parseFromUrl(query.url)
   }
 }
 

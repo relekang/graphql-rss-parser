@@ -3,17 +3,6 @@ const FeedParser = require('feedparser')
 
 const { ParserError, NotAFeedError } = require('../errors')
 
-function transform (parsed, options) {
-  if (!parsed) return null
-  const {title, link, feedUrl} = parsed
-  const entries = parsed.items.map(entry => ({
-    title: entry.title,
-    pubDate: entry.pubDate,
-    link: entry.link
-  }))
-  return { title, link, feedUrl, entries }
-}
-
 module.exports = function parseString (feed) {
   return new Promise((resolve, reject) => {
     try {
@@ -37,7 +26,7 @@ module.exports = function parseString (feed) {
       })
 
       feedparser.on('end', function () {
-        resolve(transform(parsedFeed))
+        resolve(parsedFeed);
       })
 
       const stream = new Readable()
