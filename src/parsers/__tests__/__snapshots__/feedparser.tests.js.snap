@@ -41,7 +41,7 @@ Object {
       "link": "http://rolflekang.com/lets-run-some-races",
       "origlink": null,
       "permalink": "http://rolflekang.com/lets-run-some-races",
-      "pubDate": 2017-01-02T00:00:00.000Z,
+      "pubDate": "2017-01-02T00:00:00.000Z",
       "pubdate": 2017-01-02T00:00:00.000Z,
       "rss:@": Object {},
       "rss:description": Object {
@@ -81,7 +81,7 @@ Object {
       "link": "http://rolflekang.com/software-development-on-an-ipad",
       "origlink": null,
       "permalink": "http://rolflekang.com/software-development-on-an-ipad",
-      "pubDate": 2017-01-01T00:00:00.000Z,
+      "pubDate": "2017-01-01T00:00:00.000Z",
       "pubdate": 2017-01-01T00:00:00.000Z,
       "rss:@": Object {},
       "rss:description": Object {
@@ -121,7 +121,7 @@ Object {
       "link": "http://rolflekang.com/filtering-lint-errors",
       "origlink": null,
       "permalink": "http://rolflekang.com/filtering-lint-errors",
-      "pubDate": 2016-06-10T00:00:00.000Z,
+      "pubDate": "2016-06-10T00:00:00.000Z",
       "pubdate": 2016-06-10T00:00:00.000Z,
       "rss:@": Object {},
       "rss:description": Object {
@@ -161,7 +161,7 @@ Object {
       "link": "http://rolflekang.com/interrail-summer",
       "origlink": null,
       "permalink": "http://rolflekang.com/interrail-summer",
-      "pubDate": 2015-07-26T00:00:00.000Z,
+      "pubDate": "2015-07-26T00:00:00.000Z",
       "pubdate": 2015-07-26T00:00:00.000Z,
       "rss:@": Object {},
       "rss:description": Object {
@@ -201,7 +201,7 @@ Object {
       "link": "http://rolflekang.com/writing-latex-in-atom",
       "origlink": null,
       "permalink": "http://rolflekang.com/writing-latex-in-atom",
-      "pubDate": 2015-05-23T00:00:00.000Z,
+      "pubDate": "2015-05-23T00:00:00.000Z",
       "pubdate": 2015-05-23T00:00:00.000Z,
       "rss:@": Object {},
       "rss:description": Object {
@@ -241,7 +241,7 @@ Object {
       "link": "http://rolflekang.com/rmoq",
       "origlink": null,
       "permalink": "http://rolflekang.com/rmoq",
-      "pubDate": 2014-12-30T00:00:00.000Z,
+      "pubDate": "2014-12-30T00:00:00.000Z",
       "pubdate": 2014-12-30T00:00:00.000Z,
       "rss:@": Object {},
       "rss:description": Object {
@@ -281,7 +281,7 @@ Object {
       "link": "http://rolflekang.com/django-nopassword-one-point-o",
       "origlink": null,
       "permalink": "http://rolflekang.com/django-nopassword-one-point-o",
-      "pubDate": 2014-10-03T15:35:00.000Z,
+      "pubDate": "2014-10-03T15:35:00.000Z",
       "pubdate": 2014-10-03T15:35:00.000Z,
       "rss:@": Object {},
       "rss:description": Object {
@@ -321,7 +321,7 @@ Object {
       "link": "http://rolflekang.com/moving-to-pelican",
       "origlink": null,
       "permalink": "http://rolflekang.com/moving-to-pelican",
-      "pubDate": 2014-05-07T00:00:00.000Z,
+      "pubDate": "2014-05-07T00:00:00.000Z",
       "pubdate": 2014-05-07T00:00:00.000Z,
       "rss:@": Object {},
       "rss:description": Object {
@@ -361,7 +361,7 @@ Object {
       "link": "http://rolflekang.com/building-tumblr-theme-with-grunt",
       "origlink": null,
       "permalink": "http://rolflekang.com/building-tumblr-theme-with-grunt",
-      "pubDate": 2014-02-02T00:00:00.000Z,
+      "pubDate": "2014-02-02T00:00:00.000Z",
       "pubdate": 2014-02-02T00:00:00.000Z,
       "rss:@": Object {},
       "rss:description": Object {
@@ -401,7 +401,7 @@ Object {
       "link": "http://rolflekang.com/backup-routines-for-redisdb",
       "origlink": null,
       "permalink": "http://rolflekang.com/backup-routines-for-redisdb",
-      "pubDate": 2013-10-24T00:00:00.000Z,
+      "pubDate": "2013-10-24T00:00:00.000Z",
       "pubdate": 2013-10-24T00:00:00.000Z,
       "rss:@": Object {},
       "rss:description": Object {
@@ -441,7 +441,7 @@ Object {
       "link": "http://rolflekang.com/django-app-custom-user",
       "origlink": null,
       "permalink": "http://rolflekang.com/django-app-custom-user",
-      "pubDate": 2013-05-22T00:00:00.000Z,
+      "pubDate": "2013-05-22T00:00:00.000Z",
       "pubdate": 2013-05-22T00:00:00.000Z,
       "rss:@": Object {},
       "rss:description": Object {
@@ -481,7 +481,7 @@ Object {
       "link": "http://rolflekang.com/stats-are-fun",
       "origlink": null,
       "permalink": "http://rolflekang.com/stats-are-fun",
-      "pubDate": 2013-03-03T00:00:00.000Z,
+      "pubDate": "2013-03-03T00:00:00.000Z",
       "pubdate": 2013-03-03T00:00:00.000Z,
       "rss:@": Object {},
       "rss:description": Object {
@@ -521,7 +521,7 @@ Object {
       "link": "http://rolflekang.com/alfred-scripts-for-jekyll",
       "origlink": null,
       "permalink": "http://rolflekang.com/alfred-scripts-for-jekyll",
-      "pubDate": 2013-02-26T00:00:00.000Z,
+      "pubDate": "2013-02-26T00:00:00.000Z",
       "pubdate": 2013-02-26T00:00:00.000Z,
       "rss:@": Object {},
       "rss:description": Object {
@@ -561,7 +561,7 @@ Object {
       "link": "http://rolflekang.com/use-array-in-postgresql-with-django",
       "origlink": null,
       "permalink": "http://rolflekang.com/use-array-in-postgresql-with-django",
-      "pubDate": 2013-01-27T00:00:00.000Z,
+      "pubDate": "2013-01-27T00:00:00.000Z",
       "pubdate": 2013-01-27T00:00:00.000Z,
       "rss:@": Object {},
       "rss:description": Object {
@@ -601,7 +601,7 @@ Object {
       "link": "http://rolflekang.com/apply-puppet-configuration-automatically",
       "origlink": null,
       "permalink": "http://rolflekang.com/apply-puppet-configuration-automatically",
-      "pubDate": 2013-01-03T00:00:00.000Z,
+      "pubDate": "2013-01-03T00:00:00.000Z",
       "pubdate": 2013-01-03T00:00:00.000Z,
       "rss:@": Object {},
       "rss:description": Object {
@@ -641,7 +641,7 @@ Object {
       "link": "http://rolflekang.com/reading-wikipedia",
       "origlink": null,
       "permalink": "http://rolflekang.com/reading-wikipedia",
-      "pubDate": 2012-12-02T00:00:00.000Z,
+      "pubDate": "2012-12-02T00:00:00.000Z",
       "pubdate": 2012-12-02T00:00:00.000Z,
       "rss:@": Object {},
       "rss:description": Object {
@@ -681,7 +681,7 @@ Object {
       "link": "http://rolflekang.com/django-nopassword",
       "origlink": null,
       "permalink": "http://rolflekang.com/django-nopassword",
-      "pubDate": 2012-09-28T00:00:00.000Z,
+      "pubDate": "2012-09-28T00:00:00.000Z",
       "pubdate": 2012-09-28T00:00:00.000Z,
       "rss:@": Object {},
       "rss:description": Object {
@@ -721,7 +721,7 @@ Object {
       "link": "http://rolflekang.com/the-github-lamp",
       "origlink": null,
       "permalink": "http://rolflekang.com/the-github-lamp",
-      "pubDate": 2012-09-16T00:00:00.000Z,
+      "pubDate": "2012-09-16T00:00:00.000Z",
       "pubdate": 2012-09-16T00:00:00.000Z,
       "rss:@": Object {},
       "rss:description": Object {
