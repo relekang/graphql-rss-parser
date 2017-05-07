@@ -1,4 +1,4 @@
 module.exports = {
-  'rss-parser': require('./rss-parser'),
-  feedparser: require('./feedparser')
+  RSS_PARSER: require('./rss-parser'),
+  FEEDPARSER: require('./feedparser')
 }

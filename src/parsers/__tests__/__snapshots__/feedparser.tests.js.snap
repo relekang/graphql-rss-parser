@@ -28,10 +28,7 @@ Object {
   "copyright": null,
   "date": null,
   "description": null,
-  "favicon": null,
-  "generator": "rl.com v1.0.0",
-  "image": Object {},
-  "items": Array [
+  "entries": Array [
     Object {
       "author": null,
       "categories": Array [],
@@ -753,6 +750,9 @@ Object {
       "title": "The Github lamp",
     },
   ],
+  "favicon": null,
+  "generator": "rl.com v1.0.0",
+  "image": Object {},
   "language": null,
   "link": "http://rolflekang.com/",
   "pubDate": null,

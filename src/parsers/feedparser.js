@@ -15,13 +15,13 @@ module.exports = function parseString (feed) {
       feedparser.on('readable', function () {
         const meta = this.meta
         if (!parsedFeed) {
-          parsedFeed = Object.assign({}, meta, { items: [] })
+          parsedFeed = Object.assign({}, meta, { entries: [] })
         }
 
         let item
         while ((item = this.read())) {
           delete item.meta
-          parsedFeed.items.push(item)
+          parsedFeed.entries.push(item)
         }
       })
 

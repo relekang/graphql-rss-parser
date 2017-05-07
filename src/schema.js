@@ -1,9 +1,14 @@
 const { buildSchema } = require('graphql')
 
-const parseFromUrl = require('./handler')
+const handleQuery = require('./handler')
 
 
 const Schema = buildSchema(`
+  enum Parser {
+    FEEDPARSER
+    RSS_PARSER
+  }
+
   type FeedItem {
     title: String
     link: String
@@ -21,13 +26,13 @@ const Schema = buildSchema(`
   }
 
   type Query {
-    feed(url: String): Feed
+    feed(url: String!, parser: Parser): Feed
   }
 `)
 
 const root = {
   feed: (query) => {
-    return parseFromUrl(query.url)
+    return handleQuery(query)
   }
 }
 
