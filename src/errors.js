@@ -1,4 +1,4 @@
-const production = process.env.NODE_ENV === 'production'
+const development = !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
 
 class BaseError extends Error {
   constructor(message, statusCode) {
@@ -73,8 +73,8 @@ function createErrorFormatter(Raven) {
     }
 
     return {
-      name: error.message,
-      stack: production ? null : error.stack.split('\n')
+      message: error.message,
+      stack: development ? error.stack.split('\n') : null,
     }
   }
 }

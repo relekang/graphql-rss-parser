@@ -4,7 +4,8 @@ const listen = require('test-listen')
 const request = require('superagent')
 const createHandler = require('../')
 
-function testGraphqlApi ([query]) {
+function testGraphqlApi (strings, ...args) {
+  const query = String.raw(strings, ...args)
   test(query, async () => {
     const service = micro(createHandler({}))
 
@@ -17,10 +18,8 @@ function testGraphqlApi ([query]) {
         .send(JSON.stringify({ query: 'query TestQuery { ' + query + ' }' }))
       ).body
     } catch (error) {
-      console.log(error)
       response = error.response.body
     }
-    expect(response.errors).toEqual(undefined)
     expect(response).toMatchSnapshot()
   })
 }

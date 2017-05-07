@@ -1,6 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`
+  feed(url: "https://non-existing-domain.com") { title }
+ 1`] = `
+Object {
+  "data": Object {
+    "feed": null,
+  },
+  "errors": Array [
+    Object {
+      "message": "getaddrinfo ENOTFOUND non-existing-domain.com non-existing-domain.com:443",
+      "stack": null,
+    },
+  ],
+}
+`;
+
+exports[`
+  feed(url: "https://non-existing-domain.com") { title, badField }
+ 1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "message": "Cannot query field \\"badField\\" on type \\"Feed\\".",
+      "stack": null,
+    },
+  ],
+}
+`;
+
+exports[`
   feed(url: "https://rolflekang.com/feed.xml") {
     title
     link
@@ -114,9 +143,7 @@ Object {
 `;
 
 exports[`
-  feed(url: "https://rolflekang.com/feed.xml") {
-    title
-  }
+  feed(url: "https://rolflekang.com/feed.xml") { title }
  1`] = `
 Object {
   "data": Object {
@@ -124,5 +151,21 @@ Object {
       "title": "Writings of Rolf Erik Lekang",
     },
   },
+}
+`;
+
+exports[`
+  feed(url: "https://rolflekang.com/not-a-feed.xml") { title }
+ 1`] = `
+Object {
+  "data": Object {
+    "feed": null,
+  },
+  "errors": Array [
+    Object {
+      "message": "Not Found",
+      "stack": null,
+    },
+  ],
 }
 `;

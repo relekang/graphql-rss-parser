@@ -1,13 +1,13 @@
 const { testGraphqlApi } = require('./utils')
 
+const url = 'https://rolflekang.com/feed.xml'
+
 testGraphqlApi`
-  feed(url: "https://rolflekang.com/feed.xml") {
-    title
-  }
+  feed(url: "${url}") { title }
 `
 
 testGraphqlApi`
-  feed(url: "https://rolflekang.com/feed.xml") {
+  feed(url: "${url}") {
     title
     link
     entries {
@@ -16,4 +16,15 @@ testGraphqlApi`
       pubDate
     }
   }
+`
+
+testGraphqlApi`
+  feed(url: "https://rolflekang.com/not-a-feed.xml") { title }
+`
+
+testGraphqlApi`
+  feed(url: "https://non-existing-domain.com") { title }
+`
+testGraphqlApi`
+  feed(url: "https://non-existing-domain.com") { title, badField }
 `
