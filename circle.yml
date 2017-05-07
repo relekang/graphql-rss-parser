@@ -1,0 +1,11 @@
+machine:
+  node:
+    version: 7
+
+dependencies:
+  override:
+    - yarn
+test:
+  override:
+    - yarn run lint
+    - yarn test -- --coverage
