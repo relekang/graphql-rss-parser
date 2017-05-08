@@ -10,7 +10,7 @@ module.exports = function createHandler(options) {
 
   if (options.ravenDsn) {
     Raven = require('raven')
-    Raven.config(process.env.RAVEN_DSN, {
+    Raven.config(options.ravenDsn, {
       release: options.version,
       environment: process.env.NODE_ENV
     }).install()

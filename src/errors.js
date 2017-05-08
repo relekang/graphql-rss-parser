@@ -49,25 +49,25 @@ function createErrorFormatter(Raven) {
       if (error.path || error.name !== 'GraphQLError') {
         Raven.captureException(
           error,
-          raven.parsers.parseRequest(req, {
+          {
             tags: { graphql: 'error' },
             extra: {
               source: error.source && error.source.body,
               positions: error.positions,
               path: error.path
             }
-          })
+          }
         )
       } else {
         Raven.captureMessage(
           `GraphQLWrongQuery: ${error.message}`,
-          Raven.parsers.parseRequest(req, {
+          {
             tags: { graphql: 'query' },
             extra: {
               source: error.source && error.source.body,
               positions: error.positions
             }
-          })
+          }
         )
       }
     }
