@@ -1,5 +1,7 @@
 # micro-rss-parser
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/relekang/micro-rss-parser.svg)](https://greenkeeper.io/)
+
 A [graphql][] microservice that parses rss feeds and returns a JSON representation of the
 given feed.
 
