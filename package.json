@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/relekang/micro-rss-parser#readme",
   "jest": {
+    "coverageDirectory": "./coverage/",
     "testRegex": "/__tests__/.*\\.tests\\.js$"
   },
   "dependencies": {
