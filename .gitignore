@@ -3,6 +3,9 @@ logs
 *.log
 npm-debug.log*
 
+# IDE files
+.vscode
+
 # Runtime data
 pids
 *.pid

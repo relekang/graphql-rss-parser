@@ -1,5 +1,6 @@
 const { testGraphqlApi } = require('./utils')
 
+const websiteUrl = 'https://rolflekang.com'
 const url = 'https://rolflekang.com/feed.xml'
 
 testGraphqlApi`
@@ -27,4 +28,10 @@ testGraphqlApi`
 `
 testGraphqlApi`
   feed(url: "https://non-existing-domain.com") { title, badField }
+`
+
+testGraphqlApi`
+  fromWebsite(websiteUrl: "${websiteUrl}") {
+    link
+  }
 `

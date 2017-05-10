@@ -26,12 +26,14 @@
     "testRegex": "/__tests__/.*\\.tests\\.js$"
   },
   "dependencies": {
+    "cheerio": "^0.22.0",
     "express-graphql": "^0.6.4",
     "graphql": "^0.9.6",
     "is-url": "^1.2.2",
     "lodash-fp": "^0.10.4",
     "micro": "^7.3.2",
     "node-feedparser": "^1.0.1",
+    "normalize-url": "^1.9.1",
     "raven": "^1.2.1",
     "rss-parser": "^2.7.0",
     "superagent": "^3.5.2",
