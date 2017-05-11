@@ -7,7 +7,7 @@ function transform(parsed, options) {
       pubDate: new Date(entry.pubDate).toISOString()
     })
   )
-  return Object.assign({}, parsed.feed, { entries })
+  return Object.assign({}, parsed.feed, { entries, parser: 'RSS_PARSER' })
 }
 
 module.exports = function parseString(document, options) {

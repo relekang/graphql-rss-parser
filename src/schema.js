@@ -19,7 +19,8 @@ const Schema = buildSchema(`
   type Feed {
     title: String
     link: String
-    feedUrl: String
+    feedLink: String
+    parser: Parser
     author: String
     guid: String
     entries: [FeedItem]

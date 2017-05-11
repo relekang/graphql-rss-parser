@@ -152,6 +152,7 @@ Object {
   "feedUrl": "http://rolflekang.com/feed.xml",
   "generator": "rl.com v1.0.0",
   "link": "http://rolflekang.com/",
+  "parser": "RSS_PARSER",
   "title": "Writings of Rolf Erik Lekang",
 }
 `;
