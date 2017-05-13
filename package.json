@@ -37,7 +37,7 @@
     "nock": "^9.0.13",
     "node-feedparser": "^1.0.1",
     "normalize-url": "^1.9.1",
-    "raven": "^1.2.1",
+    "raven": "^2.0.0",
     "rss-parser": "^2.7.0",
     "superagent": "^3.5.2",
     "update-notifier": "^2.1.0"
