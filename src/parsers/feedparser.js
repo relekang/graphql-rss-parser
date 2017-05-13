@@ -15,7 +15,7 @@ module.exports = function parseString (feed) {
       feedparser.on('readable', function () {
         const meta = this.meta
         if (!parsedFeed) {
-          parsedFeed = Object.assign({}, meta, { entries: [] })
+          parsedFeed = Object.assign({}, meta, { entries: [], parser: 'FEEDPARSER' })
         }
 
         let item

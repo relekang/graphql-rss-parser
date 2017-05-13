@@ -755,6 +755,7 @@ Object {
   "image": Object {},
   "language": null,
   "link": "http://rolflekang.com/",
+  "parser": "FEEDPARSER",
   "pubDate": null,
   "pubdate": null,
   "rss:@": Object {},
