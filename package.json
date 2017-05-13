@@ -10,7 +10,7 @@
     "start": "./cli.js",
     "dev": "nodemon ./cli.js",
     "test": "jest",
-    "lint": "standard src",
+    "lint": "standard 'src/**/*.js' 'src/*.js' '*.js'",
     "release": "standard-version -i changelog.md -m '%s'"
   },
   "repository": {

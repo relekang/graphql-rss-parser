@@ -1,8 +1,7 @@
 const { buildSchema } = require('graphql')
 
 const feed = require('./handlers/feed')
-const findFeed = require('./handlers/findFeed');
-
+const findFeed = require('./handlers/findFeed')
 
 const Schema = buildSchema(`
   enum Parser {

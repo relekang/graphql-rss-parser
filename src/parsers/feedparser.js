@@ -26,7 +26,7 @@ module.exports = function parseString (feed) {
       })
 
       feedparser.on('end', function () {
-        resolve(parsedFeed);
+        resolve(parsedFeed)
       })
 
       const stream = new Readable()

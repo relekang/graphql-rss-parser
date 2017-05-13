@@ -6,13 +6,14 @@ const request = require('superagent')
 const {resolve} = require('path')
 
 const createHandler = require('../')
+const {EmptyHttpResponseError, NotFoundError} = require('../errors')
 
-async function mockRequest(url) {
-  const path = resolve(__dirname + '/../../__fixtures__/' + url.replace(/https?:\/\//, '').replace(/\//g, '_'))
-  let content;
+async function mockRequest (url) {
+  const path = resolve(__dirname, '../../__fixtures__', url.replace(/https?:\/\//, '').replace(/\//g, '_'))
+  let content
   try {
     content = (await fs.readFileAsync(path)).toString()
-  } catch(error) { }
+  } catch (error) { }
   if (!content) {
     const response = await request(url).buffer()
 

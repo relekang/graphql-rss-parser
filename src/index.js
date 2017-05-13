@@ -5,7 +5,7 @@ const { createErrorFormatter } = require('./errors')
 
 const production = process.env.NODE_ENV === 'production'
 
-module.exports = function createHandler(options) {
+module.exports = function createHandler (options) {
   let Raven
 
   if (options.ravenDsn) {
@@ -23,6 +23,6 @@ module.exports = function createHandler(options) {
     schema: Schema,
     pretty: !production,
     graphiql: !production,
-		formatError,
+    formatError
   })
 }
