@@ -33,7 +33,7 @@ $ micro-rss-parser --help
     -v, --version       Output the version number
 ```
 
-### Example query
+### Example queries
 
 #### feed(url: String)
 ```graphql
