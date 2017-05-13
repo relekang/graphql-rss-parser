@@ -34,6 +34,8 @@ $ micro-rss-parser --help
 ```
 
 ### Example query
+
+#### feed(url: String)
 ```graphql
 {
   feed(url: "https://rolflekang.com/feed.xml") {
@@ -47,3 +49,11 @@ $ micro-rss-parser --help
 }
 ```
 
+#### findFeed(url: String)
+```graphql
+{
+  findFeed(url: "https://rolflekang.com") {
+    link
+  }
+}
+```
