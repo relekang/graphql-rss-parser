@@ -31,7 +31,7 @@ testGraphqlApi`
 `
 
 testGraphqlApi`
-  fromWebsite(websiteUrl: "${websiteUrl}") {
+  findFeed(url: "${websiteUrl}") {
     link
   }
 `

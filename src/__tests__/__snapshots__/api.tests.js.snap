@@ -171,13 +171,13 @@ Object {
 `;
 
 exports[`
-  fromWebsite(websiteUrl: "https://rolflekang.com") {
+  findFeed(url: "https://rolflekang.com") {
     link
   }
  1`] = `
 Object {
   "data": Object {
-    "fromWebsite": Array [
+    "findFeed": Array [
       Object {
         "link": "https://rolflekang.com/feed.xml",
       },

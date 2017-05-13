@@ -1,13 +1,17 @@
 const { buildSchema } = require('graphql')
 
 const feed = require('./handlers/feed')
-const handleFromWebsite = require('./handlers/fromWebsite');
+const findFeed = require('./handlers/findFeed');
 
 
 const Schema = buildSchema(`
   enum Parser {
     FEEDPARSER
     RSS_PARSER
+  }
+
+  type FindFeedResult {
+    link: String
   }
 
   type FeedItem {
@@ -28,14 +32,14 @@ const Schema = buildSchema(`
   }
 
   type Query {
-    fromWebsite(websiteUrl: String!): [Feed]
+    findFeed(url: String!): [FindFeedResult]
     feed(url: String!, parser: Parser): Feed
   }
 `)
 
 const root = {
-  feed: (query) => handleQuery(query),
-  fromWebsite: (query) => handleFromWebsite(query)
+  feed: (query) => feed(query),
+  findFeed: (query) => findFeed(query)
 }
 
 module.exports = { Schema, root }

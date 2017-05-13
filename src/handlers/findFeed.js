@@ -2,11 +2,11 @@ const request = require('superagent');
 const cheerio = require('cheerio');
 const normalizeUrl = require("normalize-url");
 
-module.exports = async function({ websiteUrl }) {
+module.exports = async function findFeed({ url }) {
     let response = null;
-    
+
     try {
-        response = await request.get(websiteUrl);
+        response = await request.get(url);
     } catch(e) {
         return [];
     }
