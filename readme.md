@@ -20,14 +20,17 @@ $ micro-rss-parser --help
 
   Usage: micro-rss-parser [options] [command]
 
+  Commands:
+
+    help  Display help
+
   Options:
 
     -h, --help          Output usage information
     -H, --host [value]  Host to listen on (defaults to "0.0.0.0")
     -p, --port <n>      Port to listen on (defaults to 3000)
-    -R, --raven-dsn     Raven DSN
+    -R, --raven-dsn     Raven DSN. This is used to configure logging with sentry.io
     -v, --version       Output the version number
-
 ```
 
 ### Example query
