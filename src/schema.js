@@ -1,6 +1,7 @@
 const { buildSchema } = require('graphql')
 
 const handleQuery = require('./handler')
+const handleFromWebsite = require('./handlers/fromWebsite');
 
 
 const Schema = buildSchema(`
@@ -27,14 +28,14 @@ const Schema = buildSchema(`
   }
 
   type Query {
+    fromWebsite(websiteUrl: String!): [Feed]
     feed(url: String!, parser: Parser): Feed
   }
 `)
 
 const root = {
-  feed: (query) => {
-    return handleQuery(query)
-  }
+  feed: (query) => handleQuery(query),
+  fromWebsite: (query) => handleFromWebsite(query)
 }
 
 module.exports = { Schema, root }

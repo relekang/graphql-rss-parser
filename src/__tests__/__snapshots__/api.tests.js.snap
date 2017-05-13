@@ -169,3 +169,19 @@ Object {
   ],
 }
 `;
+
+exports[`
+  fromWebsite(websiteUrl: "https://rolflekang.com") {
+    link
+  }
+ 1`] = `
+Object {
+  "data": Object {
+    "fromWebsite": Array [
+      Object {
+        "link": "https://rolflekang.com/feed.xml",
+      },
+    ],
+  },
+}
+`;
