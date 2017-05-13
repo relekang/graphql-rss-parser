@@ -1,6 +1,6 @@
 const { buildSchema } = require('graphql')
 
-const handleQuery = require('./handler')
+const feed = require('./handlers/feed')
 const handleFromWebsite = require('./handlers/fromWebsite');
 
 

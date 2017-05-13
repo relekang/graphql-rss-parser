@@ -1,10 +1,10 @@
 const url = require('url')
 const { send } = require('micro')
 
-const parsers = require('./parsers')
-const transform = require('./transform')
-const request = require('./request')
-const { EmptyParseOutputError, NotFoundError } = require('./errors')
+const parsers = require('../parsers')
+const transform = require('../transform')
+const request = require('../request')
+const { EmptyParseOutputError, NotFoundError } = require('../errors')
 
 async function parse(parser, text) {
   const parsed = await parsers[parser](text)
