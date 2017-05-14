@@ -11,16 +11,18 @@ async function parse (parser, text) {
 
 module.exports = async function parseFromQuery ({ url, parser }) {
   const content = await request(url)
-  let parsed
   if (parser) {
-    parsed = await parse(parser, content)
+    return parse(parser, content)
   } else {
-    try {
-      parsed = await parse('FEEDPARSER', content)
-    } catch (error) {
-      parsed = await parse('RSS_PARSER', content)
+    for (let i = 0; i < parsers.keys.length; i++) {
+      try {
+        return parse(parsers.keys[i], content)
+      } catch (error) {
+        if (i !== parsers.keys.length - 1) {
+          throw error
+        }
+        continue
+      }
     }
   }
-
-  return parsed
 }

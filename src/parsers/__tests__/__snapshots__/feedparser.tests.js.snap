@@ -1,5 +1,298 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should parse string from google.blogspot.com/feeds/posts/default 1`] = `
+Object {
+  "#ns": Array [
+    Object {
+      "xmlns": "http://www.w3.org/2005/Atom",
+    },
+    Object {
+      "xmlns:opensearch": "http://a9.com/-/spec/opensearchrss/1.0/",
+    },
+    Object {
+      "xmlns:blogger": "http://schemas.google.com/blogger/2008",
+    },
+    Object {
+      "xmlns:georss": "http://www.georss.org/georss",
+    },
+    Object {
+      "xmlns:gd": "http://schemas.google.com/g/2005",
+    },
+    Object {
+      "xmlns:thr": "http://purl.org/syndication/thread/1.0",
+    },
+    Object {
+      "xmlns:media": "http://search.yahoo.com/mrss/",
+    },
+  ],
+  "#type": "atom",
+  "#version": "1.0",
+  "#xml": Object {
+    "encoding": "UTF-8",
+    "version": "1.0",
+  },
+  "@": Array [
+    Object {
+      "xmlns": "http://www.w3.org/2005/Atom",
+    },
+    Object {
+      "xmlns:opensearch": "http://a9.com/-/spec/opensearchrss/1.0/",
+    },
+    Object {
+      "xmlns:blogger": "http://schemas.google.com/blogger/2008",
+    },
+    Object {
+      "xmlns:georss": "http://www.georss.org/georss",
+    },
+    Object {
+      "xmlns:gd": "http://schemas.google.com/g/2005",
+    },
+    Object {
+      "xmlns:thr": "http://purl.org/syndication/thread/1.0",
+    },
+  ],
+  "atom:@": Object {
+    "xmlns": "http://www.w3.org/2005/Atom",
+    "xmlns:blogger": "http://schemas.google.com/blogger/2008",
+    "xmlns:gd": "http://schemas.google.com/g/2005",
+    "xmlns:georss": "http://www.georss.org/georss",
+    "xmlns:opensearch": "http://a9.com/-/spec/opensearchrss/1.0/",
+    "xmlns:thr": "http://purl.org/syndication/thread/1.0",
+  },
+  "atom:author": Object {
+    "@": Object {},
+    "email": Object {
+      "#": "noreply@blogger.com",
+      "@": Object {},
+    },
+    "gd:image": Object {
+      "@": Object {
+        "height": "32",
+        "rel": "http://schemas.google.com/g/2005#thumbnail",
+        "src": "http://3.bp.blogspot.com/_YA50adQ-7vQ/S1gfIm66ItI/AAAAAAAAAAM/afcQKdbbZaU/S220/brett.png",
+        "width": "32",
+      },
+    },
+    "name": Object {
+      "#": "Brett Wiltshire",
+      "@": Object {},
+    },
+    "uri": Object {
+      "#": "http://www.blogger.com/profile/01430672582309320414",
+      "@": Object {},
+    },
+  },
+  "atom:generator": Object {
+    "#": "Blogger",
+    "@": Object {
+      "uri": "http://www.blogger.com",
+      "version": "7.00",
+    },
+  },
+  "atom:id": Object {
+    "#": "tag:blogger.com,1999:blog-2120328063286836889",
+    "@": Object {},
+  },
+  "atom:link": Array [
+    Object {
+      "@": Object {
+        "href": "http://google.blogspot.com/feeds/posts/default",
+        "rel": "http://schemas.google.com/g/2005#feed",
+        "type": "application/atom+xml",
+      },
+    },
+    Object {
+      "@": Object {
+        "href": "http://www.blogger.com/feeds/2120328063286836889/posts/default",
+        "rel": "self",
+        "type": "application/atom+xml",
+      },
+    },
+    Object {
+      "@": Object {
+        "href": "http://google.blogspot.com/",
+        "rel": "alternate",
+        "type": "text/html",
+      },
+    },
+    Object {
+      "@": Object {
+        "href": "http://pubsubhubbub.appspot.com/",
+        "rel": "hub",
+      },
+    },
+  ],
+  "atom:subtitle": Object {
+    "@": Object {
+      "type": "html",
+    },
+  },
+  "atom:title": Object {
+    "#": "Google on BlogSpot",
+    "@": Object {
+      "type": "text",
+    },
+  },
+  "atom:updated": Object {
+    "#": "2017-05-13T08:04:56.580-07:00",
+    "@": Object {},
+  },
+  "author": "Brett Wiltshire",
+  "categories": Array [],
+  "cloud": Object {
+    "href": "http://pubsubhubbub.appspot.com/",
+    "type": "hub",
+  },
+  "copyright": null,
+  "date": 2017-05-13T15:04:56.580Z,
+  "description": null,
+  "entries": Array [
+    Object {
+      "atom:@": Object {},
+      "atom:author": Object {
+        "@": Object {},
+        "email": Object {
+          "#": "noreply@blogger.com",
+          "@": Object {},
+        },
+        "gd:image": Object {
+          "@": Object {
+            "height": "32",
+            "rel": "http://schemas.google.com/g/2005#thumbnail",
+            "src": "http://3.bp.blogspot.com/_YA50adQ-7vQ/S1gfIm66ItI/AAAAAAAAAAM/afcQKdbbZaU/S220/brett.png",
+            "width": "32",
+          },
+        },
+        "name": Object {
+          "#": "Brett Wiltshire",
+          "@": Object {},
+        },
+        "uri": Object {
+          "#": "http://www.blogger.com/profile/01430672582309320414",
+          "@": Object {},
+        },
+      },
+      "atom:content": Object {
+        "#": "<i>Posted by Brett Wiltshire, Blogger CEO</i><br /><br />This morning we’re beyond thrilled to announce that Blogger has signed a definitive agreement to be acquired by Google, the Internet search company. This is exciting news not only for all of us on the Blogger team, but for our users, our partners, and most importantly -- the blogosphere itself. <br /><br />Understandably, you probably have lots of questions about what this means for Blogger and Blogger users. Below, we've put together some initial answers to many of the biggest questions. More info will be available as we figure it out. Thanks for your support as we transfer into this next exciting phase. &nbsp; <br /><br /><br /><b>Q: Why did Blogger sell to Google?</b><br />A: Well, on the surface, it may look obvious: A company of Google's size could give Blogger the resources we needed to do things better, faster, bigger. It's been a long eleven+ years since we started the company, and not all of them were very fun. We had been making serious progress over the last year or so, but bootstrapping (growing without funding) is always a slow process, and we were a long way from where we wanted to be. We wanted to offer a better service. And with Google, it wasn't just their size, of course. They had clearly done an incredible job building their technology and business, and we'd been big fans. <br /><br />However, that doesn't mean it was an easy decision. We'd seen many small companies doing interesting things die (or at least become uninteresting) after getting acquired. It was only after becoming convinced that: a) There were sensible, cool, powerful things we could do on the technology/product side with Google that we couldn't do otherwise; and b) It was a good company, run by people we liked, who wanted the same things we did (i.e., they wouldn't screw up Blogger or make our lives miserable). <br /><br />We became convinced both of these were the case rather quickly after thinking about the product side and talking to lots of Googlers. &nbsp; Also, Google liked our logo. And we liked their food. <br /><br /><b>Q: Will Blogger go away?&nbsp;</b><br />A: Nope. Blogger is going to maintain its branding and services. While we may integrate with Google in certain areas there will always be a Blogger. <br /><br /><b>Q: What does the acquisition mean to Blogger users?&nbsp;</b><br />A: Greater reliability, new innovative products and a whole lot more that we aren't ready to share quite yet (truth is, we're still figuring a lot of it out). Right now, we're mostly bolstering up our hardware -- making things faster and more reliable -- and getting settled. Next, we're going to be working on some killer ideas we've been wanting to implement for years. It'll be fun. <br /><br /><b>Q: Will there be any changes to my account?&nbsp;</b><br />A: Not right now but if anything does change we will notify you ahead of time, as we've done in the past.<br /><br /><b>Q: Will there be any changes to the Blogger products?&nbsp;</b><br />A: We will be making some changes in our product line. We've been working on a new version of Blogger for some time now that will be coming out soon. We'll tell you more as soon as we know. <br /><br /><b>Q: What are your plans for the future?&nbsp;</b><br />A: We are building a nuclear powered... Wait, you almost had us. We aren't telling, yet! But we will have more in a few weeks. <br /><br /><b>Q: Does this mean my blog will rank higher in Google search results?&nbsp;</b><br />A: Nope. It does mean your blog might be stored physically closer to Google but that's about it. The people at Google have done a great job over the years making sure their search results are honest and objective and there's no reason they would change that policy for Blogger or anyone else. <br /><br /><b>Q: What will happen to all the nice kids that work on Blogger?&nbsp;</b><br />A: We’ll still be working on Blogger and making it better. <br /><br /><b>Q: Are you still as handsome as ever?&nbsp;</b><br />A:<br /><div class=\\"separator\\" style=\\"clear: both; text-align: center;\\"><a href=\\"http://1.bp.blogspot.com/_UUTay7LUoq0/TXVACrMZNOI/AAAAAAAAADI/_WWawmSQnIM/s1600/_MG_1538.jpg\\" imageanchor=\\"1\\" style=\\"margin-left: 1em; margin-right: 1em;\\"><img border=\\"0\\" src=\\"http://1.bp.blogspot.com/_UUTay7LUoq0/TXVACrMZNOI/AAAAAAAAADI/_WWawmSQnIM/s400/_MG_1538.jpg\\" width=\\"500\\" /></a></div>",
+        "@": Object {
+          "type": "html",
+        },
+      },
+      "atom:id": Object {
+        "#": "tag:blogger.com,1999:blog-2120328063286836889.post-7340716506563491347",
+        "@": Object {},
+      },
+      "atom:link": Array [
+        Object {
+          "@": Object {
+            "href": "http://google.blogspot.com/feeds/7340716506563491347/comments/default",
+            "rel": "replies",
+            "title": "Post Comments",
+            "type": "application/atom+xml",
+          },
+        },
+        Object {
+          "@": Object {
+            "href": "http://google.blogspot.com/2011/04/google-to-acquire-blogger.html#comment-form",
+            "rel": "replies",
+            "title": "20 Comments",
+            "type": "text/html",
+          },
+        },
+        Object {
+          "@": Object {
+            "href": "http://www.blogger.com/feeds/2120328063286836889/posts/default/7340716506563491347",
+            "rel": "edit",
+            "type": "application/atom+xml",
+          },
+        },
+        Object {
+          "@": Object {
+            "href": "http://www.blogger.com/feeds/2120328063286836889/posts/default/7340716506563491347",
+            "rel": "self",
+            "type": "application/atom+xml",
+          },
+        },
+        Object {
+          "@": Object {
+            "href": "http://google.blogspot.com/2011/04/google-to-acquire-blogger.html",
+            "rel": "alternate",
+            "title": "Google to Acquire Blogger",
+            "type": "text/html",
+          },
+        },
+      ],
+      "atom:published": Object {
+        "#": "2011-04-01T08:06:00.000-07:00",
+        "@": Object {},
+      },
+      "atom:title": Object {
+        "#": "Google to Acquire Blogger",
+        "@": Object {
+          "type": "text",
+        },
+      },
+      "atom:updated": Object {
+        "#": "2011-04-01T08:13:07.987-07:00",
+        "@": Object {},
+      },
+      "author": "Brett Wiltshire",
+      "categories": Array [],
+      "comments": "http://google.blogspot.com/2011/04/google-to-acquire-blogger.html#comment-form",
+      "date": 2011-04-01T15:13:07.987Z,
+      "description": "<i>Posted by Brett Wiltshire, Blogger CEO</i><br /><br />This morning we’re beyond thrilled to announce that Blogger has signed a definitive agreement to be acquired by Google, the Internet search company. This is exciting news not only for all of us on the Blogger team, but for our users, our partners, and most importantly -- the blogosphere itself. <br /><br />Understandably, you probably have lots of questions about what this means for Blogger and Blogger users. Below, we've put together some initial answers to many of the biggest questions. More info will be available as we figure it out. Thanks for your support as we transfer into this next exciting phase. &nbsp; <br /><br /><br /><b>Q: Why did Blogger sell to Google?</b><br />A: Well, on the surface, it may look obvious: A company of Google's size could give Blogger the resources we needed to do things better, faster, bigger. It's been a long eleven+ years since we started the company, and not all of them were very fun. We had been making serious progress over the last year or so, but bootstrapping (growing without funding) is always a slow process, and we were a long way from where we wanted to be. We wanted to offer a better service. And with Google, it wasn't just their size, of course. They had clearly done an incredible job building their technology and business, and we'd been big fans. <br /><br />However, that doesn't mean it was an easy decision. We'd seen many small companies doing interesting things die (or at least become uninteresting) after getting acquired. It was only after becoming convinced that: a) There were sensible, cool, powerful things we could do on the technology/product side with Google that we couldn't do otherwise; and b) It was a good company, run by people we liked, who wanted the same things we did (i.e., they wouldn't screw up Blogger or make our lives miserable). <br /><br />We became convinced both of these were the case rather quickly after thinking about the product side and talking to lots of Googlers. &nbsp; Also, Google liked our logo. And we liked their food. <br /><br /><b>Q: Will Blogger go away?&nbsp;</b><br />A: Nope. Blogger is going to maintain its branding and services. While we may integrate with Google in certain areas there will always be a Blogger. <br /><br /><b>Q: What does the acquisition mean to Blogger users?&nbsp;</b><br />A: Greater reliability, new innovative products and a whole lot more that we aren't ready to share quite yet (truth is, we're still figuring a lot of it out). Right now, we're mostly bolstering up our hardware -- making things faster and more reliable -- and getting settled. Next, we're going to be working on some killer ideas we've been wanting to implement for years. It'll be fun. <br /><br /><b>Q: Will there be any changes to my account?&nbsp;</b><br />A: Not right now but if anything does change we will notify you ahead of time, as we've done in the past.<br /><br /><b>Q: Will there be any changes to the Blogger products?&nbsp;</b><br />A: We will be making some changes in our product line. We've been working on a new version of Blogger for some time now that will be coming out soon. We'll tell you more as soon as we know. <br /><br /><b>Q: What are your plans for the future?&nbsp;</b><br />A: We are building a nuclear powered... Wait, you almost had us. We aren't telling, yet! But we will have more in a few weeks. <br /><br /><b>Q: Does this mean my blog will rank higher in Google search results?&nbsp;</b><br />A: Nope. It does mean your blog might be stored physically closer to Google but that's about it. The people at Google have done a great job over the years making sure their search results are honest and objective and there's no reason they would change that policy for Blogger or anyone else. <br /><br /><b>Q: What will happen to all the nice kids that work on Blogger?&nbsp;</b><br />A: We’ll still be working on Blogger and making it better. <br /><br /><b>Q: Are you still as handsome as ever?&nbsp;</b><br />A:<br /><div class=\\"separator\\" style=\\"clear: both; text-align: center;\\"><a href=\\"http://1.bp.blogspot.com/_UUTay7LUoq0/TXVACrMZNOI/AAAAAAAAADI/_WWawmSQnIM/s1600/_MG_1538.jpg\\" imageanchor=\\"1\\" style=\\"margin-left: 1em; margin-right: 1em;\\"><img border=\\"0\\" src=\\"http://1.bp.blogspot.com/_UUTay7LUoq0/TXVACrMZNOI/AAAAAAAAADI/_WWawmSQnIM/s400/_MG_1538.jpg\\" width=\\"500\\" /></a></div>",
+      "enclosures": Array [],
+      "guid": "tag:blogger.com,1999:blog-2120328063286836889.post-7340716506563491347",
+      "image": Object {
+        "url": "http://1.bp.blogspot.com/_UUTay7LUoq0/TXVACrMZNOI/AAAAAAAAADI/_WWawmSQnIM/s72-c/_MG_1538.jpg",
+      },
+      "link": "http://google.blogspot.com/2011/04/google-to-acquire-blogger.html",
+      "media:thumbnail": Object {
+        "@": Object {
+          "height": "72",
+          "url": "http://1.bp.blogspot.com/_UUTay7LUoq0/TXVACrMZNOI/AAAAAAAAADI/_WWawmSQnIM/s72-c/_MG_1538.jpg",
+          "width": "72",
+          "xmlns:media": "http://search.yahoo.com/mrss/",
+        },
+      },
+      "origlink": null,
+      "pubDate": "2011-04-01T15:06:00.000Z",
+      "pubdate": 2011-04-01T15:06:00.000Z,
+      "source": Object {},
+      "summary": null,
+      "thr:total": Object {
+        "#": "20",
+        "@": Object {},
+      },
+      "title": "Google to Acquire Blogger",
+    },
+  ],
+  "favicon": null,
+  "generator": "Blogger v7.00 (http://www.blogger.com)",
+  "image": Object {},
+  "language": null,
+  "link": "http://google.blogspot.com/",
+  "opensearch:itemsperpage": Object {
+    "#": "25",
+    "@": Object {},
+  },
+  "opensearch:startindex": Object {
+    "#": "1",
+    "@": Object {},
+  },
+  "opensearch:totalresults": Object {
+    "#": "1",
+    "@": Object {},
+  },
+  "parser": "FEEDPARSER",
+  "pubDate": 2017-05-13T15:04:56.580Z,
+  "pubdate": 2017-05-13T15:04:56.580Z,
+  "title": "Google on BlogSpot",
+  "xmlUrl": "http://www.blogger.com/feeds/2120328063286836889/posts/default",
+  "xmlurl": "http://www.blogger.com/feeds/2120328063286836889/posts/default",
+}
+`;
+
 exports[`should parse string from rolflekang.com/feed.xml 1`] = `
 Object {
   "#ns": Array [

@@ -1,5 +1,5 @@
 /* eslint-env jest */
-const parse = require('../rss-parser')
+const parse = require('../feedme')
 const mockRequest = require('../../__tests__/mockRequests')
 
 test('should parse string from rolflekang.com/feed.xml', async () => {
@@ -8,7 +8,7 @@ test('should parse string from rolflekang.com/feed.xml', async () => {
   expect(await parse(fixture)).toMatchSnapshot()
 })
 
-test.skip('should parse string from google.blogspot.com/feeds/posts/default', async () => {
+test('should parse string from google.blogspot.com/feeds/posts/default', async () => {
   const fixture = await mockRequest('http://google.blogspot.com/feeds/posts/default')
 
   expect(await parse(fixture)).toMatchSnapshot()

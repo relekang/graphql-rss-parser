@@ -7,3 +7,9 @@ test('should parse string from rolflekang.com/feed.xml', async () => {
 
   expect(await parse(fixture)).toMatchSnapshot()
 })
+
+test('should parse string from google.blogspot.com/feeds/posts/default', async () => {
+  const fixture = await mockRequest('http://google.blogspot.com/feeds/posts/default')
+
+  expect(await parse(fixture)).toMatchSnapshot()
+})

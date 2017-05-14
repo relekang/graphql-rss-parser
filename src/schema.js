@@ -7,6 +7,7 @@ const Schema = buildSchema(`
   enum Parser {
     FEEDPARSER
     RSS_PARSER
+    FEEDME
   }
 
   type FindFeedResult {

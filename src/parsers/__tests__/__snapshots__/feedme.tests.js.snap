@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should parse string from google.blogspot.com/feeds/posts/default 1`] = `
+Object {
+  "entries": Array [
+    Object {
+      "description": undefined,
+      "guid": undefined,
+      "link": "http://google.blogspot.com/2011/04/google-to-acquire-blogger.html",
+      "pubDate": "2011-04-01T15:06:00.000Z",
+      "title": "Google to Acquire Blogger",
+    },
+  ],
+  "link": "http://google.blogspot.com/",
+  "parser": "FEEDME",
+  "title": "Google on BlogSpot",
+}
+`;
+
+exports[`should parse string from rolflekang.com/feed.xml 1`] = `
+Object {
+  "description": "",
+  "entries": Array [
+    Object {
+      "description": "",
+      "guid": "http://rolflekang.com/lets-run-some-races",
+      "link": "http://rolflekang.com/lets-run-some-races",
+      "pubDate": "2017-01-02T00:00:00.000Z",
+      "title": "Let's run some races this year",
+    },
+    Object {
+      "description": "",
+      "guid": "http://rolflekang.com/software-development-on-an-ipad",
+      "link": "http://rolflekang.com/software-development-on-an-ipad",
+      "pubDate": "2017-01-01T00:00:00.000Z",
+      "title": "Software development on an iPad",
+    },
+    Object {
+      "description": "",
+      "guid": "http://rolflekang.com/filtering-lint-errors",
+      "link": "http://rolflekang.com/filtering-lint-errors",
+      "pubDate": "2016-06-10T00:00:00.000Z",
+      "title": "Filtering lint errors",
+    },
+    Object {
+      "description": "",
+      "guid": "http://rolflekang.com/interrail-summer",
+      "link": "http://rolflekang.com/interrail-summer",
+      "pubDate": "2015-07-26T00:00:00.000Z",
+      "title": "Interrail summer",
+    },
+    Object {
+      "description": "",
+      "guid": "http://rolflekang.com/writing-latex-in-atom",
+      "link": "http://rolflekang.com/writing-latex-in-atom",
+      "pubDate": "2015-05-23T00:00:00.000Z",
+      "title": "Writing (latex) in Atom",
+    },
+    Object {
+      "description": "",
+      "guid": "http://rolflekang.com/rmoq",
+      "link": "http://rolflekang.com/rmoq",
+      "pubDate": "2014-12-30T00:00:00.000Z",
+      "title": "rmoq - a request mock cache",
+    },
+    Object {
+      "description": "",
+      "guid": "http://rolflekang.com/django-nopassword-one-point-o",
+      "link": "http://rolflekang.com/django-nopassword-one-point-o",
+      "pubDate": "2014-10-03T15:35:00.000Z",
+      "title": "django-nopassword reached 1.0",
+    },
+    Object {
+      "description": "",
+      "guid": "http://rolflekang.com/moving-to-pelican",
+      "link": "http://rolflekang.com/moving-to-pelican",
+      "pubDate": "2014-05-07T00:00:00.000Z",
+      "title": "Moving the blog to pelican",
+    },
+    Object {
+      "description": "",
+      "guid": "http://rolflekang.com/building-tumblr-theme-with-grunt",
+      "link": "http://rolflekang.com/building-tumblr-theme-with-grunt",
+      "pubDate": "2014-02-02T00:00:00.000Z",
+      "title": "Building a Tumblr theme with GruntJS",
+    },
+    Object {
+      "description": "",
+      "guid": "http://rolflekang.com/backup-routines-for-redisdb",
+      "link": "http://rolflekang.com/backup-routines-for-redisdb",
+      "pubDate": "2013-10-24T00:00:00.000Z",
+      "title": "Backup routine for Redis",
+    },
+    Object {
+      "description": "",
+      "guid": "http://rolflekang.com/django-app-custom-user",
+      "link": "http://rolflekang.com/django-app-custom-user",
+      "pubDate": "2013-05-22T00:00:00.000Z",
+      "title": "Making your Django app ready for custom users",
+    },
+    Object {
+      "description": "",
+      "guid": "http://rolflekang.com/stats-are-fun",
+      "link": "http://rolflekang.com/stats-are-fun",
+      "pubDate": "2013-03-03T00:00:00.000Z",
+      "title": "Stats are fun",
+    },
+    Object {
+      "description": "",
+      "guid": "http://rolflekang.com/alfred-scripts-for-jekyll",
+      "link": "http://rolflekang.com/alfred-scripts-for-jekyll",
+      "pubDate": "2013-02-26T00:00:00.000Z",
+      "title": "Alfred scripts for Jekyll",
+    },
+    Object {
+      "description": "",
+      "guid": "http://rolflekang.com/use-array-in-postgresql-with-django",
+      "link": "http://rolflekang.com/use-array-in-postgresql-with-django",
+      "pubDate": "2013-01-27T00:00:00.000Z",
+      "title": "Use array in postgresql with django",
+    },
+    Object {
+      "description": "",
+      "guid": "http://rolflekang.com/apply-puppet-configuration-automatically",
+      "link": "http://rolflekang.com/apply-puppet-configuration-automatically",
+      "pubDate": "2013-01-03T00:00:00.000Z",
+      "title": "Apply puppet automatically",
+    },
+    Object {
+      "description": "",
+      "guid": "http://rolflekang.com/reading-wikipedia",
+      "link": "http://rolflekang.com/reading-wikipedia",
+      "pubDate": "2012-12-02T00:00:00.000Z",
+      "title": "Readable Wikipedia",
+    },
+    Object {
+      "description": "",
+      "guid": "http://rolflekang.com/django-nopassword",
+      "link": "http://rolflekang.com/django-nopassword",
+      "pubDate": "2012-09-28T00:00:00.000Z",
+      "title": "django-nopassword",
+    },
+    Object {
+      "description": "",
+      "guid": "http://rolflekang.com/the-github-lamp",
+      "link": "http://rolflekang.com/the-github-lamp",
+      "pubDate": "2012-09-16T00:00:00.000Z",
+      "title": "The Github lamp",
+    },
+  ],
+  "link": "http://rolflekang.com/",
+  "parser": "FEEDME",
+  "title": "Writings of Rolf Erik Lekang",
+}
+`;
