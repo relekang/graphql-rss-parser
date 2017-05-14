@@ -6,6 +6,7 @@
   <a href="https://www.npmjs.com/package/micro-rss-parser"><img src="https://img.shields.io/npm/v/micro-rss-parser.svg" alt="npm version"></a>
   <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
 </div>
+
 A [graphql][] microservice that parses rss feeds and returns a JSON representation of the
 given feed. It uses different parses installed from npm. When a parser fail it will try the next following this order: [feedparser][], [rss-parser][], [feedme][]. To specify a specific parser see example queries below.
 
