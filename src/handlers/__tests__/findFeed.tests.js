@@ -1,4 +1,6 @@
 /* eslint-env jest */
+require('../../__tests__/mockRequests')
+
 const findFeed = require('../findFeed')
 
 test('Should return feedUrl from any website which have a link to his rss feed', async () => {

@@ -1,33 +1,9 @@
 /* eslint-env jest */
-const fs = require('fs-extra-promise')
 const micro = require('micro')
 const listen = require('test-listen')
 const request = require('superagent')
-const {resolve} = require('path')
 
 const createHandler = require('../')
-const {EmptyHttpResponseError, NotFoundError} = require('../errors')
-
-async function mockRequest (url) {
-  const path = resolve(__dirname, '../../__fixtures__', url.replace(/https?:\/\//, '').replace(/\//g, '_'))
-  let content
-  try {
-    content = (await fs.readFileAsync(path)).toString()
-  } catch (error) { }
-  if (!content) {
-    const response = await request(url).buffer()
-
-    if (!response.text) throw new EmptyHttpResponseError()
-    if (response.notFound) throw new NotFoundError(url)
-
-    content = response.text
-    await fs.writeFileAsync(path, content)
-  }
-
-  return content
-}
-
-jest.mock('../request', () => mockRequest)
 
 function testGraphqlApi (strings, ...args) {
   const query = String.raw(strings, ...args)
@@ -54,4 +30,4 @@ function testGraphqlApi (strings, ...args) {
   })
 }
 
-module.exports = { testGraphqlApi, mockRequest }
+module.exports = { testGraphqlApi }
