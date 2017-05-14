@@ -155,6 +155,42 @@ Object {
 `;
 
 exports[`
+  feed(url: "https://rolflekang.com/feed.xml", parser: FEEDME) { title }
+ 1`] = `
+Object {
+  "data": Object {
+    "feed": Object {
+      "title": "Writings of Rolf Erik Lekang",
+    },
+  },
+}
+`;
+
+exports[`
+  feed(url: "https://rolflekang.com/feed.xml", parser: FEEDPARSER) { title }
+ 1`] = `
+Object {
+  "data": Object {
+    "feed": Object {
+      "title": "Writings of Rolf Erik Lekang",
+    },
+  },
+}
+`;
+
+exports[`
+  feed(url: "https://rolflekang.com/feed.xml", parser: RSS_PARSER) { title }
+ 1`] = `
+Object {
+  "data": Object {
+    "feed": Object {
+      "title": "Writings of Rolf Erik Lekang",
+    },
+  },
+}
+`;
+
+exports[`
   feed(url: "https://rolflekang.com/not-a-feed.xml") { title }
  1`] = `
 Object {

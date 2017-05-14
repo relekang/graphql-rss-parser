@@ -21,6 +21,18 @@ testGraphqlApi`
 `
 
 testGraphqlApi`
+  feed(url: "${url}", parser: FEEDPARSER) { title }
+`
+
+testGraphqlApi`
+  feed(url: "${url}", parser: RSS_PARSER) { title }
+`
+
+testGraphqlApi`
+  feed(url: "${url}", parser: FEEDME) { title }
+`
+
+testGraphqlApi`
   feed(url: "https://rolflekang.com/not-a-feed.xml") { title }
 `
 
