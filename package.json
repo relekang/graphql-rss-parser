@@ -28,7 +28,7 @@
     "testRegex": "/__tests__/.*\\.tests\\.js$"
   },
   "dependencies": {
-    "cheerio": "^0.22.0",
+    "cheerio": "^1.0.0-rc.2",
     "express-graphql": "^0.6.4",
     "feedme": "^1.0.0",
     "graphql": "^0.10.0",
