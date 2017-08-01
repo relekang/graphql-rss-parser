@@ -34,7 +34,7 @@
     "graphql": "^0.10.0",
     "is-url": "^1.2.2",
     "lodash-fp": "^0.10.4",
-    "micro": "^7.3.2",
+    "micro": "^8.0.0",
     "nock": "^9.0.13",
     "node-feedparser": "^1.0.1",
     "normalize-url": "^1.9.1",
