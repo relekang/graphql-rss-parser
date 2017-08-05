@@ -30,7 +30,7 @@
   "dependencies": {
     "args": "^3.0.4",
     "cheerio": "^1.0.0-rc.2",
-    "express-graphql": "^0.6.4",
+    "express-graphql": "^0.6.7",
     "feedme": "^1.0.0",
     "graphql": "^0.10.0",
     "is-url": "^1.2.2",
