@@ -20,7 +20,7 @@ module.exports = async function findFeed ({ url }) {
   return $linkTags.map((index, $linkTag) => {
     const link = normalizeUrl($linkTag.attribs.href)
     return {
-      link: /^\//.test(link) ? url + link : link,
+      link: /^\//.test(link) ? url + link : link
     }
   }).toArray()
 }
