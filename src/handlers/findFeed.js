@@ -18,8 +18,9 @@ module.exports = async function findFeed ({ url }) {
     .add('link[rel="alternate"][type="application/atom+xml"]')
 
   return $linkTags.map((index, $linkTag) => {
+    const link = normalizeUrl($linkTag.attribs.href)
     return {
-      link: normalizeUrl($linkTag.attribs.href)
+      link: /^\//.test(link) ? url + link : link,
     }
   }).toArray()
 }
