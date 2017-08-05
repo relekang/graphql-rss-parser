@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/relekang/micro-rss-parser/compare/v1.2.0...v1.3.0) (2017-08-05)
+
+
+### Bug Fixes
+
+* **package:** update cheerio to version 1.0.0-rc.2 ([c5aaf3e](https://github.com/relekang/micro-rss-parser/commit/c5aaf3e))
+* **package:** update graphql to version 0.10.0 ([b232402](https://github.com/relekang/micro-rss-parser/commit/b232402))
+* **package:** update micro to version 8.0.0 ([b1d057b](https://github.com/relekang/micro-rss-parser/commit/b1d057b))
+* Make findFeed return full url ([7780a33](https://github.com/relekang/micro-rss-parser/commit/7780a33)), closes [#10](https://github.com/relekang/micro-rss-parser/issues/10)
+* Move nock to dev dependencies ([fdadc10](https://github.com/relekang/micro-rss-parser/commit/fdadc10))
+* Update rss-parser and use isoDate ([d8e8112](https://github.com/relekang/micro-rss-parser/commit/d8e8112))
+* Upgrade express-graphql ([711c084](https://github.com/relekang/micro-rss-parser/commit/711c084))
+* Upgrade raven ([0040ff8](https://github.com/relekang/micro-rss-parser/commit/0040ff8))
+* Use internal request wrapper in findFeed ([79c76e6](https://github.com/relekang/micro-rss-parser/commit/79c76e6))
+* Use npmignore to remove tests and fixtures ([99ea41c](https://github.com/relekang/micro-rss-parser/commit/99ea41c))
+
+
+### Features
+
+* Add feedme to available parsers ([5a53ff0](https://github.com/relekang/micro-rss-parser/commit/5a53ff0))
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/relekang/micro-rss-parser/compare/v1.1.0...v1.2.0) (2017-05-13)
 
