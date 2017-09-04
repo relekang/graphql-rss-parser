@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "fs-extra-promise": "^1.0.1",
-    "jest": "^20.0.4",
+    "jest": "^21.0.0",
     "nock": "^9.0.14",
     "nodemon": "^1.11.0",
     "prettier": "^1.5.3",
