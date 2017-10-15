@@ -28,11 +28,11 @@
     "testRegex": "/__tests__/.*\\.tests\\.js$"
   },
   "dependencies": {
-    "args": "^3.0.4",
+    "args": "^3.0.7",
     "cheerio": "^1.0.0-rc.2",
-    "express-graphql": "^0.6.7",
+    "express-graphql": "^0.6.11",
     "feedme": "^1.0.1",
-    "graphql": "^0.10.0",
+    "graphql": "^0.11.7",
     "is-url": "^1.2.2",
     "lodash-fp": "^0.10.4",
     "micro": "^8.0.0",
