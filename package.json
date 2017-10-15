@@ -41,7 +41,7 @@
     "raven": "^2.2.1",
     "rss-parser": "^2.10.6",
     "superagent": "^3.6.3",
-    "update-notifier": "^2.1.0"
+    "update-notifier": "^2.3.0"
   },
   "devDependencies": {
     "fs-extra-promise": "^1.0.1",
