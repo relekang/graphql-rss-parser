@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.3.1"></a>
+## [1.3.1](https://github.com/relekang/micro-rss-parser/compare/v1.3.0...v1.3.1) (2017-10-15)
+
+
+### Bug Fixes
+
+* Upgrade grahpql dependencies ([8fa3154](https://github.com/relekang/micro-rss-parser/commit/8fa3154))
+* Upgrade micro ([f018a12](https://github.com/relekang/micro-rss-parser/commit/f018a12))
+* Upgrade raven ([c4b8e4e](https://github.com/relekang/micro-rss-parser/commit/c4b8e4e))
+* Upgrade rss-parsers ([5de999a](https://github.com/relekang/micro-rss-parser/commit/5de999a))
+* Upgrade superagent ([e226086](https://github.com/relekang/micro-rss-parser/commit/e226086))
+
+
+
 <a name="1.3.0"></a>
 # [1.3.0](https://github.com/relekang/micro-rss-parser/compare/v1.2.0...v1.3.0) (2017-08-05)
 
