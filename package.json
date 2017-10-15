@@ -38,7 +38,7 @@
     "micro": "^8.0.0",
     "node-feedparser": "^1.0.1",
     "normalize-url": "^1.9.1",
-    "raven": "^2.1.1",
+    "raven": "^2.2.1",
     "rss-parser": "^2.10.6",
     "superagent": "^3.5.2",
     "update-notifier": "^2.1.0"
