@@ -31,7 +31,7 @@
     "args": "^3.0.4",
     "cheerio": "^1.0.0-rc.2",
     "express-graphql": "^0.6.7",
-    "feedme": "^1.0.0",
+    "feedme": "^1.0.1",
     "graphql": "^0.10.0",
     "is-url": "^1.2.2",
     "lodash-fp": "^0.10.4",
@@ -39,7 +39,7 @@
     "node-feedparser": "^1.0.1",
     "normalize-url": "^1.9.1",
     "raven": "^2.1.1",
-    "rss-parser": "^2.10.1",
+    "rss-parser": "^2.10.6",
     "superagent": "^3.5.2",
     "update-notifier": "^2.1.0"
   },

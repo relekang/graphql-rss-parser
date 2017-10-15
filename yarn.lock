@@ -1508,9 +1508,9 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "^2.0.0"
 
-feedme@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/feedme/-/feedme-1.0.0.tgz#9d76c0d097ee384e8f9d87e9aefc3ea06eef89c1"
+feedme@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/feedme/-/feedme-1.0.1.tgz#05723ec2f573fe4dd7dbe499b35d9d93506efd25"
   dependencies:
     clarinet "^0.11.0"
     eventyoshi "^0.1.4"
@@ -3699,9 +3699,9 @@ rimraf@2, rimraf@^2.2.8, rimraf@^2.5.1, rimraf@^2.6.1:
   dependencies:
     glob "^7.0.5"
 
-rss-parser@^2.10.1:
-  version "2.10.1"
-  resolved "https://registry.yarnpkg.com/rss-parser/-/rss-parser-2.10.1.tgz#d793b69106c2731dfc0027939e9ca4186b695f57"
+rss-parser@^2.10.6:
+  version "2.10.6"
+  resolved "https://registry.yarnpkg.com/rss-parser/-/rss-parser-2.10.6.tgz#4bc52417a93e52fc8a701a25256d606f2a2bdca9"
   dependencies:
     entities "^1.1.1"
     xml2js "^0.4.17"
