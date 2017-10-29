@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.3.2"></a>
+## [1.3.2](https://github.com/relekang/micro-rss-parser/compare/v1.3.1...v1.3.2) (2017-10-29)
+
+
+### Bug Fixes
+
+* Add Dockerfile ([b210512](https://github.com/relekang/micro-rss-parser/commit/b210512))
+* Throw ConnectionFailedError on ENOTFOUND error ([1ab1d81](https://github.com/relekang/micro-rss-parser/commit/1ab1d81))
+* Ugprade feedme ([df0b39b](https://github.com/relekang/micro-rss-parser/commit/df0b39b))
+* Upgrade rss-parser ([67e4fbc](https://github.com/relekang/micro-rss-parser/commit/67e4fbc))
+* Upgrade superagent ([fa8b977](https://github.com/relekang/micro-rss-parser/commit/fa8b977))
+
+
+
 <a name="1.3.1"></a>
 ## [1.3.1](https://github.com/relekang/micro-rss-parser/compare/v1.3.0...v1.3.1) (2017-10-15)
 
