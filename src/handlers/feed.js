@@ -9,16 +9,15 @@ async function parse (parser, text) {
   return transform(parsed)
 }
 
-
 module.exports = async function parseFromQuery ({ url, parser }) {
-  let content;
+  let content
   try {
     content = await request(url)
-  } catch(error) {
-    if (error.code === "ENOTFOUND") {
+  } catch (error) {
+    if (error.code === 'ENOTFOUND') {
       throw new ConnectionFailedError(url)
     }
-    throw error;
+    throw error
   }
 
   if (parser) {
