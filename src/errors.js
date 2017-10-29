@@ -43,6 +43,13 @@ class NotAFeedError extends ParserError {
   }
 }
 
+class ConnectionFailedError extends ParserError {
+  constructor (url) {
+    super('Could not connect', 404)
+    this.url = url
+  }
+}
+
 function createErrorFormatter (Raven) {
   return function formatError (error) {
     if (Raven) {
@@ -80,6 +87,7 @@ function createErrorFormatter (Raven) {
 }
 
 module.exports = {
+  ConnectionFailedError,
   EmptyHttpResponseError,
   EmptyParseOutputError,
   InvalidInputError,

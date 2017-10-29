@@ -1,7 +1,7 @@
 const parsers = require('../parsers')
 const transform = require('../transform')
 const request = require('../request')
-const { EmptyParseOutputError } = require('../errors')
+const { ConnectionFailedError, EmptyParseOutputError } = require('../errors')
 
 async function parse (parser, text) {
   const parsed = await parsers[parser](text)
@@ -9,8 +9,18 @@ async function parse (parser, text) {
   return transform(parsed)
 }
 
+
 module.exports = async function parseFromQuery ({ url, parser }) {
-  const content = await request(url)
+  let content;
+  try {
+    content = await request(url)
+  } catch(error) {
+    if (error.code === "ENOTFOUND") {
+      throw new ConnectionFailedError(url)
+    }
+    throw error;
+  }
+
   if (parser) {
     return parse(parser, content)
   } else {
