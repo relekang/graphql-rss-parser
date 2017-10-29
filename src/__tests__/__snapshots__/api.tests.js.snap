@@ -9,7 +9,7 @@ Object {
   },
   "errors": Array [
     Object {
-      "message": "getaddrinfo ENOTFOUND non-existing-domain.com non-existing-domain.com:443",
+      "message": "ConnectionFailedError",
       "stack": null,
     },
   ],
