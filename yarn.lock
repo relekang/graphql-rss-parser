@@ -1405,9 +1405,9 @@ event-stream@~3.3.0:
     stream-combiner "~0.0.4"
     through "~2.3.1"
 
-eventyoshi@^0.1.4:
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/eventyoshi/-/eventyoshi-0.1.8.tgz#db6c2542fe13b5e6c0e0eb474910c48c6d4c5e22"
+eventyoshi@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/eventyoshi/-/eventyoshi-0.2.0.tgz#4ec78f356fba34d69b8509eb598b57bc25ef8b86"
 
 exec-sh@^0.2.0:
   version "0.2.0"
@@ -1487,12 +1487,12 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "^2.0.0"
 
-feedme@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/feedme/-/feedme-1.0.1.tgz#05723ec2f573fe4dd7dbe499b35d9d93506efd25"
+feedme@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/feedme/-/feedme-1.1.0.tgz#0fc8ade7a702802b6515c6a3990f2f7a2ec66abd"
   dependencies:
     clarinet "^0.11.0"
-    eventyoshi "^0.1.4"
+    eventyoshi "^0.2.0"
     sax "^1.0.0"
 
 feedparser@^1.1.0:
