@@ -45,6 +45,11 @@ Object {
     "feed": Object {
       "entries": Array [
         Object {
+          "link": "http://rolflekang.com/testing-simple-graphql-services",
+          "pubDate": "2017-05-28T00:00:00.000Z",
+          "title": "Testing simple GraphQL services",
+        },
+        Object {
           "link": "http://rolflekang.com/lets-run-some-races",
           "pubDate": "2017-01-02T00:00:00.000Z",
           "title": "Let's run some races this year",

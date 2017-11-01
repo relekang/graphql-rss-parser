@@ -9,7 +9,7 @@ async function mockRequest (url) {
   const path = resolve(__dirname, '../../__fixtures__', url.replace(/https?:\/\//, '').replace(/\//g, '_'))
   let content
   try {
-    content = (await fs.readFileAsync(path)).toString()
+    content = JSON.parse((await fs.readFileAsync(path)).toString())
   } catch (error) {
     if (process.env.DEBUG_MOCKS) console.log(error)
   }
@@ -19,8 +19,8 @@ async function mockRequest (url) {
     if (!response.text) throw new EmptyHttpResponseError()
     if (response.notFound) throw new NotFoundError(url)
 
-    content = response.text
-    await fs.writeFileAsync(path, content)
+    content = {text: response.text, status: response.status, contentType: response.headers["content-type"]} 
+    await fs.writeFileAsync(path, JSON.stringify(content, null, 2))
   }
 
   return content

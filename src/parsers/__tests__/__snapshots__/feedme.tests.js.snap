@@ -23,6 +23,13 @@ Object {
   "entries": Array [
     Object {
       "description": "",
+      "guid": "http://rolflekang.com/testing-simple-graphql-services",
+      "link": "http://rolflekang.com/testing-simple-graphql-services",
+      "pubDate": "2017-05-28T00:00:00.000Z",
+      "title": "Testing simple GraphQL services",
+    },
+    Object {
+      "description": "",
       "guid": "http://rolflekang.com/lets-run-some-races",
       "link": "http://rolflekang.com/lets-run-some-races",
       "pubDate": "2017-01-02T00:00:00.000Z",

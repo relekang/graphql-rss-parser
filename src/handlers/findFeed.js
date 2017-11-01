@@ -13,7 +13,7 @@ module.exports = async function findFeed ({ url }) {
     return []
   }
 
-  const dom = cheerio.load(response)
+  const dom = cheerio.load(response.text)
   const $linkTags = dom('link[rel="alternate"][type="application/rss+xml"]')
     .add('link[rel="alternate"][type="application/atom+xml"]')
 

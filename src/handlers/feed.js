@@ -12,7 +12,7 @@ async function parse (parser, text) {
 module.exports = async function parseFromQuery ({ url, parser }) {
   let content
   try {
-    content = await request(url)
+    content = (await request(url)).text
   } catch (error) {
     if (error.code === 'ENOTFOUND') {
       throw new ConnectionFailedError(url)

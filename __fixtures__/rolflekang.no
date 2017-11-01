@@ -1,43 +1,5 @@
-<!DOCTYPE html>
-<html>
-
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script type="text/javascript">
-//<![CDATA[
-try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"ae7078668a4f9bb5a98bb11526923cf2",petok:"93f846a7b46a7bdcde05df6768078d9e9f98c2e0-1494752553-1800",zone:"rolflekang.no",rocket:"0",apps:{"abetterbrowser":{"ie":"7"}}}];!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=85b614c0f6/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()}}catch(e){};
-//]]>
-</script>
-<link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
-
-    <title>Rolf Erik Lekang</title>
-    <meta name="description" content="I am a Computer Science student at Norwegian University of Science and Technology.">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://rolflekang.no/">
-  </head>
-  <body>
-    <div class="bg" style="background-image: url(https://unsplash.imgix.net/uploads%2F14115408840644deb16b0%2F2dc933e3?q=75&fm=jpg&auto=format&s=7f43646e4d26049c6c39890afb2e5ced);"></div>
-    <div class="jumbotron">
-  <div class="container">
-    <h1>Rolf Erik Lekang</h1>
-    <ul class="meta-list">
-      
-      <li><a href="/cdn-cgi/l/email-protection#533e3613213c3f353f3638323d347d303c3e"><i class="fa fa-2x fa-fw fa-envelope-o"></i></a></li>
-      
-      <li><a href="https://github.com/relekang"><i class="fa fa-2x fa-fw fa-github"></i></a></li>
-      
-      <li><a href="https://twitter.com/relekang"><i class="fa fa-2x fa-fw fa-twitter"></i></a></li>
-      
-      <li><a href="https://www.linkedin.com/in/rolflekang/"><i class="fa fa-2x fa-fw fa-linkedin"></i></a></li>
-      
-      <li><a href="http://rolflekang.com"><i class="fa fa-2x fa-fw fa-pencil"></i></a></li>
-      
-    </ul>
-  </div>
-</div>
-
-  <script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
-</html>
+{
+  "text": "<!DOCTYPE html>\n<html>\n\n  <head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width initial-scale=1\" />\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <script src=\"/cdn-cgi/apps/head/7mYfbjpOHh3bVcEzdnkGSooSyZI.js\"></script><link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>\n\n    <title>Rolf Erik Lekang</title>\n    <meta name=\"description\" content=\"I am a Computer Science student at Norwegian University of Science and Technology.\">\n    <link href=\"//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css\" rel=\"stylesheet\">\n    <link rel=\"stylesheet\" href=\"/css/main.css\">\n    <link rel=\"canonical\" href=\"http://rolflekang.no/\">\n  </head>\n  <body>\n    <div class=\"bg\" style=\"background-image: url(https://unsplash.imgix.net/uploads%2F14115408840644deb16b0%2F2dc933e3?q=75&fm=jpg&auto=format&s=7f43646e4d26049c6c39890afb2e5ced);\"></div>\n    <div class=\"jumbotron\">\n  <div class=\"container\">\n    <h1>Rolf Erik Lekang</h1>\n    <ul class=\"meta-list\">\n      \n      <li><a href=\"/cdn-cgi/l/email-protection#45282005372a292329202e242b226b262a28\"><i class=\"fa fa-2x fa-fw fa-envelope-o\"></i></a></li>\n      \n      <li><a href=\"https://github.com/relekang\"><i class=\"fa fa-2x fa-fw fa-github\"></i></a></li>\n      \n      <li><a href=\"https://twitter.com/relekang\"><i class=\"fa fa-2x fa-fw fa-twitter\"></i></a></li>\n      \n      <li><a href=\"https://www.linkedin.com/in/rolflekang/\"><i class=\"fa fa-2x fa-fw fa-linkedin\"></i></a></li>\n      \n      <li><a href=\"http://rolflekang.com\"><i class=\"fa fa-2x fa-fw fa-pencil\"></i></a></li>\n      \n    </ul>\n  </div>\n</div>\n\n  <script src=\"/cdn-cgi/scripts/78d64697/cloudflare-static/email-decode.min.js\"></script></body>\n</html>\n",
+  "status": 200,
+  "contentType": "text/html; charset=utf-8"
+}

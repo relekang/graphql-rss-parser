@@ -27,6 +27,15 @@ Object {
     Object {
       "content": "",
       "contentSnippet": "",
+      "guid": "http://rolflekang.com/testing-simple-graphql-services",
+      "isoDate": "2017-05-28T00:00:00.000Z",
+      "link": "http://rolflekang.com/testing-simple-graphql-services",
+      "pubDate": "2017-05-28T00:00:00.000Z",
+      "title": "Testing simple GraphQL services",
+    },
+    Object {
+      "content": "",
+      "contentSnippet": "",
       "guid": "http://rolflekang.com/lets-run-some-races",
       "isoDate": "2017-01-02T00:00:00.000Z",
       "link": "http://rolflekang.com/lets-run-some-races",

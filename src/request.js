@@ -8,5 +8,5 @@ module.exports = async function request (url) {
   if (!response.text) throw new EmptyHttpResponseError()
   if (response.notFound) throw new NotFoundError(url)
 
-  return response.text
+  return {text: response.text, status: response.status, contentType: response.headers["content-type"]}
 }

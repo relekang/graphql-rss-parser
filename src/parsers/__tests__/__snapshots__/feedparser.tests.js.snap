@@ -134,7 +134,7 @@ Object {
     },
   },
   "atom:updated": Object {
-    "#": "2017-05-13T08:04:56.580-07:00",
+    "#": "2017-10-28T12:47:10.983-07:00",
     "@": Object {},
   },
   "author": "Brett Wiltshire",
@@ -144,7 +144,7 @@ Object {
     "type": "hub",
   },
   "copyright": null,
-  "date": 2017-05-13T15:04:56.580Z,
+  "date": 2017-10-28T19:47:10.983Z,
   "description": null,
   "entries": Array [
     Object {
@@ -285,8 +285,8 @@ Object {
     "@": Object {},
   },
   "parser": "FEEDPARSER",
-  "pubDate": 2017-05-13T15:04:56.580Z,
-  "pubdate": 2017-05-13T15:04:56.580Z,
+  "pubDate": 2017-10-28T19:47:10.983Z,
+  "pubdate": 2017-10-28T19:47:10.983Z,
   "title": "Google on BlogSpot",
   "xmlUrl": "http://www.blogger.com/feeds/2120328063286836889/posts/default",
   "xmlurl": "http://www.blogger.com/feeds/2120328063286836889/posts/default",
@@ -322,6 +322,46 @@ Object {
   "date": null,
   "description": null,
   "entries": Array [
+    Object {
+      "author": null,
+      "categories": Array [],
+      "comments": null,
+      "date": 2017-05-28T00:00:00.000Z,
+      "description": null,
+      "enclosures": Array [],
+      "guid": "http://rolflekang.com/testing-simple-graphql-services",
+      "image": Object {},
+      "link": "http://rolflekang.com/testing-simple-graphql-services",
+      "origlink": null,
+      "permalink": "http://rolflekang.com/testing-simple-graphql-services",
+      "pubDate": "2017-05-28T00:00:00.000Z",
+      "pubdate": 2017-05-28T00:00:00.000Z,
+      "rss:@": Object {},
+      "rss:description": Object {
+        "@": Object {},
+      },
+      "rss:guid": Object {
+        "#": "http://rolflekang.com/testing-simple-graphql-services",
+        "@": Object {
+          "ispermalink": "true",
+        },
+      },
+      "rss:link": Object {
+        "#": "http://rolflekang.com/testing-simple-graphql-services",
+        "@": Object {},
+      },
+      "rss:pubdate": Object {
+        "#": "Sun, 28 May 2017 00:00:00 GMT",
+        "@": Object {},
+      },
+      "rss:title": Object {
+        "#": "Testing simple GraphQL services",
+        "@": Object {},
+      },
+      "source": Object {},
+      "summary": null,
+      "title": "Testing simple GraphQL services",
+    },
     Object {
       "author": null,
       "categories": Array [],
