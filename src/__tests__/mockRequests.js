@@ -19,7 +19,11 @@ async function mockRequest (url) {
     if (!response.text) throw new EmptyHttpResponseError()
     if (response.notFound) throw new NotFoundError(url)
 
-    content = {text: response.text, status: response.status, contentType: response.headers["content-type"]} 
+    content = {
+      text: response.text,
+      status: response.status,
+      contentType: response.headers['content-type']
+    }
     await fs.writeFileAsync(path, JSON.stringify(content, null, 2))
   }
 
