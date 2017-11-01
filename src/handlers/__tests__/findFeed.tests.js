@@ -9,6 +9,18 @@ test('findFeed should return feedUrl from any website which have a link to his r
   expect(feedUrls).toEqual([{link: 'https://rolflekang.com/feed.xml'}])
 })
 
+test('findFeed should work with feeds', async () => {
+  const feedUrls = await findFeed({url: 'https://rolflekang.com//feed.xml'})
+
+  expect(feedUrls).toEqual([{link: 'https://rolflekang.com/feed.xml'}])
+})
+
+test('findFeed should work with double slashes', async () => {
+  const feedUrls = await findFeed({url: 'https://rolflekang.com//feed.xml'})
+
+  expect(feedUrls).toEqual([{link: 'https://rolflekang.com/feed.xml'}])
+})
+
 test('findFeed should return full link to feed', async () => {
   const feedUrls = await findFeed({url: 'https://xkcd.com'})
 

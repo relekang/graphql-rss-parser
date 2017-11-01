@@ -4,13 +4,18 @@ const normalizeUrl = require('normalize-url')
 const request = require('../request')
 
 module.exports = async function findFeed ({ url }) {
+  const normalizedUrl = normalizeUrl(url)
   let response = null
 
   try {
-    response = await request(url)
+    response = await request(normalizedUrl)
   } catch (error) {
     console.log(error)
     return []
+  }
+
+  if(/application\/(rss|atom)/.test(response.contentType)) {
+    return [{link: normalizedUrl}]
   }
 
   const dom = cheerio.load(response.text)
