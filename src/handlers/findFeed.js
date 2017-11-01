@@ -3,8 +3,10 @@ const normalizeUrl = require('normalize-url')
 
 const request = require('../request')
 
+const normalizeOptions = {removeTrailingSlash: false}
+
 module.exports = async function findFeed ({ url }) {
-  const normalizedUrl = normalizeUrl(url)
+  const normalizedUrl = normalizeUrl(url, normalizeOptions)
   let response = null
 
   try {
@@ -23,7 +25,7 @@ module.exports = async function findFeed ({ url }) {
     .add('link[rel="alternate"][type="application/atom+xml"]')
 
   return $linkTags.map((index, $linkTag) => {
-    const link = normalizeUrl($linkTag.attribs.href)
+    const link = normalizeUrl($linkTag.attribs.href, normalizeOptions)
     return {
       link: /^\//.test(link) ? url + link : link
     }
