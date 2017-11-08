@@ -40,7 +40,7 @@
     "normalize-url": "^1.9.1",
     "raven": "^2.2.1",
     "rss-parser": "^2.10.8",
-    "superagent": "^3.8.0",
+    "superagent": "^3.8.1",
     "update-notifier": "^2.3.0"
   },
   "devDependencies": {
