@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.5.0"></a>
+# [1.5.0](https://github.com/relekang/micro-rss-parser/compare/v1.4.1...v1.5.0) (2017-11-08)
+
+
+### Bug Fixes
+
+* Add readme in fixture folder ([8865767](https://github.com/relekang/micro-rss-parser/commit/8865767))
+* Upgrade micro ([119721f](https://github.com/relekang/micro-rss-parser/commit/119721f))
+* Upgrade superagent ([083be46](https://github.com/relekang/micro-rss-parser/commit/083be46))
+
+
+### Features
+
+* Add title to findFeed result ([047c8fc](https://github.com/relekang/micro-rss-parser/commit/047c8fc))
+
+
+
 <a name="1.4.1"></a>
 ## [1.4.1](https://github.com/relekang/micro-rss-parser/compare/v1.4.0...v1.4.1) (2017-11-01)
 
