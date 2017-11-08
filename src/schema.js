@@ -39,8 +39,8 @@ const Schema = buildSchema(`
 `)
 
 const root = {
-  feed: (query) => feed(query),
-  findFeed: (query) => findFeed(query)
+  feed: query => feed(query),
+  findFeed: query => findFeed(query),
 }
 
 module.exports = { Schema, root }

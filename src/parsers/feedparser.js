@@ -3,7 +3,7 @@ const FeedParser = require('feedparser')
 
 const { ParserError, NotAFeedError } = require('../errors')
 
-module.exports = function parseString (feed) {
+module.exports = function parseString(feed) {
   return new Promise((resolve, reject) => {
     try {
       const feedparser = new FeedParser()
@@ -12,20 +12,27 @@ module.exports = function parseString (feed) {
       })
 
       let parsedFeed
-      feedparser.on('readable', function () {
+      feedparser.on('readable', function() {
         const meta = this.meta
         if (!parsedFeed) {
-          parsedFeed = Object.assign({}, meta, { entries: [], parser: 'FEEDPARSER' })
+          parsedFeed = Object.assign({}, meta, {
+            entries: [],
+            parser: 'FEEDPARSER',
+          })
         }
 
         let item
         while ((item = this.read())) {
           delete item.meta
-          parsedFeed.entries.push(Object.assign({}, item, {pubDate: new Date(item.pubDate).toISOString()}))
+          parsedFeed.entries.push(
+            Object.assign({}, item, {
+              pubDate: new Date(item.pubDate).toISOString(),
+            })
+          )
         }
       })
 
-      feedparser.on('end', function () {
+      feedparser.on('end', function() {
         resolve(parsedFeed)
       })
 
@@ -34,11 +41,9 @@ module.exports = function parseString (feed) {
       stream.push(feed)
       stream.push(null)
     } catch (error) {
-      console.log({error})
       reject(error)
     }
-  })
-  .catch(error => {
+  }).catch(error => {
     if (error.message === 'Not a feed') {
       throw new NotAFeedError(error)
     }

@@ -5,7 +5,7 @@ const request = require('superagent')
 
 const createHandler = require('../')
 
-function testGraphqlApi (strings, ...args) {
+function testGraphqlApi(strings, ...args) {
   const query = String.raw(strings, ...args)
   test(query, async () => {
     const service = micro(createHandler({}))
@@ -17,8 +17,8 @@ function testGraphqlApi (strings, ...args) {
         .post(url)
         .set('User-Agent', 'graphql-test')
         .set('Content-Type', 'application/json')
-        .send(JSON.stringify({ query: 'query TestQuery { ' + query + ' }' }))
-      ).body
+        .send(JSON.stringify({ query: 'query TestQuery { ' + query + ' }' })))
+        .body
     } catch (error) {
       if (!error.response) {
         throw error

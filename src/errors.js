@@ -1,7 +1,8 @@
-const development = !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
+const development =
+  !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
 
 class BaseError extends Error {
-  constructor (message, statusCode) {
+  constructor(message, statusCode) {
     super(message)
     this.name = this.constructor.name
     this.statusCode = statusCode || 500
@@ -18,70 +19,64 @@ class EmptyParseOutputError extends BaseError {}
 class EmptyHttpResponseError extends BaseError {}
 
 class InvalidInputError extends BaseError {
-  constructor (message, statusCode) {
+  constructor(message, statusCode) {
     super(message, statusCode || 400)
   }
 }
 
 class NotFoundError extends BaseError {
-  constructor (url) {
+  constructor(url) {
     super('Could not find feed', 404)
     this.url = url
   }
 }
 
 class ParserError extends BaseError {
-  constructor (cause, statusCode) {
+  constructor(cause, statusCode) {
     super(cause.message, statusCode)
     this.cause = cause
   }
 }
 
 class NotAFeedError extends ParserError {
-  constructor (cause, statusCode) {
+  constructor(cause, statusCode) {
     super(cause, statusCode || 400)
   }
 }
 
 class ConnectionFailedError extends ParserError {
-  constructor (url) {
+  constructor(url) {
     super('Could not connect', 404)
     this.url = url
   }
 }
 
-function createErrorFormatter (Raven) {
-  return function formatError (error) {
+function createErrorFormatter(Raven) {
+  return function formatError(error) {
     if (Raven) {
       if (error.path || error.name !== 'GraphQLError') {
-        Raven.captureException(
-          error,
-          {
-            tags: { graphql: 'error' },
-            extra: {
-              source: error.source && error.source.body,
-              positions: error.positions,
-              path: error.path
-            }
-          }
-        )
+        Raven.captureException(error, {
+          tags: { graphql: 'error' },
+          extra: {
+            source: error.source && error.source.body,
+            positions: error.positions,
+            path: error.path,
+          },
+        })
       } else {
-        Raven.captureMessage(
-          `GraphQLWrongQuery: ${error.message}`,
-          {
-            tags: { graphql: 'query' },
-            extra: {
-              source: error.source && error.source.body,
-              positions: error.positions
-            }
-          }
-        )
+        Raven.captureMessage(`GraphQLWrongQuery: ${error.message}`, {
+          tags: { graphql: 'query' },
+          extra: {
+            source: error.source && error.source.body,
+            positions: error.positions,
+          },
+        })
       }
     }
 
     return {
       message: error.message,
-      stack: development ? error.stack.split('\n') : null
+      stack: development ? error.stack.split('\n') : null,
     }
   }
 }
@@ -94,5 +89,5 @@ module.exports = {
   ParserError,
   NotAFeedError,
   NotFoundError,
-  createErrorFormatter
+  createErrorFormatter,
 }

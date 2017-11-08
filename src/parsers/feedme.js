@@ -5,14 +5,12 @@ const get = require('lodash/fp/get')
 
 const { ParserError } = require('../errors')
 
-const findHtmlLink = find({rel: 'alternate', type: 'text/html'})
-function evaluateLink (link) {
-  return Array.isArray(link)
-    ? get('href')(findHtmlLink(link))
-    : link
+const findHtmlLink = find({ rel: 'alternate', type: 'text/html' })
+function evaluateLink(link) {
+  return Array.isArray(link) ? get('href')(findHtmlLink(link)) : link
 }
 
-module.exports = function parseString (feed) {
+module.exports = function parseString(feed) {
   return new Promise((resolve, reject) => {
     try {
       const parser = new FeedMe()
@@ -20,13 +18,17 @@ module.exports = function parseString (feed) {
       const parsed = {
         parser: 'FEEDME',
         link: [],
-        entries: []
+        entries: [],
       }
 
-      parser.on('title', (title) => { parsed.title = title })
-      parser.on('description', (description) => { parsed.description = description })
+      parser.on('title', title => {
+        parsed.title = title
+      })
+      parser.on('description', description => {
+        parsed.description = description
+      })
 
-      parser.on('link', (link) => {
+      parser.on('link', link => {
         if (typeof link === 'string') {
           parsed.link = link
         } else {
@@ -34,23 +36,26 @@ module.exports = function parseString (feed) {
         }
       })
 
-      parser.on('item', (item) => {
+      parser.on('item', item => {
         try {
           let pubDate = item.pubdate || item.published
 
           try {
             pubDate = new Date(pubDate).toISOString()
           } catch (error) {
-            console.log(error)
+            // pubdata will be the broken date
           }
 
-          parsed.entries = [...parsed.entries, {
-            title: item.title,
-            link: evaluateLink(item.link),
-            guid: item.guid && item.guid.text,
-            description: item.description,
-            pubDate
-          }]
+          parsed.entries = [
+            ...parsed.entries,
+            {
+              title: item.title,
+              link: evaluateLink(item.link),
+              guid: item.guid && item.guid.text,
+              description: item.description,
+              pubDate,
+            },
+          ]
         } catch (error) {
           reject(new ParserError(error))
         }

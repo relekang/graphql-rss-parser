@@ -1,16 +1,21 @@
 /* eslint-env jest */
 const fs = require('fs-extra-promise')
-const {resolve} = require('path')
+const { resolve } = require('path')
 const request = require('superagent')
 
-const {EmptyHttpResponseError, NotFoundError} = require('../errors')
+const { EmptyHttpResponseError, NotFoundError } = require('../errors')
 
-async function mockRequest (url) {
-  const path = resolve(__dirname, '../../__fixtures__', url.replace(/https?:\/\//, '').replace(/\//g, '_'))
+async function mockRequest(url) {
+  const path = resolve(
+    __dirname,
+    '../../__fixtures__',
+    url.replace(/https?:\/\//, '').replace(/\//g, '_')
+  )
   let content
   try {
     content = JSON.parse((await fs.readFileAsync(path)).toString())
   } catch (error) {
+    // eslint-disable-next-line no-console
     if (process.env.DEBUG_MOCKS) console.log(error)
   }
   if (!content) {
@@ -22,7 +27,7 @@ async function mockRequest (url) {
     content = {
       text: response.text,
       status: response.status,
-      contentType: response.headers['content-type']
+      contentType: response.headers['content-type'],
     }
     await fs.writeFileAsync(path, JSON.stringify(content, null, 2))
   }

@@ -3,13 +3,13 @@ const transform = require('../transform')
 const request = require('../request')
 const { ConnectionFailedError, EmptyParseOutputError } = require('../errors')
 
-async function parse (parser, text) {
+async function parse(parser, text) {
   const parsed = await parsers[parser](text)
   if (!parsed) throw new EmptyParseOutputError()
   return transform(parsed)
 }
 
-module.exports = async function parseFromQuery ({ url, parser }) {
+module.exports = async function parseFromQuery({ url, parser }) {
   let content
   try {
     content = (await request(url)).text
