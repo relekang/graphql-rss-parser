@@ -11,6 +11,7 @@ const Schema = buildSchema(`
   }
 
   type FindFeedResult {
+    title: String
     link: String
   }
 

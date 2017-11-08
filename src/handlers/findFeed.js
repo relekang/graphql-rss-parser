@@ -1,6 +1,8 @@
 const cheerio = require('cheerio')
 const normalizeUrl = require('normalize-url')
 
+const parseFromQuery = require('./feed')
+
 const request = require('../request')
 
 const normalizeOptions = {removeTrailingSlash: false}
@@ -24,10 +26,13 @@ module.exports = async function findFeed ({ url }) {
   const $linkTags = dom('link[rel="alternate"][type="application/rss+xml"]')
     .add('link[rel="alternate"][type="application/atom+xml"]')
 
-  return $linkTags.map((index, $linkTag) => {
+  const urls = $linkTags.map((index, $linkTag) => {
     const link = normalizeUrl($linkTag.attribs.href, normalizeOptions)
-    return {
-      link: /^\//.test(link) ? url + link : link
-    }
+    return /^\//.test(link) ? url + link : link
   }).toArray()
+
+  return Promise.all(urls.map(async url => {
+    const {title} = await parseFromQuery({url});
+    return {title, link: url};
+  }))
 }

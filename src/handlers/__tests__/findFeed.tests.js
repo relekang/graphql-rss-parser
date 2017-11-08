@@ -3,35 +3,38 @@ require('../../__tests__/mockRequests')
 
 const findFeed = require('../findFeed')
 
-test('findFeed should return feedUrl from any website which have a link to his rss feed', async () => {
-  const feedUrls = await findFeed({url: 'https://rolflekang.com'})
+test('findFeed should return feedUrl from any website which have a link to its rss feed', async () => {
+  const feeds = await findFeed({url: 'https://rolflekang.com'})
 
-  expect(feedUrls).toEqual([{link: 'https://rolflekang.com/feed.xml'}])
+  expect(feeds).toEqual([{
+    link: 'https://rolflekang.com/feed.xml',
+    title: 'Writings of Rolf Erik Lekang'
+  }])
 })
 
 test('findFeed should work with feeds', async () => {
-  const feedUrls = await findFeed({url: 'https://rolflekang.com//feed.xml'})
+  const feeds = await findFeed({url: 'https://rolflekang.com//feed.xml'})
 
-  expect(feedUrls).toEqual([{link: 'https://rolflekang.com/feed.xml'}])
+  expect(feeds).toEqual([{link: 'https://rolflekang.com/feed.xml'}])
 })
 
 test('findFeed should work with double slashes', async () => {
-  const feedUrls = await findFeed({url: 'https://rolflekang.com//feed.xml'})
+  const feeds = await findFeed({url: 'https://rolflekang.com//feed.xml'})
 
-  expect(feedUrls).toEqual([{link: 'https://rolflekang.com/feed.xml'}])
+  expect(feeds).toEqual([{link: 'https://rolflekang.com/feed.xml'}])
 })
 
 test('findFeed should return full link to feed', async () => {
-  const feedUrls = await findFeed({url: 'https://xkcd.com'})
+  const feeds = await findFeed({url: 'https://xkcd.com'})
 
-  expect(feedUrls).toEqual([
-    {link: 'https://xkcd.com/atom.xml'},
-    {link: 'https://xkcd.com/rss.xml'}
+  expect(feeds).toEqual([
+    {link: 'https://xkcd.com/atom.xml', title: "xkcd.com"},
+    {link: 'https://xkcd.com/rss.xml', title: "xkcd.com"}
   ])
 })
 
 test('findFeed should return an empty array if website doesn\'t exist', async () => {
-  const feedUrls = await findFeed({url: 'https://rolflekang.no'})
+  const feeds = await findFeed({url: 'https://rolflekang.no'})
 
-  expect(feedUrls).toHaveLength(0)
+  expect(feeds).toHaveLength(0)
 })
