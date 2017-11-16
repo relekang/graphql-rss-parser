@@ -40,3 +40,11 @@ test("findFeed should return an empty array if website doesn't exist", async () 
 
   expect(feeds).toHaveLength(0)
 })
+
+test('findFeed should work with feedburner', async () => {
+  const feeds = await findFeed({
+    url: 'http://feeds.feedburner.com/zenhabits',
+  })
+
+  expect(feeds).toEqual([{ link: 'http://feeds.feedburner.com/zenhabits' }])
+})

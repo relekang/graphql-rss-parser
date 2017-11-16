@@ -17,7 +17,10 @@ module.exports = async function findFeed({ url }) {
     return []
   }
 
-  if (/application\/(rss|atom)/.test(response.contentType)) {
+  if (
+    /application\/(rss|atom)/.test(response.contentType) ||
+    /text\/xml/.test(response.contentType)
+  ) {
     return [{ link: normalizedUrl }]
   }
 
