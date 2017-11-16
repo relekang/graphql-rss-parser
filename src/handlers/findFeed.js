@@ -21,7 +21,8 @@ module.exports = async function findFeed({ url }) {
     /application\/(rss|atom)/.test(response.contentType) ||
     /text\/xml/.test(response.contentType)
   ) {
-    return [{ link: normalizedUrl }]
+    const { title } = await parseFromQuery({ url: normalizedUrl })
+    return [{ title, link: normalizedUrl }]
   }
 
   const dom = cheerio.load(response.text)
