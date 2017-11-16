@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.5.1"></a>
+## [1.5.1](https://github.com/relekang/micro-rss-parser/compare/v1.5.0...v1.5.1) (2017-11-16)
+
+
+### Bug Fixes
+
+* Add support for feeds with content-type text/xml ([f4c5a1d](https://github.com/relekang/micro-rss-parser/commit/f4c5a1d))
+* Add title to the case when same url is returned ([a7b89e0](https://github.com/relekang/micro-rss-parser/commit/a7b89e0))
+
+
+
 <a name="1.5.0"></a>
 # [1.5.0](https://github.com/relekang/micro-rss-parser/compare/v1.4.1...v1.5.0) (2017-11-08)
 
