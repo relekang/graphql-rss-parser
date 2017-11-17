@@ -37,10 +37,16 @@ module.exports = async function findFeed({ url }) {
     })
     .toArray()
 
-  return Promise.all(
+  return (await Promise.all(
     urls.map(async url => {
-      const { title } = await parseFromQuery({ url })
-      return { title, link: url }
+      try {
+        const { title } = await parseFromQuery({ url })
+        return { title, link: url }
+      } catch (error) {
+        if (process.env.NODE_ENV !== 'production') {
+          console.log(error) // eslint-disable-line no-console
+        }
+      }
     })
-  )
+  )).filter(item => item !== undefined && item !== null)
 }
