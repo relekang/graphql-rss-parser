@@ -32,8 +32,11 @@ module.exports = async function findFeed({ url }) {
 
   const urls = $linkTags
     .map((index, $linkTag) => {
-      const link = normalizeUrl($linkTag.attribs.href, normalizeOptions)
-      return /^\//.test(link) ? url + link : link
+      const link = $linkTag.attribs.href
+      return normalizeUrl(
+        /^\//.test(link) ? url + link : link,
+        normalizeOptions
+      )
     })
     .toArray()
 

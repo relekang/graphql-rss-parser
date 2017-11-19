@@ -45,6 +45,15 @@ test('findFeed should return full link to feed', async () => {
   ])
 })
 
+test('findFeed should not add double slash when building link', async () => {
+  const feeds = await findFeed({ url: 'https://xkcd.com/' })
+
+  expect(feeds).toEqual([
+    { link: 'https://xkcd.com/atom.xml', title: 'xkcd.com' },
+    { link: 'https://xkcd.com/rss.xml', title: 'xkcd.com' },
+  ])
+})
+
 test("findFeed should return an empty array if website doesn't exist", async () => {
   const feeds = await findFeed({ url: 'https://rolflekang.no' })
 
