@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.5.3"></a>
+## [1.5.3](https://github.com/relekang/micro-rss-parser/compare/v1.5.2...v1.5.3) (2017-11-19)
+
+
+### Bug Fixes
+
+* Move normalizing of url after all building of the url ([e2a0f23](https://github.com/relekang/micro-rss-parser/commit/e2a0f23))
+
+
+
 <a name="1.5.2"></a>
 ## [1.5.2](https://github.com/relekang/micro-rss-parser/compare/v1.5.1...v1.5.2) (2017-11-17)
 
