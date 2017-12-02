@@ -196,7 +196,7 @@ Object {
 `;
 
 exports[`
-  feed(url: "https://rolflekang.com/not-a-feed.xml") { title }
+  feed(url: "https://rolflekang.com/testing-simple-graphql-services") { title }
  1`] = `
 Object {
   "data": Object {
@@ -204,7 +204,7 @@ Object {
   },
   "errors": Array [
     Object {
-      "message": "Not Found",
+      "message": "Not a feed",
       "stack": null,
     },
   ],

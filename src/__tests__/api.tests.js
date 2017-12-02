@@ -33,7 +33,7 @@ testGraphqlApi`
 `
 
 testGraphqlApi`
-  feed(url: "https://rolflekang.com/not-a-feed.xml") { title }
+  feed(url: "https://rolflekang.com/testing-simple-graphql-services") { title }
 `
 
 testGraphqlApi`
