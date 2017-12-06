@@ -19,7 +19,7 @@ module.exports = async function findFeed({ url }) {
 
   if (
     /application\/(rss|atom)/.test(response.contentType) ||
-    /text\/xml/.test(response.contentType)
+    /(application|text)\/xml/.test(response.contentType)
   ) {
     const { title } = await parseFromQuery({ url: normalizedUrl })
     return [{ title, link: normalizedUrl }]
