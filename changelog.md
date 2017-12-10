@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.5.6"></a>
+## [1.5.6](https://github.com/relekang/micro-rss-parser/compare/v1.5.5...v1.5.6) (2017-12-10)
+
+
+### Bug Fixes
+
+* Add parser to ParserError ([feca909](https://github.com/relekang/micro-rss-parser/commit/feca909))
+* Make error handling use full parser list ([a224ec6](https://github.com/relekang/micro-rss-parser/commit/a224ec6))
+* Make rss-parser reject with NotAFeedError on syntax error ([5093a73](https://github.com/relekang/micro-rss-parser/commit/5093a73))
+* Remove feedme from list of parsers ([8044de7](https://github.com/relekang/micro-rss-parser/commit/8044de7))
+
+
+
 <a name="1.5.5"></a>
 ## [1.5.5](https://github.com/relekang/micro-rss-parser/compare/v1.5.4...v1.5.5) (2017-12-06)
 
