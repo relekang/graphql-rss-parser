@@ -57,7 +57,7 @@ module.exports = function parseString(feed) {
             },
           ]
         } catch (error) {
-          reject(new ParserError(error))
+          reject(new ParserError(error, 'FEEDME'))
         }
       })
 
@@ -67,7 +67,7 @@ module.exports = function parseString(feed) {
       })
 
       parser.on('error', error => {
-        reject(new ParserError(error))
+        reject(new ParserError(error, 'FEEDME'))
       })
 
       const stream = new Readable()

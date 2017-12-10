@@ -8,7 +8,7 @@ module.exports = function parseString(feed) {
     try {
       const feedparser = new FeedParser()
       feedparser.on('error', error => {
-        reject(new ParserError(error))
+        reject(new ParserError(error, 'FEEDPARSER'))
       })
 
       let parsedFeed
@@ -41,7 +41,7 @@ module.exports = function parseString(feed) {
       stream.push(feed)
       stream.push(null)
     } catch (error) {
-      reject(error)
+      reject(new ParserError(error, 'FEEDPARSER'))
     }
   }).catch(error => {
     if (error.message === 'Not a feed') {

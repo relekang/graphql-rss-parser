@@ -32,9 +32,10 @@ class NotFoundError extends BaseError {
 }
 
 class ParserError extends BaseError {
-  constructor(cause, statusCode) {
+  constructor(cause, parser, statusCode) {
     super(cause.message, statusCode)
     this.cause = cause
+    this.parser = parser
   }
 }
 
