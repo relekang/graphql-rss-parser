@@ -17,8 +17,7 @@ function testGraphqlApi(strings, ...args) {
         .post(url)
         .set('User-Agent', 'graphql-test')
         .set('Content-Type', 'application/json')
-        .send(JSON.stringify({ query: 'query TestQuery { ' + query + ' }' })))
-        .body
+        .send(JSON.stringify({ query: 'query TestQuery { ' + query + ' }' }))).body
     } catch (error) {
       if (!error.response) {
         throw error

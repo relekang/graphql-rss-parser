@@ -44,7 +44,7 @@ module.exports = function parseString(feed) {
       reject(new ParserError(error, 'FEEDPARSER'))
     }
   }).catch(error => {
-    if (error.message === 'Not a feed') {
+    if (error.message === 'Not a feed' || error.cause.message === 'Not a feed') {
       throw new NotAFeedError(error)
     }
     throw error

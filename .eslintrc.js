@@ -16,6 +16,7 @@ module.exports = {
       "trailingComma": "es5",
       "bracketSpacing": true,
       "semi": false,
+      "printWidth": 100,
     }]
   }
 }

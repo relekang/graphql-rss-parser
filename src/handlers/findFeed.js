@@ -26,17 +26,14 @@ module.exports = async function findFeed({ url }) {
   }
 
   const dom = cheerio.load(response.text)
-  const $linkTags = dom(
-    'link[rel="alternate"][type="application/rss+xml"]'
-  ).add('link[rel="alternate"][type="application/atom+xml"]')
+  const $linkTags = dom('link[rel="alternate"][type="application/rss+xml"]').add(
+    'link[rel="alternate"][type="application/atom+xml"]'
+  )
 
   const urls = $linkTags
     .map((index, $linkTag) => {
       const link = $linkTag.attribs.href
-      return normalizeUrl(
-        /^\//.test(link) ? url + link : link,
-        normalizeOptions
-      )
+      return normalizeUrl(/^\//.test(link) ? url + link : link, normalizeOptions)
     })
     .toArray()
 

@@ -1,5 +1,4 @@
-const development =
-  !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
+const development = !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
 
 class BaseError extends Error {
   constructor(message, statusCode) {

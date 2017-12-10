@@ -65,7 +65,5 @@ test('findFeed should work with feedburner', async () => {
     url: 'http://feeds.feedburner.com/zenhabits',
   })
 
-  expect(feeds).toEqual([
-    { title: 'zen habits', link: 'http://feeds.feedburner.com/zenhabits' },
-  ])
+  expect(feeds).toEqual([{ title: 'zen habits', link: 'http://feeds.feedburner.com/zenhabits' }])
 })
