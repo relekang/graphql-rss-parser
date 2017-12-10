@@ -33,14 +33,15 @@ testGraphqlApi`
 `
 
 testGraphqlApi`
+  feed(url: "${url}") { title, badField }
+`
+
+testGraphqlApi`
   feed(url: "https://rolflekang.com/testing-simple-graphql-services") { title }
 `
 
 testGraphqlApi`
   feed(url: "https://non-existing-domain.com") { title }
-`
-testGraphqlApi`
-  feed(url: "https://non-existing-domain.com") { title, badField }
 `
 
 testGraphqlApi`

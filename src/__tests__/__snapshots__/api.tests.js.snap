@@ -17,19 +17,6 @@ Object {
 `;
 
 exports[`
-  feed(url: "https://non-existing-domain.com") { title, badField }
- 1`] = `
-Object {
-  "errors": Array [
-    Object {
-      "message": "Cannot query field \\"badField\\" on type \\"Feed\\".",
-      "stack": null,
-    },
-  ],
-}
-`;
-
-exports[`
   feed(url: "https://rolflekang.com/feed.xml") {
     title
     link
@@ -156,6 +143,19 @@ Object {
       "title": "Writings of Rolf Erik Lekang",
     },
   },
+}
+`;
+
+exports[`
+  feed(url: "https://rolflekang.com/feed.xml") { title, badField }
+ 1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "message": "Cannot query field \\"badField\\" on type \\"Feed\\".",
+      "stack": null,
+    },
+  ],
 }
 `;
 
