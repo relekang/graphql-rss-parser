@@ -38,9 +38,9 @@ class ParserError extends BaseError {
   }
 }
 
-class NotAFeedError extends ParserError {
-  constructor(cause, statusCode) {
-    super(cause, statusCode || 400)
+class NotAFeedError extends BaseError {
+  constructor() {
+    super('Not a feed', 400)
   }
 }
 
