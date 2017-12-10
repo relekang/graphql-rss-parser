@@ -25,12 +25,12 @@ module.exports = async function parseFromQuery({ url, parser }) {
   } else {
     for (let i = 0; i < parsers.keys.length; i++) {
       try {
-        return parse(parsers.keys[i], content)
+        return await parse(parsers.keys[i], content)
       } catch (error) {
-        if (i !== parsers.keys.length - 1) {
-          throw error
+        if (i < parsers.keys.length - 1) {
+          continue
         }
-        continue
+        throw error
       }
     }
   }
