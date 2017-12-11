@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.5.7"></a>
+## [1.5.7](https://github.com/relekang/micro-rss-parser/compare/v1.5.6...v1.5.7) (2017-12-11)
+
+
+### Bug Fixes
+
+* Upgrade micro to 9.0.2 ([6efec1c](https://github.com/relekang/micro-rss-parser/commit/6efec1c))
+* Upgrade raven to 2.3.0 ([727b785](https://github.com/relekang/micro-rss-parser/commit/727b785))
+* Upgrade rss-parser to 2.11.0 ([130de3c](https://github.com/relekang/micro-rss-parser/commit/130de3c))
+* Upgrade superagent to 3.8.2 ([f4bddbe](https://github.com/relekang/micro-rss-parser/commit/f4bddbe))
+
+
+
 <a name="1.5.6"></a>
 ## [1.5.6](https://github.com/relekang/micro-rss-parser/compare/v1.5.5...v1.5.6) (2017-12-10)
 
