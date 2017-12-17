@@ -5,8 +5,6 @@ const { get, post, router } = require('microrouter')
 const { schema } = require('./schema')
 const { createErrorFormatter } = require('./errors')
 
-const production = process.env.NODE_ENV === 'production'
-
 module.exports = function createHandler(options) {
   let Raven
 
