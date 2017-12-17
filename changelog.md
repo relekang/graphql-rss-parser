@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.5.8"></a>
+## [1.5.8](https://github.com/relekang/micro-rss-parser/compare/v1.5.7...v1.5.8) (2017-12-17)
+
+
+### Bug Fixes
+
+* Add type to error response with name of exception ([40265b6](https://github.com/relekang/micro-rss-parser/commit/40265b6))
+* Make ConnectionFailed error extend BaseError ([6e210e3](https://github.com/relekang/micro-rss-parser/commit/6e210e3))
+* Use apollo server instead of graphql-express ([29e6419](https://github.com/relekang/micro-rss-parser/commit/29e6419))
+
+
+
 <a name="1.5.7"></a>
 ## [1.5.7](https://github.com/relekang/micro-rss-parser/compare/v1.5.6...v1.5.7) (2017-12-11)
 
