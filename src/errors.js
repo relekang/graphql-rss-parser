@@ -44,7 +44,7 @@ class NotAFeedError extends BaseError {
   }
 }
 
-class ConnectionFailedError extends ParserError {
+class ConnectionFailedError extends BaseError {
   constructor(url) {
     super('Could not connect', 404)
     this.url = url
