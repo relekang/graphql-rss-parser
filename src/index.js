@@ -1,6 +1,8 @@
-const graphqlHTTP = require('express-graphql')
+const { send } = require('micro')
+const { microGraphiql, microGraphql } = require('apollo-server-micro')
+const { get, post, router } = require('microrouter')
 
-const { Schema, root } = require('./schema')
+const { schema } = require('./schema')
 const { createErrorFormatter } = require('./errors')
 
 const production = process.env.NODE_ENV === 'production'
@@ -17,12 +19,13 @@ module.exports = function createHandler(options) {
   }
 
   const formatError = createErrorFormatter(Raven)
+  const graphqlHandler = microGraphql({ formatError, schema })
+  const graphiqlHandler = microGraphiql({ endpointURL: '/' })
 
-  return graphqlHTTP({
-    rootValue: root,
-    schema: Schema,
-    pretty: !production,
-    graphiql: !production,
-    formatError,
-  })
+  return router(
+    get('/', graphqlHandler),
+    post('/', graphqlHandler),
+    get('/i', graphiqlHandler),
+    (req, res) => send(res, 404, 'not found')
+  )
 }

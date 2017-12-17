@@ -1,9 +1,9 @@
-const { buildSchema } = require('graphql')
+const { makeExecutableSchema } = require('graphql-tools')
 
 const feed = require('./handlers/feed')
 const findFeed = require('./handlers/findFeed')
 
-const Schema = buildSchema(`
+const typeDefs = `
   enum Parser {
     FEEDPARSER
     RSS_PARSER
@@ -36,11 +36,18 @@ const Schema = buildSchema(`
     findFeed(url: String!): [FindFeedResult]
     feed(url: String!, parser: Parser): Feed
   }
-`)
+`
 
-const root = {
-  feed: query => feed(query),
-  findFeed: query => findFeed(query),
+const resolvers = {
+  Query: {
+    feed: (_, query) => feed(query),
+    findFeed: (_, query) => findFeed(query),
+  },
 }
 
-module.exports = { Schema, root }
+const schema = makeExecutableSchema({
+  typeDefs,
+  resolvers,
+})
+
+module.exports = { schema }
