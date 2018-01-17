@@ -41,7 +41,7 @@
     "node-feedparser": "^1.0.1",
     "normalize-url": "^2.0.0",
     "raven": "^2.3.0",
-    "rss-parser": "^2.11.0",
+    "rss-parser": "^3.0.0",
     "superagent": "^3.8.2",
     "update-notifier": "^2.3.0"
   },
