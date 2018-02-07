@@ -32,7 +32,7 @@
     "args": "^3.0.7",
     "cheerio": "^1.0.0-rc.2",
     "feedme": "^1.1.0",
-    "graphql": "^0.12.3",
+    "graphql": "^0.13.0",
     "graphql-tools": "^2.13.0",
     "is-url": "^1.2.2",
     "lodash-fp": "^0.10.4",
