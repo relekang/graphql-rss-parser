@@ -1,0 +1,18 @@
+{
+  "text": "<!DOCTYPE html>\n\n<html>\n<head>\n  <title>Rolf Erik Lekang</title>\n  <meta name=\"theme-color\" content=\"#e1f5a9\" />\n  <meta name=\"viewport\" content=\"width=device-width, user-scalable=no\" />\n  <script src=\"/cdn-cgi/apps/head/UfjZ8HAT0I7Fsvqp0rf-S7u-dA8.js\"></script><link\n    href=\"//fonts.googleapis.com/css?family=Merriweather:400,300,700\"\n    rel=\"stylesheet\"\n  />\n  <link href=\"/static/fonts/ss-social.css\" rel=\"stylesheet\" />\n  <link\n    rel=\"alternate\"\n    type=\"application/atom+xml\"\n    href=\"https://rolflekang.com/feed.xml\"\n  />\n</head>\n<body>\n  <div id=root></div>\n  <script src=\"/static/main.js\"></script>\n  <link\n    rel=\"stylesheet\"\n    href=\"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/github.min.css\"\n  />\n  \n  <script type=\"text/javascript\">\n  window.ga =\n  window.ga ||\n  function() {\n    (ga.q = ga.q || []).push(arguments);\n  };\nga.l = +new Date();\nga('create', 'UA-7442952-7', 'auto');\nga('require', 'eventTracker');\nga('require', 'outboundLinkTracker');\nga('require', 'urlChangeTracker');\nga('send', 'pageview');\n</script>\n  \n\n  <script async src=\"https://www.google-analytics.com/analytics.js\"></script>\n  <script async src=\"/static/ga/autotrack.js\"></script>\n</body>\n\n</html>\n",
+  "status": 200,
+  "contentType": "text/html; charset=utf-8",
+  "headers": {
+    "date": "Fri, 23 Feb 2018 21:59:28 GMT",
+    "content-type": "text/html; charset=utf-8",
+    "transfer-encoding": "chunked",
+    "connection": "close",
+    "set-cookie": [
+      "__cfduid=dc4b826cd2520508b7fab2dc8e2d475d41519423168; expires=Sat, 23-Feb-19 21:59:28 GMT; path=/; domain=.rolflekang.com; HttpOnly"
+    ],
+    "x-powered-by": "Express",
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+    "server": "cloudflare",
+    "cf-ray": "3f1d73d25b274279-OSL"
+  }
+}
