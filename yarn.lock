@@ -762,9 +762,9 @@ circular-json@^0.3.1:
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/circular-json/-/circular-json-0.3.3.tgz#815c99ea84f6809529d2f45791bdf82711352d66"
 
-clarinet@^0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/clarinet/-/clarinet-0.11.0.tgz#6cc912b93138dc867fc273cd34ea90e83e054719"
+clarinet@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/clarinet/-/clarinet-0.12.0.tgz#001d17e22124a62db1b174d9383420ffc933aeaf"
 
 class-utils@^0.3.5:
   version "0.3.6"
@@ -1615,11 +1615,11 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "^2.0.0"
 
-feedme@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/feedme/-/feedme-1.1.0.tgz#0fc8ade7a702802b6515c6a3990f2f7a2ec66abd"
+feedme@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/feedme/-/feedme-1.1.2.tgz#68798e10160ed70df1af0cbdf651c527c274632d"
   dependencies:
-    clarinet "^0.11.0"
+    clarinet "^0.12.0"
     eventyoshi "^0.2.0"
     sax "^1.0.0"
 
