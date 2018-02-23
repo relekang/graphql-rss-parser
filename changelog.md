@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.5.9"></a>
+## [1.5.9](https://github.com/relekang/micro-rss-parser/compare/v1.5.8...v1.5.9) (2018-02-23)
+
+
+### Bug Fixes
+
+* Accept rss-feeds with html content-type ([6900b5a](https://github.com/relekang/micro-rss-parser/commit/6900b5a))
+* **package:** update graphql to version 0.13.0 ([36aceef](https://github.com/relekang/micro-rss-parser/commit/36aceef))
+
+
+
 <a name="1.5.8"></a>
 ## [1.5.8](https://github.com/relekang/micro-rss-parser/compare/v1.5.7...v1.5.8) (2017-12-17)
 
