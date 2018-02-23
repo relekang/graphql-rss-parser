@@ -1,7 +1,7 @@
 const cheerio = require('cheerio')
 const normalizeUrl = require('normalize-url')
 
-const parseFromQuery = require('./feed')
+const { parseFromString, parseFromQuery } = require('./feed')
 
 const request = require('../request')
 
@@ -10,9 +10,11 @@ const normalizeOptions = { removeTrailingSlash: false }
 module.exports = async function findFeed({ url }) {
   const normalizedUrl = normalizeUrl(url, normalizeOptions)
   let response = null
+  let content
 
   try {
     response = await request(normalizedUrl)
+    content = response.text
   } catch (error) {
     return []
   }
@@ -21,7 +23,7 @@ module.exports = async function findFeed({ url }) {
     /application\/(rss|atom)/.test(response.contentType) ||
     /(application|text)\/xml/.test(response.contentType)
   ) {
-    const { title } = await parseFromQuery({ url: normalizedUrl })
+    const { title } = await parseFromString({ content })
     return [{ title, link: normalizedUrl }]
   }
 
@@ -29,7 +31,7 @@ module.exports = async function findFeed({ url }) {
 
   if (dom('rss')) {
     try {
-      const { title } = await parseFromQuery({ url: normalizedUrl })
+      const { title } = await parseFromString({ content })
       return [{ title, link: normalizedUrl }]
     } catch (error) {
       if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test') {

@@ -40,7 +40,7 @@ const typeDefs = `
 
 const resolvers = {
   Query: {
-    feed: (_, query) => feed(query),
+    feed: (_, query) => feed.parseFromQuery(query),
     findFeed: (_, query) => findFeed(query),
   },
 }

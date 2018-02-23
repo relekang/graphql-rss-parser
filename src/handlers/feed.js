@@ -9,17 +9,7 @@ async function parse(parser, text) {
   return transform(parsed)
 }
 
-module.exports = async function parseFromQuery({ url, parser }) {
-  let content
-  try {
-    content = (await request(url)).text
-  } catch (error) {
-    if (error.code === 'ENOTFOUND') {
-      throw new ConnectionFailedError(url)
-    }
-    throw error
-  }
-
+async function parseFromString({ content, parser }) {
   if (parser) {
     return parse(parser, content)
   } else {
@@ -35,3 +25,18 @@ module.exports = async function parseFromQuery({ url, parser }) {
     }
   }
 }
+
+async function parseFromQuery({ url, parser }) {
+  try {
+    const content = (await request(url)).text
+    console.log(content)
+    return parseFromString({ content, parser })
+  } catch (error) {
+    if (error.code === 'ENOTFOUND') {
+      throw new ConnectionFailedError(url)
+    }
+    console.log('....', error)
+    throw error
+  }
+}
+module.exports = { parseFromQuery, parseFromString }
