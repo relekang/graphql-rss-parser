@@ -4,7 +4,6 @@
   <a href="https://circleci.com/gh/relekang/micro-rss-parser/tree/master"><img src="https://circleci.com/gh/relekang/micro-rss-parser/tree/master.svg?style=svg" alt="CircleCI"></a>
   <a href="https://codecov.io/gh/relekang/micro-rss-parser"><img src="https://codecov.io/gh/relekang/micro-rss-parser/branch/master/graph/badge.svg" alt="codecov"></a>
   <a href="https://www.npmjs.com/package/micro-rss-parser"><img src="https://img.shields.io/npm/v/micro-rss-parser.svg" alt="npm version"></a>
-  <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
 </div>
 
 A [graphql][] microservice that parses rss feeds and returns a JSON representation of the
