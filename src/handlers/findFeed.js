@@ -16,6 +16,9 @@ module.exports = async function findFeed({ url }) {
     response = await request(normalizedUrl)
     content = response.text
   } catch (error) {
+    if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test') {
+      console.log(error) // eslint-disable-line no-console
+    }
     return []
   }
 
@@ -23,8 +26,14 @@ module.exports = async function findFeed({ url }) {
     /application\/(rss|atom)/.test(response.contentType) ||
     /(application|text)\/xml/.test(response.contentType)
   ) {
-    const { title } = await parseFromString({ content })
-    return [{ title, link: normalizedUrl }]
+    try {
+      const { title } = await parseFromString({ content })
+      return [{ title, link: normalizedUrl }]
+    } catch (error) {
+      if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test') {
+        console.log(error) // eslint-disable-line no-console
+      }
+    }
   }
 
   const dom = cheerio.load(response.text)
