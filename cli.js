@@ -20,6 +20,9 @@ const options = args
 
 options.version = pkg.version
 
+// eslint-disable-next-line no-console
+console.log('Starting micro-rss-parser v' + pkg.version)
+
 const server = micro(createHandler(options))
 
 server.listen(options.port)
