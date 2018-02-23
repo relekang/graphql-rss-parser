@@ -26,6 +26,18 @@ module.exports = async function findFeed({ url }) {
   }
 
   const dom = cheerio.load(response.text)
+
+  if (dom('rss')) {
+    try {
+      const { title } = await parseFromQuery({ url: normalizedUrl })
+      return [{ title, link: normalizedUrl }]
+    } catch (error) {
+      if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test') {
+        console.log(error) // eslint-disable-line no-console
+      }
+    }
+  }
+
   const $linkTags = dom('link[rel="alternate"][type="application/rss+xml"]').add(
     'link[rel="alternate"][type="application/atom+xml"]'
   )
@@ -43,7 +55,7 @@ module.exports = async function findFeed({ url }) {
         const { title } = await parseFromQuery({ url })
         return { title, link: url }
       } catch (error) {
-        if (process.env.NODE_ENV !== 'production') {
+        if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test') {
           console.log(error) // eslint-disable-line no-console
         }
       }

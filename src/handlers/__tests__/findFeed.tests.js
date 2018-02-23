@@ -36,6 +36,17 @@ test('findFeed should work with double slashes', async () => {
   ])
 })
 
+test('findFeed should work html response', async () => {
+  const feeds = await findFeed({ url: 'https://rolflekang.com/feed-html/' })
+
+  expect(feeds).toEqual([
+    {
+      link: 'https://rolflekang.com/feed-html/',
+      title: 'Writings of Rolf Erik Lekang',
+    },
+  ])
+})
+
 test('findFeed should return full link to feed', async () => {
   const feeds = await findFeed({ url: 'https://xkcd.com' })
 
