@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.5.12"></a>
+## [1.5.12](https://github.com/relekang/micro-rss-parser/compare/v1.5.11...v1.5.12) (2018-02-23)
+
+
+### Bug Fixes
+
+* Upgrade args ([8b5cbf0](https://github.com/relekang/micro-rss-parser/commit/8b5cbf0))
+* Upgrade feedme ([c554fb3](https://github.com/relekang/micro-rss-parser/commit/c554fb3))
+* Upgrade graphql-tools ([b8909e0](https://github.com/relekang/micro-rss-parser/commit/b8909e0))
+* Upgrade micro ([7d8bafc](https://github.com/relekang/micro-rss-parser/commit/7d8bafc))
+* Upgrade normalize-url ([d1cd23f](https://github.com/relekang/micro-rss-parser/commit/d1cd23f))
+* Upgrade raven ([0877246](https://github.com/relekang/micro-rss-parser/commit/0877246))
+* Upgrade rss-parser to 3.x ([0dffab6](https://github.com/relekang/micro-rss-parser/commit/0dffab6))
+
+
+
 <a name="1.5.11"></a>
 ## [1.5.11](https://github.com/relekang/micro-rss-parser/compare/v1.5.10...v1.5.11) (2018-02-23)
 
