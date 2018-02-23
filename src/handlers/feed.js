@@ -29,13 +29,11 @@ async function parseFromString({ content, parser }) {
 async function parseFromQuery({ url, parser }) {
   try {
     const content = (await request(url)).text
-    console.log(content)
     return parseFromString({ content, parser })
   } catch (error) {
     if (error.code === 'ENOTFOUND') {
       throw new ConnectionFailedError(url)
     }
-    console.log('....', error)
     throw error
   }
 }

@@ -1,6 +1,6 @@
 /* eslint-env jest */
 const micro = require('micro')
-const request = require('superagent')
+const axios = require('axios')
 
 const createHandler = require('../')
 
@@ -22,17 +22,21 @@ function testGraphqlApi(strings, ...args) {
     const { url, close } = await listen(service)
     let response
     try {
-      response = (await request
-        .post(url)
-        .set('User-Agent', 'graphql-test')
-        .set('Content-Type', 'application/json')
-        .send(JSON.stringify({ query: 'query TestQuery { ' + query + ' }' }))).body
+      response = (await axios({
+        url,
+        method: 'post',
+        headers: {
+          'User-Agent': 'graphql-test',
+          'Content-Type': 'application/json',
+        },
+        data: JSON.stringify({ query: 'query TestQuery { ' + query + ' }' }),
+      })).data
     } catch (error) {
       if (!error.response) {
         throw error
       }
 
-      response = error.response.body
+      response = error.response.data
     }
     close()
     expect(response).toMatchSnapshot()
