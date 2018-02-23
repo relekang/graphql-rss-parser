@@ -66,7 +66,7 @@ test('findFeed should not add double slash when building link', async () => {
 })
 
 test("findFeed should return an empty array if website doesn't exist", async () => {
-  const feeds = await findFeed({ url: 'https://rolflekang.no' })
+  const feeds = await findFeed({ url: 'https://q.rolflekang.no' })
 
   expect(feeds).toHaveLength(0)
 })

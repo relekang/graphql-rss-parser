@@ -7,8 +7,8 @@ const request = require('../request')
 
 const normalizeOptions = { removeTrailingSlash: false }
 
-module.exports = async function findFeed({ url }) {
-  const normalizedUrl = normalizeUrl(url, normalizeOptions)
+module.exports = async function findFeed({ url, normalize }) {
+  const normalizedUrl = normalize ? normalizeUrl(url, normalizeOptions) : url
   let response = null
   let content
 
@@ -60,7 +60,7 @@ module.exports = async function findFeed({ url }) {
     })
     .toArray()
 
-  return (await Promise.all(
+  const result = (await Promise.all(
     urls.map(async url => {
       try {
         const { title } = await parseFromQuery({ url })
@@ -72,4 +72,10 @@ module.exports = async function findFeed({ url }) {
       }
     })
   )).filter(item => item !== undefined && item !== null)
+
+  if (result.length === 0 && !normalize) {
+    return findFeed({ url, normalize: false })
+  }
+
+  return result
 }
