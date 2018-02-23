@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.5.10"></a>
+## [1.5.10](https://github.com/relekang/micro-rss-parser/compare/v1.5.9...v1.5.10) (2018-02-23)
+
+
+### Bug Fixes
+
+* Add more debug logging to findfeed ([5b500a6](https://github.com/relekang/micro-rss-parser/commit/5b500a6))
+* Change from superagent to axios ([4ca882d](https://github.com/relekang/micro-rss-parser/commit/4ca882d))
+
+
+### Performance Improvements
+
+* Remove unecessary duplicate requests for feeds ([87fed1e](https://github.com/relekang/micro-rss-parser/commit/87fed1e))
+
+
+
 <a name="1.5.9"></a>
 ## [1.5.9](https://github.com/relekang/micro-rss-parser/compare/v1.5.8...v1.5.9) (2018-02-23)
 
