@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.5.11"></a>
+## [1.5.11](https://github.com/relekang/micro-rss-parser/compare/v1.5.10...v1.5.11) (2018-02-23)
+
+
+### Bug Fixes
+
+* Add starting message ([e52a9ad](https://github.com/relekang/micro-rss-parser/commit/e52a9ad))
+* Throw correct exception with axios ([e65b1ee](https://github.com/relekang/micro-rss-parser/commit/e65b1ee))
+* Try without normalizing url if it fails in findFeed ([0239fcf](https://github.com/relekang/micro-rss-parser/commit/0239fcf))
+
+
+
 <a name="1.5.10"></a>
 ## [1.5.10](https://github.com/relekang/micro-rss-parser/compare/v1.5.9...v1.5.10) (2018-02-23)
 
