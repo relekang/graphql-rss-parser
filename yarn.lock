@@ -4121,9 +4121,9 @@ rimraf@2, rimraf@^2.2.8, rimraf@^2.5.1, rimraf@^2.5.4, rimraf@^2.6.1:
   dependencies:
     glob "^7.0.5"
 
-rss-parser@^2.11.0:
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/rss-parser/-/rss-parser-2.11.0.tgz#2641f5a628b61b61d575b09df4c284a5b7e87c2e"
+rss-parser@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/rss-parser/-/rss-parser-3.1.1.tgz#ded3c30544ce2c2694efc2240c05d76337f295a4"
   dependencies:
     entities "^1.1.1"
     xml2js "^0.4.17"

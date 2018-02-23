@@ -1,15 +1,17 @@
-const parser = require('rss-parser')
+const Parser = require('rss-parser')
 
 const { NotAFeedError, ParserError } = require('../errors')
 
+const parser = new Parser()
+
 function transform(parsed) {
   if (!parsed) return null
-  const entries = parsed.feed.entries.map(entry =>
+  const entries = parsed.items.map(entry =>
     Object.assign({}, entry, {
       pubDate: entry.isoDate,
     })
   )
-  return Object.assign({}, parsed.feed, { entries, parser: 'RSS_PARSER' })
+  return Object.assign({}, parsed, { entries, parser: 'RSS_PARSER' })
 }
 
 module.exports = function parseString(document, options) {
