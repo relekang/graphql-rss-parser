@@ -35,7 +35,7 @@
     "cheerio": "^1.0.0-rc.2",
     "feedme": "^1.1.2",
     "graphql": "^0.13.0",
-    "graphql-tools": "^2.21.0",
+    "graphql-tools": "^3.0.1",
     "is-url": "^1.2.2",
     "lodash-fp": "^0.10.4",
     "micro": "^9.1.0",
