@@ -34,7 +34,7 @@
     "axios": "^0.18.0",
     "cheerio": "^1.0.0-rc.2",
     "feedme": "^1.1.2",
-    "graphql": "^0.13.0",
+    "graphql": "^14.0.0-rc.1",
     "graphql-tools": "^2.21.0",
     "is-url": "^1.2.2",
     "lodash-fp": "^0.10.4",
