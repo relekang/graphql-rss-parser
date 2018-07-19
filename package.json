@@ -29,7 +29,7 @@
     "testRegex": "/__tests__/.*\\.tests\\.js$"
   },
   "dependencies": {
-    "apollo-server-micro": "^1.3.2",
+    "apollo-server-micro": "^2.0.0",
     "args": "^3.0.8",
     "axios": "^0.18.0",
     "cheerio": "^1.0.0-rc.2",
