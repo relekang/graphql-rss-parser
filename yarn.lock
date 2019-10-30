@@ -1615,9 +1615,10 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "^2.0.0"
 
-feedme@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/feedme/-/feedme-1.1.2.tgz#68798e10160ed70df1af0cbdf651c527c274632d"
+feedme@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/feedme/-/feedme-1.2.0.tgz#7049249c1b4ef5293e48906de8d9c8626ce0fd46"
+  integrity sha512-GNaewCsb6eWTgWqvxnGCYm6MkYrRSlXyqNhJRbdX7ku2Ubks3Vlg0cveea+gnK3mYh4pjfMQpzWpYyFl2RvILw==
   dependencies:
     clarinet "^0.12.0"
     eventyoshi "^0.2.0"
