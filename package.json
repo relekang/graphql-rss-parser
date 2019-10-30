@@ -36,7 +36,7 @@
     "feedme": "^1.2.0",
     "graphql": "^0.13.0",
     "graphql-tools": "^2.21.0",
-    "is-url": "^1.2.2",
+    "is-url": "^1.2.4",
     "lodash-fp": "^0.10.4",
     "micro": "^9.1.0",
     "microrouter": "^3.0.0",
