@@ -1,6 +1,4 @@
-const { send } = require('micro')
-const { microGraphiql, microGraphql } = require('apollo-server-micro')
-const { get, post, router } = require('microrouter')
+const { ApolloServer } = require('apollo-server-micro')
 
 const { schema } = require('./schema')
 const { createErrorFormatter } = require('./errors')
@@ -17,13 +15,7 @@ module.exports = function createHandler(options) {
   }
 
   const formatError = createErrorFormatter(Raven)
-  const graphqlHandler = microGraphql({ formatError, schema })
-  const graphiqlHandler = microGraphiql({ endpointURL: '/' })
+  const apolloServer = new ApolloServer({ schema, formatError })
 
-  return router(
-    get('/', graphqlHandler),
-    post('/', graphqlHandler),
-    get('/i', graphiqlHandler),
-    (req, res) => send(res, 404, 'not found')
-  )
+  return apolloServer.createHandler({ path: '/' })
 }

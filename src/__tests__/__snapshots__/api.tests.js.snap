@@ -10,7 +10,6 @@ Object {
   "errors": Array [
     Object {
       "message": "Could not connect",
-      "type": "ConnectionFailedError",
     },
   ],
 }
@@ -153,7 +152,6 @@ Object {
   "errors": Array [
     Object {
       "message": "Cannot query field \\"badField\\" on type \\"Feed\\".",
-      "type": "Cannot query field \\"badField\\" on type \\"Feed\\".",
     },
   ],
 }
@@ -205,7 +203,6 @@ Object {
   "errors": Array [
     Object {
       "message": "Not a feed",
-      "type": "NotAFeedError",
     },
   ],
 }
