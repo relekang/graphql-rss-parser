@@ -73,7 +73,7 @@ module.exports = async function findFeed({ url, normalize }) {
     })
   )).filter(item => item !== undefined && item !== null)
 
-  if (result.length === 0 && !normalize) {
+  if (result.length === 0 && normalize) {
     return findFeed({ url, normalize: false })
   }
 
