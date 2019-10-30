@@ -41,7 +41,7 @@
     "micro": "^9.3.4",
     "node-feedparser": "^1.0.1",
     "normalize-url": "^4.5.0",
-    "raven": "^2.4.1",
+    "raven": "^2.6.4",
     "rss-parser": "^3.7.3",
     "update-notifier": "^2.3.0"
   },
