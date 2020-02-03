@@ -77,14 +77,16 @@ function createErrorFormatter(Raven) {
     const response = {
       message: error.message,
     }
-    if (development) {
-      response.stack = error.stack.split('\n')
-    }
-    try {
-      response.type = error.stack.split('\n')[0].split(':')[0]
-    } catch (error) {
+    if (error.stack) {
       if (development) {
-        return error
+        response.stack = error.stack.split('\n')
+      }
+      try {
+        response.type = error.stack.split('\n')[0].split(':')[0]
+      } catch (error) {
+        if (development) {
+          return error
+        }
       }
     }
     return response
