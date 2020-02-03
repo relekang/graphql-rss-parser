@@ -42,7 +42,7 @@
     "node-feedparser": "^1.0.1",
     "normalize-url": "^4.5.0",
     "raven": "^2.6.4",
-    "rss-parser": "^3.7.3",
+    "rss-parser": "^3.7.4",
     "update-notifier": "^2.3.0"
   },
   "devDependencies": {
