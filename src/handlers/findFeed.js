@@ -60,18 +60,20 @@ module.exports = async function findFeed({ url, normalize }) {
     })
     .toArray()
 
-  const result = (await Promise.all(
-    urls.map(async url => {
-      try {
-        const { title } = await parseFromQuery({ url })
-        return { title, link: url }
-      } catch (error) {
-        if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test') {
-          console.log(error) // eslint-disable-line no-console
+  const result = (
+    await Promise.all(
+      urls.map(async url => {
+        try {
+          const { title } = await parseFromQuery({ url })
+          return { title, link: url }
+        } catch (error) {
+          if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test') {
+            console.log(error) // eslint-disable-line no-console
+          }
         }
-      }
-    })
-  )).filter(item => item !== undefined && item !== null)
+      })
+    )
+  ).filter(item => item !== undefined && item !== null)
 
   if (result.length === 0 && normalize) {
     return findFeed({ url, normalize: false })

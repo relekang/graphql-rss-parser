@@ -22,15 +22,17 @@ function testGraphqlApi(strings, ...args) {
     const { url, close } = await listen(service)
     let response
     try {
-      response = (await axios({
-        url,
-        method: 'post',
-        headers: {
-          'User-Agent': 'graphql-test',
-          'Content-Type': 'application/json',
-        },
-        data: JSON.stringify({ query: 'query TestQuery { ' + query + ' }' }),
-      })).data
+      response = (
+        await axios({
+          url,
+          method: 'post',
+          headers: {
+            'User-Agent': 'graphql-test',
+            'Content-Type': 'application/json',
+          },
+          data: JSON.stringify({ query: 'query TestQuery { ' + query + ' }' }),
+        })
+      ).data
     } catch (error) {
       if (!error.response) {
         throw error
