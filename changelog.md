@@ -1,6 +1,38 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [2.0.0](https://github.com/relekang/micro-rss-parser/compare/v1.5.12...v2.0.0) (2020-02-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* Require node 10
+* The old routes are replaced by having the graphql
+endpoint at "/".
+
+### Features
+
+* Upgrade apollo and move route to / ([b05acd4](https://github.com/relekang/micro-rss-parser/commit/b05acd45f3fdd426670f26b20b006e535e6b8ebc))
+
+
+### Bug Fixes
+
+* Make error handling more robust when missing stack ([3b16ede](https://github.com/relekang/micro-rss-parser/commit/3b16edeb2492ad41d61c98b446c252208d3ce67a))
+* Only retry feed if normalize is true ([31fe7c2](https://github.com/relekang/micro-rss-parser/commit/31fe7c2b576a2d2a0e6ee49925ea55e7f7f28c51))
+* Require node 10 ([c065b51](https://github.com/relekang/micro-rss-parser/commit/c065b51bcaa975f741e27624c65cc36516642622))
+* Upgrade apollo-server-micro ([9a86993](https://github.com/relekang/micro-rss-parser/commit/9a869932f5867b502758bb4e4c61c31384a13a4d))
+* Upgrade axios ([ac99cbd](https://github.com/relekang/micro-rss-parser/commit/ac99cbdd5ad5d6ccf29a529ea2de6a65fbf9c1aa))
+* Upgrade axios ([a160af2](https://github.com/relekang/micro-rss-parser/commit/a160af2826379d18c646e3f7dfd97eccb9e3fd0c))
+* Upgrade cheerio ([29a2bb7](https://github.com/relekang/micro-rss-parser/commit/29a2bb7e39f78adfa6861a355a260de929019e17))
+* Upgrade feedme ([c84ab0d](https://github.com/relekang/micro-rss-parser/commit/c84ab0d74661072abc69f6c5ef5dec23dc029fd7))
+* Upgrade graphql ([19b87be](https://github.com/relekang/micro-rss-parser/commit/19b87be2e85f6478394ec0b6a42986973dd9ca45))
+* Upgrade is-url ([cd51794](https://github.com/relekang/micro-rss-parser/commit/cd5179485d2b4c56deac75165e699e0b8d91ad63))
+* Upgrade micro ([9141174](https://github.com/relekang/micro-rss-parser/commit/9141174b62e875dbbc748600caab5d2cafcfe217))
+* Upgrade normalize-url ([f41b2a4](https://github.com/relekang/micro-rss-parser/commit/f41b2a4db02ad2945605c273249547f956e5cf2e))
+* Upgrade raven ([a2aaf73](https://github.com/relekang/micro-rss-parser/commit/a2aaf73c132ba77ea68c249da0317922b0c68fdd))
+* Upgrade rss-parser ([936c927](https://github.com/relekang/micro-rss-parser/commit/936c927af038cde4a8cb1dfdae3c96c018fce5ac))
+* Upgrade rss-parser package ([5761e3d](https://github.com/relekang/micro-rss-parser/commit/5761e3dd6c4dc2654a0c7cbd94caa4d7b78aa137))
 
 <a name="1.5.12"></a>
 ## [1.5.12](https://github.com/relekang/micro-rss-parser/compare/v1.5.11...v1.5.12) (2018-02-23)
