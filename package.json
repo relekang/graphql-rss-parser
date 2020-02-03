@@ -10,7 +10,7 @@
     "start": "./cli.js",
     "dev": "nodemon ./cli.js",
     "test": "jest",
-    "lint": "eslint .",
+    "lint": "eslint src *.js",
     "release": "standard-version -i changelog.md -m '%s'"
   },
   "repository": {
@@ -46,14 +46,14 @@
     "update-notifier": "^2.3.0"
   },
   "devDependencies": {
-    "eslint": "^4.18.1",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-prettier": "^2.6.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
     "fs-extra-promise": "^1.0.1",
-    "jest": "^22.4.2",
-    "nock": "^9.1.9",
-    "nodemon": "^1.15.1",
-    "prettier": "^1.10.2",
-    "standard-version": "^4.3.0"
+    "jest": "^25.1.0",
+    "nock": "^11.7.2",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "standard-version": "^7.1.0"
   }
 }
