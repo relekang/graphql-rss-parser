@@ -13,6 +13,7 @@ function transform(parsed) {
       },
       entry,
       {
+        author: entry.author || entry['dc:creator'],
         pubDate: entry.isoDate,
       }
     )

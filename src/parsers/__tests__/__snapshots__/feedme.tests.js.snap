@@ -4,6 +4,7 @@ exports[`should parse string from google.blogspot.com/feeds/posts/default 1`] = 
 Object {
   "entries": Array [
     Object {
+      "author": "Brett Wiltshire",
       "categories": Array [],
       "description": undefined,
       "guid": undefined,
@@ -23,6 +24,7 @@ Object {
   "description": "",
   "entries": Array [
     Object {
+      "author": undefined,
       "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/testing-simple-graphql-services",
@@ -31,6 +33,7 @@ Object {
       "title": "Testing simple GraphQL services",
     },
     Object {
+      "author": undefined,
       "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/lets-run-some-races",
@@ -39,6 +42,7 @@ Object {
       "title": "Let's run some races this year",
     },
     Object {
+      "author": undefined,
       "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/software-development-on-an-ipad",
@@ -47,6 +51,7 @@ Object {
       "title": "Software development on an iPad",
     },
     Object {
+      "author": undefined,
       "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/filtering-lint-errors",
@@ -55,6 +60,7 @@ Object {
       "title": "Filtering lint errors",
     },
     Object {
+      "author": undefined,
       "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/interrail-summer",
@@ -63,6 +69,7 @@ Object {
       "title": "Interrail summer",
     },
     Object {
+      "author": undefined,
       "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/writing-latex-in-atom",
@@ -71,6 +78,7 @@ Object {
       "title": "Writing (latex) in Atom",
     },
     Object {
+      "author": undefined,
       "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/rmoq",
@@ -79,6 +87,7 @@ Object {
       "title": "rmoq - a request mock cache",
     },
     Object {
+      "author": undefined,
       "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/django-nopassword-one-point-o",
@@ -87,6 +96,7 @@ Object {
       "title": "django-nopassword reached 1.0",
     },
     Object {
+      "author": undefined,
       "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/moving-to-pelican",
@@ -95,6 +105,7 @@ Object {
       "title": "Moving the blog to pelican",
     },
     Object {
+      "author": undefined,
       "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/building-tumblr-theme-with-grunt",
@@ -103,6 +114,7 @@ Object {
       "title": "Building a Tumblr theme with GruntJS",
     },
     Object {
+      "author": undefined,
       "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/backup-routines-for-redisdb",
@@ -111,6 +123,7 @@ Object {
       "title": "Backup routine for Redis",
     },
     Object {
+      "author": undefined,
       "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/django-app-custom-user",
@@ -119,6 +132,7 @@ Object {
       "title": "Making your Django app ready for custom users",
     },
     Object {
+      "author": undefined,
       "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/stats-are-fun",
@@ -127,6 +141,7 @@ Object {
       "title": "Stats are fun",
     },
     Object {
+      "author": undefined,
       "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/alfred-scripts-for-jekyll",
@@ -135,6 +150,7 @@ Object {
       "title": "Alfred scripts for Jekyll",
     },
     Object {
+      "author": undefined,
       "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/use-array-in-postgresql-with-django",
@@ -143,6 +159,7 @@ Object {
       "title": "Use array in postgresql with django",
     },
     Object {
+      "author": undefined,
       "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/apply-puppet-configuration-automatically",
@@ -151,6 +168,7 @@ Object {
       "title": "Apply puppet automatically",
     },
     Object {
+      "author": undefined,
       "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/reading-wikipedia",
@@ -159,6 +177,7 @@ Object {
       "title": "Readable Wikipedia",
     },
     Object {
+      "author": undefined,
       "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/django-nopassword",
@@ -167,6 +186,7 @@ Object {
       "title": "django-nopassword",
     },
     Object {
+      "author": undefined,
       "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/the-github-lamp",

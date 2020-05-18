@@ -59,6 +59,7 @@ module.exports = function parseString(feed) {
               description: item.description,
               categories: item.categories || [],
               pubDate,
+              author: item.author ? item.author.name || item.author : item['dc:creator'],
             },
           ]
         } catch (error) {

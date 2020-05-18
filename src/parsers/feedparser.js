@@ -27,6 +27,7 @@ module.exports = function parseString(feed) {
           parsedFeed.entries.push(
             Object.assign({ categories: [] }, item, {
               pubDate: new Date(item.pubDate).toISOString(),
+              author: item.author || (item['dc:creator'] || {})['#'],
             })
           )
         }
