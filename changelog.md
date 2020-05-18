@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/relekang/micro-rss-parser/compare/v2.0.0...v2.1.0) (2020-05-18)
+
+
+### Features
+
+* Add support for categories ([9e99ec0](https://github.com/relekang/micro-rss-parser/commit/9e99ec0ad1b2ac5ea472a6938d6dd5e901a51f45))
+* Add support for entry author ([c8c3ff9](https://github.com/relekang/micro-rss-parser/commit/c8c3ff94de0c21d15c89fde386b54b9b0d171a0e))
+
+
+### Bug Fixes
+
+* Correctly set required in schema ([0a878d9](https://github.com/relekang/micro-rss-parser/commit/0a878d92fe3f78806dfc3dc7f44a30346e89e967))
+
 ## [2.0.0](https://github.com/relekang/micro-rss-parser/compare/v1.5.12...v2.0.0) (2020-02-03)
 
 
