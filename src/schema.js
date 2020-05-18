@@ -29,11 +29,11 @@ const typeDefs = `
     parser: Parser
     author: String
     guid: String
-    entries: [FeedItem]
+    entries: [FeedItem!]!
   }
 
   type Query {
-    findFeed(url: String!): [FindFeedResult]
+    findFeed(url: String!): [FindFeedResult]!
     feed(url: String!, parser: Parser): Feed
   }
 `

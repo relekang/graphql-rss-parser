@@ -29,7 +29,9 @@ async function parseFromString({ content, parser }) {
 async function parseFromQuery({ url, parser }) {
   try {
     const content = (await request(url)).text
-    return parseFromString({ content, parser })
+    const parsed = await parseFromString({ content, parser })
+    parsed.entries = parsed.entries.filter(item => item == null)
+    return await parseFromString({ content, parser })
   } catch (error) {
     if (error.code === 'ENOTFOUND') {
       throw new ConnectionFailedError(url)
