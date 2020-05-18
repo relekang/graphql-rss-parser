@@ -4,6 +4,7 @@ exports[`should parse string from google.blogspot.com/feeds/posts/default 1`] = 
 Object {
   "entries": Array [
     Object {
+      "categories": Array [],
       "description": undefined,
       "guid": undefined,
       "link": "http://google.blogspot.com/2011/04/google-to-acquire-blogger.html",
@@ -22,6 +23,7 @@ Object {
   "description": "",
   "entries": Array [
     Object {
+      "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/testing-simple-graphql-services",
       "link": "http://rolflekang.com/testing-simple-graphql-services",
@@ -29,6 +31,7 @@ Object {
       "title": "Testing simple GraphQL services",
     },
     Object {
+      "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/lets-run-some-races",
       "link": "http://rolflekang.com/lets-run-some-races",
@@ -36,6 +39,7 @@ Object {
       "title": "Let's run some races this year",
     },
     Object {
+      "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/software-development-on-an-ipad",
       "link": "http://rolflekang.com/software-development-on-an-ipad",
@@ -43,6 +47,7 @@ Object {
       "title": "Software development on an iPad",
     },
     Object {
+      "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/filtering-lint-errors",
       "link": "http://rolflekang.com/filtering-lint-errors",
@@ -50,6 +55,7 @@ Object {
       "title": "Filtering lint errors",
     },
     Object {
+      "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/interrail-summer",
       "link": "http://rolflekang.com/interrail-summer",
@@ -57,6 +63,7 @@ Object {
       "title": "Interrail summer",
     },
     Object {
+      "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/writing-latex-in-atom",
       "link": "http://rolflekang.com/writing-latex-in-atom",
@@ -64,6 +71,7 @@ Object {
       "title": "Writing (latex) in Atom",
     },
     Object {
+      "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/rmoq",
       "link": "http://rolflekang.com/rmoq",
@@ -71,6 +79,7 @@ Object {
       "title": "rmoq - a request mock cache",
     },
     Object {
+      "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/django-nopassword-one-point-o",
       "link": "http://rolflekang.com/django-nopassword-one-point-o",
@@ -78,6 +87,7 @@ Object {
       "title": "django-nopassword reached 1.0",
     },
     Object {
+      "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/moving-to-pelican",
       "link": "http://rolflekang.com/moving-to-pelican",
@@ -85,6 +95,7 @@ Object {
       "title": "Moving the blog to pelican",
     },
     Object {
+      "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/building-tumblr-theme-with-grunt",
       "link": "http://rolflekang.com/building-tumblr-theme-with-grunt",
@@ -92,6 +103,7 @@ Object {
       "title": "Building a Tumblr theme with GruntJS",
     },
     Object {
+      "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/backup-routines-for-redisdb",
       "link": "http://rolflekang.com/backup-routines-for-redisdb",
@@ -99,6 +111,7 @@ Object {
       "title": "Backup routine for Redis",
     },
     Object {
+      "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/django-app-custom-user",
       "link": "http://rolflekang.com/django-app-custom-user",
@@ -106,6 +119,7 @@ Object {
       "title": "Making your Django app ready for custom users",
     },
     Object {
+      "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/stats-are-fun",
       "link": "http://rolflekang.com/stats-are-fun",
@@ -113,6 +127,7 @@ Object {
       "title": "Stats are fun",
     },
     Object {
+      "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/alfred-scripts-for-jekyll",
       "link": "http://rolflekang.com/alfred-scripts-for-jekyll",
@@ -120,6 +135,7 @@ Object {
       "title": "Alfred scripts for Jekyll",
     },
     Object {
+      "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/use-array-in-postgresql-with-django",
       "link": "http://rolflekang.com/use-array-in-postgresql-with-django",
@@ -127,6 +143,7 @@ Object {
       "title": "Use array in postgresql with django",
     },
     Object {
+      "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/apply-puppet-configuration-automatically",
       "link": "http://rolflekang.com/apply-puppet-configuration-automatically",
@@ -134,6 +151,7 @@ Object {
       "title": "Apply puppet automatically",
     },
     Object {
+      "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/reading-wikipedia",
       "link": "http://rolflekang.com/reading-wikipedia",
@@ -141,6 +159,7 @@ Object {
       "title": "Readable Wikipedia",
     },
     Object {
+      "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/django-nopassword",
       "link": "http://rolflekang.com/django-nopassword",
@@ -148,6 +167,7 @@ Object {
       "title": "django-nopassword",
     },
     Object {
+      "categories": Array [],
       "description": "",
       "guid": "http://rolflekang.com/the-github-lamp",
       "link": "http://rolflekang.com/the-github-lamp",

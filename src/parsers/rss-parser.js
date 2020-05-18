@@ -7,9 +7,15 @@ const parser = new Parser()
 function transform(parsed) {
   if (!parsed) return null
   const entries = parsed.items.map(entry =>
-    Object.assign({}, entry, {
-      pubDate: entry.isoDate,
-    })
+    Object.assign(
+      {
+        categories: [],
+      },
+      entry,
+      {
+        pubDate: entry.isoDate,
+      }
+    )
   )
   return Object.assign({}, parsed, { entries, parser: 'RSS_PARSER' })
 }

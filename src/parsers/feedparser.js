@@ -25,7 +25,7 @@ module.exports = function parseString(feed) {
         while ((item = this.read())) {
           delete item.meta
           parsedFeed.entries.push(
-            Object.assign({}, item, {
+            Object.assign({ categories: [] }, item, {
               pubDate: new Date(item.pubDate).toISOString(),
             })
           )

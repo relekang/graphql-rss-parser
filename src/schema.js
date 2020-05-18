@@ -20,6 +20,7 @@ const typeDefs = `
     link: String
     pubDate: String
     guid: String
+    categories: [String!]!
   }
 
   type Feed {

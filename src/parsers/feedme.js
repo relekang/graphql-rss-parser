@@ -13,6 +13,10 @@ function evaluateLink(link) {
 module.exports = function parseString(feed) {
   return new Promise((resolve, reject) => {
     try {
+      if (feed.includes('medium.com')) {
+        throw new Error('Failed to parse')
+      }
+
       const parser = new FeedMe()
 
       const parsed = {
@@ -53,6 +57,7 @@ module.exports = function parseString(feed) {
               link: evaluateLink(item.link),
               guid: item.guid && item.guid.text,
               description: item.description,
+              categories: item.categories || [],
               pubDate,
             },
           ]
