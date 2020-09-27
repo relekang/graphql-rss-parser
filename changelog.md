@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.3](https://github.com/relekang/micro-rss-parser/compare/v2.1.2...v2.1.3) (2020-09-27)
+
+
+### Bug Fixes
+
+* Upgrade axios to 0.20.0 ([770e7e7](https://github.com/relekang/micro-rss-parser/commit/770e7e77c8b771d6280cddce646972386260a1c6))
+* Upgrade graphql dependencies ([0ffe768](https://github.com/relekang/micro-rss-parser/commit/0ffe768ab82723a6e2e7a4e09960895d54d32859))
+
 ### [2.1.2](https://github.com/relekang/micro-rss-parser/compare/v2.1.1...v2.1.2) (2020-09-27)
 
 
