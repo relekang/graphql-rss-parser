@@ -32,13 +32,13 @@
     "testRegex": "/__tests__/.*\\.tests\\.js$"
   },
   "dependencies": {
-    "apollo-server-micro": "^2.9.16",
+    "apollo-server-micro": "^2.18.1",
     "args": "^3.0.8",
     "axios": "^0.20.0",
     "cheerio": "^1.0.0-rc.3",
     "feedme": "^1.2.0",
-    "graphql": "^14.6.0",
-    "graphql-tools": "^4.0.6",
+    "graphql": "^15.3.0",
+    "graphql-tools": "^6.2.3",
     "is-url": "^1.2.4",
     "lodash-fp": "^0.10.4",
     "micro": "^9.3.4",
