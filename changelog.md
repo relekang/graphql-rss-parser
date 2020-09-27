@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.1](https://github.com/relekang/micro-rss-parser/compare/v2.1.0...v2.1.1) (2020-09-27)
+
+
+### Bug Fixes
+
+* Make rss-parser work with CET and CEST dates without parenthesis ([e787392](https://github.com/relekang/micro-rss-parser/commit/e787392a17ab346cf6663e56f1f8ba361e2346b9))
+* Return error on empty url in findFeed ([8d5ac1a](https://github.com/relekang/micro-rss-parser/commit/8d5ac1a73925e78d69d5574ff170178e2f82b11b))
+
 ## [2.1.0](https://github.com/relekang/micro-rss-parser/compare/v2.0.0...v2.1.0) (2020-05-18)
 
 
