@@ -12,6 +12,10 @@ module.exports = async function findFeed({ url, normalize }) {
   let response = null
   let content
 
+  if (!normalizedUrl) {
+    throw new Error('Empty url is not allowed')
+  }
+
   try {
     response = await request(normalizedUrl)
     content = response.text
