@@ -4,6 +4,17 @@ const { NotAFeedError, ParserError } = require('../errors')
 
 const parser = new Parser()
 
+function getPubDate(entry) {
+  if (entry.isoDate) {
+    return entry.isoDate
+  }
+  try {
+    return new Date(entry.pubDate.replace(/CES?T/, '(CET)')).toISOString()
+  } catch (error) {
+    return entry.pubDate
+  }
+}
+
 function transform(parsed) {
   if (!parsed) return null
   const entries = parsed.items.map(entry =>
@@ -14,7 +25,7 @@ function transform(parsed) {
       entry,
       {
         author: entry.author || entry['dc:creator'],
-        pubDate: entry.isoDate,
+        pubDate: getPubDate(entry),
       }
     )
   )
