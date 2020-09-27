@@ -34,7 +34,7 @@
   "dependencies": {
     "apollo-server-micro": "^2.9.16",
     "args": "^3.0.8",
-    "axios": "^0.19.2",
+    "axios": "^0.20.0",
     "cheerio": "^1.0.0-rc.3",
     "feedme": "^1.2.0",
     "graphql": "^14.6.0",
