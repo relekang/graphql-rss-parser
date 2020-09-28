@@ -1,6 +1,6 @@
 const axios = require('axios')
 
-const { EmptyHttpResponseError, NotFoundError } = require('./errors')
+const { EmptyHttpResponseError, UpstreamHttpError } = require('./errors')
 
 module.exports = async function request(url) {
   try {
@@ -12,8 +12,9 @@ module.exports = async function request(url) {
     })
 
     if (!response.data) throw new EmptyHttpResponseError()
-    if (response.status === 404) throw new NotFoundError(url)
-
+    if (!/2\d\d/.test(response.status)) {
+      throw new UpstreamHttpError('Not found', response.status)
+    }
     return {
       text: response.data,
       status: response.status,
@@ -21,8 +22,8 @@ module.exports = async function request(url) {
       headers: response.headers,
     }
   } catch (error) {
-    if (error.response && error.response.status === 404) {
-      throw new NotFoundError(url)
+    if (error.response && error.response) {
+      throw new UpstreamHttpError('Upstream HTTP error', error.response.status)
     }
     throw error
   }

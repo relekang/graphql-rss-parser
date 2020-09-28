@@ -1,5 +1,6 @@
 const cheerio = require('cheerio')
 const normalizeUrl = require('normalize-url')
+const { BaseError } = require('../errors')
 
 const { parseFromString, parseFromQuery } = require('./feed')
 
@@ -13,18 +14,13 @@ module.exports = async function findFeed({ url, normalize }) {
   let content
 
   if (!normalizedUrl) {
-    throw new Error('Empty url is not allowed')
+    throw new BaseError('Empty url is not allowed', 400)
   }
 
-  try {
-    response = await request(normalizedUrl)
-    content = response.text
-  } catch (error) {
-    if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test') {
-      console.log(error) // eslint-disable-line no-console
-    }
-    return []
-  }
+  response = await request(normalizedUrl)
+  content = response.text
+
+  console.log(content)
 
   if (
     /application\/(rss|atom)/.test(response.contentType) ||

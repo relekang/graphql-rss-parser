@@ -1,10 +1,10 @@
 const development = !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
 
 class BaseError extends Error {
-  constructor(message, statusCode) {
+  constructor(message, code) {
     super(message)
     this.name = this.constructor.name
-    this.statusCode = statusCode || 500
+    this.code = code || 'internal-server-error'
     if (typeof Error.captureStackTrace === 'function') {
       Error.captureStackTrace(this, this.constructor)
     } else {
@@ -13,26 +13,40 @@ class BaseError extends Error {
   }
 }
 
-class EmptyParseOutputError extends BaseError {}
+class EmptyParseOutputError extends BaseError {
+  constructor() {
+    super('Internal server error', 'empty-parse-output')
+  }
+}
 
-class EmptyHttpResponseError extends BaseError {}
+class EmptyHttpResponseError extends BaseError {
+  constructor() {
+    super('Internal server error', 'empty-http-response-output')
+  }
+}
 
 class InvalidInputError extends BaseError {
-  constructor(message, statusCode) {
-    super(message, statusCode || 400)
+  constructor(message, code) {
+    super(message, code || 'invalid-input')
+  }
+}
+
+class UpstreamHttpError extends BaseError {
+  constructor(message, status) {
+    super(message, 'upstream-http-error')
+    this.status = status
   }
 }
 
 class NotFoundError extends BaseError {
-  constructor(url) {
-    super('Could not find feed', 404)
-    this.url = url
+  constructor() {
+    super('Could not find feed', 'could-not-find-feed')
   }
 }
 
 class ParserError extends BaseError {
-  constructor(cause, parser, statusCode) {
-    super(cause.message, statusCode)
+  constructor(cause, parser) {
+    super(cause.message, 'parser-error')
     this.cause = cause
     this.parser = parser
   }
@@ -40,13 +54,13 @@ class ParserError extends BaseError {
 
 class NotAFeedError extends BaseError {
   constructor() {
-    super('Not a feed', 400)
+    super('Not a feed', 'not-a-feed')
   }
 }
 
 class ConnectionFailedError extends BaseError {
   constructor(url) {
-    super('Could not connect', 404)
+    super('Could not connect', 'connection-failed')
     this.url = url
   }
 }
@@ -75,7 +89,14 @@ function createErrorFormatter(Raven) {
     }
 
     const response = {
-      message: error.message,
+      path: error.path,
+      error: {
+        message: error.message,
+        code: error.extensions.exception.code,
+        url: error.extensions.exception.url,
+        status: error.extensions.exception.status,
+        parser: error.extensions.exception.parser,
+      },
     }
     if (error.stack) {
       if (development) {
@@ -101,5 +122,6 @@ module.exports = {
   ParserError,
   NotAFeedError,
   NotFoundError,
+  UpstreamHttpError,
   createErrorFormatter,
 }
