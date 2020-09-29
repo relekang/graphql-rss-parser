@@ -9,7 +9,13 @@ Object {
   },
   "errors": Array [
     Object {
-      "message": "Could not connect",
+      "error": Object {
+        "code": "dns-lookup-error",
+        "message": "Could not find domain",
+      },
+      "path": Array [
+        "feed",
+      ],
     },
   ],
 }
@@ -202,7 +208,13 @@ Object {
   },
   "errors": Array [
     Object {
-      "message": "Not a feed",
+      "error": Object {
+        "code": "not-a-feed",
+        "message": "Not a feed",
+      },
+      "path": Array [
+        "feed",
+      ],
     },
   ],
 }

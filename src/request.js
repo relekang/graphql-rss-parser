@@ -1,6 +1,6 @@
 const axios = require('./axios')
 
-const { EmptyHttpResponseError, UpstreamHttpError } = require('./errors')
+const { EmptyHttpResponseError, UpstreamHttpError, DnsLookupError } = require('./errors')
 
 module.exports = async function request(url) {
   try {
@@ -24,6 +24,9 @@ module.exports = async function request(url) {
   } catch (error) {
     if (error.response && error.response) {
       throw new UpstreamHttpError('Upstream HTTP error', error.response.status)
+    }
+    if (error.code === 'ENOTFOUND') {
+      throw new DnsLookupError()
     }
     throw error
   }

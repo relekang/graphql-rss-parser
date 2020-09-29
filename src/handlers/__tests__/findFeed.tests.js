@@ -1,7 +1,8 @@
 /* eslint-env jest */
-require('../../__tests__/mockRequests')
+require('../../__tests__/mockAxios')
 
 const findFeed = require('../findFeed')
+const { DnsLookupError } = require('../../errors')
 
 test('findFeed should return feedUrl from any website which have a link to its rss feed', async () => {
   const feeds = await findFeed({ url: 'https://rolflekang.com' })

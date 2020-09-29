@@ -44,6 +44,12 @@ class NotFoundError extends BaseError {
   }
 }
 
+class DnsLookupError extends BaseError {
+  constructor() {
+    super('Could not find domain', 'dns-lookup-error')
+  }
+}
+
 class ParserError extends BaseError {
   constructor(cause, parser) {
     super(cause.message, 'parser-error')
@@ -100,10 +106,10 @@ function createErrorFormatter(Raven) {
     }
     if (error.stack) {
       if (development) {
-        response.stack = error.stack.split('\n')
+        response.stack = error.extensions.exception.stack.split('\n')
       }
       try {
-        response.type = error.stack.split('\n')[0].split(':')[0]
+        response.type = error.extensions.exception.stack.split('\n')[0].split(':')[0]
       } catch (error) {
         if (development) {
           return error
@@ -123,5 +129,6 @@ module.exports = {
   NotAFeedError,
   NotFoundError,
   UpstreamHttpError,
+  DnsLookupError,
   createErrorFormatter,
 }

@@ -1,4 +1,4 @@
-require('./mockRequests')
+require('./mockAxios')
 const { testGraphqlApi } = require('./utils')
 
 const websiteUrl = 'https://rolflekang.com'
