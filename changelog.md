@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0](https://github.com/relekang/micro-rss-parser/compare/v2.2.0...v2.3.0) (2020-09-29)
+
+
+### Features
+
+* Make findfeed return errors ([7fa09ab](https://github.com/relekang/micro-rss-parser/commit/7fa09ab3bca06ebe611d5e236c2948ac9f206567))
+
+
+### Bug Fixes
+
+* Add DnsLookupError ([6a1f67b](https://github.com/relekang/micro-rss-parser/commit/6a1f67b92358cbeadbf573a7106536d6691f49fd))
+
 ## [2.2.0](https://github.com/relekang/micro-rss-parser/compare/v2.1.3...v2.2.0) (2020-09-28)
 
 
