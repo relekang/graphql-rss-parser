@@ -49,6 +49,11 @@ class DnsLookupError extends BaseError {
     super('Could not find domain', 'dns-lookup-error')
   }
 }
+class ConnectionRefusedError extends BaseError {
+  constructor() {
+    super('The website refused the connection', 'connection-refused')
+  }
+}
 
 class ParserError extends BaseError {
   constructor(cause, parser) {
@@ -130,5 +135,6 @@ module.exports = {
   NotFoundError,
   UpstreamHttpError,
   DnsLookupError,
+  ConnectionRefusedError,
   createErrorFormatter,
 }
