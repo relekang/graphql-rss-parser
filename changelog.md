@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.3.1](https://github.com/relekang/micro-rss-parser/compare/v2.3.0...v2.3.1) (2020-09-29)
+
+
+### Bug Fixes
+
+* Upgrade dependencies with vulnerabilities ([5efcf6e](https://github.com/relekang/micro-rss-parser/commit/5efcf6eae2297ec4102c3760c7563d74ab2585d1))
+* Upgrade normalize-url ([414fb2c](https://github.com/relekang/micro-rss-parser/commit/414fb2c93b75746236bbeba831c8bb1113ee05d0))
+* Use node 14 in dockerfile ([54e0f17](https://github.com/relekang/micro-rss-parser/commit/54e0f171602ce9b369d4091d95dc08a2b315092c))
+
 ## [2.3.0](https://github.com/relekang/micro-rss-parser/compare/v2.2.0...v2.3.0) (2020-09-29)
 
 
