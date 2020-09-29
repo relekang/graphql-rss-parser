@@ -7,12 +7,12 @@ module.exports = function parseString(feed) {
   return new Promise((resolve, reject) => {
     try {
       const feedparser = new FeedParser()
-      feedparser.on('error', error => {
+      feedparser.on('error', (error) => {
         reject(new ParserError(error, 'FEEDPARSER'))
       })
 
       let parsedFeed
-      feedparser.on('readable', function() {
+      feedparser.on('readable', function () {
         const meta = this.meta
         if (!parsedFeed) {
           parsedFeed = Object.assign({}, meta, {
@@ -33,7 +33,7 @@ module.exports = function parseString(feed) {
         }
       })
 
-      feedparser.on('end', function() {
+      feedparser.on('end', function () {
         resolve(parsedFeed)
       })
 
@@ -44,7 +44,7 @@ module.exports = function parseString(feed) {
     } catch (error) {
       reject(new ParserError(error, 'FEEDPARSER'))
     }
-  }).catch(error => {
+  }).catch((error) => {
     if (error.message === 'Not a feed' || error.cause.message === 'Not a feed') {
       throw new NotAFeedError(error)
     }

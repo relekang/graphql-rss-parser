@@ -30,7 +30,7 @@ async function parseFromQuery({ url, parser }) {
   try {
     const content = (await request(url)).text
     const parsed = await parseFromString({ content, parser })
-    parsed.entries = parsed.entries.filter(item => item == null)
+    parsed.entries = parsed.entries.filter((item) => item == null)
     return await parseFromString({ content, parser })
   } catch (error) {
     if (error.code === 'ENOTFOUND') {

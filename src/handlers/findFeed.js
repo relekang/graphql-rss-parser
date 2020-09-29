@@ -63,7 +63,7 @@ module.exports = async function findFeed({ url, normalize }) {
 
   const result = (
     await Promise.all(
-      urls.map(async url => {
+      urls.map(async (url) => {
         try {
           const { title } = await parseFromQuery({ url })
           return { title, link: url }
@@ -75,7 +75,7 @@ module.exports = async function findFeed({ url, normalize }) {
         }
       })
     )
-  ).filter(item => item !== undefined && item !== null)
+  ).filter((item) => item !== undefined && item !== null)
 
   if (result.length === 0 && normalize) {
     return findFeed({ url, normalize: false })

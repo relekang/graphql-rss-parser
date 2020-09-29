@@ -4,7 +4,7 @@ const axios = require('axios')
 
 const createHandler = require('../')
 
-const listen = server =>
+const listen = (server) =>
   new Promise((resolve, reject) => {
     server.on('error', reject)
 

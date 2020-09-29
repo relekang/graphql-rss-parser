@@ -17,7 +17,7 @@ function getPubDate(entry) {
 
 function transform(parsed) {
   if (!parsed) return null
-  const entries = parsed.items.map(entry =>
+  const entries = parsed.items.map((entry) =>
     Object.assign(
       {
         categories: [],
@@ -34,7 +34,7 @@ function transform(parsed) {
 
 module.exports = function parseString(document, options) {
   return new Promise((resolve, reject) => {
-    parser.parseString(document, function(error, parsed) {
+    parser.parseString(document, function (error, parsed) {
       if (error) {
         if (/Line:/.test(error.message) && /Column:/.test(error.message)) {
           return reject(new NotAFeedError())

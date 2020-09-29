@@ -25,14 +25,14 @@ module.exports = function parseString(feed) {
         entries: [],
       }
 
-      parser.on('title', title => {
+      parser.on('title', (title) => {
         parsed.title = title
       })
-      parser.on('description', description => {
+      parser.on('description', (description) => {
         parsed.description = description
       })
 
-      parser.on('link', link => {
+      parser.on('link', (link) => {
         if (typeof link === 'string') {
           parsed.link = link
         } else {
@@ -40,7 +40,7 @@ module.exports = function parseString(feed) {
         }
       })
 
-      parser.on('item', item => {
+      parser.on('item', (item) => {
         try {
           let pubDate = item.pubdate || item.published
 
@@ -72,7 +72,7 @@ module.exports = function parseString(feed) {
         resolve(parsed)
       })
 
-      parser.on('error', error => {
+      parser.on('error', (error) => {
         reject(new ParserError(error, 'FEEDME'))
       })
 
