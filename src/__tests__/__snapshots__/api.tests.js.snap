@@ -37,103 +37,138 @@ Object {
     "feed": Object {
       "entries": Array [
         Object {
-          "link": "http://rolflekang.com/testing-simple-graphql-services",
+          "link": "https://rolflekang.com/ansible-handlers-in-loops",
+          "pubDate": "2020-09-12T00:00:00.000Z",
+          "title": "Using Ansible handlers in loops",
+        },
+        Object {
+          "link": "https://rolflekang.com/serving-plain-text-with-nextjs",
+          "pubDate": "2020-05-26T00:00:00.000Z",
+          "title": "Serving text/plain for curl with Next",
+        },
+        Object {
+          "link": "https://rolflekang.com/wireless-uplinks-with-unifi",
+          "pubDate": "2020-05-03T00:00:00.000Z",
+          "title": "Wireless uplinks with Unifi",
+        },
+        Object {
+          "link": "https://rolflekang.com/using-git-commits-instead-of-stash",
+          "pubDate": "2019-11-14T00:00:00.000Z",
+          "title": "Using git commits instead of git stash",
+        },
+        Object {
+          "link": "https://rolflekang.com/twitter-cards-for-gatsby-posts",
+          "pubDate": "2019-02-26T00:00:00.000Z",
+          "title": "Twitter cards for Gatsby posts",
+        },
+        Object {
+          "link": "https://rolflekang.com/related-articles-with-gatsby",
+          "pubDate": "2019-02-20T00:00:00.000Z",
+          "title": "Related articles with Gatsby",
+        },
+        Object {
+          "link": "https://rolflekang.com/creating-a-cli-with-reason-native",
+          "pubDate": "2019-02-12T00:00:00.000Z",
+          "title": "Creating a CLI with  Reason native",
+        },
+        Object {
+          "link": "https://rolflekang.com/testing-simple-graphql-services",
           "pubDate": "2017-05-28T00:00:00.000Z",
           "title": "Testing simple GraphQL services",
         },
         Object {
-          "link": "http://rolflekang.com/lets-run-some-races",
+          "link": "https://rolflekang.com/lets-run-some-races",
           "pubDate": "2017-01-02T00:00:00.000Z",
           "title": "Let's run some races this year",
         },
         Object {
-          "link": "http://rolflekang.com/software-development-on-an-ipad",
+          "link": "https://rolflekang.com/software-development-on-an-ipad",
           "pubDate": "2017-01-01T00:00:00.000Z",
           "title": "Software development on an iPad",
         },
         Object {
-          "link": "http://rolflekang.com/filtering-lint-errors",
+          "link": "https://rolflekang.com/filtering-lint-errors",
           "pubDate": "2016-06-10T00:00:00.000Z",
           "title": "Filtering lint errors",
         },
         Object {
-          "link": "http://rolflekang.com/interrail-summer",
+          "link": "https://rolflekang.com/interrail-summer",
           "pubDate": "2015-07-26T00:00:00.000Z",
           "title": "Interrail summer",
         },
         Object {
-          "link": "http://rolflekang.com/writing-latex-in-atom",
+          "link": "https://rolflekang.com/writing-latex-in-atom",
           "pubDate": "2015-05-23T00:00:00.000Z",
           "title": "Writing (latex) in Atom",
         },
         Object {
-          "link": "http://rolflekang.com/rmoq",
+          "link": "https://rolflekang.com/rmoq",
           "pubDate": "2014-12-30T00:00:00.000Z",
           "title": "rmoq - a request mock cache",
         },
         Object {
-          "link": "http://rolflekang.com/django-nopassword-one-point-o",
-          "pubDate": "2014-10-03T15:35:00.000Z",
+          "link": "https://rolflekang.com/django-nopassword-one-point-o",
+          "pubDate": "2014-10-03T00:00:00.000Z",
           "title": "django-nopassword reached 1.0",
         },
         Object {
-          "link": "http://rolflekang.com/moving-to-pelican",
+          "link": "https://rolflekang.com/moving-to-pelican",
           "pubDate": "2014-05-07T00:00:00.000Z",
           "title": "Moving the blog to pelican",
         },
         Object {
-          "link": "http://rolflekang.com/building-tumblr-theme-with-grunt",
+          "link": "https://rolflekang.com/building-tumblr-theme-with-grunt",
           "pubDate": "2014-02-02T00:00:00.000Z",
           "title": "Building a Tumblr theme with GruntJS",
         },
         Object {
-          "link": "http://rolflekang.com/backup-routines-for-redisdb",
+          "link": "https://rolflekang.com/backup-routines-for-redisdb",
           "pubDate": "2013-10-24T00:00:00.000Z",
           "title": "Backup routine for Redis",
         },
         Object {
-          "link": "http://rolflekang.com/django-app-custom-user",
+          "link": "https://rolflekang.com/django-app-custom-user",
           "pubDate": "2013-05-22T00:00:00.000Z",
           "title": "Making your Django app ready for custom users",
         },
         Object {
-          "link": "http://rolflekang.com/stats-are-fun",
+          "link": "https://rolflekang.com/stats-are-fun",
           "pubDate": "2013-03-03T00:00:00.000Z",
           "title": "Stats are fun",
         },
         Object {
-          "link": "http://rolflekang.com/alfred-scripts-for-jekyll",
+          "link": "https://rolflekang.com/alfred-scripts-for-jekyll",
           "pubDate": "2013-02-26T00:00:00.000Z",
           "title": "Alfred scripts for Jekyll",
         },
         Object {
-          "link": "http://rolflekang.com/use-array-in-postgresql-with-django",
+          "link": "https://rolflekang.com/use-array-in-postgresql",
           "pubDate": "2013-01-27T00:00:00.000Z",
           "title": "Use array in postgresql with django",
         },
         Object {
-          "link": "http://rolflekang.com/apply-puppet-configuration-automatically",
+          "link": "https://rolflekang.com/apply-puppet-configuration-automatically",
           "pubDate": "2013-01-03T00:00:00.000Z",
           "title": "Apply puppet automatically",
         },
         Object {
-          "link": "http://rolflekang.com/reading-wikipedia",
+          "link": "https://rolflekang.com/readable-wikipedia",
           "pubDate": "2012-12-02T00:00:00.000Z",
           "title": "Readable Wikipedia",
         },
         Object {
-          "link": "http://rolflekang.com/django-nopassword",
+          "link": "https://rolflekang.com/django-nopassword",
           "pubDate": "2012-09-28T00:00:00.000Z",
           "title": "django-nopassword",
         },
         Object {
-          "link": "http://rolflekang.com/the-github-lamp",
+          "link": "https://rolflekang.com/the-github-lamp",
           "pubDate": "2012-09-16T00:00:00.000Z",
           "title": "The Github lamp",
         },
       ],
-      "link": "http://rolflekang.com/",
-      "title": "Writings of Rolf Erik Lekang",
+      "link": "https://rolflekang.com",
+      "title": "Writing by Rolf Erik Lekang",
     },
   },
 }
@@ -145,7 +180,7 @@ exports[`
 Object {
   "data": Object {
     "feed": Object {
-      "title": "Writings of Rolf Erik Lekang",
+      "title": "Writing by Rolf Erik Lekang",
     },
   },
 }
@@ -157,7 +192,10 @@ exports[`
 Object {
   "errors": Array [
     Object {
-      "message": "Cannot query field \\"badField\\" on type \\"Feed\\".",
+      "extensions": Object {
+        "code": "INTERNAL_SERVER_ERROR",
+      },
+      "message": "Internal server error",
     },
   ],
 }
@@ -169,7 +207,7 @@ exports[`
 Object {
   "data": Object {
     "feed": Object {
-      "title": "Writings of Rolf Erik Lekang",
+      "title": "Writing by Rolf Erik Lekang",
     },
   },
 }
@@ -181,7 +219,7 @@ exports[`
 Object {
   "data": Object {
     "feed": Object {
-      "title": "Writings of Rolf Erik Lekang",
+      "title": "Writing by Rolf Erik Lekang",
     },
   },
 }
@@ -193,7 +231,7 @@ exports[`
 Object {
   "data": Object {
     "feed": Object {
-      "title": "Writings of Rolf Erik Lekang",
+      "title": "Writing by Rolf Erik Lekang",
     },
   },
 }
