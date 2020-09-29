@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.3.2](https://github.com/relekang/micro-rss-parser/compare/v2.3.1...v2.3.2) (2020-09-29)
+
+
+### Bug Fixes
+
+* Add connection refused error ([7cb8be5](https://github.com/relekang/micro-rss-parser/commit/7cb8be563659e299f854bb40dc5d27fb34e03990))
+* Add status text in upstream error ([abe215c](https://github.com/relekang/micro-rss-parser/commit/abe215c904adf0bd5f6fca1fc207e99cd0dd3860))
+
 ### [2.3.1](https://github.com/relekang/micro-rss-parser/compare/v2.3.0...v2.3.1) (2020-09-29)
 
 
