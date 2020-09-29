@@ -1,26 +1,24 @@
 const cheerio = require('cheerio')
 const normalizeUrl = require('normalize-url')
-const { BaseError } = require('../errors')
 
+const { BaseError } = require('../errors')
 const { parseFromString, parseFromQuery } = require('./feed')
 
 const request = require('../request')
 
-const normalizeOptions = { removeTrailingSlash: false }
+const normalizeOptions = { removeTrailingSlash: false, stripHash: true }
 
 module.exports = async function findFeed({ url, normalize }) {
-  const normalizedUrl = normalize ? normalizeUrl(url, normalizeOptions) : url
+  const normalizedUrl = normalize === false ? url : normalizeUrl(url, normalizeOptions)
   let response = null
   let content
 
   if (!normalizedUrl) {
-    throw new BaseError('Empty url is not allowed', 400)
+    throw new BaseError('Empty url is not allowed', 'missing-url')
   }
 
   response = await request(normalizedUrl)
   content = response.text
-
-  console.log(content)
 
   if (
     /application\/(rss|atom)/.test(response.contentType) ||
@@ -56,7 +54,10 @@ module.exports = async function findFeed({ url, normalize }) {
   const urls = $linkTags
     .map((index, $linkTag) => {
       const link = $linkTag.attribs.href
-      return normalizeUrl(/^\//.test(link) ? url + link : link, normalizeOptions)
+      return normalizeUrl(
+        /^\//.test(link) ? new URL(normalizedUrl).origin + link : link,
+        normalizeOptions
+      )
     })
     .toArray()
 
@@ -70,6 +71,7 @@ module.exports = async function findFeed({ url, normalize }) {
           if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test') {
             console.log(error) // eslint-disable-line no-console
           }
+          console.log(url, error)
         }
       })
     )

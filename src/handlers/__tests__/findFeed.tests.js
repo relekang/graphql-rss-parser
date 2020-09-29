@@ -10,7 +10,7 @@ test('findFeed should return feedUrl from any website which have a link to its r
   expect(feeds).toEqual([
     {
       link: 'https://rolflekang.com/feed.xml',
-      title: 'Writings of Rolf Erik Lekang',
+      title: 'Writing by Rolf Erik Lekang',
     },
   ])
 })
@@ -21,7 +21,7 @@ test('findFeed should work with feeds', async () => {
   expect(feeds).toEqual([
     {
       link: 'https://rolflekang.com/feed.xml',
-      title: 'Writings of Rolf Erik Lekang',
+      title: 'Writing by Rolf Erik Lekang',
     },
   ])
 })
@@ -32,18 +32,18 @@ test('findFeed should work with double slashes', async () => {
   expect(feeds).toEqual([
     {
       link: 'https://rolflekang.com/feed.xml',
-      title: 'Writings of Rolf Erik Lekang',
+      title: 'Writing by Rolf Erik Lekang',
     },
   ])
 })
 
 test('findFeed should work html response', async () => {
-  const feeds = await findFeed({ url: 'https://rolflekang.com/feed-html/' })
+  const feeds = await findFeed({ url: 'https://rolflekang.com/writing/' })
 
   expect(feeds).toEqual([
     {
-      link: 'https://rolflekang.com/feed-html/',
-      title: 'Writings of Rolf Erik Lekang',
+      link: 'https://rolflekang.com/feed.xml',
+      title: 'Writing by Rolf Erik Lekang',
     },
   ])
 })
@@ -66,10 +66,10 @@ test('findFeed should not add double slash when building link', async () => {
   ])
 })
 
-test("findFeed should return an empty array if website doesn't exist", async () => {
-  const feeds = await findFeed({ url: 'https://q.rolflekang.no' })
+test('findFeed should return an error', async () => {
+  const request = findFeed({ url: 'https://q.rolflekang.no' })
 
-  expect(feeds).toHaveLength(0)
+  await expect(request).rejects.toEqual(new DnsLookupError())
 })
 
 test('findFeed should work with feedburner', async () => {
