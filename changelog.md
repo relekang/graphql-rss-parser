@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.3.3](https://github.com/relekang/micro-rss-parser/compare/v2.3.2...v2.3.3) (2020-09-29)
+
+
+### Bug Fixes
+
+* Handle unknown status code ([e955531](https://github.com/relekang/micro-rss-parser/commit/e95553182767aeb9c333e875a1b3178d38dcfa2b))
+
 ### [2.3.2](https://github.com/relekang/micro-rss-parser/compare/v2.3.1...v2.3.2) (2020-09-29)
 
 
