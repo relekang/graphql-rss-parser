@@ -39,6 +39,7 @@
     "feedme": "^1.2.0",
     "graphql": "^15.3.0",
     "graphql-tools": "^6.2.3",
+    "http-status-codes": "^2.1.4",
     "is-url": "^1.2.4",
     "lodash-fp": "^0.10.4",
     "micro": "^9.3.4",

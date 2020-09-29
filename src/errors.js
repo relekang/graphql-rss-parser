@@ -1,3 +1,4 @@
+const { getReasonPhrase } = require('http-status-codes')
 const development = !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
 
 class BaseError extends Error {
@@ -35,6 +36,7 @@ class UpstreamHttpError extends BaseError {
   constructor(message, status) {
     super(message, 'upstream-http-error')
     this.status = status
+    this.statusText = getReasonPhrase(status)
   }
 }
 
@@ -106,6 +108,7 @@ function createErrorFormatter(Raven) {
         code: error.extensions.exception.code,
         url: error.extensions.exception.url,
         status: error.extensions.exception.status,
+        statusText: error.extensions.exception.statusText,
         parser: error.extensions.exception.parser,
       },
     }
