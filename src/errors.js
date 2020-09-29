@@ -36,7 +36,11 @@ class UpstreamHttpError extends BaseError {
   constructor(message, status) {
     super(message, 'upstream-http-error')
     this.status = status
-    this.statusText = getReasonPhrase(status)
+    try {
+      this.statusText = getReasonPhrase(status)
+    } catch (error) {
+      this.statusText = `Unknown error (${status})`
+    }
   }
 }
 
