@@ -1,6 +1,7 @@
 const axios = require('./axios')
 
 const {
+  UnknownRequestError,
   EmptyHttpResponseError,
   UpstreamHttpError,
   DnsLookupError,
@@ -27,15 +28,19 @@ module.exports = async function request(url) {
       headers: response.headers,
     }
   } catch (error) {
+    if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test') {
+      console.log(error)
+    }
     if (error.response && error.response) {
       throw new UpstreamHttpError('Upstream HTTP error', error.response.status)
     }
-    if (error.code === 'ENOTFOUND') {
+    if (error.code === 'ENOTFOUND' || error.code === 'EAI_AGAIN') {
       throw new DnsLookupError()
     }
     if (error.code === 'ECONNREFUSED') {
       throw new ConnectionRefusedError()
     }
-    throw error
+
+    throw new UnknownRequestError(error)
   }
 }

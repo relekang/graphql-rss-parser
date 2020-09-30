@@ -55,9 +55,17 @@ class DnsLookupError extends BaseError {
     super('Could not find domain', 'dns-lookup-error')
   }
 }
+
 class ConnectionRefusedError extends BaseError {
   constructor() {
     super('The website refused the connection', 'connection-refused')
+  }
+}
+
+class UnknownRequestError extends BaseError {
+  constructor(cause) {
+    super('Unknown error while requesting feed', 'unknown-request-error')
+    this.cause = cause
   }
 }
 
@@ -143,5 +151,6 @@ module.exports = {
   UpstreamHttpError,
   DnsLookupError,
   ConnectionRefusedError,
+  UnknownRequestError,
   createErrorFormatter,
 }
