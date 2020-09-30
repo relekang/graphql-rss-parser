@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.4.0](https://github.com/relekang/micro-rss-parser/compare/v2.3.3...v2.4.0) (2020-09-30)
+
+
+### Features
+
+* Add new parser rss-to-json ([bf7dc71](https://github.com/relekang/micro-rss-parser/commit/bf7dc71e77b6bc3db66958d0baed9669062423bc))
+* Enable feedme and rss-to-json ([3773c9b](https://github.com/relekang/micro-rss-parser/commit/3773c9bdb75f7439f02748dd803087444af28878))
+
+
+### Bug Fixes
+
+* Enable filtering of empty entries ([3fd0add](https://github.com/relekang/micro-rss-parser/commit/3fd0add82b80d1f016bb8e9d3c398fe6120573ab))
+* Handle more errors in requests ([0b64958](https://github.com/relekang/micro-rss-parser/commit/0b64958af94f8d7e83c9225f8235f0ff0cca3721))
+* Make categories parsing in feedme work ([5d5a0e8](https://github.com/relekang/micro-rss-parser/commit/5d5a0e8f31157fdeee87521b19dd2ea54da0c61a))
+
 ### [2.3.3](https://github.com/relekang/micro-rss-parser/compare/v2.3.2...v2.3.3) (2020-09-29)
 
 
