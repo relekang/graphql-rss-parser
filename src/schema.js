@@ -8,6 +8,7 @@ const typeDefs = `
     FEEDPARSER
     RSS_PARSER
     FEEDME
+    RSS_TO_JSON
   }
 
   type FindFeedResult {

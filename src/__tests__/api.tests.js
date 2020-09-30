@@ -33,6 +33,10 @@ testGraphqlApi`
 `
 
 testGraphqlApi`
+  feed(url: "${url}", parser: RSS_TO_JSON) { title }
+`
+
+testGraphqlApi`
   feed(url: "${url}") { title, badField }
 `
 

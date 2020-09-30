@@ -238,6 +238,18 @@ Object {
 `;
 
 exports[`
+  feed(url: "https://rolflekang.com/feed.xml", parser: RSS_TO_JSON) { title }
+ 1`] = `
+Object {
+  "data": Object {
+    "feed": Object {
+      "title": "Writing by Rolf Erik Lekang",
+    },
+  },
+}
+`;
+
+exports[`
   feed(url: "https://rolflekang.com/testing-simple-graphql-services") { title }
  1`] = `
 Object {

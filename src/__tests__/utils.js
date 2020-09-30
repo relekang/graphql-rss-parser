@@ -45,4 +45,4 @@ function testGraphqlApi(strings, ...args) {
   })
 }
 
-module.exports = { testGraphqlApi }
+module.exports = { testGraphqlApi, listen }
