@@ -57,7 +57,7 @@ module.exports = function parseString(feed) {
               link: evaluateLink(item.link),
               guid: item.guid && item.guid.text,
               description: item.description,
-              categories: item.categories || [],
+              categories: typeof item.category === 'string' ? [item.category] : item.category || [],
               pubDate,
               author: item.author ? item.author.name || item.author : item['dc:creator'],
             },

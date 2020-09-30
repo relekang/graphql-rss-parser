@@ -25,7 +25,12 @@ Object {
   "entries": Array [
     Object {
       "author": undefined,
-      "categories": Array [],
+      "categories": Array [
+        "ansible",
+        "devops",
+        "ops",
+        "infrastructure-as-code",
+      ],
       "description": "Recently I have been dusting of my old ansible playbooks that I use to deploy personal
 stuff. Everything from side projects like feedhuddler…",
       "guid": "https://rolflekang.com/ansible-handlers-in-loops",
@@ -35,7 +40,12 @@ stuff. Everything from side projects like feedhuddler…",
     },
     Object {
       "author": undefined,
-      "categories": Array [],
+      "categories": Array [
+        "nextjs",
+        "javascript",
+        "curl",
+        "nodejs",
+      ],
       "description": "I have recently been trying out the Next.js for some projects again. I have
 had earlier projects where I have been really happy with Next…",
       "guid": "https://rolflekang.com/serving-plain-text-with-nextjs",
@@ -45,7 +55,12 @@ had earlier projects where I have been really happy with Next…",
     },
     Object {
       "author": undefined,
-      "categories": Array [],
+      "categories": Array [
+        "networking",
+        "unifi",
+        "ubiquiti",
+        "homelab",
+      ],
       "description": "In the apartment I live in there is only ethernet between the place where the fiber
 connection is and the tv point in the living room. In…",
       "guid": "https://rolflekang.com/wireless-uplinks-with-unifi",
@@ -55,7 +70,9 @@ connection is and the tv point in the living room. In…",
     },
     Object {
       "author": undefined,
-      "categories": Array [],
+      "categories": Array [
+        "git",
+      ],
       "description": "Over the years I have time and time again run into the problem of getting
 conflicts when popping from the git stash. Somehow this has…",
       "guid": "https://rolflekang.com/using-git-commits-instead-of-stash",
@@ -65,7 +82,11 @@ conflicts when popping from the git stash. Somehow this has…",
     },
     Object {
       "author": undefined,
-      "categories": Array [],
+      "categories": Array [
+        "gatsby",
+        "canvas",
+        "javascript",
+      ],
       "description": "Previously this blog had the default article twitter card. I have seen some
 other sited like dev.to have these nice title images for the…",
       "guid": "https://rolflekang.com/twitter-cards-for-gatsby-posts",
@@ -75,7 +96,10 @@ other sited like dev.to have these nice title images for the…",
     },
     Object {
       "author": undefined,
-      "categories": Array [],
+      "categories": Array [
+        "gatsby",
+        "javascript",
+      ],
       "description": "This website is created with Gatsby, Reasonml and a little bit of typescript.
 In this post I will explain how I built the \\"Related articles…",
       "guid": "https://rolflekang.com/related-articles-with-gatsby",
@@ -85,7 +109,10 @@ In this post I will explain how I built the \\"Related articles…",
     },
     Object {
       "author": undefined,
-      "categories": Array [],
+      "categories": Array [
+        "reasonml",
+        "native",
+      ],
       "description": "Recently I have started to look into the native compilation of Reason. There
 are many use cases for compiling to native, e.g. fast CLIs…",
       "guid": "https://rolflekang.com/creating-a-cli-with-reason-native",
@@ -95,7 +122,11 @@ are many use cases for compiling to native, e.g. fast CLIs…",
     },
     Object {
       "author": undefined,
-      "categories": Array [],
+      "categories": Array [
+        "graphql",
+        "testing",
+        "javascript",
+      ],
       "description": "I recently created a GraphQL based microservice for parsing RSS-feeds. I wanted
 to write something down about the approach I took to test…",
       "guid": "https://rolflekang.com/testing-simple-graphql-services",
@@ -105,7 +136,9 @@ to write something down about the approach I took to test…",
     },
     Object {
       "author": undefined,
-      "categories": Array [],
+      "categories": Array [
+        "running",
+      ],
       "description": "This will be the first year that I enter a running race, ever.
 I am pretty excited. I am at the moment aiming at three races
 for this year…",
@@ -116,7 +149,10 @@ for this year…",
     },
     Object {
       "author": undefined,
-      "categories": Array [],
+      "categories": Array [
+        "ipad",
+        "development-environment",
+      ],
       "description": "I recently bought an iPad Pro as a replacement for my computer at home. The old one was a
 Macbook Pro that is taking its last spins these…",
       "guid": "https://rolflekang.com/software-development-on-an-ipad",
@@ -126,7 +162,11 @@ Macbook Pro that is taking its last spins these…",
     },
     Object {
       "author": undefined,
-      "categories": Array [],
+      "categories": Array [
+        "linter",
+        "linting",
+        "development",
+      ],
       "description": "We all learn new stuff every day, that goes for how we write code as well.
 Over time our perception of best practices change, the codestyle…",
       "guid": "https://rolflekang.com/filtering-lint-errors",
@@ -136,7 +176,10 @@ Over time our perception of best practices change, the codestyle…",
     },
     Object {
       "author": undefined,
-      "categories": Array [],
+      "categories": Array [
+        "travel",
+        "interrail",
+      ],
       "description": "After I finished my master thesis in June I left for a interrail with my girlfriend this summer. Traveling by train has its ups an downs…",
       "guid": "https://rolflekang.com/interrail-summer",
       "link": "https://rolflekang.com/interrail-summer",
@@ -145,7 +188,11 @@ Over time our perception of best practices change, the codestyle…",
     },
     Object {
       "author": undefined,
-      "categories": Array [],
+      "categories": Array [
+        "atom",
+        "writing",
+        "procrastination",
+      ],
       "description": "These days I am writing my master thesis, which I will deliver in June.
 It is not easy to produce content all days, so when you have one of…",
       "guid": "https://rolflekang.com/writing-latex-in-atom",
@@ -155,7 +202,11 @@ It is not easy to produce content all days, so when you have one of…",
     },
     Object {
       "author": undefined,
-      "categories": Array [],
+      "categories": Array [
+        "python",
+        "testing",
+        "mocking",
+      ],
       "description": "While working on feedhuddler.com there are tests that test the feedparsing functionality. It uses the actual feeds from their origins, which…",
       "guid": "https://rolflekang.com/rmoq",
       "link": "https://rolflekang.com/rmoq",
@@ -164,7 +215,12 @@ It is not easy to produce content all days, so when you have one of…",
     },
     Object {
       "author": undefined,
-      "categories": Array [],
+      "categories": Array [
+        "django",
+        "nopassword",
+        "django-nopassword",
+        "authentication",
+      ],
       "description": "I started the this project as way to understand django authentication backends
 about two years ago. I read a blog post by Ben Brown about…",
       "guid": "https://rolflekang.com/django-nopassword-one-point-o",
@@ -174,7 +230,12 @@ about two years ago. I read a blog post by Ben Brown about…",
     },
     Object {
       "author": undefined,
-      "categories": Array [],
+      "categories": Array [
+        "this",
+        "static-site",
+        "pelican",
+        "jekyll",
+      ],
       "description": "A couple of days ago I swapped the static site generator used at this blog
 from Jekyll to Pelican. It was not to much work, mostly changing…",
       "guid": "https://rolflekang.com/moving-to-pelican",
@@ -184,7 +245,11 @@ from Jekyll to Pelican. It was not to much work, mostly changing…",
     },
     Object {
       "author": undefined,
-      "categories": Array [],
+      "categories": Array [
+        "gruntjs",
+        "cookiecutter",
+        "tumblr",
+      ],
       "description": "Building custom themes for Tumblr To create themes for Tumblr one has to create a single HTML file and paste the contents into a editor on…",
       "guid": "https://rolflekang.com/building-tumblr-theme-with-grunt",
       "link": "https://rolflekang.com/building-tumblr-theme-with-grunt",
@@ -193,7 +258,11 @@ from Jekyll to Pelican. It was not to much work, mostly changing…",
     },
     Object {
       "author": undefined,
-      "categories": Array [],
+      "categories": Array [
+        "db",
+        "backup",
+        "redis",
+      ],
       "description": "After I created the memoris API and started to use it I had to set up a backup routine for the Redis database running behind it. I only run…",
       "guid": "https://rolflekang.com/backup-routines-for-redisdb",
       "link": "https://rolflekang.com/backup-routines-for-redisdb",
@@ -202,7 +271,10 @@ from Jekyll to Pelican. It was not to much work, mostly changing…",
     },
     Object {
       "author": undefined,
-      "categories": Array [],
+      "categories": Array [
+        "django",
+        "custom user",
+      ],
       "description": "In Django 1.5 custom users was introduced. This means that the user model can be swapped for a
 custom model. How does this affect third…",
       "guid": "https://rolflekang.com/django-app-custom-user",
@@ -212,7 +284,12 @@ custom model. How does this affect third…",
     },
     Object {
       "author": undefined,
-      "categories": Array [],
+      "categories": Array [
+        "pypstats",
+        "pypi",
+        "stats",
+        "geek-tool",
+      ],
       "description": "Update: PyPi stopped serving stats in may 2013. The script in this blogpost will only be able to get download counts until may 24th. More…",
       "guid": "https://rolflekang.com/stats-are-fun",
       "link": "https://rolflekang.com/stats-are-fun",
@@ -221,7 +298,11 @@ custom model. How does this affect third…",
     },
     Object {
       "author": undefined,
-      "categories": Array [],
+      "categories": Array [
+        "alfredapp",
+        "jekyll",
+        "shell script",
+      ],
       "description": "Alfred App is the productivity application I use the most, and the one that actually boosts productivity. I recently started to use Jekyll…",
       "guid": "https://rolflekang.com/alfred-scripts-for-jekyll",
       "link": "https://rolflekang.com/alfred-scripts-for-jekyll",
@@ -230,7 +311,13 @@ custom model. How does this affect third…",
     },
     Object {
       "author": undefined,
-      "categories": Array [],
+      "categories": Array [
+        "tags",
+        "postgres",
+        "array",
+        "pgarray",
+        "django",
+      ],
       "description": "I wanted to use arrays in postgresql for tags on this blog. I installed the packages
  and . The model for the blogposts is displayed below…",
       "guid": "https://rolflekang.com/use-array-in-postgresql",
@@ -240,7 +327,14 @@ custom model. How does this affect third…",
     },
     Object {
       "author": undefined,
-      "categories": Array [],
+      "categories": Array [
+        "puppet",
+        "web.py",
+        "nginx",
+        "uwsgi",
+        "github",
+        "github-hooks",
+      ],
       "description": "I recently started using github web interface as editor for my puppet configuration. I wanted to be able to push a new configuration without…",
       "guid": "https://rolflekang.com/apply-puppet-configuration-automatically",
       "link": "https://rolflekang.com/apply-puppet-configuration-automatically",
@@ -249,7 +343,12 @@ custom model. How does this affect third…",
     },
     Object {
       "author": undefined,
-      "categories": Array [],
+      "categories": Array [
+        "wikipedia",
+        "css",
+        "readability",
+        "stylebot",
+      ],
       "description": "I have been reading a lot of wikipedia articles lately so I made a stylebot stylesheet to make it a little bit more comfortable to read. If…",
       "guid": "https://rolflekang.com/readable-wikipedia",
       "link": "https://rolflekang.com/readable-wikipedia",
@@ -258,7 +357,12 @@ custom model. How does this affect third…",
     },
     Object {
       "author": undefined,
-      "categories": Array [],
+      "categories": Array [
+        "django",
+        "no-password",
+        "email-authentication",
+        "authentication",
+      ],
       "description": "Some weeks ago I read a blog post by Ben Brown about password less login. I wanted to learn more about custom authentication in Django and I…",
       "guid": "https://rolflekang.com/django-nopassword",
       "link": "https://rolflekang.com/django-nopassword",
@@ -267,7 +371,12 @@ custom model. How does this affect third…",
     },
     Object {
       "author": undefined,
-      "categories": Array [],
+      "categories": Array [
+        "arduino",
+        "github",
+        "git",
+        "web.py",
+      ],
       "description": "Update: This project is now on github: relekang/lumen My arduino has been collecting dust in a drawer for a while. This weekend I figured…",
       "guid": "https://rolflekang.com/the-github-lamp",
       "link": "https://rolflekang.com/the-github-lamp",
