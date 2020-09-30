@@ -11,7 +11,7 @@ module.exports = async function parseString(feed) {
       title: parsed.title,
       link: parsed.link,
       feedLink: parsed.feedLink,
-      entries: parsed.items.map((item) => {
+      entries: parsed.items.map(item => {
         return Object.assign({}, item, {
           pubDate: new Date(item.created).toISOString(),
           categories: typeof item.category === 'string' ? [item.category] : item.category || [],
@@ -20,7 +20,10 @@ module.exports = async function parseString(feed) {
       }),
     }
   } catch (error) {
-    if (error.toString().includes('There are errors in your xml')) {
+    if (
+      error.toString().includes('There are errors in your xml') ||
+      error.toString().includes("Cannot read property 'item' of undefined")
+    ) {
       throw new NotAFeedError()
     }
     throw new ParserError(error, 'RSS_TO_JSON')
