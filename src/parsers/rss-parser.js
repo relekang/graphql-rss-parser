@@ -1,4 +1,5 @@
 const Parser = require('rss-parser')
+const debug = require('debug')('micro-rss-parser:parsers:rss-parser')
 
 const { NotAFeedError, ParserError } = require('../errors')
 
@@ -34,14 +35,17 @@ function transform(parsed) {
 
 module.exports = function parseString(document, options) {
   return new Promise((resolve, reject) => {
+    debug('starting to parse')
     parser.parseString(document, function (error, parsed) {
       if (error) {
+        debug('parsing failed with error', error)
         if (/Line:/.test(error.message) && /Column:/.test(error.message)) {
           return reject(new NotAFeedError())
         }
         return reject(new ParserError(error, 'RSS_PARSER'))
       }
 
+      debug('done parsing')
       resolve(transform(parsed, options))
     })
   })

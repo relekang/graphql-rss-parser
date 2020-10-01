@@ -1,4 +1,5 @@
 const axios = require('./axios')
+const debug = require('debug')('micro-rss-parser:request')
 
 const {
   UnknownRequestError,
@@ -10,13 +11,14 @@ const {
 
 module.exports = async function request(url) {
   try {
+    debug(`requesting ${url}`)
     const response = await axios({
       url,
       headers: {
         'User-Agent': 'micro-rss-parser',
       },
     })
-
+    debug(`response from ${url} status-code=${response.status}`)
     if (!response.data) throw new EmptyHttpResponseError()
     if (!/2\d\d/.test(response.status)) {
       throw new UpstreamHttpError('Not found', response.status)
@@ -28,9 +30,7 @@ module.exports = async function request(url) {
       headers: response.headers,
     }
   } catch (error) {
-    if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test') {
-      console.log(error)
-    }
+    debug(`request to ${url} failed with error`, error)
     if (error.response && error.response) {
       throw new UpstreamHttpError('Upstream HTTP error', error.response.status)
     }

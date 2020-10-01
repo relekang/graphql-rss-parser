@@ -1,4 +1,5 @@
 const { makeExecutableSchema } = require('graphql-tools')
+const debug = require('debug')('micro-rss-parser:schema')
 
 const feed = require('./handlers/feed')
 const findFeed = require('./handlers/findFeed')
@@ -43,8 +44,14 @@ const typeDefs = `
 
 const resolvers = {
   Query: {
-    feed: (_, query) => feed.parseFromQuery(query),
-    findFeed: (_, query) => findFeed(query),
+    feed: (_, query) => {
+      debug('query-resolver feed, query:', query)
+      return feed.parseFromQuery(query)
+    },
+    findFeed: (_, query) => {
+      debug('query-resolver findFeed, query:', query)
+      return findFeed(query)
+    },
   },
 }
 

@@ -1,13 +1,16 @@
 const Readable = require('stream').Readable
 const FeedParser = require('feedparser')
+const debug = require('debug')('micro-rss-parser:parsers:feedparser')
 
 const { ParserError, NotAFeedError } = require('../errors')
 
 module.exports = function parseString(feed) {
   return new Promise((resolve, reject) => {
     try {
+      debug('starting to parse')
       const feedparser = new FeedParser()
       feedparser.on('error', (error) => {
+        debug('parsing failed with error', error)
         reject(new ParserError(error, 'FEEDPARSER'))
       })
 
@@ -34,6 +37,7 @@ module.exports = function parseString(feed) {
       })
 
       feedparser.on('end', function () {
+        debug('done parsing')
         resolve(parsedFeed)
       })
 
@@ -42,9 +46,11 @@ module.exports = function parseString(feed) {
       stream.push(feed)
       stream.push(null)
     } catch (error) {
+      debug('parsing failed with error', error)
       reject(new ParserError(error, 'FEEDPARSER'))
     }
   }).catch((error) => {
+    debug('parsing failed with error', error)
     if (error.message === 'Not a feed' || error.cause.message === 'Not a feed') {
       throw new NotAFeedError(error)
     }

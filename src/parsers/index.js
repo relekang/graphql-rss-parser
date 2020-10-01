@@ -1,5 +1,11 @@
+const debug = require('debug')('micro-rss-parser:parsers')
+
+const keys = ['FEEDPARSER', 'RSS_PARSER', 'FEEDME', 'RSS_TO_JSON']
+
+debug('active parsers:', keys)
+
 module.exports = {
-  keys: ['FEEDPARSER', 'RSS_PARSER', 'FEEDME', 'RSS_TO_JSON'],
+  keys,
   RSS_PARSER: require('./rss-parser'),
   FEEDPARSER: require('./feedparser'),
   FEEDME: require('./feedme'),

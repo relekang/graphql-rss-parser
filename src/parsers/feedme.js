@@ -1,3 +1,4 @@
+const debug = require('debug')('micro-rss-parser:parsers:feedme')
 const Readable = require('stream').Readable
 const FeedMe = require('feedme')
 const find = require('lodash/fp/find')
@@ -12,6 +13,7 @@ function evaluateLink(link) {
 
 module.exports = function parseString(feed) {
   return new Promise((resolve, reject) => {
+    debug('starting to parse')
     try {
       if (feed.includes('medium.com')) {
         throw new Error('Failed to parse')
@@ -63,16 +65,19 @@ module.exports = function parseString(feed) {
             },
           ]
         } catch (error) {
+          debug('parsing failed with error', error)
           reject(new ParserError(error, 'FEEDME'))
         }
       })
 
       parser.on('end', () => {
         parsed.link = evaluateLink(parsed.link)
+        debug('done parsing')
         resolve(parsed)
       })
 
       parser.on('error', (error) => {
+        debug('parsing failed with error', error)
         reject(new ParserError(error, 'FEEDME'))
       })
 
@@ -81,6 +86,7 @@ module.exports = function parseString(feed) {
       stream.push(feed)
       stream.push(null)
     } catch (error) {
+      debug('parsing failed with error', error)
       reject(error)
     }
   })
