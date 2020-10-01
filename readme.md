@@ -1,10 +1,7 @@
-<h1 style="text-align: center;">micro-rss-parser</h1>
-
-<div style="text-align: center;">
-  <a href="https://circleci.com/gh/relekang/micro-rss-parser/tree/master"><img src="https://circleci.com/gh/relekang/micro-rss-parser/tree/master.svg?style=svg" alt="CircleCI"></a>
-  <a href="https://codecov.io/gh/relekang/micro-rss-parser"><img src="https://codecov.io/gh/relekang/micro-rss-parser/branch/master/graph/badge.svg" alt="codecov"></a>
-  <a href="https://www.npmjs.com/package/micro-rss-parser"><img src="https://img.shields.io/npm/v/micro-rss-parser.svg" alt="npm version"></a>
-</div>
+<h1 style="text-align: center;">
+micro-rss-parser
+<a href="https://www.npmjs.com/package/micro-rss-parser"><img src="https://img.shields.io/npm/v/micro-rss-parser.svg" alt="npm version"></a>
+</h1>
 
 A [graphql][] microservice that parses rss feeds and returns a JSON representation of the
 given feed. It uses different parses installed from npm. When a parser fail it will try the next following this order: [feedparser][], [rss-parser][], [feedme][]. To specify a specific parser see example queries below.
