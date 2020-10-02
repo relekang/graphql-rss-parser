@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.6.0](https://github.com/relekang/graphql-rss-parser/compare/v2.5.0...v2.6.0) (2020-10-02)
+
+
+### Features
+
+* Port raven to sentry sdk and add error filtering ([2a6e209](https://github.com/relekang/graphql-rss-parser/commit/2a6e209513cb39ec9f27f2abf4e2dda2b0fed9ae))
+
 ## [2.5.0](https://github.com/relekang/graphql-rss-parser/compare/v2.4.0...v2.5.0) (2020-10-02)
 
 
