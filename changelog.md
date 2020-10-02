@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.6.1](https://github.com/relekang/graphql-rss-parser/compare/v2.6.0...v2.6.1) (2020-10-02)
+
+
+### Bug Fixes
+
+* Make sentry debug controllable with env variable ([b6a4044](https://github.com/relekang/graphql-rss-parser/commit/b6a4044bee87508bfa9aa64225444d505a2265a9))
+
 ## [2.6.0](https://github.com/relekang/graphql-rss-parser/compare/v2.5.0...v2.6.0) (2020-10-02)
 
 
