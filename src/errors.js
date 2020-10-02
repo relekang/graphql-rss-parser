@@ -1,5 +1,5 @@
 const { getReasonPhrase } = require('http-status-codes')
-const debug = require('debug')('micro-rss-parser:errors')
+const debug = require('debug')('graphql-rss-parser:errors')
 const development = !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
 
 class BaseError extends Error {

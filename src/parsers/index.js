@@ -1,4 +1,4 @@
-const debug = require('debug')('micro-rss-parser:parsers')
+const debug = require('debug')('graphql-rss-parser:parsers')
 
 const keys = ['FEEDPARSER', 'RSS_PARSER', 'FEEDME', 'RSS_TO_JSON']
 

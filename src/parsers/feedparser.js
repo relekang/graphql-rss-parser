@@ -1,6 +1,6 @@
 const Readable = require('stream').Readable
 const FeedParser = require('feedparser')
-const debug = require('debug')('micro-rss-parser:parsers:feedparser')
+const debug = require('debug')('graphql-rss-parser:parsers:feedparser')
 
 const { ParserError, NotAFeedError } = require('../errors')
 

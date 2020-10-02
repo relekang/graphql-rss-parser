@@ -1,13 +1,13 @@
 {
-  "name": "micro-rss-parser",
+  "name": "graphql-rss-parser",
   "version": "2.4.0",
-  "description": "A microservice that parses rss feeds and returns JSON",
+  "description": "A microservice that parses rss feeds and makes it available as grahpql schema",
   "main": "src/index.js",
   "engines": {
     "node": ">=10"
   },
   "bin": {
-    "micro-rss-parser": "./cli.js"
+    "graphql-rss-parser": "./cli.js"
   },
   "scripts": {
     "start": "./cli.js",
@@ -18,14 +18,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/relekang/micro-rss-parser.git"
+    "url": "git+https://github.com/relekang/graphql-rss-parser.git"
   },
   "author": "Rolf Erik Lekang",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/relekang/micro-rss-parser/issues"
+    "url": "https://github.com/relekang/graphql-rss-parser/issues"
   },
-  "homepage": "https://github.com/relekang/micro-rss-parser#readme",
+  "homepage": "https://github.com/relekang/graphql-rss-parser#readme",
   "jest": {
     "testEnvironment": "node",
     "coverageDirectory": "./coverage/",

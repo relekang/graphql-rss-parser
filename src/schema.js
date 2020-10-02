@@ -1,5 +1,5 @@
 const { makeExecutableSchema } = require('graphql-tools')
-const debug = require('debug')('micro-rss-parser:schema')
+const debug = require('debug')('graphql-rss-parser:schema')
 
 const feed = require('./handlers/feed')
 const findFeed = require('./handlers/findFeed')

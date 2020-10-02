@@ -1,4 +1,4 @@
-const debug = require('debug')('micro-rss-parser:parsers:feedme')
+const debug = require('debug')('graphql-rss-parser:parsers:feedme')
 const Readable = require('stream').Readable
 const FeedMe = require('feedme')
 const find = require('lodash/fp/find')

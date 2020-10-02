@@ -1,5 +1,5 @@
 const axios = require('./axios')
-const debug = require('debug')('micro-rss-parser:request')
+const debug = require('debug')('graphql-rss-parser:request')
 
 const {
   UnknownRequestError,
@@ -15,7 +15,7 @@ module.exports = async function request(url) {
     const response = await axios({
       url,
       headers: {
-        'User-Agent': 'micro-rss-parser',
+        'User-Agent': 'graphql-rss-parser',
       },
     })
     debug(`response from ${url} status-code=${response.status}`)

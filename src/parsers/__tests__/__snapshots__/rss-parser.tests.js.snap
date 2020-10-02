@@ -1815,7 +1815,7 @@ are many use cases for compiling to native, e.g. fast CLIs…",
       ],
       "content": "I recently created a GraphQL based microservice for parsing RSS-feeds. I wanted
 to write something down about the approach I took to test…",
-      "content:encoded": "<p>I recently created a <a href=\\"https://github.com/relekang/micro-rss-parser\\">GraphQL based microservice</a> for parsing RSS-feeds. I wanted
+      "content:encoded": "<p>I recently created a <a href=\\"https://github.com/relekang/graphql-rss-parser\\">GraphQL based microservice</a> for parsing RSS-feeds. I wanted
 to write something down about the approach I took to test the API. The service is read only, as
 there is little we can push out into others RSS feeds.</p>
 <p>GraphQL returns 200 status for almost everything. Whenever error occurs it only pushes the error
@@ -1824,7 +1824,7 @@ and give as much information as it can even when something fails. This also mean
 abstract away the most part of successful and unsuccessful requests in our tests and still get
 valid tests. Thus, when testing the API layer of this service the only thing that matters is the
 query and the response.</p>
-<p>Services like micro-rss-parser has another characteristic that makes them easy to test. No
+<p>Services like graphql-rss-parser has another characteristic that makes them easy to test. No
 authentication or authorization, which means that we do not need to check different types of errors
 based on different states of authorization. Thus, it is only the GraphQL query and the response
 that matters.</p>
@@ -1841,13 +1841,13 @@ tests look like this:</p>
 <p>Under the hood that helper creates a <a href=\\"https://facebook.github.io/jest/\\">jest</a> test that asserts to a snapshot with jests handy
 <a href=\\"http://facebook.github.io/jest/docs/expect.html#tomatchsnapshotoptionalstring\\">toMatchSnapshot()</a>. This generates a snapshot file for every test file with a map of responses
 with the query as key. Thus, reviewing these tests and test changes is a bliss. Below is the
-implementation of the test helper as it was in micro-rss-parser at the time when this was written.</p>
+implementation of the test helper as it was in graphql-rss-parser at the time when this was written.</p>
 <div class=\\"gatsby-highlight\\" data-language=\\"js\\"><pre class=\\"language-js\\"><code class=\\"language-js\\"><span class=\\"token keyword\\">const</span> request <span class=\\"token operator\\">=</span> <span class=\\"token function\\">require</span><span class=\\"token punctuation\\">(</span><span class=\\"token string\\">'superagent'</span><span class=\\"token punctuation\\">)</span>
 
 <span class=\\"token keyword\\">function</span> <span class=\\"token function\\">createTestServer</span><span class=\\"token punctuation\\">(</span><span class=\\"token punctuation\\">)</span> <span class=\\"token punctuation\\">{</span>
   <span class=\\"token comment\\">/*
    * Set up a test instance and return url.
-   * For micro-rss-parser I used this https://github.com/zeit/micro#testing
+   * For graphql-rss-parser I used this https://github.com/zeit/micro#testing
    */</span>
 <span class=\\"token punctuation\\">}</span>
 
@@ -1888,7 +1888,7 @@ and give as much information as it can even when something fails. This also mean
 abstract away the most part of successful and unsuccessful requests in our tests and still get
 valid tests. Thus, when testing the API layer of this service the only thing that matters is the
 query and the response.
-Services like micro-rss-parser has another characteristic that makes them easy to test. No
+Services like graphql-rss-parser has another characteristic that makes them easy to test. No
 authentication or authorization, which means that we do not need to check different types of errors
 based on different states of authorization. Thus, it is only the GraphQL query and the response
 that matters.
@@ -1906,13 +1906,13 @@ testGraphQlService\`{
 Under the hood that helper creates a jest test that asserts to a snapshot with jests handy
 toMatchSnapshot(). This generates a snapshot file for every test file with a map of responses
 with the query as key. Thus, reviewing these tests and test changes is a bliss. Below is the
-implementation of the test helper as it was in micro-rss-parser at the time when this was written.
+implementation of the test helper as it was in graphql-rss-parser at the time when this was written.
 const request = require('superagent')
 
 function createTestServer() {
   /*
    * Set up a test instance and return url.
-   * For micro-rss-parser I used this https://github.com/zeit/micro#testing
+   * For graphql-rss-parser I used this https://github.com/zeit/micro#testing
    */
 }
 
@@ -5396,7 +5396,7 @@ are many use cases for compiling to native, e.g. fast CLIs…",
       ],
       "content": "I recently created a GraphQL based microservice for parsing RSS-feeds. I wanted
 to write something down about the approach I took to test…",
-      "content:encoded": "<p>I recently created a <a href=\\"https://github.com/relekang/micro-rss-parser\\">GraphQL based microservice</a> for parsing RSS-feeds. I wanted
+      "content:encoded": "<p>I recently created a <a href=\\"https://github.com/relekang/graphql-rss-parser\\">GraphQL based microservice</a> for parsing RSS-feeds. I wanted
 to write something down about the approach I took to test the API. The service is read only, as
 there is little we can push out into others RSS feeds.</p>
 <p>GraphQL returns 200 status for almost everything. Whenever error occurs it only pushes the error
@@ -5405,7 +5405,7 @@ and give as much information as it can even when something fails. This also mean
 abstract away the most part of successful and unsuccessful requests in our tests and still get
 valid tests. Thus, when testing the API layer of this service the only thing that matters is the
 query and the response.</p>
-<p>Services like micro-rss-parser has another characteristic that makes them easy to test. No
+<p>Services like graphql-rss-parser has another characteristic that makes them easy to test. No
 authentication or authorization, which means that we do not need to check different types of errors
 based on different states of authorization. Thus, it is only the GraphQL query and the response
 that matters.</p>
@@ -5422,13 +5422,13 @@ tests look like this:</p>
 <p>Under the hood that helper creates a <a href=\\"https://facebook.github.io/jest/\\">jest</a> test that asserts to a snapshot with jests handy
 <a href=\\"http://facebook.github.io/jest/docs/expect.html#tomatchsnapshotoptionalstring\\">toMatchSnapshot()</a>. This generates a snapshot file for every test file with a map of responses
 with the query as key. Thus, reviewing these tests and test changes is a bliss. Below is the
-implementation of the test helper as it was in micro-rss-parser at the time when this was written.</p>
+implementation of the test helper as it was in graphql-rss-parser at the time when this was written.</p>
 <div class=\\"gatsby-highlight\\" data-language=\\"js\\"><pre class=\\"language-js\\"><code class=\\"language-js\\"><span class=\\"token keyword\\">const</span> request <span class=\\"token operator\\">=</span> <span class=\\"token function\\">require</span><span class=\\"token punctuation\\">(</span><span class=\\"token string\\">'superagent'</span><span class=\\"token punctuation\\">)</span>
 
 <span class=\\"token keyword\\">function</span> <span class=\\"token function\\">createTestServer</span><span class=\\"token punctuation\\">(</span><span class=\\"token punctuation\\">)</span> <span class=\\"token punctuation\\">{</span>
   <span class=\\"token comment\\">/*
    * Set up a test instance and return url.
-   * For micro-rss-parser I used this https://github.com/zeit/micro#testing
+   * For graphql-rss-parser I used this https://github.com/zeit/micro#testing
    */</span>
 <span class=\\"token punctuation\\">}</span>
 
@@ -5469,7 +5469,7 @@ and give as much information as it can even when something fails. This also mean
 abstract away the most part of successful and unsuccessful requests in our tests and still get
 valid tests. Thus, when testing the API layer of this service the only thing that matters is the
 query and the response.
-Services like micro-rss-parser has another characteristic that makes them easy to test. No
+Services like graphql-rss-parser has another characteristic that makes them easy to test. No
 authentication or authorization, which means that we do not need to check different types of errors
 based on different states of authorization. Thus, it is only the GraphQL query and the response
 that matters.
@@ -5487,13 +5487,13 @@ testGraphQlService\`{
 Under the hood that helper creates a jest test that asserts to a snapshot with jests handy
 toMatchSnapshot(). This generates a snapshot file for every test file with a map of responses
 with the query as key. Thus, reviewing these tests and test changes is a bliss. Below is the
-implementation of the test helper as it was in micro-rss-parser at the time when this was written.
+implementation of the test helper as it was in graphql-rss-parser at the time when this was written.
 const request = require('superagent')
 
 function createTestServer() {
   /*
    * Set up a test instance and return url.
-   * For micro-rss-parser I used this https://github.com/zeit/micro#testing
+   * For graphql-rss-parser I used this https://github.com/zeit/micro#testing
    */
 }
 

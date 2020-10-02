@@ -16,12 +16,12 @@ const options = args
     'Raven DSN. This is used to configure logging with sentry.io',
     process.env.RAVEN_DSN
   )
-  .parse(process.argv, { name: 'micro-rss-parser' })
+  .parse(process.argv, { name: 'graphql-rss-parser' })
 
 options.version = pkg.version
 
 // eslint-disable-next-line no-console
-console.log('Starting micro-rss-parser v' + pkg.version)
+console.log('Starting graphql-rss-parser v' + pkg.version)
 
 const server = micro(createHandler(options))
 

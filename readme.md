@@ -1,6 +1,6 @@
 <h1 style="text-align: center;">
-micro-rss-parser
-<a href="https://www.npmjs.com/package/micro-rss-parser"><img src="https://img.shields.io/npm/v/micro-rss-parser.svg" alt="npm version"></a>
+graphql-rss-parser
+<a href="https://www.npmjs.com/package/graphql-rss-parser"><img src="https://img.shields.io/npm/v/graphql-rss-parser.svg" alt="npm version"></a>
 </h1>
 
 A [graphql][] microservice that parses rss feeds and returns a JSON representation of the
@@ -11,7 +11,7 @@ given feed. It uses different parses installed from npm. When a parser fail it w
 ## Installation
 
 ```shell
-npm i -g micro-rss-parser
+npm i -g graphql-rss-parser
 ```
 
 ## Usage
@@ -19,9 +19,9 @@ npm i -g micro-rss-parser
 ### CLI for starting the server
 
 ```shell
-$ micro-rss-parser --help
+$ graphql-rss-parser --help
 
-  Usage: micro-rss-parser [options] [command]
+  Usage: graphql-rss-parser [options] [command]
 
   Commands:
 
@@ -53,7 +53,7 @@ $ micro-rss-parser --help
 ```
 
 ##### Specifying the parser.
-micro-rss-parser supports several of the rss parsers on npm. It can be specified with the parser option in a feed query as seen below.
+graphql-rss-parser supports several of the rss parsers on npm. It can be specified with the parser option in a feed query as seen below.
 
 Available parsers:
 

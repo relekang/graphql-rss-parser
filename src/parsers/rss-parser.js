@@ -1,5 +1,5 @@
 const Parser = require('rss-parser')
-const debug = require('debug')('micro-rss-parser:parsers:rss-parser')
+const debug = require('debug')('graphql-rss-parser:parsers:rss-parser')
 
 const { NotAFeedError, ParserError } = require('../errors')
 
