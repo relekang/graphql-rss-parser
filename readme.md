@@ -4,7 +4,7 @@ graphql-rss-parser
 </h1>
 
 A [graphql][] microservice that parses rss feeds and returns a JSON representation of the
-given feed. It uses different parses installed from npm. When a parser fail it will try the next following this order: [feedparser][], [rss-parser][], [feedme][]. To specify a specific parser see example queries below.
+given feed. It uses different parses installed from npm. When a parser fail it will try the next following this order: [feedparser][], [rss-parser][], [feedme][], [rss-to-json][]. To specify a specific parser see example queries below.
 
 
 
@@ -60,6 +60,7 @@ Available parsers:
 * `FEEDPARSER` - [feedparser][]
 * `RSS_PARSER` - [rss-parser][]
 * `FEEDME` - [feedme][]
+* `RSS_TO_JSON` - [rss-to-json][]
 
 ```graphql
 {
@@ -85,3 +86,4 @@ Available parsers:
 [feedparser]: https://www.npmjs.com/package/feedparser
 [rss-parser]: https://www.npmjs.com/package/rss-parser
 [feedme]: https://www.npmjs.com/package/feedme
+[rss-to-json]: https://www.npmjs.com/package/rss-to-json
