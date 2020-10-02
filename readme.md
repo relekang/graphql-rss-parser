@@ -32,9 +32,15 @@ $ graphql-rss-parser --help
     -h, --help          Output usage information
     -H, --host [value]  Host to listen on (defaults to "0.0.0.0")
     -p, --port <n>      Port to listen on (defaults to 3000)
-    -R, --raven-dsn     Raven DSN. This is used to configure logging with sentry.io
+    -D, --sentry-dsn    Sentry DSN. This is used to configure logging with sentry.io
     -v, --version       Output the version number
 ```
+
+### Sentry integration
+
+The sentry integration can be enabled by passing the `-D/--sentry-dsn` cli option. It is important to note
+that errors that happens because errors in parsers or http requests will be filtered out. This is because
+the goal of this error tracking is to catch errors in the code of the service.
 
 ### Example queries
 

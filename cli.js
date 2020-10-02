@@ -12,9 +12,9 @@ const options = args
   .option(['p', 'port'], 'Port to listen on', process.env.PORT || 3000, Number)
   .option(['H', 'host'], 'Host to listen on', process.env.HOST || '0.0.0.0')
   .option(
-    ['R', 'raven-dsn'],
-    'Raven DSN. This is used to configure logging with sentry.io',
-    process.env.RAVEN_DSN
+    ['D', 'sentry-dsn'],
+    'SENTRY DSN. This is used to configure logging with sentry.io',
+    process.env.SENTRY_DSN
   )
   .parse(process.argv, { name: 'graphql-rss-parser' })
 

@@ -91,29 +91,9 @@ class ConnectionFailedError extends BaseError {
   }
 }
 
-function createErrorFormatter(Raven) {
+function createErrorFormatter(Sentry) {
+  debug(Sentry ? 'creating error formatter with sentry' : 'creating error formatter without sentry')
   return function formatError(error) {
-    if (Raven) {
-      if (error.path || error.name !== 'GraphQLError') {
-        Raven.captureException(error, {
-          tags: { graphql: 'error' },
-          extra: {
-            source: error.source && error.source.body,
-            positions: error.positions,
-            path: error.path,
-          },
-        })
-      } else {
-        Raven.captureMessage(`GraphQLWrongQuery: ${error.message}`, {
-          tags: { graphql: 'query' },
-          extra: {
-            source: error.source && error.source.body,
-            positions: error.positions,
-          },
-        })
-      }
-    }
-
     const response = {
       path: error.path,
       error: {
@@ -137,7 +117,18 @@ function createErrorFormatter(Raven) {
         }
       }
     }
+
     debug.extend('formatError')('error response', response)
+
+    if (Sentry) {
+      Sentry.captureException(error.originalError || error, {
+        extra: {
+          path: error.path,
+          apiResponse: response,
+        },
+      })
+    }
+
     return response
   }
 }
@@ -155,4 +146,17 @@ module.exports = {
   ConnectionRefusedError,
   UnknownRequestError,
   createErrorFormatter,
+  sentryIgnoreErrors: [
+    'ConnectionFailedError',
+    'ConnectionRefusedError',
+    'DnsLookupError',
+    'EmptyHttpResponseError',
+    'EmptyParseOutputError',
+    'InvalidInputError',
+    'NotAFeedError',
+    'NotFoundError',
+    'ParserError',
+    'UpstreamHttpError',
+    'ValidationError',
+  ],
 }

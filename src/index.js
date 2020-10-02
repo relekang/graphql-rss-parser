@@ -1,20 +1,26 @@
 const { ApolloServer } = require('apollo-server-micro')
 
 const { schema } = require('./schema')
-const { createErrorFormatter } = require('./errors')
+const { createErrorFormatter, sentryIgnoreErrors } = require('./errors')
 
 module.exports = function createHandler(options) {
-  let Raven
+  let Sentry
 
-  if (options.ravenDsn) {
-    Raven = require('raven')
-    Raven.config(options.ravenDsn, {
-      release: options.version,
+  if (options.sentryDsn) {
+    Sentry = require('@sentry/node')
+    Sentry.init({
+      dsn: options.sentryDsn,
+      release: options.release,
       environment: process.env.NODE_ENV,
-    }).install()
+      ignoreErrors: sentryIgnoreErrors,
+      onFatalError(error) {
+        console.error(error, error.response)
+      },
+      debug: true,
+    })
   }
 
-  const formatError = createErrorFormatter(Raven)
+  const formatError = createErrorFormatter(Sentry)
   const apolloServer = new ApolloServer({ schema, formatError })
 
   return apolloServer.createHandler({ path: '/' })
