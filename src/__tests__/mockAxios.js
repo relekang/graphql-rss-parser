@@ -7,7 +7,7 @@ async function mockAxios(options) {
   const path = resolve(
     __dirname,
     '../../__fixtures__',
-    (options.url || '').replace(/https?:\/\//, '').replace(/\//g, '_') + ".json"
+    (options.url || '').replace(/https?:\/\//, '').replace(/\//g, '_') + '.json'
   )
   let content
   try {
