@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.5.0](https://github.com/relekang/graphql-rss-parser/compare/v2.4.0...v2.5.0) (2020-10-02)
+
+
+### Features
+
+* Add debug logging ([7f12cc1](https://github.com/relekang/graphql-rss-parser/commit/7f12cc17e2d4669f582b66a9f45258e1cf746866))
+
+
+### Bug Fixes
+
+* Add handling of not feed errors in rss-to-json ([8992e7c](https://github.com/relekang/graphql-rss-parser/commit/8992e7c1199085955683244f67522e3e1db14f68))
+* Upgrade normalize-url ([8a26300](https://github.com/relekang/graphql-rss-parser/commit/8a26300e8b9e2c47d19e12dbd5ba464c22fb39c5))
+
 ## [2.4.0](https://github.com/relekang/graphql-rss-parser/compare/v2.3.3...v2.4.0) (2020-09-30)
 
 
