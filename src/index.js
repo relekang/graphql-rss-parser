@@ -16,7 +16,7 @@ module.exports = function createHandler(options) {
       onFatalError(error) {
         console.error(error, error.response)
       },
-      debug: true,
+      debug: process.env.DEBUG_SENTRY == 'true',
     })
   }
 
