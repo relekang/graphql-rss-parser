@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.6.2](https://github.com/relekang/graphql-rss-parser/compare/v2.6.1...v2.6.2) (2020-10-14)
+
+
+### Bug Fixes
+
+* Add release tag in sentry ([4aa0138](https://github.com/relekang/graphql-rss-parser/commit/4aa013837c0de60146bafaa996ebf888ed7e9feb))
+* Handle ECONNRESET errors ([5d6e803](https://github.com/relekang/graphql-rss-parser/commit/5d6e8037d8ab282225ab049add06466408b5fdda))
+
 ### [2.6.1](https://github.com/relekang/graphql-rss-parser/compare/v2.6.0...v2.6.1) (2020-10-02)
 
 
