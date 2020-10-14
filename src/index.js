@@ -10,7 +10,7 @@ module.exports = function createHandler(options) {
     Sentry = require('@sentry/node')
     Sentry.init({
       dsn: options.sentryDsn,
-      release: options.release,
+      release: `graphql-rss-parser@${options.version}`,
       environment: process.env.NODE_ENV,
       ignoreErrors: sentryIgnoreErrors,
       onFatalError(error) {
