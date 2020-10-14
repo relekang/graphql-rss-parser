@@ -37,7 +37,7 @@ module.exports = async function request(url) {
     if (error.code === 'ENOTFOUND' || error.code === 'EAI_AGAIN') {
       throw new DnsLookupError()
     }
-    if (error.code === 'ECONNREFUSED') {
+    if (error.code === 'ECONNREFUSED' || error.code === 'ECONNRESET') {
       throw new ConnectionRefusedError()
     }
 
