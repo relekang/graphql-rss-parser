@@ -7,7 +7,10 @@ const {
   EmptyHttpResponseError,
   UnknownRequestError,
   UpstreamHttpError,
+  TimeoutError,
 } = require('./errors')
+
+const TIMEOUT = 30 * 1000
 
 module.exports = async function request(url) {
   try {
@@ -17,6 +20,7 @@ module.exports = async function request(url) {
       headers: {
         'User-Agent': 'graphql-rss-parser',
       },
+      timeout: TIMEOUT,
     })
     debug(`response from ${url} status-code=${response.status}`)
     if (!response.data) throw new EmptyHttpResponseError()
@@ -39,6 +43,10 @@ module.exports = async function request(url) {
     }
     if (error.code === 'ECONNREFUSED' || error.code === 'ECONNRESET') {
       throw new ConnectionRefusedError()
+    }
+
+    if (error.code === 'ECONNABORTED' || error.code === 'ETIMEDOUT') {
+      throw new TimeoutError()
     }
 
     if (error.constructor === EmptyHttpResponseError || error.constructor === UpstreamHttpError) {

@@ -63,6 +63,12 @@ class ConnectionRefusedError extends BaseError {
   }
 }
 
+class TimeoutError extends BaseError {
+  constructor() {
+    super('The request for the feed timed out', 'timeout')
+  }
+}
+
 class UnknownRequestError extends BaseError {
   constructor(cause) {
     super('Unknown error while requesting feed', 'unknown-request-error')
@@ -135,17 +141,18 @@ function createErrorFormatter(Sentry) {
 
 module.exports = {
   ConnectionFailedError,
+  ConnectionRefusedError,
+  createErrorFormatter,
+  DnsLookupError,
   EmptyHttpResponseError,
   EmptyParseOutputError,
   InvalidInputError,
-  ParserError,
   NotAFeedError,
   NotFoundError,
-  UpstreamHttpError,
-  DnsLookupError,
-  ConnectionRefusedError,
+  ParserError,
+  TimeoutError,
   UnknownRequestError,
-  createErrorFormatter,
+  UpstreamHttpError,
   sentryIgnoreErrors: [
     'ConnectionFailedError',
     'ConnectionRefusedError',
@@ -156,6 +163,7 @@ module.exports = {
     'NotAFeedError',
     'NotFoundError',
     'ParserError',
+    'TimeoutError',
     'UpstreamHttpError',
     'ValidationError',
   ],
