@@ -35,7 +35,7 @@
     "@sentry/node": "^5.27.1",
     "apollo-server-micro": "^2.18.1",
     "args": "^3.0.8",
-    "axios": "^0.20.0",
+    "axios": "^0.21.0",
     "cheerio": "^1.0.0-rc.3",
     "debug": "^4.2.0",
     "feedme": "^1.2.0",
