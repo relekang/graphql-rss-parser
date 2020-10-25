@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.7.0](https://github.com/relekang/graphql-rss-parser/compare/v2.6.2...v2.7.0) (2020-10-25)
+
+
+### Features
+
+* Add timeout to feed request ([0d3a127](https://github.com/relekang/graphql-rss-parser/commit/0d3a1277628b2b33507bb78d6b0e7bd439a57fdd))
+
+
+### Bug Fixes
+
+* Make error handling return own errors ([4f95842](https://github.com/relekang/graphql-rss-parser/commit/4f95842425d6eaaaf7a6d77249fac48c2744e064))
+* Upgrade axios to 0.21.0 ([d164827](https://github.com/relekang/graphql-rss-parser/commit/d164827440560905b276bd55326a40cb785b808f))
+* Upgrade sentry client ([717d328](https://github.com/relekang/graphql-rss-parser/commit/717d32858c0f7dc37631c395bfc6c131b7e96b15))
+
 ### [2.6.2](https://github.com/relekang/graphql-rss-parser/compare/v2.6.1...v2.6.2) (2020-10-14)
 
 
