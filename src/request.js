@@ -2,11 +2,11 @@ const axios = require('./axios')
 const debug = require('debug')('graphql-rss-parser:request')
 
 const {
-  UnknownRequestError,
-  EmptyHttpResponseError,
-  UpstreamHttpError,
-  DnsLookupError,
   ConnectionRefusedError,
+  DnsLookupError,
+  EmptyHttpResponseError,
+  UnknownRequestError,
+  UpstreamHttpError,
 } = require('./errors')
 
 module.exports = async function request(url) {
@@ -31,7 +31,7 @@ module.exports = async function request(url) {
     }
   } catch (error) {
     debug(`request to ${url} failed with error`, error)
-    if (error.response && error.response) {
+    if (error.response && error.response.status) {
       throw new UpstreamHttpError('Upstream HTTP error', error.response.status)
     }
     if (error.code === 'ENOTFOUND' || error.code === 'EAI_AGAIN') {
@@ -39,6 +39,10 @@ module.exports = async function request(url) {
     }
     if (error.code === 'ECONNREFUSED' || error.code === 'ECONNRESET') {
       throw new ConnectionRefusedError()
+    }
+
+    if (error.constructor === EmptyHttpResponseError || error.constructor === UpstreamHttpError) {
+      throw error
     }
 
     throw new UnknownRequestError(error)

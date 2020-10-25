@@ -23,7 +23,7 @@ class EmptyParseOutputError extends BaseError {
 
 class EmptyHttpResponseError extends BaseError {
   constructor() {
-    super('Internal server error', 'empty-http-response-output')
+    super('Empty response from feed', 'empty-http-response-output')
   }
 }
 
