@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.7.1](https://github.com/relekang/graphql-rss-parser/compare/v2.7.0...v2.7.1) (2020-11-02)
+
+
+### Bug Fixes
+
+* Add handling of tls errors ([9e42a96](https://github.com/relekang/graphql-rss-parser/commit/9e42a9633d0d70b8aea595beb9b26d6e97f6d0f8))
+
 ## [2.7.0](https://github.com/relekang/graphql-rss-parser/compare/v2.6.2...v2.7.0) (2020-10-25)
 
 
