@@ -44,6 +44,12 @@ class UpstreamHttpError extends BaseError {
     }
   }
 }
+class UpstreamEncryptionError extends BaseError {
+  constructor(error) {
+    super('Upstream encryption error', 'upstream-encryption-error')
+    this.cause = error
+  }
+}
 
 class NotFoundError extends BaseError {
   constructor() {
@@ -153,6 +159,7 @@ module.exports = {
   TimeoutError,
   UnknownRequestError,
   UpstreamHttpError,
+  UpstreamEncryptionError,
   sentryIgnoreErrors: [
     'ConnectionFailedError',
     'ConnectionRefusedError',
@@ -165,6 +172,7 @@ module.exports = {
     'ParserError',
     'TimeoutError',
     'UpstreamHttpError',
+    'UpstreamEncryptionError',
     'ValidationError',
   ],
 }

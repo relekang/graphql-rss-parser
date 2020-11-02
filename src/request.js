@@ -7,6 +7,7 @@ const {
   EmptyHttpResponseError,
   UnknownRequestError,
   UpstreamHttpError,
+  UpstreamEncryptionError,
   TimeoutError,
 } = require('./errors')
 
@@ -51,6 +52,10 @@ module.exports = async function request(url) {
 
     if (error.constructor === EmptyHttpResponseError || error.constructor === UpstreamHttpError) {
       throw error
+    }
+
+    if (/certificate|tls|ssl/.test(error.toString())) {
+      throw new UpstreamEncryptionError(error)
     }
 
     throw new UnknownRequestError(error)
