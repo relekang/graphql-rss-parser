@@ -48,7 +48,7 @@
     "node-feedparser": "^1.0.1",
     "normalize-url": "^5.2.1",
     "rss-parser": "^3.9.0",
-    "rss-to-json": "^1.1.1",
+    "rss-to-json": "^1.1.2",
     "update-notifier": "^5.0.0"
   },
   "devDependencies": {
