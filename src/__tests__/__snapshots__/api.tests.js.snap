@@ -250,6 +250,30 @@ Object {
 `;
 
 exports[`
+  feed(url: "https://rolflekang.com/feed.xml", startTime: "2020-01-01", endTime: "2020-10-31") {
+    entries { title }
+  }
+ 1`] = `
+Object {
+  "data": Object {
+    "feed": Object {
+      "entries": Array [
+        Object {
+          "title": "Using Ansible handlers in loops",
+        },
+        Object {
+          "title": "Serving text/plain for curl with Next",
+        },
+        Object {
+          "title": "Wireless uplinks with Unifi",
+        },
+      ],
+    },
+  },
+}
+`;
+
+exports[`
   feed(url: "https://rolflekang.com/testing-simple-graphql-services") { title }
  1`] = `
 Object {

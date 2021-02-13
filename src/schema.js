@@ -38,7 +38,7 @@ const typeDefs = `
 
   type Query {
     findFeed(url: String!): [FindFeedResult]!
-    feed(url: String!, parser: Parser): Feed
+    feed(url: String!, parser: Parser, startTime: String, endTime: String): Feed
   }
 `
 

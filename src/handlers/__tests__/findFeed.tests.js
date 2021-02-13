@@ -79,3 +79,4 @@ test('findFeed should work with feedburner', async () => {
 
   expect(feeds).toEqual([{ title: 'zen habits', link: 'http://feeds.feedburner.com/zenhabits' }])
 })
+
