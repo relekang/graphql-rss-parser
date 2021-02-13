@@ -2462,7 +2462,7 @@ ci-info@^2.0.0:
   resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-2.0.0.tgz#67a9e964be31a51e15e5010d58e6f12834002f46"
   integrity sha512-5tK7EtrZ0N+OLFMthtqOj4fI2Jeb88C4CAZPu25LDVUgXJ0A3Js4PMGqrn0JU1W0Mh1/Z8wZzYPxqUrXeBboCQ==
 
-clarinet@^0.12.0:
+clarinet@^0.12.4:
   version "0.12.4"
   resolved "https://registry.yarnpkg.com/clarinet/-/clarinet-0.12.4.tgz#5d7196a2b2347ff283db2e2bf1ef615c0aa6afdb"
   integrity sha512-Rx9Zw8KQkoPO3/O2yPRchCZm3cGubCQiRLmmFAlbkDKobUIPP3JYul+bKILR9DIv1gSVwPQSgF8JGGkXzX8Q0w==
@@ -3452,11 +3452,6 @@ eventemitter3@^3.1.0:
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-3.1.2.tgz#2d3d48f9c346698fce83a85d7d664e98535df6e7"
   integrity sha512-tvtQIeLVHjDkJYnzf2dgVMxfuSGJeM/7UCG17TT4EumTfNtF+0nebF/4zWOIkCreAbtNqhGEboB6BWrwqNaw4Q==
 
-eventyoshi@^0.2.0:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/eventyoshi/-/eventyoshi-0.2.1.tgz#e110e47c1197513ff1937542a99d34ed0324b8d4"
-  integrity sha512-74HGaBn3Okqlv+mLFBRgqAgG5X8FvmHzrAZcJ7SG8nZZiLgRR2or0kJrkJ3GT5NncQDwHYh/sO7Cpzne+Ep2LA==
-
 exec-sh@^0.3.2:
   version "0.3.4"
   resolved "https://registry.yarnpkg.com/exec-sh/-/exec-sh-0.3.4.tgz#3a018ceb526cc6f6df2bb504b2bfe8e3a4934ec5"
@@ -3641,14 +3636,13 @@ fbjs@^1.0.0:
     setimmediate "^1.0.5"
     ua-parser-js "^0.7.18"
 
-feedme@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/feedme/-/feedme-1.2.0.tgz#7049249c1b4ef5293e48906de8d9c8626ce0fd46"
-  integrity sha512-GNaewCsb6eWTgWqvxnGCYm6MkYrRSlXyqNhJRbdX7ku2Ubks3Vlg0cveea+gnK3mYh4pjfMQpzWpYyFl2RvILw==
+feedme@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/feedme/-/feedme-2.0.2.tgz#f738b6ca434a30c57c23cbf9bdedc7cdb91413a9"
+  integrity sha512-0RNn0uLaSey8EThxgABR0T1Q47kSRatYnAXy1cfUc8/eypqXiAu38XGthuwwzb7mESCD9465k6Nym8D9AtB8HA==
   dependencies:
-    clarinet "^0.12.0"
-    eventyoshi "^0.2.0"
-    sax "^1.0.0"
+    clarinet "^0.12.4"
+    sax "^1.2.4"
 
 feedparser@^1.1.0:
   version "1.1.6"
@@ -6869,7 +6863,7 @@ sane@^4.0.3:
     minimist "^1.1.1"
     walker "~1.0.5"
 
-sax@>=0.6.0, sax@^1.0.0:
+sax@>=0.6.0, sax@^1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
