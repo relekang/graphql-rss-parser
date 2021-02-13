@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.8.0](https://github.com/relekang/graphql-rss-parser/compare/v2.7.2...v2.8.0) (2021-02-13)
+
+
+### Features
+
+* Add support for startTime and endTime ([6bcf740](https://github.com/relekang/graphql-rss-parser/commit/6bcf7407ad418fe71876bd5d756e8cae8380a35d)), closes [#3](https://github.com/relekang/graphql-rss-parser/issues/3)
+
 ### [2.7.2](https://github.com/relekang/graphql-rss-parser/compare/v2.7.1...v2.7.2) (2021-02-13)
 
 
