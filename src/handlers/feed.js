@@ -26,10 +26,21 @@ async function parseFromString({ content, parser }) {
   }
 }
 
-async function parseFromQuery({ url, parser }) {
+async function parseFromQuery({ url, parser, endTime, startTime }) {
   const content = (await request(url)).text
   const parsed = await parseFromString({ content, parser })
-  parsed.entries = parsed.entries.filter((item) => item != null)
+  parsed.entries = parsed.entries.filter((item) => {
+    if (item == null) {
+      return false
+    }
+    if (endTime && new Date(endTime) < new Date(item.pubDate)) {
+      return false
+    }
+    if (startTime && new Date(startTime) > new Date(item.pubDate)) {
+      return false
+    }
+    return true
+  })
   parsed.feedLink = parsed.feedLink || url
   return parsed
 }
