@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.7.2](https://github.com/relekang/graphql-rss-parser/compare/v2.7.1...v2.7.2) (2021-02-13)
+
+
+### Bug Fixes
+
+* Upgrade @sentry/node to 6.1.0 ([01405bc](https://github.com/relekang/graphql-rss-parser/commit/01405bcece094cc2903c2036c119ad46a84022af))
+* Upgrade feedme to 2.0.2 ([e62bb6e](https://github.com/relekang/graphql-rss-parser/commit/e62bb6eae3b78333e1e5be7cc193a790c1dce723))
+* Upgrade normalize-url to 5.3.0 ([1e6a3f7](https://github.com/relekang/graphql-rss-parser/commit/1e6a3f74afc3ed6e7f64639bc89b5a5d1ca14c8c))
+* Upgrade rss-parser to 3.11.0 ([40516b3](https://github.com/relekang/graphql-rss-parser/commit/40516b32382ad6a367fe1b31008a49231c09325b))
+* Upgrade rss-to-json to 1.1.2 ([ca2445a](https://github.com/relekang/graphql-rss-parser/commit/ca2445abec0387f80986cb63c890544aca63a58f))
+
 ### [2.7.1](https://github.com/relekang/graphql-rss-parser/compare/v2.7.0...v2.7.1) (2020-11-02)
 
 
