@@ -32,7 +32,7 @@
     "testRegex": "/__tests__/.*\\.tests\\.js$"
   },
   "dependencies": {
-    "@sentry/node": "^6.1.0",
+    "@sentry/node": "^6.2.4",
     "apollo-server-micro": "^2.22.2",
     "args": "^3.0.8",
     "axios": "^0.21.0",
