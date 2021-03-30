@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.8.1](https://github.com/relekang/graphql-rss-parser/compare/v2.8.0...v2.8.1) (2021-03-30)
+
+
+### Bug Fixes
+
+* Add support for feed links without leading slash ([4da2091](https://github.com/relekang/graphql-rss-parser/commit/4da20912d7a60191d4d1db441ed3f37f88a9d630))
+* Add y18n to resolutions ([afb5711](https://github.com/relekang/graphql-rss-parser/commit/afb57112153a7ccef591262d656bba21423b6829))
+* Upgrade graphql dependencies ([7dbda12](https://github.com/relekang/graphql-rss-parser/commit/7dbda12837571b3e17bf27957591645a2af25105))
+* Upgrade rss-parser ([a3f373a](https://github.com/relekang/graphql-rss-parser/commit/a3f373ab9f10dd260fda65422c6962f738f0d811))
+* Upgrade rss-to-json ([3bf73f7](https://github.com/relekang/graphql-rss-parser/commit/3bf73f7320bc467cb0aca9b452591e672eaee07b))
+
 ## [2.8.0](https://github.com/relekang/graphql-rss-parser/compare/v2.7.2...v2.8.0) (2021-02-13)
 
 
