@@ -1,7 +1,7 @@
 /* eslint-env jest */
 require('../../__tests__/mockAxios')
 
-const findFeed = require('../findFeed')
+const { findFeed, normalizeFeedLink } = require('../findFeed')
 const { DnsLookupError } = require('../../errors')
 
 test('findFeed should return feedUrl from any website which have a link to its rss feed', async () => {
@@ -78,4 +78,13 @@ test('findFeed should work with feedburner', async () => {
   })
 
   expect(feeds).toEqual([{ title: 'zen habits', link: 'http://feeds.feedburner.com/zenhabits' }])
+})
+;[
+  [['https://example.com', 'feed.xml'], 'https://example.com/feed.xml'],
+  [['https://example.com', '/feed.xml'], 'https://example.com/feed.xml'],
+  [['https://example.com', 'https://example.com/feed.xml'], 'https://example.com/feed.xml'],
+].forEach(([input, expected]) => {
+  test(`normalizeFeedLink should return the normalized link for ${input.join(',')}`, () => {
+    expect(normalizeFeedLink(...input)).toEqual(expected)
+  })
 })

@@ -8,7 +8,14 @@ const request = require('../request')
 
 const normalizeOptions = { removeTrailingSlash: false, stripHash: true }
 
-module.exports = async function findFeed({ url, normalize }) {
+function normalizeFeedLink(baseUrl, link) {
+  return normalizeUrl(
+    /^http/.test(link) ? link : new URL(baseUrl).origin + (/^\//.test(link) ? link : `/${link}`),
+    normalizeOptions
+  )
+}
+
+async function findFeed({ url, normalize }) {
   const normalizedUrl = normalize === false ? url : normalizeUrl(url, normalizeOptions)
   let response = null
   let content
@@ -52,13 +59,7 @@ module.exports = async function findFeed({ url, normalize }) {
   )
 
   const urls = $linkTags
-    .map((index, $linkTag) => {
-      const link = $linkTag.attribs.href
-      return normalizeUrl(
-        /^\//.test(link) ? new URL(normalizedUrl).origin + link : link,
-        normalizeOptions
-      )
-    })
+    .map((index, $linkTag) => normalizeFeedLink(normalizedUrl, $linkTag.attribs.href))
     .toArray()
 
   const result = (
@@ -82,4 +83,9 @@ module.exports = async function findFeed({ url, normalize }) {
   }
 
   return result
+}
+
+module.exports = {
+  normalizeFeedLink,
+  findFeed,
 }
