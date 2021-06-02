@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.9.0](https://github.com/relekang/graphql-rss-parser/compare/v2.8.1...v2.9.0) (2021-06-02)
+
+
+### Features
+
+* Add support for jsonfeed v1 ([d78906c](https://github.com/relekang/graphql-rss-parser/commit/d78906cf064676d7af4a02c5ee1e9301a2d1185d))
+
 ### [2.8.1](https://github.com/relekang/graphql-rss-parser/compare/v2.8.0...v2.8.1) (2021-03-30)
 
 
