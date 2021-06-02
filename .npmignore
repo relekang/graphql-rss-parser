@@ -48,3 +48,9 @@ __fixtures__
 yarn.lock
 nodemon.json
 circle.yml
+.idea/
+.github
+Dockerfile
+*.tgz
+.*rc*
+.node-version
