@@ -11,7 +11,7 @@ test('Same query should give same output for different parsers', async () => {
 
   const { url, close } = await listen(service)
 
-  const fields = ' title link feedLink entries { title link pubDate guid author categories }'
+  const fields = ' title link feedLink entries { title link pubDate author categories }'
   const feedUrl = 'https://rolflekang.com/feed.xml'
 
   const query =

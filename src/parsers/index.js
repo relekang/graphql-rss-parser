@@ -10,4 +10,5 @@ module.exports = {
   FEEDPARSER: require('./feedparser'),
   FEEDME: require('./feedme'),
   RSS_TO_JSON: require('./rss-to-json'),
+  JSON_FEED_V1: require('./jsonfeed-v1'),
 }

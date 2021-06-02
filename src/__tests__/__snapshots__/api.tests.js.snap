@@ -22,6 +22,18 @@ Object {
 `;
 
 exports[`
+  feed(url: "https://rolflekang.com/feed.json", parser: JSON_FEED_V1) { title }
+ 1`] = `
+Object {
+  "data": Object {
+    "feed": Object {
+      "title": "Writing by Rolf Erik Lekang",
+    },
+  },
+}
+`;
+
+exports[`
   feed(url: "https://rolflekang.com/feed.xml") {
     title
     link
@@ -36,6 +48,11 @@ Object {
   "data": Object {
     "feed": Object {
       "entries": Array [
+        Object {
+          "link": "https://rolflekang.com/using-certbot-with-ansible",
+          "pubDate": "2020-11-08T00:00:00.000Z",
+          "title": "Using certbot with Ansible",
+        },
         Object {
           "link": "https://rolflekang.com/ansible-handlers-in-loops",
           "pubDate": "2020-09-12T00:00:00.000Z",
@@ -69,7 +86,7 @@ Object {
         Object {
           "link": "https://rolflekang.com/creating-a-cli-with-reason-native",
           "pubDate": "2019-02-12T00:00:00.000Z",
-          "title": "Creating a CLI with  Reason native",
+          "title": "Creating a CLI with Reason native",
         },
         Object {
           "link": "https://rolflekang.com/testing-simple-graphql-services",
@@ -304,6 +321,9 @@ Object {
     "findFeed": Array [
       Object {
         "link": "https://rolflekang.com/feed.xml",
+      },
+      Object {
+        "link": "https://rolflekang.com/feed.json",
       },
     ],
   },

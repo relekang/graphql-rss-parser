@@ -27,8 +27,16 @@ async function parseFromString({ content, parser }) {
 }
 
 async function parseFromQuery({ url, parser, endTime, startTime }) {
-  const content = (await request(url)).text
-  const parsed = await parseFromString({ content, parser })
+  const response = await request(url)
+
+  const isJsonFeed = ['application/json', 'application/feed+json'].includes(
+    response.contentType.split(';')[0]
+  )
+  const parsed = await parseFromString({
+    content: response.text,
+    parser: isJsonFeed ? 'JSON_FEED_V1' : parser,
+  })
+
   parsed.entries = parsed.entries.filter((item) => {
     if (item == null) {
       return false
@@ -44,4 +52,5 @@ async function parseFromQuery({ url, parser, endTime, startTime }) {
   parsed.feedLink = parsed.feedLink || url
   return parsed
 }
+
 module.exports = { parseFromQuery, parseFromString }

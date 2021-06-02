@@ -37,6 +37,10 @@ testGraphqlApi`
 `
 
 testGraphqlApi`
+  feed(url: "https://rolflekang.com/feed.json", parser: JSON_FEED_V1) { title }
+`
+
+testGraphqlApi`
   feed(url: "${url}") { title, badField }
 `
 

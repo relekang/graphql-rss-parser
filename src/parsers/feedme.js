@@ -57,7 +57,7 @@ module.exports = function parseString(feed) {
             {
               title: item.title,
               link: evaluateLink(item.link),
-              guid: item.guid && item.guid.text,
+              guid: typeof item.guid === 'string' ? item.guid : item.guid && item.guid.text,
               description: item.description,
               categories: typeof item.category === 'string' ? [item.category] : item.category || [],
               pubDate,

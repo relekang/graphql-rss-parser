@@ -12,15 +12,30 @@ test('findFeed should return feedUrl from any website which have a link to its r
       link: 'https://rolflekang.com/feed.xml',
       title: 'Writing by Rolf Erik Lekang',
     },
+    {
+      link: 'https://rolflekang.com/feed.json',
+      title: 'Writing by Rolf Erik Lekang',
+    },
   ])
 })
 
 test('findFeed should work with feeds', async () => {
-  const feeds = await findFeed({ url: 'https://rolflekang.com//feed.xml' })
+  const feeds = await findFeed({ url: 'https://rolflekang.com/feed.xml' })
 
   expect(feeds).toEqual([
     {
       link: 'https://rolflekang.com/feed.xml',
+      title: 'Writing by Rolf Erik Lekang',
+    },
+  ])
+})
+
+test('findFeed should work with json feeds', async () => {
+  const feeds = await findFeed({ url: 'https://rolflekang.com/feed.json' })
+
+  expect(feeds).toEqual([
+    {
+      link: 'https://rolflekang.com/feed.json',
       title: 'Writing by Rolf Erik Lekang',
     },
   ])
@@ -43,6 +58,10 @@ test('findFeed should work html response', async () => {
   expect(feeds).toEqual([
     {
       link: 'https://rolflekang.com/feed.xml',
+      title: 'Writing by Rolf Erik Lekang',
+    },
+    {
+      link: 'https://rolflekang.com/feed.json',
       title: 'Writing by Rolf Erik Lekang',
     },
   ])

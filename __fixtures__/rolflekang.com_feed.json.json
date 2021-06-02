@@ -1,0 +1,421 @@
+{
+  "data": {
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Writing by Rolf Erik Lekang",
+    "home_page_url": "https://rolflekang.com",
+    "feed_url": "https://rolflekang.com/feed.json",
+    "author": {
+      "name": "Rolf Erik Lekang"
+    },
+    "items": [
+      {
+        "id": "https://rolflekang.com/using-certbot-with-ansible",
+        "url": "https://rolflekang.com/using-certbot-with-ansible",
+        "title": "Using certbot with Ansible",
+        "date_modified": "2020-11-08T00:00:00.000Z",
+        "author": {
+          "name": "Rolf Erik Lekang"
+        },
+        "tags": [
+          "letsencrypt",
+          "acme",
+          "certbot",
+          "ansible"
+        ]
+      },
+      {
+        "id": "https://rolflekang.com/ansible-handlers-in-loops",
+        "url": "https://rolflekang.com/ansible-handlers-in-loops",
+        "title": "Using Ansible handlers in loops",
+        "date_modified": "2020-09-12T00:00:00.000Z",
+        "author": {
+          "name": "Rolf Erik Lekang"
+        },
+        "tags": [
+          "ansible",
+          "devops",
+          "ops",
+          "infrastructure-as-code"
+        ]
+      },
+      {
+        "id": "https://rolflekang.com/serving-plain-text-with-nextjs",
+        "url": "https://rolflekang.com/serving-plain-text-with-nextjs",
+        "title": "Serving text/plain for curl with Next",
+        "date_modified": "2020-05-26T00:00:00.000Z",
+        "author": {
+          "name": "Rolf Erik Lekang"
+        },
+        "tags": [
+          "nextjs",
+          "javascript",
+          "curl",
+          "nodejs"
+        ]
+      },
+      {
+        "id": "https://rolflekang.com/wireless-uplinks-with-unifi",
+        "url": "https://rolflekang.com/wireless-uplinks-with-unifi",
+        "title": "Wireless uplinks with Unifi",
+        "date_modified": "2020-05-03T00:00:00.000Z",
+        "author": {
+          "name": "Rolf Erik Lekang"
+        },
+        "tags": [
+          "networking",
+          "unifi",
+          "ubiquiti",
+          "homelab"
+        ]
+      },
+      {
+        "id": "https://rolflekang.com/using-git-commits-instead-of-stash",
+        "url": "https://rolflekang.com/using-git-commits-instead-of-stash",
+        "title": "Using git commits instead of git stash",
+        "date_modified": "2019-11-14T00:00:00.000Z",
+        "author": {
+          "name": "Rolf Erik Lekang"
+        },
+        "tags": [
+          "git"
+        ]
+      },
+      {
+        "id": "https://rolflekang.com/twitter-cards-for-gatsby-posts",
+        "url": "https://rolflekang.com/twitter-cards-for-gatsby-posts",
+        "title": "Twitter cards for Gatsby posts",
+        "date_modified": "2019-02-26T00:00:00.000Z",
+        "author": {
+          "name": "Rolf Erik Lekang"
+        },
+        "tags": [
+          "gatsby",
+          "canvas",
+          "javascript"
+        ]
+      },
+      {
+        "id": "https://rolflekang.com/related-articles-with-gatsby",
+        "url": "https://rolflekang.com/related-articles-with-gatsby",
+        "title": "Related articles with Gatsby",
+        "date_modified": "2019-02-20T00:00:00.000Z",
+        "author": {
+          "name": "Rolf Erik Lekang"
+        },
+        "tags": [
+          "gatsby",
+          "javascript"
+        ]
+      },
+      {
+        "id": "https://rolflekang.com/creating-a-cli-with-reason-native",
+        "url": "https://rolflekang.com/creating-a-cli-with-reason-native",
+        "title": "Creating a CLI with Reason native",
+        "date_modified": "2019-02-12T00:00:00.000Z",
+        "author": {
+          "name": "Rolf Erik Lekang"
+        },
+        "tags": [
+          "reasonml",
+          "native"
+        ]
+      },
+      {
+        "id": "https://rolflekang.com/testing-simple-graphql-services",
+        "url": "https://rolflekang.com/testing-simple-graphql-services",
+        "title": "Testing simple GraphQL services",
+        "date_modified": "2017-05-28T00:00:00.000Z",
+        "author": {
+          "name": "Rolf Erik Lekang"
+        },
+        "tags": [
+          "graphql",
+          "testing",
+          "javascript"
+        ]
+      },
+      {
+        "id": "https://rolflekang.com/lets-run-some-races",
+        "url": "https://rolflekang.com/lets-run-some-races",
+        "title": "Let's run some races this year",
+        "date_modified": "2017-01-02T00:00:00.000Z",
+        "author": {
+          "name": "Rolf Erik Lekang"
+        },
+        "tags": [
+          "running"
+        ]
+      },
+      {
+        "id": "https://rolflekang.com/software-development-on-an-ipad",
+        "url": "https://rolflekang.com/software-development-on-an-ipad",
+        "title": "Software development on an iPad",
+        "date_modified": "2017-01-01T00:00:00.000Z",
+        "author": {
+          "name": "Rolf Erik Lekang"
+        },
+        "tags": [
+          "ipad",
+          "development-environment"
+        ]
+      },
+      {
+        "id": "https://rolflekang.com/filtering-lint-errors",
+        "url": "https://rolflekang.com/filtering-lint-errors",
+        "title": "Filtering lint errors",
+        "date_modified": "2016-06-10T00:00:00.000Z",
+        "author": {
+          "name": "Rolf Erik Lekang"
+        },
+        "tags": [
+          "linter",
+          "linting",
+          "development"
+        ]
+      },
+      {
+        "id": "https://rolflekang.com/interrail-summer",
+        "url": "https://rolflekang.com/interrail-summer",
+        "title": "Interrail summer",
+        "date_modified": "2015-07-26T00:00:00.000Z",
+        "author": {
+          "name": "Rolf Erik Lekang"
+        },
+        "tags": [
+          "travel",
+          "interrail"
+        ]
+      },
+      {
+        "id": "https://rolflekang.com/writing-latex-in-atom",
+        "url": "https://rolflekang.com/writing-latex-in-atom",
+        "title": "Writing (latex) in Atom",
+        "date_modified": "2015-05-23T00:00:00.000Z",
+        "author": {
+          "name": "Rolf Erik Lekang"
+        },
+        "tags": [
+          "atom",
+          "writing",
+          "procrastination"
+        ]
+      },
+      {
+        "id": "https://rolflekang.com/rmoq",
+        "url": "https://rolflekang.com/rmoq",
+        "title": "rmoq - a request mock cache",
+        "date_modified": "2014-12-30T00:00:00.000Z",
+        "author": {
+          "name": "Rolf Erik Lekang"
+        },
+        "tags": [
+          "python",
+          "testing",
+          "mocking"
+        ]
+      },
+      {
+        "id": "https://rolflekang.com/django-nopassword-one-point-o",
+        "url": "https://rolflekang.com/django-nopassword-one-point-o",
+        "title": "django-nopassword reached 1.0",
+        "date_modified": "2014-10-03T00:00:00.000Z",
+        "author": {
+          "name": "Rolf Erik Lekang"
+        },
+        "tags": [
+          "django",
+          "nopassword",
+          "django-nopassword",
+          "authentication"
+        ]
+      },
+      {
+        "id": "https://rolflekang.com/moving-to-pelican",
+        "url": "https://rolflekang.com/moving-to-pelican",
+        "title": "Moving the blog to pelican",
+        "date_modified": "2014-05-07T00:00:00.000Z",
+        "author": {
+          "name": "Rolf Erik Lekang"
+        },
+        "tags": [
+          "this",
+          "static-site",
+          "pelican",
+          "jekyll"
+        ]
+      },
+      {
+        "id": "https://rolflekang.com/building-tumblr-theme-with-grunt",
+        "url": "https://rolflekang.com/building-tumblr-theme-with-grunt",
+        "title": "Building a Tumblr theme with GruntJS",
+        "date_modified": "2014-02-02T00:00:00.000Z",
+        "author": {
+          "name": "Rolf Erik Lekang"
+        },
+        "tags": [
+          "gruntjs",
+          "cookiecutter",
+          "tumblr"
+        ]
+      },
+      {
+        "id": "https://rolflekang.com/backup-routines-for-redisdb",
+        "url": "https://rolflekang.com/backup-routines-for-redisdb",
+        "title": "Backup routine for Redis",
+        "date_modified": "2013-10-24T00:00:00.000Z",
+        "author": {
+          "name": "Rolf Erik Lekang"
+        },
+        "tags": [
+          "db",
+          "backup",
+          "redis"
+        ]
+      },
+      {
+        "id": "https://rolflekang.com/django-app-custom-user",
+        "url": "https://rolflekang.com/django-app-custom-user",
+        "title": "Making your Django app ready for custom users",
+        "date_modified": "2013-05-22T00:00:00.000Z",
+        "author": {
+          "name": "Rolf Erik Lekang"
+        },
+        "tags": [
+          "django",
+          "custom user"
+        ]
+      },
+      {
+        "id": "https://rolflekang.com/stats-are-fun",
+        "url": "https://rolflekang.com/stats-are-fun",
+        "title": "Stats are fun",
+        "date_modified": "2013-03-03T00:00:00.000Z",
+        "author": {
+          "name": "Rolf Erik Lekang"
+        },
+        "tags": [
+          "pypstats",
+          "pypi",
+          "stats",
+          "geek-tool"
+        ]
+      },
+      {
+        "id": "https://rolflekang.com/alfred-scripts-for-jekyll",
+        "url": "https://rolflekang.com/alfred-scripts-for-jekyll",
+        "title": "Alfred scripts for Jekyll",
+        "date_modified": "2013-02-26T00:00:00.000Z",
+        "author": {
+          "name": "Rolf Erik Lekang"
+        },
+        "tags": [
+          "alfredapp",
+          "jekyll",
+          "shell script"
+        ]
+      },
+      {
+        "id": "https://rolflekang.com/use-array-in-postgresql",
+        "url": "https://rolflekang.com/use-array-in-postgresql",
+        "title": "Use array in postgresql with django",
+        "date_modified": "2013-01-27T00:00:00.000Z",
+        "author": {
+          "name": "Rolf Erik Lekang"
+        },
+        "tags": [
+          "tags",
+          "postgres",
+          "array",
+          "pgarray",
+          "django"
+        ]
+      },
+      {
+        "id": "https://rolflekang.com/apply-puppet-configuration-automatically",
+        "url": "https://rolflekang.com/apply-puppet-configuration-automatically",
+        "title": "Apply puppet automatically",
+        "date_modified": "2013-01-03T00:00:00.000Z",
+        "author": {
+          "name": "Rolf Erik Lekang"
+        },
+        "tags": [
+          "puppet",
+          "web.py",
+          "nginx",
+          "uwsgi",
+          "github",
+          "github-hooks"
+        ]
+      },
+      {
+        "id": "https://rolflekang.com/readable-wikipedia",
+        "url": "https://rolflekang.com/readable-wikipedia",
+        "title": "Readable Wikipedia",
+        "date_modified": "2012-12-02T00:00:00.000Z",
+        "author": {
+          "name": "Rolf Erik Lekang"
+        },
+        "tags": [
+          "wikipedia",
+          "css",
+          "readability",
+          "stylebot"
+        ]
+      },
+      {
+        "id": "https://rolflekang.com/django-nopassword",
+        "url": "https://rolflekang.com/django-nopassword",
+        "title": "django-nopassword",
+        "date_modified": "2012-09-28T00:00:00.000Z",
+        "author": {
+          "name": "Rolf Erik Lekang"
+        },
+        "tags": [
+          "django",
+          "no-password",
+          "email-authentication",
+          "authentication"
+        ]
+      },
+      {
+        "id": "https://rolflekang.com/the-github-lamp",
+        "url": "https://rolflekang.com/the-github-lamp",
+        "title": "The Github lamp",
+        "date_modified": "2012-09-16T00:00:00.000Z",
+        "author": {
+          "name": "Rolf Erik Lekang"
+        },
+        "tags": [
+          "arduino",
+          "github",
+          "git",
+          "web.py"
+        ]
+      }
+    ]
+  },
+  "status": 200,
+  "headers": {
+    "date": "Wed, 02 Jun 2021 08:11:45 GMT",
+    "content-type": "application/json; charset=UTF-8",
+    "transfer-encoding": "chunked",
+    "connection": "close",
+    "cache-control": "public, max-age=0",
+    "last-modified": "Tue, 01 Jun 2021 19:17:22 GMT",
+    "etag": "W/\"334e-179c9024e5b\"",
+    "vary": "Accept-Encoding",
+    "x-frame-options": "SAMEORIGIN",
+    "strict-transport-security": "max-age=2592000; includeSubdomains; preload",
+    "x-content-type-options": "nosniff",
+    "referrer-policy": "strict-origin",
+    "feature-policy": "microphone 'none'; geolocation 'none'",
+    "cf-cache-status": "DYNAMIC",
+    "cf-request-id": "0a6d605f6e00000b4550385000000001",
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+    "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v2?s=L42q8KYYXhwBa6aa8PKIwR9eGCP48zMkFpKG1CpD8KvlXsuiG68l8CI1%2Ba%2FRk8lSyKhVXB5rJ5bYHbkNyXOkakEAlop9oWq%2BzkdkCzO5JNZihM%2BbKeRNdDGQPlk%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+    "nel": "{\"report_to\":\"cf-nel\",\"max_age\":604800}",
+    "server": "cloudflare",
+    "cf-ray": "658f3678a83f0b45-OSL",
+    "alt-svc": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400, h3=\":443\"; ma=86400"
+  }
+}

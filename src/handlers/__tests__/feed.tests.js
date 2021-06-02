@@ -18,13 +18,14 @@ test('feed should filter based on both startTime and endTime', async () => {
   ])
 })
 
-test('feed should filter based on both startTime', async () => {
+test('feed should filter based on startTime', async () => {
   const feeds = await parseFromQuery({
     url: 'https://rolflekang.com/feed.xml',
     startTime: '2019-11-14',
   })
 
   expect(feeds.entries.map((item) => item.title)).toEqual([
+    'Using certbot with Ansible',
     'Using Ansible handlers in loops',
     'Serving text/plain for curl with Next',
     'Wireless uplinks with Unifi',
