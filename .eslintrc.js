@@ -1,9 +1,10 @@
 module.exports = {
-  extends: ['eslint:recommended', 'prettier'],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 8,
   },
-  plugins: ['prettier'],
+  plugins: ['prettier', '@typescript-eslint'],
   env: {
     node: true,
     es6: true,
@@ -19,5 +20,7 @@ module.exports = {
         printWidth: 100,
       },
     ],
+    '@typescript-eslint/ban-ts-comment': 1,
+    '@typescript-eslint/explicit-module-boundary-types': 0,
   },
 }
