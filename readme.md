@@ -67,7 +67,7 @@ Available parsers:
 * `RSS_PARSER` - [rss-parser][]
 * `FEEDME` - [feedme][]
 * `RSS_TO_JSON` - [rss-to-json][]
-* `JSON_FEED_V1` - internal see `src/parsers/jsonfeed-v1.js`
+* `JSON_FEED_V1` - internal see `src/parsers/jsonfeed-v1.ts`
 
 ```graphql
 {
