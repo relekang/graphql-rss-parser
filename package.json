@@ -16,7 +16,7 @@
     "test": "jest",
     "lint": "eslint --ext ts,js src *.js",
     "format": "yarn lint -- --fix",
-    "release": "standard-version -i changelog.md -m '%s'"
+    "release": "yarn build && standard-version -i changelog.md -m '%s'"
   },
   "repository": {
     "type": "git",
