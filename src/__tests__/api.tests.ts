@@ -1,4 +1,3 @@
-import './mockAxios'
 import { testGraphqlApi } from './utils'
 
 const websiteUrl = 'https://rolflekang.com'

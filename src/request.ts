@@ -24,14 +24,18 @@ export default async function request(url: string) {
         'User-Agent': 'graphql-rss-parser',
       },
       timeout: TIMEOUT,
+      responseType: 'arraybuffer',
+      transformResponse: undefined,
     })
     debug(`response from ${url} status-code=${response.status}`)
-    if (!response.data) throw new EmptyHttpResponseError()
     if (!/2\d\d/.test(response.status.toString())) {
       throw new UpstreamHttpError('Not found', response.status)
     }
+    if (!response.data) {
+      throw new EmptyHttpResponseError()
+    }
     return {
-      text: response.data,
+      text: response.data.toString(),
       status: response.status,
       contentType: response.headers['content-type'],
       headers: response.headers,

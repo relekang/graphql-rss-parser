@@ -1,8 +1,13 @@
 /* eslint-env jest */
 import nock from 'nock'
+
 import request from '../request'
 
 describe('request', () => {
+  beforeAll(() => {
+    nock.cleanAll()
+  })
+
   it('should return response for successful call', async () => {
     nock('http://example.com').get('/').reply(200, 'Success')
 

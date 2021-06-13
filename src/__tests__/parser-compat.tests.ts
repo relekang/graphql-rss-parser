@@ -1,6 +1,5 @@
 /* eslint-env jest */
 import micro from 'micro'
-import axios from 'axios'
 
 import createHandler from '../'
 import { parserKeys } from '../parsers'
@@ -25,7 +24,7 @@ test('Same query should give same output for different parsers', async () => {
   let response
   try {
     response = (
-      await axios({
+      await jest.requireActual('axios')({
         url,
         method: 'post',
         headers: {

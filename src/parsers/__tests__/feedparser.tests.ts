@@ -1,15 +1,15 @@
 /* eslint-env jest */
 import { parse } from '../feedparser'
-import mockAxios from '../../__tests__/mockAxios'
+import request from '../../request'
 
 test('should parse string from rolflekang.com/feed.xml', async () => {
-  const fixture = await mockAxios({ url: 'https://rolflekang.com/feed.xml' })
+  const { text } = await request('https://rolflekang.com/feed.xml')
 
-  expect(await parse(fixture.data)).toMatchSnapshot()
+  expect(await parse(text)).toMatchSnapshot()
 })
 
 test('should parse string from google.blogspot.com/feeds/posts/default', async () => {
-  const fixture = await mockAxios({ url: 'http://google.blogspot.com/feeds/posts/default' })
+  const { text } = await request('http://google.blogspot.com/feeds/posts/default')
 
-  expect(await parse(fixture.data)).toMatchSnapshot()
+  expect(await parse(text)).toMatchSnapshot()
 })

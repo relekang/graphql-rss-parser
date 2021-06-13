@@ -1,23 +1,23 @@
 {
-  "data": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<feed xmlns=\"http://www.w3.org/2005/Atom\" xml:lang=\"en\"><title>xkcd.com</title><link href=\"https://xkcd.com/\" rel=\"alternate\"></link><id>https://xkcd.com/</id><updated>2020-09-28T00:00:00Z</updated><entry><title>Messaging Systems</title><link href=\"https://xkcd.com/2365/\" rel=\"alternate\"></link><updated>2020-09-28T00:00:00Z</updated><id>https://xkcd.com/2365/</id><summary type=\"html\">&lt;img src=\"https://imgs.xkcd.com/comics/messaging_systems.png\" title=\"SMS is just the worst, but I'm having trouble convincing people to adopt my preferred system, TLS IRC with a local server and a patched DOSBox gateway running in my mobile browser.\" alt=\"SMS is just the worst, but I'm having trouble convincing people to adopt my preferred system, TLS IRC with a local server and a patched DOSBox gateway running in my mobile browser.\" /&gt;</summary></entry><entry><title>Parity Conservation</title><link href=\"https://xkcd.com/2364/\" rel=\"alternate\"></link><updated>2020-09-25T00:00:00Z</updated><id>https://xkcd.com/2364/</id><summary type=\"html\">&lt;img src=\"https://imgs.xkcd.com/comics/parity_conservation.png\" title=\"Bloody Mary is made of antimatter. It explains so much.\" alt=\"Bloody Mary is made of antimatter. It explains so much.\" /&gt;</summary></entry><entry><title>Message Boards</title><link href=\"https://xkcd.com/2363/\" rel=\"alternate\"></link><updated>2020-09-23T00:00:00Z</updated><id>https://xkcd.com/2363/</id><summary type=\"html\">&lt;img src=\"https://imgs.xkcd.com/comics/message_boards.png\" title=\"(c) You can have a scooter when you pay for it yourself, and (d) if you can't learn to start a new thread rather than responding to an old one, you'll be banned. [thread locked by moderator]\" alt=\"(c) You can have a scooter when you pay for it yourself, and (d) if you can't learn to start a new thread rather than responding to an old one, you'll be banned. [thread locked by moderator]\" /&gt;</summary></entry><entry><title>Volcano Dinosaur</title><link href=\"https://xkcd.com/2362/\" rel=\"alternate\"></link><updated>2020-09-21T00:00:00Z</updated><id>https://xkcd.com/2362/</id><summary type=\"html\">&lt;img src=\"https://imgs.xkcd.com/comics/volcano_dinosaur.png\" title=\"Phylogeneticists are working on identifying and notifying its next of kin.\" alt=\"Phylogeneticists are working on identifying and notifying its next of kin.\" /&gt;</summary></entry></feed>",
+  "data": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<feed xmlns=\"http://www.w3.org/2005/Atom\" xml:lang=\"en\"><title>xkcd.com</title><link href=\"https://xkcd.com/\" rel=\"alternate\"></link><id>https://xkcd.com/</id><updated>2021-06-11T00:00:00Z</updated><entry><title>Health Drink</title><link href=\"https://xkcd.com/2475/\" rel=\"alternate\"></link><updated>2021-06-11T00:00:00Z</updated><id>https://xkcd.com/2475/</id><summary type=\"html\">&lt;img src=\"https://imgs.xkcd.com/comics/health_drink.png\" title=\"You'd need to keep track of so many people! Would you use, like, Excel or something? Far too fancy for a simple country nanoenzyme developer like me.\" alt=\"You'd need to keep track of so many people! Would you use, like, Excel or something? Far too fancy for a simple country nanoenzyme developer like me.\" /&gt;</summary></entry><entry><title>First Time Since Early 2020</title><link href=\"https://xkcd.com/2474/\" rel=\"alternate\"></link><updated>2021-06-09T00:00:00Z</updated><id>https://xkcd.com/2474/</id><summary type=\"html\">&lt;img src=\"https://imgs.xkcd.com/comics/first_time_since_early_2020.png\" title=\"Gotten the Ferris wheel operator's attention\" alt=\"Gotten the Ferris wheel operator's attention\" /&gt;</summary></entry><entry><title>Product Launch</title><link href=\"https://xkcd.com/2473/\" rel=\"alternate\"></link><updated>2021-06-07T00:00:00Z</updated><id>https://xkcd.com/2473/</id><summary type=\"html\">&lt;img src=\"https://imgs.xkcd.com/comics/product_launch.png\" title=\"&amp;quot;Okay, that was weird, but the product reveal was normal. I think the danger is pas--&amp;quot; &amp;quot;One more thing.&amp;quot; &amp;quot;Oh no.&amp;quot;\" alt=\"&amp;quot;Okay, that was weird, but the product reveal was normal. I think the danger is pas--&amp;quot; &amp;quot;One more thing.&amp;quot; &amp;quot;Oh no.&amp;quot;\" /&gt;</summary></entry><entry><title>Fuzzy Blob</title><link href=\"https://xkcd.com/2472/\" rel=\"alternate\"></link><updated>2021-06-04T00:00:00Z</updated><id>https://xkcd.com/2472/</id><summary type=\"html\">&lt;img src=\"https://imgs.xkcd.com/comics/fuzzy_blob.png\" title=\"If there's no dome, how do you explain the irregularities the board discovered in the zoning permits issued in that area!?\" alt=\"If there's no dome, how do you explain the irregularities the board discovered in the zoning permits issued in that area!?\" /&gt;</summary></entry></feed>",
   "status": 200,
   "headers": {
     "connection": "close",
-    "content-length": "2410",
+    "content-length": "2370",
     "server": "nginx",
     "content-type": "text/xml; charset=UTF-8",
-    "last-modified": "Mon, 28 Sep 2020 23:28:06 GMT",
-    "etag": "\"5f727186-96a\"",
-    "expires": "Mon, 28 Sep 2020 23:33:55 GMT",
+    "last-modified": "Sat, 12 Jun 2021 04:21:44 GMT",
+    "etag": "\"60c43658-942\"",
+    "expires": "Sat, 12 Jun 2021 04:29:40 GMT",
     "cache-control": "max-age=300",
     "accept-ranges": "bytes",
-    "date": "Tue, 29 Sep 2020 13:37:50 GMT",
+    "date": "Sun, 13 Jun 2021 17:56:43 GMT",
     "via": "1.1 varnish",
-    "age": "212",
+    "age": "258",
     "x-served-by": "cache-bma1635-BMA",
     "x-cache": "HIT",
     "x-cache-hits": "1",
-    "x-timer": "S1601386671.801516,VS0,VE1",
+    "x-timer": "S1623607004.597907,VS0,VE0",
     "vary": "Accept-Encoding"
   }
 }

@@ -1,5 +1,4 @@
 /* eslint-env jest */
-import '../../__tests__/mockAxios'
 import { parseFromQuery } from '../feed'
 
 test('feed should filter based on both startTime and endTime', async () => {

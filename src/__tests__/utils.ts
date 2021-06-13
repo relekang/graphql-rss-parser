@@ -1,6 +1,5 @@
 /* eslint-env jest */
 import micro from 'micro'
-import axios from 'axios'
 import { Server } from 'http'
 
 import createHandler from '../'
@@ -32,7 +31,7 @@ export function testGraphqlApi(strings: TemplateStringsArray, ...args: unknown[]
     let response
     try {
       response = (
-        await axios({
+        await jest.requireActual('axios')({
           url,
           method: 'post',
           headers: {
