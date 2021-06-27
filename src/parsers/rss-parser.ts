@@ -22,24 +22,25 @@ function getPubDate(entry: Parser.Item): string | undefined {
 }
 
 function transform(parsed: Parser.Output<{ 'dc:creator'?: string }>): ParserResponse {
-  const entries = parsed.items.map(
+  const items = parsed.items.map(
     (item): Item => ({
       title: item.title,
-      description: item.content,
-      link: item.link,
-      guid: item.guid,
-      categories: item.categories || [],
-      author: item.creator || item['dc:creator'],
-      pubDate: getPubDate(item),
+      content_html: item.content,
+      url: item.link as string,
+      id: item.guid as string,
+      tags: item.categories || [],
+      authors:
+        item.creator || item['dc:creator'] ? [{ name: item.creator || item['dc:creator'] }] : [],
+      date_published: getPubDate(item),
     })
   )
   return {
     parser: 'RSS_PARSER',
-    title: parsed.title,
+    title: parsed.title || '',
     description: parsed.description,
-    link: parsed.link,
-    feedLink: parsed.feedUrl,
-    entries,
+    home_page_url: parsed.link,
+    feed_url: parsed.feedUrl,
+    items,
   }
 }
 

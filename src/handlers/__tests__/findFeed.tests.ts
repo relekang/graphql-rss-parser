@@ -1,6 +1,4 @@
 /* eslint-env jest */
-import '../../__tests__/mockAxios'
-
 import { findFeed, normalizeFeedLink } from '../findFeed'
 import { DnsLookupError } from '../../errors'
 

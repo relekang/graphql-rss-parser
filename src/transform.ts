@@ -3,14 +3,14 @@ import { Feed, Item } from './types'
 
 function transformItem(item: Item) {
   return Object.assign({}, item, {
-    link: !item.link && isUrl(item.title || '') ? item.title : item.link,
+    url: !item.url && isUrl(item.title || '') ? item.title || '' : item.url,
   })
 }
 
-const transformEntries = (items: Item[]) => items.map(transformItem)
+const transformItems = (items: Item[]) => items.map(transformItem)
 
 export default function transform<T extends Feed>(feed: T): T {
   return Object.assign({}, feed, {
-    entries: transformEntries(feed.entries),
+    entries: transformItems(feed.items || []),
   })
 }

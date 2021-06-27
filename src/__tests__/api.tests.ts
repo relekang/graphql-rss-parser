@@ -10,11 +10,11 @@ testGraphqlApi`
 testGraphqlApi`
   feed(url: "${url}") {
     title
-    link
-    entries {
+    feed_url
+    items {
       title
-      link
-      pubDate
+      url
+      date_published
     }
   }
 `
@@ -59,6 +59,6 @@ testGraphqlApi`
 
 testGraphqlApi`
   feed(url: "${url}", startTime: "2020-01-01", endTime: "2020-10-31") {
-    entries { title }
+    items { title }
   }
 `

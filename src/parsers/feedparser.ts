@@ -26,12 +26,12 @@ export function parse(feed: string): Promise<ParserResponse> {
         while ((item = this.read())) {
           items.push({
             title: item.title,
-            description: item.description,
-            link: item.link,
-            categories: item.categories,
-            pubDate: item.pubdate ? new Date(item.pubdate).toISOString() : undefined,
-            author: item.author,
-            guid: item.guid,
+            content_html: item.description,
+            url: item.link,
+            tags: item.categories,
+            date_published: item.pubdate ? new Date(item.pubdate).toISOString() : undefined,
+            authors: item.author ? [{ name: item.author }] : [],
+            id: item.guid,
           })
         }
       })
@@ -45,9 +45,9 @@ export function parse(feed: string): Promise<ParserResponse> {
           parser: 'FEEDPARSER',
           title: meta.title,
           description: meta.description,
-          link: meta.link,
-          feedLink: undefined,
-          entries: items,
+          home_page_url: meta.link,
+          feed_url: undefined,
+          items,
         })
       })
 

@@ -16,26 +16,28 @@ const typeDefs = `
 
   type FindFeedResult {
     title: String
-    link: String
+    link: String!
   }
 
   type FeedItem {
+    id: String
     title: String
-    link: String
-    pubDate: String
+    url: String
+    date_published: String
     guid: String
     author: String
-    categories: [String!]!
+    tags: [String!]!
   }
 
   type Feed {
+    version: String
     title: String
-    link: String
-    feedLink: String
+    feed_url: String
+    home_page_url: String
     parser: Parser
     author: String
     guid: String
-    entries: [FeedItem!]!
+    items: [FeedItem!]!
   }
 
   type Query {

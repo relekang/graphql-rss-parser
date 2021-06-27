@@ -19,33 +19,54 @@ const findHtmlLink = (array: FeedObject[]): string | undefined => {
   return undefined
 }
 
-function evaluateLink(link: FeedObject | FeedObject[] | undefined): string | undefined {
+function evaluateLink(link: FeedObject | FeedObject[] | undefined): string {
   if (Array.isArray(link)) {
-    return findHtmlLink(link)
+    const htmlLink = findHtmlLink(link)
+    if (htmlLink) {
+      return htmlLink
+    }
   }
   if (typeof link === 'string') {
     return link
   }
-  return undefined
+  throw new ParserError(new Error('Missing link'), 'FEEDME')
 }
 
 function unpack(
   input: FeedObject | FeedObject[] | undefined,
-  attribute: string
+  attribute: string,
+  required: true,
+  key: string
+): string
+function unpack(
+  input: FeedObject | FeedObject[] | undefined,
+  attribute: string,
+  required?: false
+): string | undefined
+function unpack(
+  input: FeedObject | FeedObject[] | undefined,
+  attribute: string,
+  required?: boolean,
+  key?: string
 ): string | undefined {
-  if (!input) {
-    return undefined
-  }
-  if (Array.isArray(input)) {
-    return
+  let output = undefined
+  if (input && Array.isArray(input)) {
+    output = unpackArray(input, attribute)[0]
   }
   if (typeof input === 'string') {
-    return input
+    output = input
   }
+  // @ts-ignore
   if (typeof input === 'object' && typeof input[attribute] === 'string') {
-    return input[attribute] as string | undefined
+    // @ts-ignore
+    output = input[attribute] as string | undefined
   }
-  return undefined
+
+  if (required && !output) {
+    throw new ParserError(new Error(`Missing field ${key}`), 'FEEDME')
+  }
+
+  return output
 }
 
 function unpackArray(input: FeedObject | FeedObject[] | undefined, attribute: string): string[] {
@@ -78,20 +99,22 @@ export function parse(feed: string): Promise<ParserResponse> {
         try {
           resolve({
             parser: 'FEEDME',
-            title: unpack(parsed['title'], 'text'),
+            title: unpack(parsed['title'], 'text', true, 'title'),
             description: unpack(parsed['description'], 'text'),
-            link: evaluateLink(parsed['link']),
-            feedLink: undefined,
-            entries: parsed.items.map((item): Item => {
+            home_page_url: evaluateLink(parsed['link']),
+            feed_url: undefined,
+            items: parsed.items.map((item): Item => {
               const pubDate = unpack(item['pubdate'], 'text')
               return {
                 title: unpack(item['title'], 'text'),
-                link: evaluateLink(item['link']),
-                guid: unpack(item['guid'], 'text'),
-                description: unpack(item['description'], 'text'),
-                categories: unpackArray(item['category'], 'text'),
-                pubDate: pubDate ? new Date(pubDate).toISOString() : pubDate,
-                author: unpack(item['author'], 'name'),
+                url: evaluateLink(item['link']),
+                id: unpack(item['id'] || item['guid'], 'text', true, 'id'),
+                content_html: unpack(item['description'], 'text'),
+                tags: unpackArray(item['category'], 'text'),
+                date_published: pubDate ? new Date(pubDate).toISOString() : pubDate,
+                authors: unpack(item['author'], 'name')
+                  ? [{ name: unpack(item['author'], 'name') }]
+                  : [],
               }
             }),
           })

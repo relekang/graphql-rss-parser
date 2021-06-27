@@ -36,155 +36,155 @@ Object {
 exports[`
   feed(url: "https://rolflekang.com/feed.xml") {
     title
-    link
-    entries {
+    feed_url
+    items {
       title
-      link
-      pubDate
+      url
+      date_published
     }
   }
  1`] = `
 Object {
   "data": Object {
     "feed": Object {
-      "entries": Array [
+      "feed_url": "https://rolflekang.com/feed.xml",
+      "items": Array [
         Object {
-          "link": "https://rolflekang.com/using-certbot-with-ansible",
-          "pubDate": "2020-11-08T00:00:00.000Z",
+          "date_published": "2020-11-08T00:00:00.000Z",
           "title": "Using certbot with Ansible",
+          "url": "https://rolflekang.com/using-certbot-with-ansible",
         },
         Object {
-          "link": "https://rolflekang.com/ansible-handlers-in-loops",
-          "pubDate": "2020-09-12T00:00:00.000Z",
+          "date_published": "2020-09-12T00:00:00.000Z",
           "title": "Using Ansible handlers in loops",
+          "url": "https://rolflekang.com/ansible-handlers-in-loops",
         },
         Object {
-          "link": "https://rolflekang.com/serving-plain-text-with-nextjs",
-          "pubDate": "2020-05-26T00:00:00.000Z",
+          "date_published": "2020-05-26T00:00:00.000Z",
           "title": "Serving text/plain for curl with Next",
+          "url": "https://rolflekang.com/serving-plain-text-with-nextjs",
         },
         Object {
-          "link": "https://rolflekang.com/wireless-uplinks-with-unifi",
-          "pubDate": "2020-05-03T00:00:00.000Z",
+          "date_published": "2020-05-03T00:00:00.000Z",
           "title": "Wireless uplinks with Unifi",
+          "url": "https://rolflekang.com/wireless-uplinks-with-unifi",
         },
         Object {
-          "link": "https://rolflekang.com/using-git-commits-instead-of-stash",
-          "pubDate": "2019-11-14T00:00:00.000Z",
+          "date_published": "2019-11-14T00:00:00.000Z",
           "title": "Using git commits instead of git stash",
+          "url": "https://rolflekang.com/using-git-commits-instead-of-stash",
         },
         Object {
-          "link": "https://rolflekang.com/twitter-cards-for-gatsby-posts",
-          "pubDate": "2019-02-26T00:00:00.000Z",
+          "date_published": "2019-02-26T00:00:00.000Z",
           "title": "Twitter cards for Gatsby posts",
+          "url": "https://rolflekang.com/twitter-cards-for-gatsby-posts",
         },
         Object {
-          "link": "https://rolflekang.com/related-articles-with-gatsby",
-          "pubDate": "2019-02-20T00:00:00.000Z",
+          "date_published": "2019-02-20T00:00:00.000Z",
           "title": "Related articles with Gatsby",
+          "url": "https://rolflekang.com/related-articles-with-gatsby",
         },
         Object {
-          "link": "https://rolflekang.com/creating-a-cli-with-reason-native",
-          "pubDate": "2019-02-12T00:00:00.000Z",
+          "date_published": "2019-02-12T00:00:00.000Z",
           "title": "Creating a CLI with Reason native",
+          "url": "https://rolflekang.com/creating-a-cli-with-reason-native",
         },
         Object {
-          "link": "https://rolflekang.com/testing-simple-graphql-services",
-          "pubDate": "2017-05-28T00:00:00.000Z",
+          "date_published": "2017-05-28T00:00:00.000Z",
           "title": "Testing simple GraphQL services",
+          "url": "https://rolflekang.com/testing-simple-graphql-services",
         },
         Object {
-          "link": "https://rolflekang.com/lets-run-some-races",
-          "pubDate": "2017-01-02T00:00:00.000Z",
+          "date_published": "2017-01-02T00:00:00.000Z",
           "title": "Let's run some races this year",
+          "url": "https://rolflekang.com/lets-run-some-races",
         },
         Object {
-          "link": "https://rolflekang.com/software-development-on-an-ipad",
-          "pubDate": "2017-01-01T00:00:00.000Z",
+          "date_published": "2017-01-01T00:00:00.000Z",
           "title": "Software development on an iPad",
+          "url": "https://rolflekang.com/software-development-on-an-ipad",
         },
         Object {
-          "link": "https://rolflekang.com/filtering-lint-errors",
-          "pubDate": "2016-06-10T00:00:00.000Z",
+          "date_published": "2016-06-10T00:00:00.000Z",
           "title": "Filtering lint errors",
+          "url": "https://rolflekang.com/filtering-lint-errors",
         },
         Object {
-          "link": "https://rolflekang.com/interrail-summer",
-          "pubDate": "2015-07-26T00:00:00.000Z",
+          "date_published": "2015-07-26T00:00:00.000Z",
           "title": "Interrail summer",
+          "url": "https://rolflekang.com/interrail-summer",
         },
         Object {
-          "link": "https://rolflekang.com/writing-latex-in-atom",
-          "pubDate": "2015-05-23T00:00:00.000Z",
+          "date_published": "2015-05-23T00:00:00.000Z",
           "title": "Writing (latex) in Atom",
+          "url": "https://rolflekang.com/writing-latex-in-atom",
         },
         Object {
-          "link": "https://rolflekang.com/rmoq",
-          "pubDate": "2014-12-30T00:00:00.000Z",
+          "date_published": "2014-12-30T00:00:00.000Z",
           "title": "rmoq - a request mock cache",
+          "url": "https://rolflekang.com/rmoq",
         },
         Object {
-          "link": "https://rolflekang.com/django-nopassword-one-point-o",
-          "pubDate": "2014-10-03T00:00:00.000Z",
+          "date_published": "2014-10-03T00:00:00.000Z",
           "title": "django-nopassword reached 1.0",
+          "url": "https://rolflekang.com/django-nopassword-one-point-o",
         },
         Object {
-          "link": "https://rolflekang.com/moving-to-pelican",
-          "pubDate": "2014-05-07T00:00:00.000Z",
+          "date_published": "2014-05-07T00:00:00.000Z",
           "title": "Moving the blog to pelican",
+          "url": "https://rolflekang.com/moving-to-pelican",
         },
         Object {
-          "link": "https://rolflekang.com/building-tumblr-theme-with-grunt",
-          "pubDate": "2014-02-02T00:00:00.000Z",
+          "date_published": "2014-02-02T00:00:00.000Z",
           "title": "Building a Tumblr theme with GruntJS",
+          "url": "https://rolflekang.com/building-tumblr-theme-with-grunt",
         },
         Object {
-          "link": "https://rolflekang.com/backup-routines-for-redisdb",
-          "pubDate": "2013-10-24T00:00:00.000Z",
+          "date_published": "2013-10-24T00:00:00.000Z",
           "title": "Backup routine for Redis",
+          "url": "https://rolflekang.com/backup-routines-for-redisdb",
         },
         Object {
-          "link": "https://rolflekang.com/django-app-custom-user",
-          "pubDate": "2013-05-22T00:00:00.000Z",
+          "date_published": "2013-05-22T00:00:00.000Z",
           "title": "Making your Django app ready for custom users",
+          "url": "https://rolflekang.com/django-app-custom-user",
         },
         Object {
-          "link": "https://rolflekang.com/stats-are-fun",
-          "pubDate": "2013-03-03T00:00:00.000Z",
+          "date_published": "2013-03-03T00:00:00.000Z",
           "title": "Stats are fun",
+          "url": "https://rolflekang.com/stats-are-fun",
         },
         Object {
-          "link": "https://rolflekang.com/alfred-scripts-for-jekyll",
-          "pubDate": "2013-02-26T00:00:00.000Z",
+          "date_published": "2013-02-26T00:00:00.000Z",
           "title": "Alfred scripts for Jekyll",
+          "url": "https://rolflekang.com/alfred-scripts-for-jekyll",
         },
         Object {
-          "link": "https://rolflekang.com/use-array-in-postgresql",
-          "pubDate": "2013-01-27T00:00:00.000Z",
+          "date_published": "2013-01-27T00:00:00.000Z",
           "title": "Use array in postgresql with django",
+          "url": "https://rolflekang.com/use-array-in-postgresql",
         },
         Object {
-          "link": "https://rolflekang.com/apply-puppet-configuration-automatically",
-          "pubDate": "2013-01-03T00:00:00.000Z",
+          "date_published": "2013-01-03T00:00:00.000Z",
           "title": "Apply puppet automatically",
+          "url": "https://rolflekang.com/apply-puppet-configuration-automatically",
         },
         Object {
-          "link": "https://rolflekang.com/readable-wikipedia",
-          "pubDate": "2012-12-02T00:00:00.000Z",
+          "date_published": "2012-12-02T00:00:00.000Z",
           "title": "Readable Wikipedia",
+          "url": "https://rolflekang.com/readable-wikipedia",
         },
         Object {
-          "link": "https://rolflekang.com/django-nopassword",
-          "pubDate": "2012-09-28T00:00:00.000Z",
+          "date_published": "2012-09-28T00:00:00.000Z",
           "title": "django-nopassword",
+          "url": "https://rolflekang.com/django-nopassword",
         },
         Object {
-          "link": "https://rolflekang.com/the-github-lamp",
-          "pubDate": "2012-09-16T00:00:00.000Z",
+          "date_published": "2012-09-16T00:00:00.000Z",
           "title": "The Github lamp",
+          "url": "https://rolflekang.com/the-github-lamp",
         },
       ],
-      "link": "https://rolflekang.com",
       "title": "Writing by Rolf Erik Lekang",
     },
   },
@@ -209,10 +209,9 @@ exports[`
 Object {
   "errors": Array [
     Object {
-      "extensions": Object {
-        "code": "INTERNAL_SERVER_ERROR",
+      "error": Object {
+        "message": "Cannot query field \\"badField\\" on type \\"Feed\\".",
       },
-      "message": "Internal server error",
     },
   ],
 }
@@ -268,13 +267,13 @@ Object {
 
 exports[`
   feed(url: "https://rolflekang.com/feed.xml", startTime: "2020-01-01", endTime: "2020-10-31") {
-    entries { title }
+    items { title }
   }
  1`] = `
 Object {
   "data": Object {
     "feed": Object {
-      "entries": Array [
+      "items": Array [
         Object {
           "title": "Using Ansible handlers in loops",
         },

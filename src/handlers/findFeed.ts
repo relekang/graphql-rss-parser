@@ -6,7 +6,7 @@ import { BaseError } from '../errors'
 import request from '../request'
 
 type FindFeedResponse = {
-  title: string | undefined
+  title: string
   link: string
 }
 

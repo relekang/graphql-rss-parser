@@ -8,7 +8,7 @@ test('feed should filter based on both startTime and endTime', async () => {
     endTime: '2020-09-12',
   })
 
-  expect(feeds.entries.map((item) => item.title)).toEqual([
+  expect(feeds.items?.map((item) => item.title)).toEqual([
     'Using Ansible handlers in loops',
     'Serving text/plain for curl with Next',
     'Wireless uplinks with Unifi',
@@ -22,7 +22,7 @@ test('feed should filter based on startTime', async () => {
     startTime: '2019-11-14',
   })
 
-  expect(feeds.entries.map((item) => item.title)).toEqual([
+  expect(feeds.items?.map((item) => item.title)).toEqual([
     'Using certbot with Ansible',
     'Using Ansible handlers in loops',
     'Serving text/plain for curl with Next',
@@ -37,5 +37,5 @@ test('feed should filter based on both endTime', async () => {
     endTime: '2012-11-14',
   })
 
-  expect(feeds.entries.map((item) => item.title)).toEqual(['django-nopassword', 'The Github lamp'])
+  expect(feeds.items?.map((item) => item.title)).toEqual(['django-nopassword', 'The Github lamp'])
 })

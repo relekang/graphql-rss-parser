@@ -59,18 +59,18 @@ export async function parseFromQuery({
     parser: isJsonFeed ? 'JSON_FEED_V1' : parser,
   })
 
-  parsed.entries = parsed.entries.filter((item) => {
+  parsed.items = parsed.items?.filter((item) => {
     if (item == null) {
       return false
     }
-    if (item.pubDate && endTime && new Date(endTime) < new Date(item.pubDate)) {
+    if (item.date_published && endTime && new Date(endTime) < new Date(item.date_published)) {
       return false
     }
-    if (item.pubDate && startTime && new Date(startTime) > new Date(item.pubDate)) {
+    if (item.date_published && startTime && new Date(startTime) > new Date(item.date_published)) {
       return false
     }
     return true
   })
-  parsed.feedLink = parsed.feedLink || url
+  parsed.feed_url = parsed.feed_url || url
   return parsed
 }

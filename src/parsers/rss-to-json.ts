@@ -16,15 +16,18 @@ export async function parse(feed: string): Promise<ParserResponse> {
       parser: 'RSS_TO_JSON',
       title: parsed.title,
       description: parsed.description,
-      link: parsed.link,
-      feedLink: parsed.feedLink,
-      entries: parsed.items.map((item: any): Item => {
-        return Object.assign({}, item, {
-          pubDate: new Date(item.created).toISOString(),
-          categories: typeof item.category === 'string' ? [item.category] : item.category || [],
-          guid: item.id,
+      home_page_url: parsed.link,
+      feed_url: parsed.feedLink,
+      items: parsed.items.map(
+        (item: any): Item => ({
+          id: item.id || item.url,
+          url: item.link,
+          title: item.title,
+          date_published: new Date(item.created).toISOString(),
+          tags: typeof item.category === 'string' ? [item.category] : item.category || [],
+          authors: item.author ? [{ name: item.author }] : [],
         })
-      }),
+      ),
     }
   } catch (error) {
     debug('parsing failed with error', error)

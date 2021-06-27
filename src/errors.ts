@@ -3,7 +3,10 @@ import _debug from 'debug'
 import { ParserKey } from './types'
 
 const debug = _debug('graphql-rss-parser:errors')
-const development = !process.env['NODE_ENV'] || process.env['NODE_ENV'] === 'development'
+const development =
+  !process.env['NODE_ENV'] ||
+  process.env['NODE_ENV'] === 'development' ||
+  process.env['NODE_ENV'] === 'test'
 
 export class BaseError extends Error {
   code: string
@@ -138,19 +141,32 @@ export function createErrorFormatter(Sentry: any) {
       path: error.path,
       error: {
         message: error.message,
-        code: error.extensions.exception.code,
-        url: error.extensions.exception.url,
-        status: error.extensions.exception.status,
-        statusText: error.extensions.exception.statusText,
-        parser: error.extensions.exception.parser,
+        code: error.originalError.code,
+        url: error.originalError.url,
+        status: error.originalError.status,
+        statusText: error.originalError.statusText,
+        parser: error.originalError.parser,
       },
     }
     if (error.stack) {
       if (development) {
-        response.stack = error.extensions.exception.stack.split('\n')
+        response.stack = error.stack.split('\n')
       }
       try {
-        response.type = error.extensions.exception.stack.split('\n')[0].split(':')[0]
+        response.type = error.stack.split('\n')[0].split(':')[0]
+      } catch (error) {
+        if (development) {
+          return error
+        }
+      }
+    }
+    if (error.extensions?.exception?.stacktrace) {
+      console.error(error.extensions?.exception?.stacktrace)
+      if (development) {
+        response.stack = error.extensions?.exception?.stacktrace
+      }
+      try {
+        response.type = error.extensions?.exception?.stacktrace[0].split(':')[0]
       } catch (error) {
         if (development) {
           return error
