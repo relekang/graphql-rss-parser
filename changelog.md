@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/relekang/graphql-rss-parser/compare/v2.9.1...v3.0.0) (2021-06-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* Drops support for node 10 and 12. If you need support
+for that you can change the target in tsconfig and compile the project.
+* This renames multiple fields in the schema. Check the
+schema definition in graphiql or schema.ts
+
+### Features
+
+* Make the schema compatible with the json feed spec ([da50751](https://github.com/relekang/graphql-rss-parser/commit/da507514b5f62cc9ffea282e9be2b12eed5c45ae))
+
+
+### Bug Fixes
+
+* Add types for jsonfeed and handle v1.1 spec ([7ed710b](https://github.com/relekang/graphql-rss-parser/commit/7ed710b4c9613fc2569c251d5a1d9df038a67def))
+* Set minimum node version to 14 ([b40108b](https://github.com/relekang/graphql-rss-parser/commit/b40108be01716f2c6678514d1d2446bf2b6824f8))
+* Upgrade @sentry/node ([9fdc8ab](https://github.com/relekang/graphql-rss-parser/commit/9fdc8abd44c65fa82e149e6af782473a7a94d07d))
+* Upgrade normalize-url ([4d28452](https://github.com/relekang/graphql-rss-parser/commit/4d284526ddf663d11a7679f4b02d97cc48372418))
+
 ### [2.9.1](https://github.com/relekang/graphql-rss-parser/compare/v2.9.0...v2.9.1) (2021-06-02)
 
 ## [2.9.0](https://github.com/relekang/graphql-rss-parser/compare/v2.8.1...v2.9.0) (2021-06-02)
