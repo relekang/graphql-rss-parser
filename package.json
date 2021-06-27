@@ -4,7 +4,7 @@
   "description": "A microservice that parses rss feeds and makes it available as grahpql schema",
   "main": "dist/index.js",
   "engines": {
-    "node": ">=10"
+    "node": ">=14"
   },
   "bin": {
     "graphql-rss-parser": "./cli.js"
