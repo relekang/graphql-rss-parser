@@ -118,7 +118,7 @@ export function parse(feed: string): Promise<ParserResponse> {
               }
             }),
           })
-        } catch (error) {
+        } catch (error: any) {
           reject(new ParserError(error, 'FEEDME'))
         }
       })

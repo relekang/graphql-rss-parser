@@ -97,8 +97,8 @@ export async function findFeed({
   const content = response.text
 
   if (
-    /application\/(rss|atom)/.test(response.contentType) ||
-    /(application|text)\/xml/.test(response.contentType)
+    /application\/(rss|atom)/.test(response.contentType || '') ||
+    /(application|text)\/xml/.test(response.contentType || '')
   ) {
     try {
       const { title } = await parseFromString({ content })
@@ -110,8 +110,8 @@ export async function findFeed({
     }
   }
   if (
-    /application\/feed\+json/.test(response.contentType) ||
-    /application\/json/.test(response.contentType)
+    /application\/feed\+json/.test(response.contentType || '') ||
+    /application\/json/.test(response.contentType || '')
   ) {
     try {
       const { title } = await parseFromQuery({

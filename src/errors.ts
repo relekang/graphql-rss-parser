@@ -134,9 +134,9 @@ type ErrorResponse = {
   }
 }
 
-export function createErrorFormatter(Sentry: any) {
+export function createErrorFormatter(Sentry: any): (error: any) => ErrorResponse {
   debug(Sentry ? 'creating error formatter with sentry' : 'creating error formatter without sentry')
-  return function formatError(error: any) {
+  return function formatError(error) {
     const response: ErrorResponse = {
       path: error.path,
       error: {
@@ -156,7 +156,7 @@ export function createErrorFormatter(Sentry: any) {
         response.type = error.stack.split('\n')[0].split(':')[0]
       } catch (error) {
         if (development) {
-          return error
+          return error as ErrorResponse
         }
       }
     }
@@ -169,7 +169,7 @@ export function createErrorFormatter(Sentry: any) {
         response.type = error.extensions?.exception?.stacktrace[0].split(':')[0]
       } catch (error) {
         if (development) {
-          return error
+          return error as ErrorResponse
         }
       }
     }

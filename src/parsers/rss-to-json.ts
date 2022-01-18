@@ -29,7 +29,7 @@ export async function parse(feed: string): Promise<ParserResponse> {
         })
       ),
     }
-  } catch (error) {
+  } catch (error: any) {
     debug('parsing failed with error', error)
     if (
       error.toString().includes('There are errors in your xml') ||

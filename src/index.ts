@@ -1,4 +1,4 @@
-import { ApolloServer } from 'apollo-server-micro'
+import { ApolloServer, Config } from 'apollo-server-micro'
 
 import { schema } from './schema'
 import { createErrorFormatter, sentryIgnoreErrors } from './errors'
@@ -26,7 +26,8 @@ export default function createHandler(options: Options) {
     })
   }
 
-  const formatError = createErrorFormatter(Sentry)
+  // @ts-ignore response does not match
+  const formatError: Config['formatError'] = createErrorFormatter(Sentry)
   const apolloServer = new ApolloServer({ schema, formatError })
 
   return apolloServer.createHandler({ path: '/' })
