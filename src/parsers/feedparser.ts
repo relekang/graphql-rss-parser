@@ -55,7 +55,7 @@ export function parse(feed: string): Promise<ParserResponse> {
       stream.pipe(feedparser)
       stream.push(feed)
       stream.push(null)
-    } catch (error) {
+    } catch (error: any) {
       debug('parsing failed with error', error)
       reject(new ParserError(error, 'FEEDPARSER'))
     }

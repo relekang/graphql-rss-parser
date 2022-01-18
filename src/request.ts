@@ -40,7 +40,7 @@ export default async function request(url: string) {
       contentType: response.headers['content-type'],
       headers: response.headers,
     }
-  } catch (error) {
+  } catch (error: any) {
     debug(`request to ${url} failed with error`, error)
     if (error.response && error.response.status) {
       throw new UpstreamHttpError('Upstream HTTP error', error.response.status)

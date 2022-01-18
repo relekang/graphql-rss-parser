@@ -41,7 +41,7 @@ export function testGraphqlApi(strings: TemplateStringsArray, ...args: unknown[]
           data: JSON.stringify({ query: 'query TestQuery { ' + query + ' }' }),
         })
       ).data
-    } catch (error) {
+    } catch (error: any) {
       if (!error.response) {
         throw error
       }

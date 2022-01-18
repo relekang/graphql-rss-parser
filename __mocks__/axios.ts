@@ -21,7 +21,7 @@ export default async function axios(options: any) {
 
   if (!content) {
     const response = await _axios(options)
-    const contentType: string = response.headers['content-type']
+    const contentType = response.headers['content-type']
 
     content = {
       data: response.data.toString(),

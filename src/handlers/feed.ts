@@ -51,9 +51,9 @@ export async function parseFromQuery({
 }): Promise<ParserResponse> {
   const response = await request(url)
 
-  const isJsonFeed = ['application/json', 'application/feed+json'].includes(
-    response.contentType.split(';')[0]
-  )
+  // @ts-ignore
+  const contentType: string = response.contentType ? response.contentType.split(';')[0] : ''
+  const isJsonFeed = ['application/json', 'application/feed+json'].includes(contentType)
   const parsed = await parseFromString({
     content: response.text,
     parser: isJsonFeed ? 'JSON_FEED_V1' : parser,

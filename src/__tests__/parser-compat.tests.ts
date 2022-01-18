@@ -38,7 +38,7 @@ describe('Same query should give same output for different parsers', () => {
           }),
         })
       ).data
-    } catch (error) {
+    } catch (error: any) {
       if (!error.response) {
         throw error
       }
