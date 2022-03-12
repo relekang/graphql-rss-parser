@@ -36,7 +36,7 @@
   "homepage": "https://github.com/relekang/graphql-rss-parser#readme",
   "dependencies": {
     "@sentry/node": "^6.6.0",
-    "@types/micro": "^7.3.5",
+    "@types/micro": "^7.3.7",
     "apollo-server-micro": "^2.22.2",
     "axios": "^0.25.0",
     "cheerio": "^1.0.0-rc.10",
@@ -57,12 +57,12 @@
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
-    "@types/debug": "^4.1.5",
-    "@types/feedparser": "^2.2.3",
-    "@types/fs-extra-promise": "^1.0.9",
+    "@types/debug": "^4.1.7",
+    "@types/feedparser": "^2.2.5",
+    "@types/fs-extra-promise": "^1.0.10",
     "@types/http-status-codes": "^1.2.0",
-    "@types/is-url": "^1.2.29",
-    "@types/jest": "^27.4.0",
+    "@types/is-url": "^1.2.30",
+    "@types/jest": "^27.4.1",
     "@types/node": "^15.12.2",
     "@typescript-eslint/eslint-plugin": "^4.26.1",
     "@typescript-eslint/parser": "^4.26.1",
@@ -76,8 +76,8 @@
     "prettier": "^2.3.1",
     "standard-version": "^9.1.1",
     "ts-jest": "^27.1.3",
-    "ts-node": "^10.4.0",
-    "typescript": "^4.5.4"
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2"
   },
   "resolutions": {
     "node-fetch": ">=2.6.1 <3.0.0-beta.1|| >= 3.0.0-beta.9",
