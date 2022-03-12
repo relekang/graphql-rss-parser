@@ -1,15 +1,31 @@
-FROM node:14
+FROM node:16 as builder
 
 WORKDIR /app
 
 ENV NODE_ENV=production
 
-COPY package.json .
-COPY yarn.lock .
+COPY package.json package-lock.json ./
 
-RUN yarn
+RUN npm ci
 
 COPY . .
 
+RUN npm run build
+
+FROM node:16-alpine as app
+
+WORKDIR /app
+
+ENV NODE_ENV=production
+
+COPY package.json package-lock.json ./
+
+RUN apk add -t build-deps build-base python3 \
+	&& npm ci \
+	&& apk del --purge build-deps
+
+COPY cli.js .
+COPY --from=builder /app/dist ./dist
+
 EXPOSE 3000
-CMD yarn start
+CMD npm run start
