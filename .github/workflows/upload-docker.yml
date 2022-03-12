@@ -1,0 +1,25 @@
+name: Upload docker image
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 1
+    - name: Build docker image
+      run: docker build -t relekang/graphql-rss-parser:${GITHUB_REF##*/}
+    - name: Tag latest image
+      run: docker tag relekang/graphql-rss-parser:${GITHUB_REF##*/} relekang/graphql-rss-parser:latest
+    - name: Login to DockerHub Registry
+      run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+    - name: Push image
+      run: |
+        docker push relekang/graphql-rss-parser:${GITHUB_REF##*/}
+        docker push relekang/graphql-rss-parser:latest
