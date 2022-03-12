@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/relekang/graphql-rss-parser#readme",
   "dependencies": {
-    "@sentry/node": "^6.6.0",
+    "@sentry/node": "^6.18.2",
     "@types/micro": "^7.3.7",
     "apollo-server-micro": "^2.22.2",
     "axios": "^0.26.1",
