@@ -1,18 +1,20 @@
 /* eslint-env jest */
-import { parse } from '../rss-parser'
-import request from '../../request'
+import { parse } from '../rss-parser';
+import request from '../../request';
 
 test('should parse string from rolflekang.com/feed.xml', async () => {
-  const fixture = await request('https://rolflekang.com/feed.xml')
+  const fixture = await request('https://rolflekang.com/feed.xml');
 
-  expect(await parse(fixture.text)).toMatchSnapshot()
-})
+  expect(await parse(fixture.text)).toMatchSnapshot();
+});
 
 test('should parse string from google.blogspot.com/feeds/posts/default', async () => {
-  const fixture = await request('http://google.blogspot.com/feeds/posts/default')
+  const fixture = await request(
+    'http://google.blogspot.com/feeds/posts/default'
+  );
 
-  expect(await parse(fixture.text)).toMatchSnapshot()
-})
+  expect(await parse(fixture.text)).toMatchSnapshot();
+});
 
 test('should parse string with CET dates', () => {
   const feed = `
@@ -51,6 +53,6 @@ test('should parse string with CET dates', () => {
       </item>
     </channel>
   </rss>
-  `
-  expect(parse(feed)).toMatchSnapshot()
-})
+  `;
+  expect(parse(feed)).toMatchSnapshot();
+});

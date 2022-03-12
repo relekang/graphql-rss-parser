@@ -1,16 +1,16 @@
-import _debug from 'debug'
-import { ParserKey, ParserResponse } from '../types'
-const debug = _debug('graphql-rss-parser:parsers:json-parser')
+import _debug from 'debug';
+import { ParserKey, ParserResponse } from '../types';
+const debug = _debug('graphql-rss-parser:parsers:json-parser');
 
 export async function parse(input: string): Promise<ParserResponse> {
-  const content: JsonFeed.Feed = JSON.parse(input)
-  debug('starting to transform')
+  const content: JsonFeed.Feed = JSON.parse(input);
+  debug('starting to transform');
 
-  let authors
+  let authors;
   if (content.version === 'https://jsonfeed.org/version/1') {
-    authors = content.author ? [content.author] : []
+    authors = content.author ? [content.author] : [];
   } else {
-    authors = content.authors
+    authors = content.authors;
   }
 
   const output: ParserResponse = {
@@ -23,14 +23,14 @@ export async function parse(input: string): Promise<ParserResponse> {
     items:
       content.items?.map((item) => {
         if (content.version === 'https://jsonfeed.org/version/1') {
-          const author = (item as JsonFeedV1.Item).author
-          delete (item as JsonFeedV1.Item).author
-          return { ...item, authors: author ? [author] : [] }
+          const author = (item as JsonFeedV1.Item).author;
+          delete (item as JsonFeedV1.Item).author;
+          return { ...item, authors: author ? [author] : [] };
         } else {
-          return item
+          return item;
         }
       }) || [],
-  }
-  debug('done transform')
-  return output
+  };
+  debug('done transform');
+  return output;
 }

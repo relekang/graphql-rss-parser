@@ -1,16 +1,16 @@
-import { parser } from 'rss-to-json'
-import _debug from 'debug'
+import { parser } from 'rss-to-json';
+import _debug from 'debug';
 
-import { ParserError, NotAFeedError } from '../errors'
-import { Item, ParserResponse } from '../types'
+import { ParserError, NotAFeedError } from '../errors';
+import { Item, ParserResponse } from '../types';
 
-const debug = _debug('graphql-rss-parser:parsers:rss-to-json')
+const debug = _debug('graphql-rss-parser:parsers:rss-to-json');
 
 export async function parse(feed: string): Promise<ParserResponse> {
   try {
-    debug('starting to parse')
-    const parsed = await parser(feed)
-    debug('done parsing')
+    debug('starting to parse');
+    const parsed = await parser(feed);
+    debug('done parsing');
 
     return {
       parser: 'RSS_TO_JSON',
@@ -24,19 +24,22 @@ export async function parse(feed: string): Promise<ParserResponse> {
           url: item.link,
           title: item.title,
           date_published: new Date(item.created).toISOString(),
-          tags: typeof item.category === 'string' ? [item.category] : item.category || [],
+          tags:
+            typeof item.category === 'string'
+              ? [item.category]
+              : item.category || [],
           authors: item.author ? [{ name: item.author }] : [],
         })
       ),
-    }
+    };
   } catch (error: any) {
-    debug('parsing failed with error', error)
+    debug('parsing failed with error', error);
     if (
       error.toString().includes('There are errors in your xml') ||
       error.toString().includes("Cannot read property 'item' of undefined")
     ) {
-      throw new NotAFeedError()
+      throw new NotAFeedError();
     }
-    throw new ParserError(error, 'RSS_TO_JSON')
+    throw new ParserError(error, 'RSS_TO_JSON');
   }
 }

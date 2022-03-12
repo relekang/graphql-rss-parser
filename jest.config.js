@@ -3,4 +3,4 @@ module.exports = {
   testEnvironment: 'node',
   coverageDirectory: './coverage/',
   testRegex: '/__tests__/.*\\.tests\\.ts$',
-}
+};
