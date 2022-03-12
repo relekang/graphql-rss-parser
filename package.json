@@ -14,9 +14,10 @@
     "start": "./cli.js",
     "dev": "nodemon --ext ts,js,json,mjs -w src -w package-lock.json -w tsconfig ./dev.js",
     "test": "jest",
-    "lint": "eslint --ext ts,js src *.js",
-    "format": "yarn lint -- --fix",
-    "release": "yarn build && standard-version -i changelog.md -m '%s'"
+    "lint": "eslint --cache --ext ts,tsx,js,jsx .",
+    "format": "eslint --cache --quiet --fix --ext ts,tsx,js,jsx .",
+    "release": "yarn build && standard-version -i changelog.md -m '%s'",
+    "lint:errors": "eslint --cache --quiet --ext ts,tsx,js,jsx ."
   },
   "repository": {
     "type": "git",
@@ -56,6 +57,7 @@
     "update-notifier": "^5.0.0"
   },
   "devDependencies": {
+    "@rushstack/eslint-patch": "^1.1.0",
     "@types/axios": "^0.14.0",
     "@types/debug": "^4.1.7",
     "@types/feedparser": "^2.2.5",
@@ -64,11 +66,8 @@
     "@types/is-url": "^1.2.30",
     "@types/jest": "^27.4.1",
     "@types/node": "^15.12.2",
-    "@typescript-eslint/eslint-plugin": "^4.26.1",
-    "@typescript-eslint/parser": "^4.26.1",
-    "eslint": "^7.28.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^3.4.0",
+    "eslint": "^8.11.0",
+    "eslint-config-relekang": "^2.1.13",
     "fs-extra-promise": "^1.0.1",
     "jest": "^27.4.7",
     "nock": "^13.0.4",

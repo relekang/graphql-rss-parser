@@ -1,15 +1,15 @@
 #!/usr/bin/env node
-/* eslint-disable @typescript-eslint/no-var-requires */
-const updateNotifier = require('update-notifier')
 
-const pkg = require('./package.json')
-const createHandler = require('./dist').default
+const updateNotifier = require('update-notifier');
 
-updateNotifier({ pkg }).notify()
+const pkg = require('./package.json');
+const createHandler = require('./dist').default;
+
+updateNotifier({ pkg }).notify();
 
 require('./dist/cli')
   .cli({ version: pkg.version, createHandler })
   .catch((error) => {
-    console.error(error)
-    process.exit(1)
-  })
+    console.error(error);
+    process.exit(1);
+  });
