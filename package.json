@@ -1,6 +1,6 @@
 {
   "name": "graphql-rss-parser",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "A microservice that parses rss feeds and makes it available as grahpql schema",
   "main": "dist/index.js",
   "engines": {
