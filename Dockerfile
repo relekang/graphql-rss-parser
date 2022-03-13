@@ -2,8 +2,6 @@ FROM node:16 as builder
 
 WORKDIR /app
 
-ENV NODE_ENV=production
-
 COPY package.json package-lock.json ./
 
 RUN npm ci
