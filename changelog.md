@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.1](https://github.com/relekang/graphql-rss-parser/compare/v3.0.0...v3.0.1) (2022-03-13)
+
+
+### Bug Fixes
+
+* Add new detection of not a feed ([09b2c28](https://github.com/relekang/graphql-rss-parser/commit/09b2c28a3c9b328b0dcf61fbd66857f273d3243d))
+* Run npm audit fix ([25758c6](https://github.com/relekang/graphql-rss-parser/commit/25758c62e4b4883828b970ef4bf49f072a26e026))
+* Update security fixes with npm audit fix ([e7c4a6b](https://github.com/relekang/graphql-rss-parser/commit/e7c4a6bee2aa3f6227e94a4dae47118e09e8fce0))
+* Upgrade @sentry/node ([1480830](https://github.com/relekang/graphql-rss-parser/commit/148083010225b13ba18bd0a5e78bce173843a693))
+* Upgrade axios ([357bfa8](https://github.com/relekang/graphql-rss-parser/commit/357bfa86114dc67b6ebe8b7499416eb42e732adc))
+* Upgrade cmd-ts ([6b41e60](https://github.com/relekang/graphql-rss-parser/commit/6b41e603b2acf8bf519a841f0b367a334e7ecf67))
+* Upgrade http-status-codes ([93d601d](https://github.com/relekang/graphql-rss-parser/commit/93d601d49cd8317b0bba29016c92344bf71d959d))
+
 ## [3.0.0](https://github.com/relekang/graphql-rss-parser/compare/v2.9.1...v3.0.0) (2021-06-27)
 
 
