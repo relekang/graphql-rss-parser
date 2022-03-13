@@ -14,7 +14,7 @@ jobs:
       with:
         fetch-depth: 1
     - name: Build docker image
-      run: docker build -t relekang/graphql-rss-parser:${GITHUB_REF##*/}
+      run: docker build -t relekang/graphql-rss-parser:${GITHUB_REF##*/} .
     - name: Tag latest image
       run: docker tag relekang/graphql-rss-parser:${GITHUB_REF##*/} relekang/graphql-rss-parser:latest
     - name: Login to DockerHub Registry
