@@ -36,7 +36,10 @@ export async function parse(feed: string): Promise<ParserResponse> {
     debug('parsing failed with error', error);
     if (
       error.toString().includes('There are errors in your xml') ||
-      error.toString().includes("Cannot read property 'item' of undefined")
+      error.toString().includes("Cannot read property 'item' of undefined") ||
+      error
+        .toString()
+        .includes("Cannot read properties of undefined (reading 'item')")
     ) {
       throw new NotAFeedError();
     }
