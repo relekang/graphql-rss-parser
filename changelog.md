@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.3](https://github.com/relekang/graphql-rss-parser/compare/v3.0.2...v3.0.3) (2022-03-13)
+
+
+### Bug Fixes
+
+* Remove node env from builder image ([a62c99a](https://github.com/relekang/graphql-rss-parser/commit/a62c99ade5e7be6e2f3e96243119efaf9d206e51))
+
 ### [3.0.2](https://github.com/relekang/graphql-rss-parser/compare/v3.0.1...v3.0.2) (2022-03-13)
 
 ### [3.0.1](https://github.com/relekang/graphql-rss-parser/compare/v3.0.0...v3.0.1) (2022-03-13)
