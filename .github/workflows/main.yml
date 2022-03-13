@@ -31,4 +31,4 @@ jobs:
       with:
         fetch-depth: 1
     - name: Build docker image
-      run: docker build -t relekang/graphql-rss-parser:${{ github.sha }}
+      run: docker build -t relekang/graphql-rss-parser:${{ github.sha }} .
