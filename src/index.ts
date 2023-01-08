@@ -28,7 +28,11 @@ export default async function createHandler(options: Options) {
 
   // @ts-ignore response does not match
   const formatError: Config['formatError'] = createErrorFormatter(Sentry);
-  const apolloServer = new ApolloServer({ schema, formatError });
+  const apolloServer = new ApolloServer({
+    schema,
+    formatError,
+    persistedQueries: false,
+  });
 
   await apolloServer.start();
 
