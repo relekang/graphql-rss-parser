@@ -58,11 +58,9 @@
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
-    "@types/axios": "^0.14.0",
     "@types/debug": "^4.1.7",
     "@types/feedparser": "^2.2.5",
     "@types/fs-extra-promise": "^1.0.10",
-    "@types/http-status-codes": "^1.2.0",
     "@types/is-url": "^1.2.30",
     "@types/jest": "^29.2.5",
     "@types/node": "^18.11.18",
