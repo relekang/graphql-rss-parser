@@ -1,4 +1,4 @@
-import { makeExecutableSchema } from 'graphql-tools';
+import { makeExecutableSchema } from '@graphql-tools/schema';
 import _debug from 'debug';
 import * as feed from './handlers/feed';
 import { findFeed } from './handlers/findFeed';

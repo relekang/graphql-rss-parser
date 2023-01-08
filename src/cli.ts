@@ -7,7 +7,7 @@ export function cli({
   createHandler,
 }: {
   version: string;
-  createHandler: (options: Options) => RequestHandler;
+  createHandler: (options: Options) => Promise<RequestHandler>;
 }) {
   const cmd = command({
     name: 'graphql-rss-parser',
@@ -44,9 +44,9 @@ export function cli({
         },
       }),
     },
-    handler: (args) => {
+    handler: async (args) => {
       const server = micro(
-        createHandler({
+        await createHandler({
           version,
           sentryDsn: args.sentryDsn,
         })

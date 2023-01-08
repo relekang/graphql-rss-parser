@@ -28,7 +28,7 @@ export function testGraphqlApi(
   const query = String.raw(strings, ...args);
   test(query, async () => {
     const service = micro(
-      createHandler({
+      await createHandler({
         version: 'test',
       })
     );

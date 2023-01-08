@@ -8,7 +8,7 @@ export type Options = {
   sentryDsn?: string;
 };
 
-export default function createHandler(options: Options) {
+export default async function createHandler(options: Options) {
   let Sentry;
 
   if (options.sentryDsn) {
@@ -29,6 +29,8 @@ export default function createHandler(options: Options) {
   // @ts-ignore response does not match
   const formatError: Config['formatError'] = createErrorFormatter(Sentry);
   const apolloServer = new ApolloServer({ schema, formatError });
+
+  await apolloServer.start();
 
   return apolloServer.createHandler({ path: '/' });
 }
