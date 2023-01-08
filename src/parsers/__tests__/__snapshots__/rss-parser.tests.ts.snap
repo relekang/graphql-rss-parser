@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should parse string from google.blogspot.com/feeds/posts/default 1`] = `
-Object {
+{
   "description": undefined,
   "feed_url": "http://www.blogger.com/feeds/2120328063286836889/posts/default",
   "home_page_url": "http://google.blogspot.com/",
-  "items": Array [
-    Object {
-      "authors": Array [],
-      "content_html": "<i>Posted by Brett Wiltshire, Blogger CEO</i><br /><br />This morning we’re beyond thrilled to announce that Blogger has signed a definitive agreement to be acquired by Google, the Internet search company. This is exciting news not only for all of us on the Blogger team, but for our users, our partners, and most importantly -- the blogosphere itself. <br /><br />Understandably, you probably have lots of questions about what this means for Blogger and Blogger users. Below, we've put together some initial answers to many of the biggest questions. More info will be available as we figure it out. Thanks for your support as we transfer into this next exciting phase. &nbsp; <br /><br /><br /><b>Q: Why did Blogger sell to Google?</b><br />A: Well, on the surface, it may look obvious: A company of Google's size could give Blogger the resources we needed to do things better, faster, bigger. It's been a long eleven+ years since we started the company, and not all of them were very fun. We had been making serious progress over the last year or so, but bootstrapping (growing without funding) is always a slow process, and we were a long way from where we wanted to be. We wanted to offer a better service. And with Google, it wasn't just their size, of course. They had clearly done an incredible job building their technology and business, and we'd been big fans. <br /><br />However, that doesn't mean it was an easy decision. We'd seen many small companies doing interesting things die (or at least become uninteresting) after getting acquired. It was only after becoming convinced that: a) There were sensible, cool, powerful things we could do on the technology/product side with Google that we couldn't do otherwise; and b) It was a good company, run by people we liked, who wanted the same things we did (i.e., they wouldn't screw up Blogger or make our lives miserable). <br /><br />We became convinced both of these were the case rather quickly after thinking about the product side and talking to lots of Googlers. &nbsp; Also, Google liked our logo. And we liked their food. <br /><br /><b>Q: Will Blogger go away?&nbsp;</b><br />A: Nope. Blogger is going to maintain its branding and services. While we may integrate with Google in certain areas there will always be a Blogger. <br /><br /><b>Q: What does the acquisition mean to Blogger users?&nbsp;</b><br />A: Greater reliability, new innovative products and a whole lot more that we aren't ready to share quite yet (truth is, we're still figuring a lot of it out). Right now, we're mostly bolstering up our hardware -- making things faster and more reliable -- and getting settled. Next, we're going to be working on some killer ideas we've been wanting to implement for years. It'll be fun. <br /><br /><b>Q: Will there be any changes to my account?&nbsp;</b><br />A: Not right now but if anything does change we will notify you ahead of time, as we've done in the past.<br /><br /><b>Q: Will there be any changes to the Blogger products?&nbsp;</b><br />A: We will be making some changes in our product line. We've been working on a new version of Blogger for some time now that will be coming out soon. We'll tell you more as soon as we know. <br /><br /><b>Q: What are your plans for the future?&nbsp;</b><br />A: We are building a nuclear powered... Wait, you almost had us. We aren't telling, yet! But we will have more in a few weeks. <br /><br /><b>Q: Does this mean my blog will rank higher in Google search results?&nbsp;</b><br />A: Nope. It does mean your blog might be stored physically closer to Google but that's about it. The people at Google have done a great job over the years making sure their search results are honest and objective and there's no reason they would change that policy for Blogger or anyone else. <br /><br /><b>Q: What will happen to all the nice kids that work on Blogger?&nbsp;</b><br />A: We’ll still be working on Blogger and making it better. <br /><br /><b>Q: Are you still as handsome as ever?&nbsp;</b><br />A:<br /><div class=\\"separator\\" style=\\"clear: both; text-align: center;\\"><a href=\\"http://1.bp.blogspot.com/_UUTay7LUoq0/TXVACrMZNOI/AAAAAAAAADI/_WWawmSQnIM/s1600/_MG_1538.jpg\\" imageanchor=\\"1\\" style=\\"margin-left: 1em; margin-right: 1em;\\"><img border=\\"0\\" src=\\"http://1.bp.blogspot.com/_UUTay7LUoq0/TXVACrMZNOI/AAAAAAAAADI/_WWawmSQnIM/s400/_MG_1538.jpg\\" width=\\"500\\" /></a></div>",
+  "items": [
+    {
+      "authors": [],
+      "content_html": "<i>Posted by Brett Wiltshire, Blogger CEO</i><br /><br />This morning we’re beyond thrilled to announce that Blogger has signed a definitive agreement to be acquired by Google, the Internet search company. This is exciting news not only for all of us on the Blogger team, but for our users, our partners, and most importantly -- the blogosphere itself. <br /><br />Understandably, you probably have lots of questions about what this means for Blogger and Blogger users. Below, we've put together some initial answers to many of the biggest questions. More info will be available as we figure it out. Thanks for your support as we transfer into this next exciting phase. &nbsp; <br /><br /><br /><b>Q: Why did Blogger sell to Google?</b><br />A: Well, on the surface, it may look obvious: A company of Google's size could give Blogger the resources we needed to do things better, faster, bigger. It's been a long eleven+ years since we started the company, and not all of them were very fun. We had been making serious progress over the last year or so, but bootstrapping (growing without funding) is always a slow process, and we were a long way from where we wanted to be. We wanted to offer a better service. And with Google, it wasn't just their size, of course. They had clearly done an incredible job building their technology and business, and we'd been big fans. <br /><br />However, that doesn't mean it was an easy decision. We'd seen many small companies doing interesting things die (or at least become uninteresting) after getting acquired. It was only after becoming convinced that: a) There were sensible, cool, powerful things we could do on the technology/product side with Google that we couldn't do otherwise; and b) It was a good company, run by people we liked, who wanted the same things we did (i.e., they wouldn't screw up Blogger or make our lives miserable). <br /><br />We became convinced both of these were the case rather quickly after thinking about the product side and talking to lots of Googlers. &nbsp; Also, Google liked our logo. And we liked their food. <br /><br /><b>Q: Will Blogger go away?&nbsp;</b><br />A: Nope. Blogger is going to maintain its branding and services. While we may integrate with Google in certain areas there will always be a Blogger. <br /><br /><b>Q: What does the acquisition mean to Blogger users?&nbsp;</b><br />A: Greater reliability, new innovative products and a whole lot more that we aren't ready to share quite yet (truth is, we're still figuring a lot of it out). Right now, we're mostly bolstering up our hardware -- making things faster and more reliable -- and getting settled. Next, we're going to be working on some killer ideas we've been wanting to implement for years. It'll be fun. <br /><br /><b>Q: Will there be any changes to my account?&nbsp;</b><br />A: Not right now but if anything does change we will notify you ahead of time, as we've done in the past.<br /><br /><b>Q: Will there be any changes to the Blogger products?&nbsp;</b><br />A: We will be making some changes in our product line. We've been working on a new version of Blogger for some time now that will be coming out soon. We'll tell you more as soon as we know. <br /><br /><b>Q: What are your plans for the future?&nbsp;</b><br />A: We are building a nuclear powered... Wait, you almost had us. We aren't telling, yet! But we will have more in a few weeks. <br /><br /><b>Q: Does this mean my blog will rank higher in Google search results?&nbsp;</b><br />A: Nope. It does mean your blog might be stored physically closer to Google but that's about it. The people at Google have done a great job over the years making sure their search results are honest and objective and there's no reason they would change that policy for Blogger or anyone else. <br /><br /><b>Q: What will happen to all the nice kids that work on Blogger?&nbsp;</b><br />A: We’ll still be working on Blogger and making it better. <br /><br /><b>Q: Are you still as handsome as ever?&nbsp;</b><br />A:<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/_UUTay7LUoq0/TXVACrMZNOI/AAAAAAAAADI/_WWawmSQnIM/s1600/_MG_1538.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/_UUTay7LUoq0/TXVACrMZNOI/AAAAAAAAADI/_WWawmSQnIM/s400/_MG_1538.jpg" width="500" /></a></div>",
       "date_published": "2011-04-01T15:06:00.000Z",
       "id": undefined,
-      "tags": Array [],
+      "tags": [],
       "title": "Google to Acquire Blogger",
       "url": "http://google.blogspot.com/2011/04/google-to-acquire-blogger.html",
     },
@@ -22,17 +22,17 @@ Object {
 `;
 
 exports[`should parse string from rolflekang.com/feed.xml 1`] = `
-Object {
+{
   "description": "undefined",
   "feed_url": "https://rolflekang.com/feed.xml",
   "home_page_url": "https://rolflekang.com",
-  "items": Array [
-    Object {
-      "authors": Array [],
+  "items": [
+    {
+      "authors": [],
       "content_html": undefined,
       "date_published": "2020-11-08T00:00:00.000Z",
       "id": "https://rolflekang.com/using-certbot-with-ansible",
-      "tags": Array [
+      "tags": [
         "letsencrypt",
         "acme",
         "certbot",
@@ -41,12 +41,12 @@ Object {
       "title": "Using certbot with Ansible",
       "url": "https://rolflekang.com/using-certbot-with-ansible",
     },
-    Object {
-      "authors": Array [],
+    {
+      "authors": [],
       "content_html": undefined,
       "date_published": "2020-09-12T00:00:00.000Z",
       "id": "https://rolflekang.com/ansible-handlers-in-loops",
-      "tags": Array [
+      "tags": [
         "ansible",
         "devops",
         "ops",
@@ -55,12 +55,12 @@ Object {
       "title": "Using Ansible handlers in loops",
       "url": "https://rolflekang.com/ansible-handlers-in-loops",
     },
-    Object {
-      "authors": Array [],
+    {
+      "authors": [],
       "content_html": undefined,
       "date_published": "2020-05-26T00:00:00.000Z",
       "id": "https://rolflekang.com/serving-plain-text-with-nextjs",
-      "tags": Array [
+      "tags": [
         "nextjs",
         "javascript",
         "curl",
@@ -69,12 +69,12 @@ Object {
       "title": "Serving text/plain for curl with Next",
       "url": "https://rolflekang.com/serving-plain-text-with-nextjs",
     },
-    Object {
-      "authors": Array [],
+    {
+      "authors": [],
       "content_html": undefined,
       "date_published": "2020-05-03T00:00:00.000Z",
       "id": "https://rolflekang.com/wireless-uplinks-with-unifi",
-      "tags": Array [
+      "tags": [
         "networking",
         "unifi",
         "ubiquiti",
@@ -83,23 +83,23 @@ Object {
       "title": "Wireless uplinks with Unifi",
       "url": "https://rolflekang.com/wireless-uplinks-with-unifi",
     },
-    Object {
-      "authors": Array [],
+    {
+      "authors": [],
       "content_html": undefined,
       "date_published": "2019-11-14T00:00:00.000Z",
       "id": "https://rolflekang.com/using-git-commits-instead-of-stash",
-      "tags": Array [
+      "tags": [
         "git",
       ],
       "title": "Using git commits instead of git stash",
       "url": "https://rolflekang.com/using-git-commits-instead-of-stash",
     },
-    Object {
-      "authors": Array [],
+    {
+      "authors": [],
       "content_html": undefined,
       "date_published": "2019-02-26T00:00:00.000Z",
       "id": "https://rolflekang.com/twitter-cards-for-gatsby-posts",
-      "tags": Array [
+      "tags": [
         "gatsby",
         "canvas",
         "javascript",
@@ -107,36 +107,36 @@ Object {
       "title": "Twitter cards for Gatsby posts",
       "url": "https://rolflekang.com/twitter-cards-for-gatsby-posts",
     },
-    Object {
-      "authors": Array [],
+    {
+      "authors": [],
       "content_html": undefined,
       "date_published": "2019-02-20T00:00:00.000Z",
       "id": "https://rolflekang.com/related-articles-with-gatsby",
-      "tags": Array [
+      "tags": [
         "gatsby",
         "javascript",
       ],
       "title": "Related articles with Gatsby",
       "url": "https://rolflekang.com/related-articles-with-gatsby",
     },
-    Object {
-      "authors": Array [],
+    {
+      "authors": [],
       "content_html": undefined,
       "date_published": "2019-02-12T00:00:00.000Z",
       "id": "https://rolflekang.com/creating-a-cli-with-reason-native",
-      "tags": Array [
+      "tags": [
         "reasonml",
         "native",
       ],
       "title": "Creating a CLI with Reason native",
       "url": "https://rolflekang.com/creating-a-cli-with-reason-native",
     },
-    Object {
-      "authors": Array [],
+    {
+      "authors": [],
       "content_html": undefined,
       "date_published": "2017-05-28T00:00:00.000Z",
       "id": "https://rolflekang.com/testing-simple-graphql-services",
-      "tags": Array [
+      "tags": [
         "graphql",
         "testing",
         "javascript",
@@ -144,35 +144,35 @@ Object {
       "title": "Testing simple GraphQL services",
       "url": "https://rolflekang.com/testing-simple-graphql-services",
     },
-    Object {
-      "authors": Array [],
+    {
+      "authors": [],
       "content_html": undefined,
       "date_published": "2017-01-02T00:00:00.000Z",
       "id": "https://rolflekang.com/lets-run-some-races",
-      "tags": Array [
+      "tags": [
         "running",
       ],
       "title": "Let's run some races this year",
       "url": "https://rolflekang.com/lets-run-some-races",
     },
-    Object {
-      "authors": Array [],
+    {
+      "authors": [],
       "content_html": undefined,
       "date_published": "2017-01-01T00:00:00.000Z",
       "id": "https://rolflekang.com/software-development-on-an-ipad",
-      "tags": Array [
+      "tags": [
         "ipad",
         "development-environment",
       ],
       "title": "Software development on an iPad",
       "url": "https://rolflekang.com/software-development-on-an-ipad",
     },
-    Object {
-      "authors": Array [],
+    {
+      "authors": [],
       "content_html": undefined,
       "date_published": "2016-06-10T00:00:00.000Z",
       "id": "https://rolflekang.com/filtering-lint-errors",
-      "tags": Array [
+      "tags": [
         "linter",
         "linting",
         "development",
@@ -180,24 +180,24 @@ Object {
       "title": "Filtering lint errors",
       "url": "https://rolflekang.com/filtering-lint-errors",
     },
-    Object {
-      "authors": Array [],
+    {
+      "authors": [],
       "content_html": undefined,
       "date_published": "2015-07-26T00:00:00.000Z",
       "id": "https://rolflekang.com/interrail-summer",
-      "tags": Array [
+      "tags": [
         "travel",
         "interrail",
       ],
       "title": "Interrail summer",
       "url": "https://rolflekang.com/interrail-summer",
     },
-    Object {
-      "authors": Array [],
+    {
+      "authors": [],
       "content_html": undefined,
       "date_published": "2015-05-23T00:00:00.000Z",
       "id": "https://rolflekang.com/writing-latex-in-atom",
-      "tags": Array [
+      "tags": [
         "atom",
         "writing",
         "procrastination",
@@ -205,12 +205,12 @@ Object {
       "title": "Writing (latex) in Atom",
       "url": "https://rolflekang.com/writing-latex-in-atom",
     },
-    Object {
-      "authors": Array [],
+    {
+      "authors": [],
       "content_html": undefined,
       "date_published": "2014-12-30T00:00:00.000Z",
       "id": "https://rolflekang.com/rmoq",
-      "tags": Array [
+      "tags": [
         "python",
         "testing",
         "mocking",
@@ -218,12 +218,12 @@ Object {
       "title": "rmoq - a request mock cache",
       "url": "https://rolflekang.com/rmoq",
     },
-    Object {
-      "authors": Array [],
+    {
+      "authors": [],
       "content_html": undefined,
       "date_published": "2014-10-03T00:00:00.000Z",
       "id": "https://rolflekang.com/django-nopassword-one-point-o",
-      "tags": Array [
+      "tags": [
         "django",
         "nopassword",
         "django-nopassword",
@@ -232,12 +232,12 @@ Object {
       "title": "django-nopassword reached 1.0",
       "url": "https://rolflekang.com/django-nopassword-one-point-o",
     },
-    Object {
-      "authors": Array [],
+    {
+      "authors": [],
       "content_html": undefined,
       "date_published": "2014-05-07T00:00:00.000Z",
       "id": "https://rolflekang.com/moving-to-pelican",
-      "tags": Array [
+      "tags": [
         "this",
         "static-site",
         "pelican",
@@ -246,12 +246,12 @@ Object {
       "title": "Moving the blog to pelican",
       "url": "https://rolflekang.com/moving-to-pelican",
     },
-    Object {
-      "authors": Array [],
+    {
+      "authors": [],
       "content_html": undefined,
       "date_published": "2014-02-02T00:00:00.000Z",
       "id": "https://rolflekang.com/building-tumblr-theme-with-grunt",
-      "tags": Array [
+      "tags": [
         "gruntjs",
         "cookiecutter",
         "tumblr",
@@ -259,12 +259,12 @@ Object {
       "title": "Building a Tumblr theme with GruntJS",
       "url": "https://rolflekang.com/building-tumblr-theme-with-grunt",
     },
-    Object {
-      "authors": Array [],
+    {
+      "authors": [],
       "content_html": undefined,
       "date_published": "2013-10-24T00:00:00.000Z",
       "id": "https://rolflekang.com/backup-routines-for-redisdb",
-      "tags": Array [
+      "tags": [
         "db",
         "backup",
         "redis",
@@ -272,24 +272,24 @@ Object {
       "title": "Backup routine for Redis",
       "url": "https://rolflekang.com/backup-routines-for-redisdb",
     },
-    Object {
-      "authors": Array [],
+    {
+      "authors": [],
       "content_html": undefined,
       "date_published": "2013-05-22T00:00:00.000Z",
       "id": "https://rolflekang.com/django-app-custom-user",
-      "tags": Array [
+      "tags": [
         "django",
         "custom user",
       ],
       "title": "Making your Django app ready for custom users",
       "url": "https://rolflekang.com/django-app-custom-user",
     },
-    Object {
-      "authors": Array [],
+    {
+      "authors": [],
       "content_html": undefined,
       "date_published": "2013-03-03T00:00:00.000Z",
       "id": "https://rolflekang.com/stats-are-fun",
-      "tags": Array [
+      "tags": [
         "pypstats",
         "pypi",
         "stats",
@@ -298,12 +298,12 @@ Object {
       "title": "Stats are fun",
       "url": "https://rolflekang.com/stats-are-fun",
     },
-    Object {
-      "authors": Array [],
+    {
+      "authors": [],
       "content_html": undefined,
       "date_published": "2013-02-26T00:00:00.000Z",
       "id": "https://rolflekang.com/alfred-scripts-for-jekyll",
-      "tags": Array [
+      "tags": [
         "alfredapp",
         "jekyll",
         "shell script",
@@ -311,12 +311,12 @@ Object {
       "title": "Alfred scripts for Jekyll",
       "url": "https://rolflekang.com/alfred-scripts-for-jekyll",
     },
-    Object {
-      "authors": Array [],
+    {
+      "authors": [],
       "content_html": undefined,
       "date_published": "2013-01-27T00:00:00.000Z",
       "id": "https://rolflekang.com/use-array-in-postgresql",
-      "tags": Array [
+      "tags": [
         "tags",
         "postgres",
         "array",
@@ -326,12 +326,12 @@ Object {
       "title": "Use array in postgresql with django",
       "url": "https://rolflekang.com/use-array-in-postgresql",
     },
-    Object {
-      "authors": Array [],
+    {
+      "authors": [],
       "content_html": undefined,
       "date_published": "2013-01-03T00:00:00.000Z",
       "id": "https://rolflekang.com/apply-puppet-configuration-automatically",
-      "tags": Array [
+      "tags": [
         "puppet",
         "web.py",
         "nginx",
@@ -342,12 +342,12 @@ Object {
       "title": "Apply puppet automatically",
       "url": "https://rolflekang.com/apply-puppet-configuration-automatically",
     },
-    Object {
-      "authors": Array [],
+    {
+      "authors": [],
       "content_html": undefined,
       "date_published": "2012-12-02T00:00:00.000Z",
       "id": "https://rolflekang.com/readable-wikipedia",
-      "tags": Array [
+      "tags": [
         "wikipedia",
         "css",
         "readability",
@@ -356,12 +356,12 @@ Object {
       "title": "Readable Wikipedia",
       "url": "https://rolflekang.com/readable-wikipedia",
     },
-    Object {
-      "authors": Array [],
+    {
+      "authors": [],
       "content_html": undefined,
       "date_published": "2012-09-28T00:00:00.000Z",
       "id": "https://rolflekang.com/django-nopassword",
-      "tags": Array [
+      "tags": [
         "django",
         "no-password",
         "email-authentication",
@@ -370,12 +370,12 @@ Object {
       "title": "django-nopassword",
       "url": "https://rolflekang.com/django-nopassword",
     },
-    Object {
-      "authors": Array [],
+    {
+      "authors": [],
       "content_html": undefined,
       "date_published": "2012-09-16T00:00:00.000Z",
       "id": "https://rolflekang.com/the-github-lamp",
-      "tags": Array [
+      "tags": [
         "arduino",
         "github",
         "git",

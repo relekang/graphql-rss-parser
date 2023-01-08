@@ -3,17 +3,17 @@
 exports[`
   feed(url: "https://non-existing-domain.com") { title }
  1`] = `
-Object {
-  "data": Object {
+{
+  "data": {
     "feed": null,
   },
-  "errors": Array [
-    Object {
-      "error": Object {
+  "errors": [
+    {
+      "error": {
         "code": "dns-lookup-error",
         "message": "Could not find domain",
       },
-      "path": Array [
+      "path": [
         "feed",
       ],
     },
@@ -24,9 +24,9 @@ Object {
 exports[`
   feed(url: "https://rolflekang.com/feed.json", parser: JSON_FEED_V1) { title }
  1`] = `
-Object {
-  "data": Object {
-    "feed": Object {
+{
+  "data": {
+    "feed": {
       "title": "Writing by Rolf Erik Lekang",
     },
   },
@@ -44,142 +44,142 @@ exports[`
     }
   }
  1`] = `
-Object {
-  "data": Object {
-    "feed": Object {
+{
+  "data": {
+    "feed": {
       "feed_url": "https://rolflekang.com/feed.xml",
-      "items": Array [
-        Object {
+      "items": [
+        {
           "date_published": "2020-11-08T00:00:00.000Z",
           "title": "Using certbot with Ansible",
           "url": "https://rolflekang.com/using-certbot-with-ansible",
         },
-        Object {
+        {
           "date_published": "2020-09-12T00:00:00.000Z",
           "title": "Using Ansible handlers in loops",
           "url": "https://rolflekang.com/ansible-handlers-in-loops",
         },
-        Object {
+        {
           "date_published": "2020-05-26T00:00:00.000Z",
           "title": "Serving text/plain for curl with Next",
           "url": "https://rolflekang.com/serving-plain-text-with-nextjs",
         },
-        Object {
+        {
           "date_published": "2020-05-03T00:00:00.000Z",
           "title": "Wireless uplinks with Unifi",
           "url": "https://rolflekang.com/wireless-uplinks-with-unifi",
         },
-        Object {
+        {
           "date_published": "2019-11-14T00:00:00.000Z",
           "title": "Using git commits instead of git stash",
           "url": "https://rolflekang.com/using-git-commits-instead-of-stash",
         },
-        Object {
+        {
           "date_published": "2019-02-26T00:00:00.000Z",
           "title": "Twitter cards for Gatsby posts",
           "url": "https://rolflekang.com/twitter-cards-for-gatsby-posts",
         },
-        Object {
+        {
           "date_published": "2019-02-20T00:00:00.000Z",
           "title": "Related articles with Gatsby",
           "url": "https://rolflekang.com/related-articles-with-gatsby",
         },
-        Object {
+        {
           "date_published": "2019-02-12T00:00:00.000Z",
           "title": "Creating a CLI with Reason native",
           "url": "https://rolflekang.com/creating-a-cli-with-reason-native",
         },
-        Object {
+        {
           "date_published": "2017-05-28T00:00:00.000Z",
           "title": "Testing simple GraphQL services",
           "url": "https://rolflekang.com/testing-simple-graphql-services",
         },
-        Object {
+        {
           "date_published": "2017-01-02T00:00:00.000Z",
           "title": "Let's run some races this year",
           "url": "https://rolflekang.com/lets-run-some-races",
         },
-        Object {
+        {
           "date_published": "2017-01-01T00:00:00.000Z",
           "title": "Software development on an iPad",
           "url": "https://rolflekang.com/software-development-on-an-ipad",
         },
-        Object {
+        {
           "date_published": "2016-06-10T00:00:00.000Z",
           "title": "Filtering lint errors",
           "url": "https://rolflekang.com/filtering-lint-errors",
         },
-        Object {
+        {
           "date_published": "2015-07-26T00:00:00.000Z",
           "title": "Interrail summer",
           "url": "https://rolflekang.com/interrail-summer",
         },
-        Object {
+        {
           "date_published": "2015-05-23T00:00:00.000Z",
           "title": "Writing (latex) in Atom",
           "url": "https://rolflekang.com/writing-latex-in-atom",
         },
-        Object {
+        {
           "date_published": "2014-12-30T00:00:00.000Z",
           "title": "rmoq - a request mock cache",
           "url": "https://rolflekang.com/rmoq",
         },
-        Object {
+        {
           "date_published": "2014-10-03T00:00:00.000Z",
           "title": "django-nopassword reached 1.0",
           "url": "https://rolflekang.com/django-nopassword-one-point-o",
         },
-        Object {
+        {
           "date_published": "2014-05-07T00:00:00.000Z",
           "title": "Moving the blog to pelican",
           "url": "https://rolflekang.com/moving-to-pelican",
         },
-        Object {
+        {
           "date_published": "2014-02-02T00:00:00.000Z",
           "title": "Building a Tumblr theme with GruntJS",
           "url": "https://rolflekang.com/building-tumblr-theme-with-grunt",
         },
-        Object {
+        {
           "date_published": "2013-10-24T00:00:00.000Z",
           "title": "Backup routine for Redis",
           "url": "https://rolflekang.com/backup-routines-for-redisdb",
         },
-        Object {
+        {
           "date_published": "2013-05-22T00:00:00.000Z",
           "title": "Making your Django app ready for custom users",
           "url": "https://rolflekang.com/django-app-custom-user",
         },
-        Object {
+        {
           "date_published": "2013-03-03T00:00:00.000Z",
           "title": "Stats are fun",
           "url": "https://rolflekang.com/stats-are-fun",
         },
-        Object {
+        {
           "date_published": "2013-02-26T00:00:00.000Z",
           "title": "Alfred scripts for Jekyll",
           "url": "https://rolflekang.com/alfred-scripts-for-jekyll",
         },
-        Object {
+        {
           "date_published": "2013-01-27T00:00:00.000Z",
           "title": "Use array in postgresql with django",
           "url": "https://rolflekang.com/use-array-in-postgresql",
         },
-        Object {
+        {
           "date_published": "2013-01-03T00:00:00.000Z",
           "title": "Apply puppet automatically",
           "url": "https://rolflekang.com/apply-puppet-configuration-automatically",
         },
-        Object {
+        {
           "date_published": "2012-12-02T00:00:00.000Z",
           "title": "Readable Wikipedia",
           "url": "https://rolflekang.com/readable-wikipedia",
         },
-        Object {
+        {
           "date_published": "2012-09-28T00:00:00.000Z",
           "title": "django-nopassword",
           "url": "https://rolflekang.com/django-nopassword",
         },
-        Object {
+        {
           "date_published": "2012-09-16T00:00:00.000Z",
           "title": "The Github lamp",
           "url": "https://rolflekang.com/the-github-lamp",
@@ -194,9 +194,9 @@ Object {
 exports[`
   feed(url: "https://rolflekang.com/feed.xml") { title }
  1`] = `
-Object {
-  "data": Object {
-    "feed": Object {
+{
+  "data": {
+    "feed": {
       "title": "Writing by Rolf Erik Lekang",
     },
   },
@@ -206,11 +206,11 @@ Object {
 exports[`
   feed(url: "https://rolflekang.com/feed.xml") { title, badField }
  1`] = `
-Object {
-  "errors": Array [
-    Object {
-      "error": Object {
-        "message": "Cannot query field \\"badField\\" on type \\"Feed\\".",
+{
+  "errors": [
+    {
+      "error": {
+        "message": "Cannot query field "badField" on type "Feed".",
       },
     },
   ],
@@ -220,9 +220,9 @@ Object {
 exports[`
   feed(url: "https://rolflekang.com/feed.xml", parser: FEEDME) { title }
  1`] = `
-Object {
-  "data": Object {
-    "feed": Object {
+{
+  "data": {
+    "feed": {
       "title": "Writing by Rolf Erik Lekang",
     },
   },
@@ -232,9 +232,9 @@ Object {
 exports[`
   feed(url: "https://rolflekang.com/feed.xml", parser: FEEDPARSER) { title }
  1`] = `
-Object {
-  "data": Object {
-    "feed": Object {
+{
+  "data": {
+    "feed": {
       "title": "Writing by Rolf Erik Lekang",
     },
   },
@@ -244,9 +244,9 @@ Object {
 exports[`
   feed(url: "https://rolflekang.com/feed.xml", parser: RSS_PARSER) { title }
  1`] = `
-Object {
-  "data": Object {
-    "feed": Object {
+{
+  "data": {
+    "feed": {
       "title": "Writing by Rolf Erik Lekang",
     },
   },
@@ -256,9 +256,9 @@ Object {
 exports[`
   feed(url: "https://rolflekang.com/feed.xml", parser: RSS_TO_JSON) { title }
  1`] = `
-Object {
-  "data": Object {
-    "feed": Object {
+{
+  "data": {
+    "feed": {
       "title": "Writing by Rolf Erik Lekang",
     },
   },
@@ -270,17 +270,17 @@ exports[`
     items { title }
   }
  1`] = `
-Object {
-  "data": Object {
-    "feed": Object {
-      "items": Array [
-        Object {
+{
+  "data": {
+    "feed": {
+      "items": [
+        {
           "title": "Using Ansible handlers in loops",
         },
-        Object {
+        {
           "title": "Serving text/plain for curl with Next",
         },
-        Object {
+        {
           "title": "Wireless uplinks with Unifi",
         },
       ],
@@ -292,17 +292,17 @@ Object {
 exports[`
   feed(url: "https://rolflekang.com/testing-simple-graphql-services") { title }
  1`] = `
-Object {
-  "data": Object {
+{
+  "data": {
     "feed": null,
   },
-  "errors": Array [
-    Object {
-      "error": Object {
+  "errors": [
+    {
+      "error": {
         "code": "not-a-feed",
         "message": "Not a feed",
       },
-      "path": Array [
+      "path": [
         "feed",
       ],
     },
@@ -315,13 +315,13 @@ exports[`
     link
   }
  1`] = `
-Object {
-  "data": Object {
-    "findFeed": Array [
-      Object {
+{
+  "data": {
+    "findFeed": [
+      {
         "link": "https://rolflekang.com/feed.xml",
       },
-      Object {
+      {
         "link": "https://rolflekang.com/feed.json",
       },
     ],
