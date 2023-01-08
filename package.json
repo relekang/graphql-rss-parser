@@ -45,7 +45,7 @@
     "debug": "^4.2.0",
     "feedme": "^2.0.2",
     "graphql": "^15.5.0",
-    "graphql-tools": "^7.0.4",
+    "graphql-tools": "^8.3.14",
     "http-status-codes": "^2.2.0",
     "is-url": "^1.2.4",
     "lodash-fp": "^0.10.4",
