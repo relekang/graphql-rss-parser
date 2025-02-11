@@ -1,23 +1,23 @@
 {
-  "data": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<rss version=\"2.0\"><channel><title>xkcd.com</title><link>https://xkcd.com/</link><description>xkcd.com: A webcomic of romance and math humor.</description><language>en</language><item><title>Health Drink</title><link>https://xkcd.com/2475/</link><description>&lt;img src=\"https://imgs.xkcd.com/comics/health_drink.png\" title=\"You'd need to keep track of so many people! Would you use, like, Excel or something? Far too fancy for a simple country nanoenzyme developer like me.\" alt=\"You'd need to keep track of so many people! Would you use, like, Excel or something? Far too fancy for a simple country nanoenzyme developer like me.\" /&gt;</description><pubDate>Fri, 11 Jun 2021 04:00:00 -0000</pubDate><guid>https://xkcd.com/2475/</guid></item><item><title>First Time Since Early 2020</title><link>https://xkcd.com/2474/</link><description>&lt;img src=\"https://imgs.xkcd.com/comics/first_time_since_early_2020.png\" title=\"Gotten the Ferris wheel operator's attention\" alt=\"Gotten the Ferris wheel operator's attention\" /&gt;</description><pubDate>Wed, 09 Jun 2021 04:00:00 -0000</pubDate><guid>https://xkcd.com/2474/</guid></item><item><title>Product Launch</title><link>https://xkcd.com/2473/</link><description>&lt;img src=\"https://imgs.xkcd.com/comics/product_launch.png\" title=\"&amp;quot;Okay, that was weird, but the product reveal was normal. I think the danger is pas--&amp;quot; &amp;quot;One more thing.&amp;quot; &amp;quot;Oh no.&amp;quot;\" alt=\"&amp;quot;Okay, that was weird, but the product reveal was normal. I think the danger is pas--&amp;quot; &amp;quot;One more thing.&amp;quot; &amp;quot;Oh no.&amp;quot;\" /&gt;</description><pubDate>Mon, 07 Jun 2021 04:00:00 -0000</pubDate><guid>https://xkcd.com/2473/</guid></item><item><title>Fuzzy Blob</title><link>https://xkcd.com/2472/</link><description>&lt;img src=\"https://imgs.xkcd.com/comics/fuzzy_blob.png\" title=\"If there's no dome, how do you explain the irregularities the board discovered in the zoning permits issued in that area!?\" alt=\"If there's no dome, how do you explain the irregularities the board discovered in the zoning permits issued in that area!?\" /&gt;</description><pubDate>Fri, 04 Jun 2021 04:00:00 -0000</pubDate><guid>https://xkcd.com/2472/</guid></item></channel></rss>",
-  "status": 200,
-  "headers": {
-    "connection": "close",
-    "content-length": "2299",
-    "server": "nginx",
-    "content-type": "text/xml; charset=UTF-8",
-    "last-modified": "Sat, 12 Jun 2021 04:21:44 GMT",
-    "etag": "\"60c43658-8fb\"",
-    "expires": "Sat, 12 Jun 2021 04:30:05 GMT",
-    "cache-control": "max-age=300",
-    "accept-ranges": "bytes",
-    "date": "Sun, 13 Jun 2021 17:56:43 GMT",
-    "via": "1.1 varnish",
-    "age": "0",
-    "x-served-by": "cache-bma1681-BMA",
-    "x-cache": "HIT",
-    "x-cache-hits": "1",
-    "x-timer": "S1623607004.596816,VS0,VE377",
-    "vary": "Accept-Encoding"
-  }
+	"data": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<rss version=\"2.0\"><channel><title>xkcd.com</title><link>https://xkcd.com/</link><description>xkcd.com: A webcomic of romance and math humor.</description><language>en</language><item><title>Health Drink</title><link>https://xkcd.com/2475/</link><description>&lt;img src=\"https://imgs.xkcd.com/comics/health_drink.png\" title=\"You'd need to keep track of so many people! Would you use, like, Excel or something? Far too fancy for a simple country nanoenzyme developer like me.\" alt=\"You'd need to keep track of so many people! Would you use, like, Excel or something? Far too fancy for a simple country nanoenzyme developer like me.\" /&gt;</description><pubDate>Fri, 11 Jun 2021 04:00:00 -0000</pubDate><guid>https://xkcd.com/2475/</guid></item><item><title>First Time Since Early 2020</title><link>https://xkcd.com/2474/</link><description>&lt;img src=\"https://imgs.xkcd.com/comics/first_time_since_early_2020.png\" title=\"Gotten the Ferris wheel operator's attention\" alt=\"Gotten the Ferris wheel operator's attention\" /&gt;</description><pubDate>Wed, 09 Jun 2021 04:00:00 -0000</pubDate><guid>https://xkcd.com/2474/</guid></item><item><title>Product Launch</title><link>https://xkcd.com/2473/</link><description>&lt;img src=\"https://imgs.xkcd.com/comics/product_launch.png\" title=\"&amp;quot;Okay, that was weird, but the product reveal was normal. I think the danger is pas--&amp;quot; &amp;quot;One more thing.&amp;quot; &amp;quot;Oh no.&amp;quot;\" alt=\"&amp;quot;Okay, that was weird, but the product reveal was normal. I think the danger is pas--&amp;quot; &amp;quot;One more thing.&amp;quot; &amp;quot;Oh no.&amp;quot;\" /&gt;</description><pubDate>Mon, 07 Jun 2021 04:00:00 -0000</pubDate><guid>https://xkcd.com/2473/</guid></item><item><title>Fuzzy Blob</title><link>https://xkcd.com/2472/</link><description>&lt;img src=\"https://imgs.xkcd.com/comics/fuzzy_blob.png\" title=\"If there's no dome, how do you explain the irregularities the board discovered in the zoning permits issued in that area!?\" alt=\"If there's no dome, how do you explain the irregularities the board discovered in the zoning permits issued in that area!?\" /&gt;</description><pubDate>Fri, 04 Jun 2021 04:00:00 -0000</pubDate><guid>https://xkcd.com/2472/</guid></item></channel></rss>",
+	"status": 200,
+	"headers": {
+		"connection": "close",
+		"content-length": "2299",
+		"server": "nginx",
+		"content-type": "text/xml; charset=UTF-8",
+		"last-modified": "Sat, 12 Jun 2021 04:21:44 GMT",
+		"etag": "\"60c43658-8fb\"",
+		"expires": "Sat, 12 Jun 2021 04:30:05 GMT",
+		"cache-control": "max-age=300",
+		"accept-ranges": "bytes",
+		"date": "Sun, 13 Jun 2021 17:56:43 GMT",
+		"via": "1.1 varnish",
+		"age": "0",
+		"x-served-by": "cache-bma1681-BMA",
+		"x-cache": "HIT",
+		"x-cache-hits": "1",
+		"x-timer": "S1623607004.596816,VS0,VE377",
+		"vary": "Accept-Encoding"
+	}
 }

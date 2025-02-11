@@ -1,7 +1,7 @@
-import { testGraphqlApi } from './utils';
+import { testGraphqlApi } from "./utils";
 
-const websiteUrl = 'https://rolflekang.com';
-const url = 'https://rolflekang.com/feed.xml';
+const websiteUrl = "https://rolflekang.com";
+const url = "https://rolflekang.com/feed.xml";
 
 testGraphqlApi`
   feed(url: "${url}") { title }

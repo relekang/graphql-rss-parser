@@ -1,23 +1,23 @@
 {
-  "data": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<feed xmlns=\"http://www.w3.org/2005/Atom\" xml:lang=\"en\"><title>xkcd.com</title><link href=\"https://xkcd.com/\" rel=\"alternate\"></link><id>https://xkcd.com/</id><updated>2021-06-11T00:00:00Z</updated><entry><title>Health Drink</title><link href=\"https://xkcd.com/2475/\" rel=\"alternate\"></link><updated>2021-06-11T00:00:00Z</updated><id>https://xkcd.com/2475/</id><summary type=\"html\">&lt;img src=\"https://imgs.xkcd.com/comics/health_drink.png\" title=\"You'd need to keep track of so many people! Would you use, like, Excel or something? Far too fancy for a simple country nanoenzyme developer like me.\" alt=\"You'd need to keep track of so many people! Would you use, like, Excel or something? Far too fancy for a simple country nanoenzyme developer like me.\" /&gt;</summary></entry><entry><title>First Time Since Early 2020</title><link href=\"https://xkcd.com/2474/\" rel=\"alternate\"></link><updated>2021-06-09T00:00:00Z</updated><id>https://xkcd.com/2474/</id><summary type=\"html\">&lt;img src=\"https://imgs.xkcd.com/comics/first_time_since_early_2020.png\" title=\"Gotten the Ferris wheel operator's attention\" alt=\"Gotten the Ferris wheel operator's attention\" /&gt;</summary></entry><entry><title>Product Launch</title><link href=\"https://xkcd.com/2473/\" rel=\"alternate\"></link><updated>2021-06-07T00:00:00Z</updated><id>https://xkcd.com/2473/</id><summary type=\"html\">&lt;img src=\"https://imgs.xkcd.com/comics/product_launch.png\" title=\"&amp;quot;Okay, that was weird, but the product reveal was normal. I think the danger is pas--&amp;quot; &amp;quot;One more thing.&amp;quot; &amp;quot;Oh no.&amp;quot;\" alt=\"&amp;quot;Okay, that was weird, but the product reveal was normal. I think the danger is pas--&amp;quot; &amp;quot;One more thing.&amp;quot; &amp;quot;Oh no.&amp;quot;\" /&gt;</summary></entry><entry><title>Fuzzy Blob</title><link href=\"https://xkcd.com/2472/\" rel=\"alternate\"></link><updated>2021-06-04T00:00:00Z</updated><id>https://xkcd.com/2472/</id><summary type=\"html\">&lt;img src=\"https://imgs.xkcd.com/comics/fuzzy_blob.png\" title=\"If there's no dome, how do you explain the irregularities the board discovered in the zoning permits issued in that area!?\" alt=\"If there's no dome, how do you explain the irregularities the board discovered in the zoning permits issued in that area!?\" /&gt;</summary></entry></feed>",
-  "status": 200,
-  "headers": {
-    "connection": "close",
-    "content-length": "2370",
-    "server": "nginx",
-    "content-type": "text/xml; charset=UTF-8",
-    "last-modified": "Sat, 12 Jun 2021 04:21:44 GMT",
-    "etag": "\"60c43658-942\"",
-    "expires": "Sat, 12 Jun 2021 04:29:40 GMT",
-    "cache-control": "max-age=300",
-    "accept-ranges": "bytes",
-    "date": "Sun, 13 Jun 2021 17:56:43 GMT",
-    "via": "1.1 varnish",
-    "age": "258",
-    "x-served-by": "cache-bma1635-BMA",
-    "x-cache": "HIT",
-    "x-cache-hits": "1",
-    "x-timer": "S1623607004.597907,VS0,VE0",
-    "vary": "Accept-Encoding"
-  }
+	"data": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<feed xmlns=\"http://www.w3.org/2005/Atom\" xml:lang=\"en\"><title>xkcd.com</title><link href=\"https://xkcd.com/\" rel=\"alternate\"></link><id>https://xkcd.com/</id><updated>2021-06-11T00:00:00Z</updated><entry><title>Health Drink</title><link href=\"https://xkcd.com/2475/\" rel=\"alternate\"></link><updated>2021-06-11T00:00:00Z</updated><id>https://xkcd.com/2475/</id><summary type=\"html\">&lt;img src=\"https://imgs.xkcd.com/comics/health_drink.png\" title=\"You'd need to keep track of so many people! Would you use, like, Excel or something? Far too fancy for a simple country nanoenzyme developer like me.\" alt=\"You'd need to keep track of so many people! Would you use, like, Excel or something? Far too fancy for a simple country nanoenzyme developer like me.\" /&gt;</summary></entry><entry><title>First Time Since Early 2020</title><link href=\"https://xkcd.com/2474/\" rel=\"alternate\"></link><updated>2021-06-09T00:00:00Z</updated><id>https://xkcd.com/2474/</id><summary type=\"html\">&lt;img src=\"https://imgs.xkcd.com/comics/first_time_since_early_2020.png\" title=\"Gotten the Ferris wheel operator's attention\" alt=\"Gotten the Ferris wheel operator's attention\" /&gt;</summary></entry><entry><title>Product Launch</title><link href=\"https://xkcd.com/2473/\" rel=\"alternate\"></link><updated>2021-06-07T00:00:00Z</updated><id>https://xkcd.com/2473/</id><summary type=\"html\">&lt;img src=\"https://imgs.xkcd.com/comics/product_launch.png\" title=\"&amp;quot;Okay, that was weird, but the product reveal was normal. I think the danger is pas--&amp;quot; &amp;quot;One more thing.&amp;quot; &amp;quot;Oh no.&amp;quot;\" alt=\"&amp;quot;Okay, that was weird, but the product reveal was normal. I think the danger is pas--&amp;quot; &amp;quot;One more thing.&amp;quot; &amp;quot;Oh no.&amp;quot;\" /&gt;</summary></entry><entry><title>Fuzzy Blob</title><link href=\"https://xkcd.com/2472/\" rel=\"alternate\"></link><updated>2021-06-04T00:00:00Z</updated><id>https://xkcd.com/2472/</id><summary type=\"html\">&lt;img src=\"https://imgs.xkcd.com/comics/fuzzy_blob.png\" title=\"If there's no dome, how do you explain the irregularities the board discovered in the zoning permits issued in that area!?\" alt=\"If there's no dome, how do you explain the irregularities the board discovered in the zoning permits issued in that area!?\" /&gt;</summary></entry></feed>",
+	"status": 200,
+	"headers": {
+		"connection": "close",
+		"content-length": "2370",
+		"server": "nginx",
+		"content-type": "text/xml; charset=UTF-8",
+		"last-modified": "Sat, 12 Jun 2021 04:21:44 GMT",
+		"etag": "\"60c43658-942\"",
+		"expires": "Sat, 12 Jun 2021 04:29:40 GMT",
+		"cache-control": "max-age=300",
+		"accept-ranges": "bytes",
+		"date": "Sun, 13 Jun 2021 17:56:43 GMT",
+		"via": "1.1 varnish",
+		"age": "258",
+		"x-served-by": "cache-bma1635-BMA",
+		"x-cache": "HIT",
+		"x-cache-hits": "1",
+		"x-timer": "S1623607004.597907,VS0,VE0",
+		"vary": "Accept-Encoding"
+	}
 }

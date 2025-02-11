@@ -1,79 +1,79 @@
 /* eslint-env jest */
-import micro from 'micro';
+import micro from "micro";
 
-import createHandler from '../';
-import { parserKeys } from '../parsers';
-import { listen } from './utils';
-import { ParserKey } from '../types';
+import createHandler from "../";
+import { parserKeys } from "../parsers";
+import type { ParserKey } from "../types";
+import { listen } from "./utils";
 
-describe('Same query should give same output for different parsers', () => {
-  let response: { data: { [key in ParserKey]: unknown }; errors: any[] };
-  let keys: ParserKey[] = [];
-  beforeAll(async () => {
-    const service = micro(await createHandler({ version: 'version' }));
+describe("Same query should give same output for different parsers", () => {
+	let response: { data: { [key in ParserKey]: unknown }; errors: any[] };
+	let keys: ParserKey[] = [];
+	beforeAll(async () => {
+		const service = micro(await createHandler({ version: "version" }));
 
-    const { url, close } = await listen(service);
+		const { url, close } = await listen(service);
 
-    const fields =
-      'title feed_url home_page_url items { id title url date_published author tags }';
-    const feedUrl = 'https://rolflekang.com/feed.xml';
+		const fields =
+			"title feed_url home_page_url items { id title url date_published author tags }";
+		const feedUrl = "https://rolflekang.com/feed.xml";
 
-    const query =
-      'query TestQuery {' +
-      parserKeys
-        .map(
-          (key) =>
-            `${key}: feed(url: "${feedUrl}", parser: ${key}) { ${fields} }`
-        )
-        .join('\n') +
-      ' }';
+		const query =
+			"query TestQuery {" +
+			parserKeys
+				.map(
+					(key) =>
+						`${key}: feed(url: "${feedUrl}", parser: ${key}) { ${fields} }`,
+				)
+				.join("\n") +
+			" }";
 
-    try {
-      response = (
-        await jest.requireActual('axios')({
-          url,
-          method: 'post',
-          headers: {
-            'User-Agent': 'graphql-test',
-            'Content-Type': 'application/json',
-          },
-          data: JSON.stringify({
-            query,
-          }),
-        })
-      ).data;
-    } catch (error: any) {
-      if (!error.response) {
-        throw error;
-      }
+		try {
+			response = (
+				await jest.requireActual("axios")({
+					url,
+					method: "post",
+					headers: {
+						"User-Agent": "graphql-test",
+						"Content-Type": "application/json",
+					},
+					data: JSON.stringify({
+						query,
+					}),
+				})
+			).data;
+		} catch (error: any) {
+			if (!error.response) {
+				throw error;
+			}
 
-      response = error.response.data;
-    }
-    close();
+			response = error.response.data;
+		}
+		close();
 
-    expect(response.errors).toEqual(undefined);
+		expect(response.errors).toEqual(undefined);
 
-    keys = Object.keys(response.data) as ParserKey[];
-  });
+		keys = Object.keys(response.data) as ParserKey[];
+	});
 
-  test('keys list should be correct', () => {
-    expect(keys).toEqual(parserKeys);
-  });
+	test("keys list should be correct", () => {
+		expect(keys).toEqual(parserKeys);
+	});
 
-  for (let i = 0; i < parserKeys.length - 1; i++) {
-    for (let j = 1; j < parserKeys.length; j++) {
-      if (parserKeys[i] != parserKeys[j]) {
-        test(`${parserKeys[i]} == ${parserKeys[j]}`, () => {
-          try {
-            expect(response.data[parserKeys[i] as ParserKey]).toEqual(
-              response.data[parserKeys[j] as ParserKey]
-            );
-          } catch (error) {
-            console.error(parserKeys[i], parserKeys[j]);
-            throw error;
-          }
-        });
-      }
-    }
-  }
+	for (let i = 0; i < parserKeys.length - 1; i++) {
+		for (let j = 1; j < parserKeys.length; j++) {
+			if (parserKeys[i] != parserKeys[j]) {
+				test(`${parserKeys[i]} == ${parserKeys[j]}`, () => {
+					try {
+						expect(response.data[parserKeys[i] as ParserKey]).toEqual(
+							response.data[parserKeys[j] as ParserKey],
+						);
+					} catch (error) {
+						console.error(parserKeys[i], parserKeys[j]);
+						throw error;
+					}
+				});
+			}
+		}
+	}
 });

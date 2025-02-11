@@ -1,41 +1,33 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
-  ],
-  "rebaseWhen": "behind-base-branch",
-  "prConcurrentLimit": 5,
-  "branchConcurrentLimit": 10,
-  "prHourlyLimit": 0,
-  "platformAutomerge": true,
-  "autoApprove": true,
-  "automergeStrategy": "rebase",
-  "automergeType": "pr",
-  "automerge": true,
-  "ignoreTests": false,
-  "dependencyDashboard": true,
-  "npm": {
-    "stabilityDays": 3
-  },
-  "packageRules": [
-    {
-      "matchUpdateTypes": [
-        "major"
-      ],
-      "prPriority": -2,
-      "automerge": false
-    },
-    {
-      "matchDepTypes": [
-        "dependencies"
-      ],
-      "prPriority": 2
-    },
-    {
-      "matchDepTypes": [
-        "devDependencies"
-      ],
-      "prPriority": -5
-    }
-  ]
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": ["config:recommended"],
+	"rebaseWhen": "behind-base-branch",
+	"prConcurrentLimit": 5,
+	"branchConcurrentLimit": 10,
+	"prHourlyLimit": 0,
+	"platformAutomerge": true,
+	"autoApprove": true,
+	"automergeStrategy": "rebase",
+	"automergeType": "pr",
+	"automerge": true,
+	"ignoreTests": false,
+	"dependencyDashboard": true,
+	"npm": {
+		"stabilityDays": 3
+	},
+	"packageRules": [
+		{
+			"matchUpdateTypes": ["major"],
+			"prPriority": -2,
+			"automerge": false
+		},
+		{
+			"matchDepTypes": ["dependencies"],
+			"prPriority": 2
+		},
+		{
+			"matchDepTypes": ["devDependencies"],
+			"prPriority": -5
+		}
+	]
 }

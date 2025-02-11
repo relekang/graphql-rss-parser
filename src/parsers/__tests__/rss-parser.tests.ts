@@ -1,23 +1,23 @@
+import request from "../../request";
 /* eslint-env jest */
-import { parse } from '../rss-parser';
-import request from '../../request';
+import { parse } from "../rss-parser";
 
-test('should parse string from rolflekang.com/feed.xml', async () => {
-  const fixture = await request('https://rolflekang.com/feed.xml');
+test("should parse string from rolflekang.com/feed.xml", async () => {
+	const fixture = await request("https://rolflekang.com/feed.xml");
 
-  expect(await parse(fixture.text)).toMatchSnapshot();
+	expect(await parse(fixture.text)).toMatchSnapshot();
 });
 
-test('should parse string from google.blogspot.com/feeds/posts/default', async () => {
-  const fixture = await request(
-    'http://google.blogspot.com/feeds/posts/default'
-  );
+test("should parse string from google.blogspot.com/feeds/posts/default", async () => {
+	const fixture = await request(
+		"http://google.blogspot.com/feeds/posts/default",
+	);
 
-  expect(await parse(fixture.text)).toMatchSnapshot();
+	expect(await parse(fixture.text)).toMatchSnapshot();
 });
 
-test('should parse string with CET dates', () => {
-  const feed = `
+test("should parse string with CET dates", () => {
+	const feed = `
     <rss version="2.0">
       <channel>
       <title>Writing by Rolf Erik Lekang</title>
@@ -54,5 +54,5 @@ test('should parse string with CET dates', () => {
     </channel>
   </rss>
   `;
-  expect(parse(feed)).toMatchSnapshot();
+	expect(parse(feed)).toMatchSnapshot();
 });

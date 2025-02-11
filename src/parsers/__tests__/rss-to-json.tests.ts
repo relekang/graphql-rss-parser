@@ -1,9 +1,9 @@
+import request from "../../request";
 /* eslint-env jest */
-import { parse } from '../rss-to-json';
-import request from '../../request';
+import { parse } from "../rss-to-json";
 
-test('should parse string from rolflekang.com/feed.xml', async () => {
-  const fixture = await request('https://rolflekang.com/feed.xml');
+test("should parse string from rolflekang.com/feed.xml", async () => {
+	const fixture = await request("https://rolflekang.com/feed.xml");
 
-  expect(await parse(fixture.text)).toMatchSnapshot();
+	expect(await parse(fixture.text)).toMatchSnapshot();
 });

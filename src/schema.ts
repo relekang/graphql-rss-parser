@@ -1,9 +1,9 @@
-import { makeExecutableSchema } from '@graphql-tools/schema';
-import _debug from 'debug';
-import * as feed from './handlers/feed';
-import { findFeed } from './handlers/findFeed';
+import { makeExecutableSchema } from "@graphql-tools/schema";
+import _debug from "debug";
+import * as feed from "./handlers/feed";
+import { findFeed } from "./handlers/findFeed";
 
-const debug = _debug('graphql-rss-parser:schema');
+const debug = _debug("graphql-rss-parser:schema");
 
 const typeDefs = `
   enum Parser {
@@ -47,19 +47,19 @@ const typeDefs = `
 `;
 
 const resolvers = {
-  Query: {
-    feed: (_: any, query: any) => {
-      debug('query-resolver feed, query:', query);
-      return feed.parseFromQuery(query);
-    },
-    findFeed: (_: any, query: any) => {
-      debug('query-resolver findFeed, query:', query);
-      return findFeed(query);
-    },
-  },
+	Query: {
+		feed: (_: any, query: any) => {
+			debug("query-resolver feed, query:", query);
+			return feed.parseFromQuery(query);
+		},
+		findFeed: (_: any, query: any) => {
+			debug("query-resolver findFeed, query:", query);
+			return findFeed(query);
+		},
+	},
 };
 
 export const schema = makeExecutableSchema({
-  typeDefs,
-  resolvers,
+	typeDefs,
+	resolvers,
 });
