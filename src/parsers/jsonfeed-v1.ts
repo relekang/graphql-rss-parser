@@ -26,9 +26,8 @@ export async function parse(input: string): Promise<ParserResponse> {
 					const author = (item as JsonFeedV1.Item).author;
 					delete (item as JsonFeedV1.Item).author;
 					return { ...item, authors: author ? [author] : [] };
-				} else {
-					return item;
 				}
+				return item;
 			}) || [],
 	};
 	debug("done transform");

@@ -1,4 +1,4 @@
-import { Readable } from "stream";
+import { Readable } from "node:stream";
 import _debug from "debug";
 import FeedMe from "feedme";
 import type { FeedObject } from "feedme/dist/parser";
@@ -12,11 +12,11 @@ const findHtmlLink = (array: FeedObject[]): string | undefined => {
 	const link = array.find(
 		(item) =>
 			typeof item === "object" &&
-			item["rel"] === "alternate" &&
-			item["type"] === "text/html",
+			item.rel === "alternate" &&
+			item.type === "text/html",
 	);
-	if (typeof link === "object" && typeof link?.["href"] === "string") {
-		return link?.["href"] || undefined;
+	if (typeof link === "object" && typeof link?.href === "string") {
+		return link?.href || undefined;
 	}
 	return undefined;
 };
@@ -107,23 +107,23 @@ export function parse(feed: string): Promise<ParserResponse> {
 				try {
 					resolve({
 						parser: "FEEDME",
-						title: unpack(parsed["title"], "text", true, "title"),
-						description: unpack(parsed["description"], "text"),
-						home_page_url: evaluateLink(parsed["link"]),
+						title: unpack(parsed.title, "text", true, "title"),
+						description: unpack(parsed.description, "text"),
+						home_page_url: evaluateLink(parsed.link),
 						feed_url: undefined,
 						items: parsed.items.map((item): Item => {
-							const pubDate = unpack(item["pubdate"], "text");
+							const pubDate = unpack(item.pubdate, "text");
 							return {
-								title: unpack(item["title"], "text"),
-								url: evaluateLink(item["link"]),
-								id: unpack(item["id"] || item["guid"], "text", true, "id"),
-								content_html: unpack(item["description"], "text"),
-								tags: unpackArray(item["category"], "text"),
+								title: unpack(item.title, "text"),
+								url: evaluateLink(item.link),
+								id: unpack(item.id || item.guid, "text", true, "id"),
+								content_html: unpack(item.description, "text"),
+								tags: unpackArray(item.category, "text"),
 								date_published: pubDate
 									? new Date(pubDate).toISOString()
 									: pubDate,
-								authors: unpack(item["author"], "name")
-									? [{ name: unpack(item["author"], "name") }]
+								authors: unpack(item.author, "name")
+									? [{ name: unpack(item.author, "name") }]
 									: [],
 							};
 						}),

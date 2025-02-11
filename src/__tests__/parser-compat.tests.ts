@@ -18,15 +18,12 @@ describe("Same query should give same output for different parsers", () => {
 			"title feed_url home_page_url items { id title url date_published author tags }";
 		const feedUrl = "https://rolflekang.com/feed.xml";
 
-		const query =
-			"query TestQuery {" +
-			parserKeys
-				.map(
-					(key) =>
-						`${key}: feed(url: "${feedUrl}", parser: ${key}) { ${fields} }`,
-				)
-				.join("\n") +
-			" }";
+		const query = `query TestQuery {${parserKeys
+			.map(
+				(key) =>
+					`${key}: feed(url: "${feedUrl}", parser: ${key}) { ${fields} }`,
+			)
+			.join("\n")} }`;
 
 		try {
 			response = (
@@ -62,7 +59,7 @@ describe("Same query should give same output for different parsers", () => {
 
 	for (let i = 0; i < parserKeys.length - 1; i++) {
 		for (let j = 1; j < parserKeys.length; j++) {
-			if (parserKeys[i] != parserKeys[j]) {
+			if (parserKeys[i] !== parserKeys[j]) {
 				test(`${parserKeys[i]} == ${parserKeys[j]}`, () => {
 					try {
 						expect(response.data[parserKeys[i] as ParserKey]).toEqual(

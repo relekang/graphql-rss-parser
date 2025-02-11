@@ -42,7 +42,7 @@ export default async function request(url: string) {
 		};
 	} catch (error: any) {
 		debug(`request to ${url} failed with error`, error);
-		if (error.response && error.response.status) {
+		if (error.response?.status) {
 			throw new UpstreamHttpError("Upstream HTTP error", error.response.status);
 		}
 		if (error.code === "ENOTFOUND" || error.code === "EAI_AGAIN") {

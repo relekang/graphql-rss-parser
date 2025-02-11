@@ -1,6 +1,6 @@
 import * as cheerio from "cheerio";
-import { CheerioAPI } from "cheerio";
-import type { Node, Element } from "domhandler";
+import type { CheerioAPI } from "cheerio";
+import type { Element, Node } from "domhandler";
 import normalizeUrl from "normalize-url";
 
 import { BaseError } from "../errors";
@@ -26,10 +26,7 @@ export function normalizeFeedLink(baseUrl: string, link: string | undefined) {
 
 function mapLinkTagToUrl(normalizedUrl: string) {
 	return (linkTag: Node | Element) => {
-		return normalizeFeedLink(
-			normalizedUrl,
-			(linkTag as Element).attribs["href"],
-		);
+		return normalizeFeedLink(normalizedUrl, (linkTag as Element).attribs.href);
 	};
 }
 
@@ -52,8 +49,8 @@ async function findJsonFeedsInDom(
 					return { title, link: url };
 				} catch (error) {
 					if (
-						process.env["NODE_ENV"] !== "production" &&
-						process.env["NODE_ENV"] !== "test"
+						process.env.NODE_ENV !== "production" &&
+						process.env.NODE_ENV !== "test"
 					) {
 						console.log(error);
 					}
@@ -83,8 +80,8 @@ async function findRssFeedsInDom(
 					return { title, link: url };
 				} catch (error) {
 					if (
-						process.env["NODE_ENV"] !== "production" &&
-						process.env["NODE_ENV"] !== "test"
+						process.env.NODE_ENV !== "production" &&
+						process.env.NODE_ENV !== "test"
 					) {
 						console.log(error);
 					}
@@ -120,8 +117,8 @@ export async function findFeed({
 			return [{ title, link: normalizedUrl }];
 		} catch (error) {
 			if (
-				process.env["NODE_ENV"] !== "production" &&
-				process.env["NODE_ENV"] !== "test"
+				process.env.NODE_ENV !== "production" &&
+				process.env.NODE_ENV !== "test"
 			) {
 				console.log(error);
 			}
@@ -139,8 +136,8 @@ export async function findFeed({
 			return [{ title, link: normalizedUrl }];
 		} catch (error) {
 			if (
-				process.env["NODE_ENV"] !== "production" &&
-				process.env["NODE_ENV"] !== "test"
+				process.env.NODE_ENV !== "production" &&
+				process.env.NODE_ENV !== "test"
 			) {
 				console.log(error);
 			}
@@ -154,8 +151,8 @@ export async function findFeed({
 			return [{ title, link: normalizedUrl }];
 		} catch (error) {
 			if (
-				process.env["NODE_ENV"] !== "production" &&
-				process.env["NODE_ENV"] !== "test"
+				process.env.NODE_ENV !== "production" &&
+				process.env.NODE_ENV !== "test"
 			) {
 				console.log(error);
 			}

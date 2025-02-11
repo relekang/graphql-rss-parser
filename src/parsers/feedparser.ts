@@ -1,4 +1,4 @@
-import { Readable } from "stream";
+import { Readable } from "node:stream";
 import _debug from "debug";
 import FeedParser from "feedparser";
 
@@ -23,6 +23,7 @@ export function parse(feed: string): Promise<ParserResponse> {
 				meta = meta || (this.meta as FeedParser.Meta);
 
 				let item;
+				// biome-ignore lint/suspicious/noAssignInExpressions: ...
 				while ((item = this.read())) {
 					items.push({
 						title: item.title,

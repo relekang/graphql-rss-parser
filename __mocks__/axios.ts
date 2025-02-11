@@ -1,4 +1,4 @@
-import { resolve } from "path";
+import { resolve } from "node:path";
 import _axios from "axios";
 /* eslint-env jest */
 import * as fs from "fs-extra-promise";
@@ -7,8 +7,7 @@ export default async function axios(options: any) {
 	const path = resolve(
 		__dirname,
 		"../__fixtures__",
-		(options.url || "").replace(/https?:\/\//, "").replace(/\//g, "_") +
-			".json",
+		`${(options.url || "").replace(/https?:\/\//, "").replace(/\//g, "_")}.json`,
 	);
 	let content;
 	if (
@@ -18,7 +17,7 @@ export default async function axios(options: any) {
 		try {
 			content = JSON.parse((await fs.readFileAsync(path)).toString());
 		} catch (error) {
-			if (process.env["DEBUG_MOCKS"]) console.log(error);
+			if (process.env.DEBUG_MOCKS) console.log(error);
 		}
 	}
 
@@ -29,7 +28,7 @@ export default async function axios(options: any) {
 		content = {
 			data: response.data.toString(),
 			status: response.status,
-			headers: response.headers || { ["content-type"]: contentType },
+			headers: response.headers || { "content-type": contentType },
 		};
 		if (
 			!options.url.includes("localhost:") &&

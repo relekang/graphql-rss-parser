@@ -19,23 +19,22 @@ export async function parseFromString({
 }): Promise<ParserResponse> {
 	if (parser) {
 		return parse(parser, content);
-	} else {
-		for (let i = 0; i < parserKeys.length; i++) {
-			try {
-				const parserKey: ParserKey | undefined = parserKeys[i];
-				if (!parserKey) {
-					continue;
-				}
-				return await parse(parserKey, content);
-			} catch (error) {
-				if (i < parserKeys.length - 1) {
-					continue;
-				}
-				throw error;
-			}
-		}
-		throw new BaseError("No parsers worked", "no-parser");
 	}
+	for (let i = 0; i < parserKeys.length; i++) {
+		try {
+			const parserKey: ParserKey | undefined = parserKeys[i];
+			if (!parserKey) {
+				continue;
+			}
+			return await parse(parserKey, content);
+		} catch (error) {
+			if (i < parserKeys.length - 1) {
+				continue;
+			}
+			throw error;
+		}
+	}
+	throw new BaseError("No parsers worked", "no-parser");
 }
 
 export async function parseFromQuery({

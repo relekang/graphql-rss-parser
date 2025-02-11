@@ -1,4 +1,4 @@
-import type { Server } from "http";
+import type { Server } from "node:http";
 /* eslint-env jest */
 import micro from "micro";
 
@@ -44,7 +44,7 @@ export function testGraphqlApi(
 						"User-Agent": "graphql-test",
 						"Content-Type": "application/json",
 					},
-					data: JSON.stringify({ query: "query TestQuery { " + query + " }" }),
+					data: JSON.stringify({ query: `query TestQuery { ${query} }` }),
 				})
 			).data;
 		} catch (error: any) {
