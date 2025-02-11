@@ -48,7 +48,7 @@ testGraphqlApi`
 `;
 
 testGraphqlApi`
-  feed(url: "https://non-existing-domain.com") { title }
+  feed(url: "https://non--------existing-domain.com") { title }
 `;
 
 testGraphqlApi`

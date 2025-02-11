@@ -1,0 +1,21 @@
+{
+  "data": "<h3>Well.. we do exisit!<br/><br/>You're a 1026 visitor.</h3><br/><br/><img src=\"nyan-cat-nyan.gif\">",
+  "status": 200,
+  "headers": {
+    "date": "Tue, 11 Feb 2025 19:50:04 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "transfer-encoding": "chunked",
+    "connection": "close",
+    "cache-control": "max-age=0",
+    "expires": "Tue, 11 Feb 2025 19:50:04 GMT",
+    "vary": "Accept-Encoding",
+    "strict-transport-security": "max-age=0;",
+    "cf-cache-status": "DYNAMIC",
+    "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=brkoNw2C57Di2umTLVnvOmpDCyuMsZ1ju8RBkFsMY%2BNcPiSNhUa08vXxKALarLW0zbDTPuUFIfyfxBffe5IvdUR8XEIBRJf8Bi2rygfdzOq1x7xE3Daa1DbyzSbWyuC2Edhf9MoMvegMzA%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+    "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+    "server": "cloudflare",
+    "cf-ray": "9106dda7e8b55693-OSL",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "server-timing": "cfL4;desc=\"?proto=TCP&rtt=28604&min_rtt=28604&rtt_var=14302&sent=1&recv=3&lost=0&retrans=0&sent_bytes=0&recv_bytes=189&delivery_rate=0&cwnd=249&unsent_bytes=0&cid=0000000000000000&ts=0&x=0\""
+  }
+}
