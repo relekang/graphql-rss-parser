@@ -1,5 +1,4 @@
-import type { Server } from "node:http";
-/* eslint-env jest */
+import { Server } from "node:http";
 import micro from "micro";
 
 import createHandler from "../";
@@ -27,10 +26,12 @@ export function testGraphqlApi(
 ) {
 	const query = String.raw(strings, ...args);
 	test(query, async () => {
-		const service = micro(
-			await createHandler({
-				version: "test",
-			}),
+		const service = new Server(
+			micro(
+				await createHandler({
+					version: "test",
+				}),
+			),
 		);
 
 		const { url, close } = await listen(service);

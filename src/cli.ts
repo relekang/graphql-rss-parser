@@ -1,5 +1,6 @@
+import { Server } from "node:http";
 import { command, number, option, optional, run, string } from "cmd-ts";
-import micro, { type RequestHandler } from "micro";
+import serve, { type RequestHandler } from "micro";
 import type { Options } from "./index";
 
 export function cli({
@@ -45,14 +46,16 @@ export function cli({
 			}),
 		},
 		handler: async (args) => {
-			const server = micro(
-				await createHandler({
-					version,
-					sentryDsn: args.sentryDsn,
-				}),
+			const server = new Server(
+				serve(
+					await createHandler({
+						version,
+						sentryDsn: args.sentryDsn,
+					}),
+				),
 			);
 
-			console.log(`Starting graphql-rss-parser v${version}`);
+			console.log("Starting graphql-rss-parser v$version");
 			server.listen(args.port);
 		},
 	});
