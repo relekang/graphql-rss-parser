@@ -3,7 +3,14 @@
   "extends": [
     "config:recommended"
   ],
-  "prConcurrentLimit": 10,
+  "rebaseWhen": "behind-base-branch",
+  "prConcurrentLimit": 5,
+  "branchConcurrentLimit": 10,
+  "prHourlyLimit": 0,
+  "platformAutomerge": true,
+  "autoApprove": true,
+  "automergeStrategy": "rebase",
+  "automergeType": "pr",
   "ignoreTests": false,
   "dependencyDashboard": true,
   "npm": {
