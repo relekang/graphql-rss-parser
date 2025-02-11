@@ -1,4 +1,6 @@
-import cheerio, { CheerioAPI, Element, Node } from 'cheerio';
+import * as cheerio from 'cheerio';
+import { CheerioAPI } from 'cheerio';
+import type { Node, Element } from 'domhandler';
 import normalizeUrl from 'normalize-url';
 
 import { parseFromQuery, parseFromString } from './feed';
@@ -23,7 +25,7 @@ export function normalizeFeedLink(baseUrl: string, link: string | undefined) {
 }
 
 function mapLinkTagToUrl(normalizedUrl: string) {
-  return (linkTag: Node | Element) => {
+  return (linkTag: Node | SVGSetElement) => {
     return normalizeFeedLink(
       normalizedUrl,
       (linkTag as Element).attribs['href']
