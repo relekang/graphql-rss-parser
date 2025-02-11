@@ -42,7 +42,7 @@
     "apollo-server-micro": "^3.11.1",
     "axios": "^1.2.2",
     "cheerio": "^1.0.0-rc.10",
-    "cmd-ts": "^0.11.0",
+    "cmd-ts": "^0.13.0",
     "debug": "^4.2.0",
     "feedme": "^2.0.2",
     "graphql": "^16.6.0",
