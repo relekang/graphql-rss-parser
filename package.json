@@ -61,7 +61,7 @@
 		"@types/node": "^18.11.18",
 		"fs-extra-promise": "^1.0.1",
 		"jest": "^29.3.1",
-		"nock": "^13.2.4",
+		"nock": "^14.0.0",
 		"nodemon": "^2.0.15",
 		"standard-version": "^9.3.2",
 		"ts-jest": "^29.0.3",
