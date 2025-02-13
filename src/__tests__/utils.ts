@@ -1,25 +1,11 @@
-import type { Server } from "node:http";
-/* eslint-env jest */
-import micro from "micro";
+import http from "node:http";
+import express from "express";
 
-import createHandler from "../";
-
-export const listen = (server: Server) =>
-	new Promise<{ url: string; close: () => void }>((resolve, reject) => {
-		server.on("error", reject);
-
-		server.listen(() => {
-			const address = server.address();
-			if (typeof address === "string") {
-				resolve({ url: address, close: () => server.close() });
-			} else {
-				resolve({
-					url: `http://localhost:${address?.port}`,
-					close: () => server.close(),
-				});
-			}
-		});
-	});
+import { format } from "node:url";
+import type { ApolloServer } from "@apollo/server";
+import { expressMiddleware } from "@apollo/server/express4";
+import type { AxiosResponse } from "axios";
+import createServer from "../";
 
 export function testGraphqlApi(
 	strings: TemplateStringsArray,
@@ -27,14 +13,12 @@ export function testGraphqlApi(
 ) {
 	const query = String.raw(strings, ...args);
 	test(query, async () => {
-		const service = micro(
-			await createHandler({
-				version: "test",
-			}),
-		);
+		const server = await createServer({
+			version: "test",
+		});
 
-		const { url, close } = await listen(service);
-		let response;
+		const { url, close } = await listen(server);
+		let response: AxiosResponse;
 		try {
 			response = (
 				await jest.requireActual("axios")({
@@ -58,3 +42,41 @@ export function testGraphqlApi(
 		expect(response).toMatchSnapshot();
 	});
 }
+
+export const listen = async (server: ApolloServer) => {
+	const app: express.Express = express();
+	const httpServer: http.Server = http.createServer(app);
+
+	await server.start();
+
+	// @ts-ignore
+	app.use(express.json({ limit: "50mb" }), expressMiddleware(server));
+
+	return await new Promise<{ url: string; close: () => void }>(
+		(resolve, reject) => {
+			httpServer.on("error", reject);
+			httpServer.listen(() => {
+				const address = httpServer.address();
+				if (address && typeof address === "object") {
+					const hostname =
+						address.address === "" || address.address === "::"
+							? "localhost"
+							: address.address;
+					return resolve({
+						url: format({
+							protocol: "http",
+							hostname,
+							port: address.port,
+							pathname: "/",
+						}),
+						close: () => httpServer.close(),
+					});
+				}
+				if (typeof address === "string") {
+					return resolve({ url: address, close: () => httpServer.close() });
+				}
+				reject(`Unknown address type ${JSON.stringify(address)}`);
+			});
+		},
+	);
+};

@@ -1,7 +1,4 @@
-/* eslint-env jest */
-import micro from "micro";
-
-import createHandler from "../";
+import createServer from "../";
 import { parserKeys } from "../parsers";
 import type { ParserKey } from "../types";
 import { listen } from "./utils";
@@ -10,7 +7,7 @@ describe("Same query should give same output for different parsers", () => {
 	let response: { data: { [key in ParserKey]: unknown }; errors: any[] };
 	let keys: ParserKey[] = [];
 	beforeAll(async () => {
-		const service = micro(await createHandler({ version: "version" }));
+		const service = await createServer({ version: "version" });
 
 		const { url, close } = await listen(service);
 

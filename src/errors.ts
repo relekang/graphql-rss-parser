@@ -1,4 +1,6 @@
+import type { ApolloServerOptions } from "@apollo/server";
 import _debug from "debug";
+import type { GraphQLFormattedError } from "graphql";
 import { getReasonPhrase } from "http-status-codes";
 import type { ParserKey } from "./types";
 
@@ -6,7 +8,7 @@ const debug = _debug("graphql-rss-parser:errors");
 const development =
 	!process.env.NODE_ENV ||
 	process.env.NODE_ENV === "development" ||
-	process.env.NODE_ENV === "test";
+	process.env.NODE_ENV !== "test";
 
 export class BaseError extends Error {
 	code: string;
@@ -20,6 +22,13 @@ export class BaseError extends Error {
 		} else {
 			this.stack = new Error(message).stack;
 		}
+	}
+
+	toExtensions() {
+		return {
+			message: this.message,
+			code: this.code,
+		};
 	}
 }
 
@@ -52,6 +61,15 @@ export class UpstreamHttpError extends BaseError {
 		} catch (error) {
 			this.statusText = `Unknown error (${status})`;
 		}
+	}
+
+	override toExtensions() {
+		return {
+			message: this.message,
+			code: this.code,
+			status: this.status.toString(),
+			statusText: this.statusText,
+		};
 	}
 }
 export class UpstreamEncryptionError extends BaseError {
@@ -120,77 +138,59 @@ export class ConnectionFailedError extends BaseError {
 	}
 }
 
-type ErrorResponse = {
-	path: string;
-	stack?: string;
-	type?: string;
-	error: {
-		message: string;
-		code?: string;
-		url?: string;
-		status?: string;
-		statusText?: string;
-		parser?: string;
-	};
-};
-
 export function createErrorFormatter(
 	Sentry: any,
-): (error: any) => ErrorResponse {
+): ApolloServerOptions<any>["formatError"] {
 	debug(
 		Sentry
 			? "creating error formatter with sentry"
 			: "creating error formatter without sentry",
 	);
-	return function formatError(error) {
-		const response: ErrorResponse = {
-			path: error.path,
-			error: {
-				message: error.message,
-				code: error.originalError.code,
-				url: error.originalError.url,
-				status: error.originalError.status,
-				statusText: error.originalError.statusText,
-				parser: error.originalError.parser,
-			},
+	return function formatError(
+		formattedError: GraphQLFormattedError,
+		error: any,
+	): GraphQLFormattedError {
+		let extensions = formattedError.extensions;
+
+		const originalError = error.originalError;
+
+		if (originalError instanceof BaseError) {
+			extensions = originalError.toExtensions();
+		}
+
+		if (extensions && error.stack) {
+			if (development) {
+				extensions.stack = error.stack.split("\n");
+			}
+			try {
+				extensions.type = error.stack.split("\n")[0].split(":")[0];
+			} catch (_error) {}
+		}
+		const response: GraphQLFormattedError = {
+			message: formattedError.message,
+			path: formattedError.path,
+			locations: formattedError.locations,
+			extensions,
 		};
-		if (error.stack) {
-			if (development) {
-				response.stack = error.stack.split("\n");
-			}
-			try {
-				response.type = error.stack.split("\n")[0].split(":")[0];
-			} catch (error) {
-				if (development) {
-					return error as ErrorResponse;
-				}
-			}
-		}
-		if (error.extensions?.exception?.stacktrace) {
-			console.error(error.extensions?.exception?.stacktrace);
-			if (development) {
-				response.stack = error.extensions?.exception?.stacktrace;
-			}
-			try {
-				response.type =
-					error.extensions?.exception?.stacktrace[0].split(":")[0];
-			} catch (error) {
-				if (development) {
-					return error as ErrorResponse;
-				}
-			}
-		}
 
 		debug.extend("formatError")("error response", response);
 
 		if (Sentry) {
-			Sentry.captureException(error.originalError || error, {
+			Sentry.captureException(error, {
 				extra: {
-					path: error.path,
+					path: formattedError.path,
 					apiResponse: response,
 				},
 			});
 		}
+
+		console.error(
+			new Date().toISOString(),
+			"-",
+			originalError.message,
+			originalError.code ? "-" : "",
+			originalError.code ? originalError.code : "",
+		);
 
 		return response;
 	};

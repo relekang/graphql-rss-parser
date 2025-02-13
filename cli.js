@@ -1,14 +1,16 @@
 #!/usr/bin/env node
 
-const updateNotifier = require("update-notifier");
-
 const pkg = require("./package.json");
-const createHandler = require("./dist").default;
+const createServer = require("./dist").default;
+console.log("", createServer);
 
-updateNotifier({ pkg }).notify();
+try {
+	const updateNotifier = require("update-notifier");
+	updateNotifier({ pkg }).notify();
+} catch {}
 
 require("./dist/cli")
-	.cli({ version: pkg.version, createHandler })
+	.cli({ version: pkg.version, createServer })
 	.catch((error) => {
 		console.error(error);
 		process.exit(1);

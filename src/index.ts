@@ -1,4 +1,4 @@
-import { ApolloServer, type Config } from "apollo-server-micro";
+import { ApolloServer } from "@apollo/server";
 
 import { createErrorFormatter, sentryIgnoreErrors } from "./errors";
 import { schema } from "./schema";
@@ -8,7 +8,9 @@ export type Options = {
 	sentryDsn?: string;
 };
 
-export default async function createHandler(options: Options) {
+export default async function createServer(
+	options: Options,
+): Promise<ApolloServer> {
 	let Sentry;
 
 	if (options.sentryDsn) {
@@ -26,15 +28,12 @@ export default async function createHandler(options: Options) {
 		});
 	}
 
-	// @ts-ignore response does not match
-	const formatError: Config["formatError"] = createErrorFormatter(Sentry);
+	const formatError = createErrorFormatter(Sentry);
 	const apolloServer = new ApolloServer({
 		schema,
 		formatError,
 		persistedQueries: false,
 	});
 
-	await apolloServer.start();
-
-	return apolloServer.createHandler({ path: "/" });
+	return apolloServer;
 }

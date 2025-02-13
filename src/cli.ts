@@ -1,13 +1,14 @@
+import type { ApolloServer } from "@apollo/server";
+import { startStandaloneServer } from "@apollo/server/standalone";
 import { command, number, option, optional, run, string } from "cmd-ts";
-import micro, { type RequestHandler } from "micro";
 import type { Options } from "./index";
 
 export function cli({
 	version,
-	createHandler,
+	createServer,
 }: {
 	version: string;
-	createHandler: (options: Options) => Promise<RequestHandler>;
+	createServer: (options: Options) => Promise<ApolloServer>;
 }) {
 	const cmd = command({
 		name: "graphql-rss-parser",
@@ -45,15 +46,17 @@ export function cli({
 			}),
 		},
 		handler: async (args) => {
-			const server = micro(
-				await createHandler({
-					version,
-					sentryDsn: args.sentryDsn,
-				}),
-			);
+			const server = await createServer({
+				version,
+				sentryDsn: args.sentryDsn,
+			});
 
 			console.log(`Starting graphql-rss-parser v${version}`);
-			server.listen(args.port);
+			const { url } = await startStandaloneServer(server, {
+				context: async ({ req }) => ({ token: req.headers.token }),
+				listen: { port: 4000 },
+			});
+			console.log(`Running on ${url}`);
 		},
 	});
 	return run(cmd, process.argv.slice(2));

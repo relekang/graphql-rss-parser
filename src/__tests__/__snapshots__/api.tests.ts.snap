@@ -9,10 +9,18 @@ exports[`
   },
   "errors": [
     {
-      "error": {
+      "extensions": {
         "code": "dns-lookup-error",
         "message": "Could not find domain",
+        "type": "DnsLookupError",
       },
+      "locations": [
+        {
+          "column": 3,
+          "line": 2,
+        },
+      ],
+      "message": "Could not find domain",
       "path": [
         "feed",
       ],
@@ -209,9 +217,17 @@ exports[`
 {
   "errors": [
     {
-      "error": {
-        "message": "Cannot query field "badField" on type "Feed".",
+      "extensions": {
+        "code": "GRAPHQL_VALIDATION_FAILED",
+        "type": "GraphQLError",
       },
+      "locations": [
+        {
+          "column": 57,
+          "line": 2,
+        },
+      ],
+      "message": "Cannot query field "badField" on type "Feed".",
     },
   ],
 }
@@ -298,10 +314,18 @@ exports[`
   },
   "errors": [
     {
-      "error": {
+      "extensions": {
         "code": "not-a-feed",
         "message": "Not a feed",
+        "type": "NotAFeedError",
       },
+      "locations": [
+        {
+          "column": 3,
+          "line": 2,
+        },
+      ],
+      "message": "Not a feed",
       "path": [
         "feed",
       ],
