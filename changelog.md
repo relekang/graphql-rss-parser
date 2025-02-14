@@ -2,6 +2,43 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://github.com/relekang/graphql-rss-parser/compare/v3.0.4...v4.0.0) (2025-02-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* Use POST requests instead of GET requests.
+
+### Bug Fixes
+
+* **deps:** update dependency @sentry/node to v9 ([5560961](https://github.com/relekang/graphql-rss-parser/commit/556096147ec206697ddca3e760530aedfe3ee53e))
+* Add catch all not a feed error ([35281e5](https://github.com/relekang/graphql-rss-parser/commit/35281e5ed94fe8a15fe29a2ad1790aaf0b8a20b9))
+* Remove lodash-fp ([2ca5904](https://github.com/relekang/graphql-rss-parser/commit/2ca5904cd14c035f16855f1606e12bb791666641))
+* Run npm audit fix ([713458e](https://github.com/relekang/graphql-rss-parser/commit/713458e7c87e83041f568849f852b03244d7c3af))
+* Upgrade apollo to v4 standalone mode ([bcd0587](https://github.com/relekang/graphql-rss-parser/commit/bcd05876d4e0fb354f75104eaf52f329d6df2b70))
+* Use forked version of rss-to-json ([f6b3d4c](https://github.com/relekang/graphql-rss-parser/commit/f6b3d4c68095629e7d794103bf3a151222528231))
+* **deps:** update dependency @graphql-tools/schema to v10 ([60beae9](https://github.com/relekang/graphql-rss-parser/commit/60beae9a581b02cb122dab8ecc85e5a07553192e))
+* **deps:** update dependency @graphql-tools/schema to v9.0.19 ([#59](https://github.com/relekang/graphql-rss-parser/issues/59)) ([5ff9f83](https://github.com/relekang/graphql-rss-parser/commit/5ff9f83bff92c5a2d8dff987cc33a513a3ca5c0d))
+* **deps:** update dependency @sentry/node to v7.120.3 ([#61](https://github.com/relekang/graphql-rss-parser/issues/61)) ([f1ba474](https://github.com/relekang/graphql-rss-parser/commit/f1ba474c53f7a9573c98e1fa2a9f25996e751531))
+* **deps:** update dependency apollo-server-micro to v3.13.0 ([#63](https://github.com/relekang/graphql-rss-parser/issues/63)) ([ecab547](https://github.com/relekang/graphql-rss-parser/commit/ecab547a5d38648c9d3f613e925c02a45bbbc138))
+* **deps:** update dependency axios to v1.6.0 [security] ([e887cf6](https://github.com/relekang/graphql-rss-parser/commit/e887cf6aa956cd43893ea566cc064b69b6602515))
+* **deps:** update dependency axios to v1.7.4 [security] ([29cb85e](https://github.com/relekang/graphql-rss-parser/commit/29cb85e74fed13e1741c3ea66dbb749ac6619078))
+* **deps:** update dependency axios to v1.7.9 ([#64](https://github.com/relekang/graphql-rss-parser/issues/64)) ([b41b103](https://github.com/relekang/graphql-rss-parser/commit/b41b103525060bd2c34f7eef10d8f5a0edaec539))
+* **deps:** update dependency cheerio to v1.0.0 ([#60](https://github.com/relekang/graphql-rss-parser/issues/60)) ([07c66c3](https://github.com/relekang/graphql-rss-parser/commit/07c66c302f92595e40f119bdc0f5e41edf57aaed))
+* **deps:** update dependency cmd-ts to ^0.13.0 ([#65](https://github.com/relekang/graphql-rss-parser/issues/65)) ([8556484](https://github.com/relekang/graphql-rss-parser/commit/85564842c057471facc9c8beead02ea3fbbfb676))
+* **deps:** update dependency debug to v4.4.0 ([#66](https://github.com/relekang/graphql-rss-parser/issues/66)) ([613d2f3](https://github.com/relekang/graphql-rss-parser/commit/613d2f3b56c745812b73204b536caedc280a8161))
+* **deps:** update dependency graphql to v16.10.0 ([#67](https://github.com/relekang/graphql-rss-parser/issues/67)) ([07a10a9](https://github.com/relekang/graphql-rss-parser/commit/07a10a94abb89af3e49c23186b0aa43f6dbe4b07))
+* **deps:** update dependency graphql to v16.8.1 [security] ([ba058d8](https://github.com/relekang/graphql-rss-parser/commit/ba058d8feef05ce74636fe8145d03d3616bbabb0))
+* **deps:** update dependency http-status-codes to v2.3.0 ([#68](https://github.com/relekang/graphql-rss-parser/issues/68)) ([9cb9a1e](https://github.com/relekang/graphql-rss-parser/commit/9cb9a1e7b590901d7265434644960d7829860214))
+* **deps:** update dependency normalize-url to v6.1.0 ([#70](https://github.com/relekang/graphql-rss-parser/issues/70)) ([0deca29](https://github.com/relekang/graphql-rss-parser/commit/0deca29cd4ecc15d0cfffbc9fea15c533b3e72f5))
+* **deps:** update dependency rss-parser to v3.13.0 ([#71](https://github.com/relekang/graphql-rss-parser/issues/71)) ([c61b3c1](https://github.com/relekang/graphql-rss-parser/commit/c61b3c1633460967d7ee44d74183ad6d43dc9f43))
+* **deps:** update dependency update-notifier to v7 ([f5a4436](https://github.com/relekang/graphql-rss-parser/commit/f5a44366c5f8ad7fcc3d17d9eac4c54be9c3987e))
+* Disable persisted queries in apollo server ([ad01e75](https://github.com/relekang/graphql-rss-parser/commit/ad01e75ac8ee15f6ffe21622308fd46217b6305e))
+* Upgrade apollo server ([c11c6c8](https://github.com/relekang/graphql-rss-parser/commit/c11c6c87e1c4ef890f6e4aef79d18b18b9d8cd43))
+* Upgrade axios ([96cc624](https://github.com/relekang/graphql-rss-parser/commit/96cc6244ea0ba66ebc2482a2cdb859f8ad035248))
+* Upgrade node version to 18 ([ce8c48f](https://github.com/relekang/graphql-rss-parser/commit/ce8c48f92af2439b4fbf7d6ba76e21ad03d543a0))
+* Upgrade sentry ([bcbc5f9](https://github.com/relekang/graphql-rss-parser/commit/bcbc5f957f5a47b30a3754ba4d196717b18f892e))
+
 ### [3.0.4](https://github.com/relekang/graphql-rss-parser/compare/v3.0.3...v3.0.4) (2022-03-13)
 
 ### [3.0.3](https://github.com/relekang/graphql-rss-parser/compare/v3.0.2...v3.0.3) (2022-03-13)
