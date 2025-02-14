@@ -1,5 +1,5 @@
 import _debug from "debug";
-import { parser } from "rss-to-json";
+import { parseFromString } from "rss-to-json";
 
 import { NotAFeedError, ParserError } from "../errors";
 import type { Item, ParserResponse } from "../types";
@@ -9,7 +9,7 @@ const debug = _debug("graphql-rss-parser:parsers:rss-to-json");
 export async function parse(feed: string): Promise<ParserResponse> {
 	try {
 		debug("starting to parse");
-		const parsed = await parser(feed);
+		const parsed = await parseFromString(feed);
 		debug("done parsing");
 
 		return {
@@ -17,10 +17,9 @@ export async function parse(feed: string): Promise<ParserResponse> {
 			title: parsed.title,
 			description: parsed.description,
 			home_page_url: parsed.link,
-			feed_url: parsed.feedLink,
 			items: parsed.items.map(
 				(item: any): Item => ({
-					id: item.id || item.url,
+					id: item.id || item.link,
 					url: item.link,
 					title: item.title,
 					date_published: new Date(item.created).toISOString(),

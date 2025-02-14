@@ -46,7 +46,7 @@
 		"node-feedparser": "^1.0.1",
 		"normalize-url": "^6.0.1",
 		"rss-parser": "^3.12.0",
-		"rss-to-json": "^1.1.3",
+		"rss-to-json": "github:relekang/rss-to-json#04b2c90",
 		"update-notifier": "^7.0.0"
 	},
 	"devDependencies": {

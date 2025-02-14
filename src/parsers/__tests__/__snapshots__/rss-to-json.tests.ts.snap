@@ -3,7 +3,6 @@
 exports[`should parse string from rolflekang.com/feed.xml 1`] = `
 {
   "description": "undefined",
-  "feed_url": undefined,
   "home_page_url": "https://rolflekang.com",
   "items": [
     {
