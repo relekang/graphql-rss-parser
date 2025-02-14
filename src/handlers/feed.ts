@@ -1,4 +1,9 @@
-import { BaseError, EmptyParserOutputError } from "../errors";
+import {
+	BaseError,
+	EmptyParserOutputError,
+	NotAFeedError,
+	ParserError,
+} from "../errors";
 import { parserKeys, parsers } from "../parsers";
 import request from "../request";
 import transform from "../transform";
@@ -18,7 +23,7 @@ export async function parseFromString({
 	parser?: ParserKey;
 }): Promise<ParserResponse> {
 	if (parser) {
-		return parse(parser, content);
+		return await parse(parser, content);
 	}
 	for (let i = 0; i < parserKeys.length; i++) {
 		try {
@@ -55,31 +60,41 @@ export async function parseFromQuery({
 	const isJsonFeed = ["application/json", "application/feed+json"].includes(
 		contentType,
 	);
-	const parsed = await parseFromString({
-		content: response.text,
-		parser: isJsonFeed ? "JSON_FEED_V1" : parser,
-	});
+	const isXmlFeed =
+		["application/xml", "text/xml"].includes(contentType) &&
+		/application\/\w+\+xml/;
+	try {
+		const parsed = await parseFromString({
+			content: response.text,
+			parser: isJsonFeed ? "JSON_FEED_V1" : parser,
+		});
 
-	parsed.items = parsed.items?.filter((item) => {
-		if (item == null) {
-			return false;
+		parsed.items = parsed.items?.filter((item) => {
+			if (item == null) {
+				return false;
+			}
+			if (
+				item.date_published &&
+				endTime &&
+				new Date(endTime) < new Date(item.date_published)
+			) {
+				return false;
+			}
+			if (
+				item.date_published &&
+				startTime &&
+				new Date(startTime) > new Date(item.date_published)
+			) {
+				return false;
+			}
+			return true;
+		});
+		parsed.feed_url = parsed.feed_url || url;
+		return parsed;
+	} catch (error: any) {
+		if (error instanceof ParserError && !isJsonFeed && !isXmlFeed) {
+			throw new NotAFeedError();
 		}
-		if (
-			item.date_published &&
-			endTime &&
-			new Date(endTime) < new Date(item.date_published)
-		) {
-			return false;
-		}
-		if (
-			item.date_published &&
-			startTime &&
-			new Date(startTime) > new Date(item.date_published)
-		) {
-			return false;
-		}
-		return true;
-	});
-	parsed.feed_url = parsed.feed_url || url;
-	return parsed;
+		throw error;
+	}
 }
