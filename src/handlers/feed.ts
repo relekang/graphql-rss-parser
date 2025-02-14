@@ -3,11 +3,11 @@ import {
 	EmptyParserOutputError,
 	NotAFeedError,
 	ParserError,
-} from "../errors";
-import { parserKeys, parsers } from "../parsers";
-import request from "../request";
-import transform from "../transform";
-import type { ParserKey, ParserResponse } from "../types";
+} from "../errors.js";
+import { parserKeys, parsers } from "../parsers/index.js";
+import request from "../request.js";
+import transform from "../transform.js";
+import type { ParserKey, ParserResponse } from "../types.js";
 
 async function parse(parser: ParserKey, text: string) {
 	const parsed = await parsers[parser](text);
@@ -93,7 +93,7 @@ export async function parseFromQuery({
 		return parsed;
 	} catch (error: any) {
 		if (error instanceof ParserError && !isJsonFeed && !isXmlFeed) {
-			throw new NotAFeedError();
+			throw new NotAFeedError(error);
 		}
 		throw error;
 	}

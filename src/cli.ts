@@ -1,7 +1,7 @@
 import type { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
 import { command, number, option, optional, run, string } from "cmd-ts";
-import type { Options } from "./index";
+import type { Options } from "./index.js";
 
 export function cli({
 	version,

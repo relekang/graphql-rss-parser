@@ -1,15 +1,15 @@
 import _debug from "debug";
-import { parseFromString } from "rss-to-json";
+import * as parser from "rss-to-json";
 
-import { NotAFeedError, ParserError } from "../errors";
-import type { Item, ParserResponse } from "../types";
+import { NotAFeedError, ParserError } from "../errors.js";
+import type { Item, ParserResponse } from "../types.js";
 
 const debug = _debug("graphql-rss-parser:parsers:rss-to-json");
 
 export async function parse(feed: string): Promise<ParserResponse> {
 	try {
 		debug("starting to parse");
-		const parsed = await parseFromString(feed);
+		const parsed = await parser.parseFromString(feed);
 		debug("done parsing");
 
 		return {

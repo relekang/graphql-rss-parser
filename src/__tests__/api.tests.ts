@@ -1,4 +1,4 @@
-import { testGraphqlApi } from "./utils";
+import { testGraphqlApi } from "./utils.js";
 
 const websiteUrl = "https://rolflekang.com";
 const url = "https://rolflekang.com/feed.xml";

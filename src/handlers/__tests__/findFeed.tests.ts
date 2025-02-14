@@ -1,6 +1,6 @@
-import { DnsLookupError } from "../../errors";
+import { DnsLookupError } from "../../errors.js";
 /* eslint-env jest */
-import { findFeed, normalizeFeedLink } from "../findFeed";
+import { findFeed, normalizeFeedLink } from "../findFeed.js";
 
 test("findFeed should return feedUrl from any website which have a link to its rss feed", async () => {
 	const feeds = await findFeed({ url: "https://rolflekang.com" });

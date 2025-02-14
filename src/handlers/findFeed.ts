@@ -3,9 +3,9 @@ import type { CheerioAPI } from "cheerio";
 import type { Element, Node } from "domhandler";
 import normalizeUrl from "normalize-url";
 
-import { BaseError } from "../errors";
-import request from "../request";
-import { parseFromQuery, parseFromString } from "./feed";
+import { BaseError } from "../errors.js";
+import request from "../request.js";
+import { parseFromQuery, parseFromString } from "./feed.js";
 
 type FindFeedResponse = {
 	title: string;

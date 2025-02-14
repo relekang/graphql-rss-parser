@@ -1,5 +1,5 @@
 import isUrl from "is-url";
-import type { Feed, Item } from "./types";
+import type { Feed, Item } from "./types.js";
 
 function transformItem(item: Item) {
 	return Object.assign({}, item, {

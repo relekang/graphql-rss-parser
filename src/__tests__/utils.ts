@@ -5,7 +5,7 @@ import { format } from "node:url";
 import type { ApolloServer } from "@apollo/server";
 import { expressMiddleware } from "@apollo/server/express4";
 import type { AxiosResponse } from "axios";
-import createServer from "../";
+import createServer from "../index.js";
 
 export function testGraphqlApi(
 	strings: TemplateStringsArray,

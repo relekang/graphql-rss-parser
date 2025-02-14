@@ -2,8 +2,12 @@ import { Readable } from "node:stream";
 import _debug from "debug";
 import FeedParser from "feedparser";
 
-import { EmptyParserOutputError, NotAFeedError, ParserError } from "../errors";
-import type { Item, ParserResponse } from "../types";
+import {
+	EmptyParserOutputError,
+	NotAFeedError,
+	ParserError,
+} from "../errors.js";
+import type { Item, ParserResponse } from "../types.js";
 
 const debug = _debug("graphql-rss-parser:parsers:feedparser");
 

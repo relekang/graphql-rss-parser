@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import nock from "nock";
 
-import request from "../request";
+import request from "../request.js";
 
 describe("request", () => {
 	beforeAll(() => {

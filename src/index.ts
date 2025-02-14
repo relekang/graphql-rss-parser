@@ -1,7 +1,7 @@
 import { ApolloServer } from "@apollo/server";
 
-import { createErrorFormatter, sentryIgnoreErrors } from "./errors";
-import { schema } from "./schema";
+import { createErrorFormatter, sentryIgnoreErrors } from "./errors.js";
+import { schema } from "./schema.js";
 
 export type Options = {
 	version: string;

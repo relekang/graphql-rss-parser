@@ -1,10 +1,10 @@
 import { Readable } from "node:stream";
 import _debug from "debug";
 import FeedMe from "feedme";
-import type { FeedObject } from "feedme/dist/parser";
+import type { FeedObject } from "feedme/dist/parser.js";
 
-import { EmptyParserOutputError, ParserError } from "../errors";
-import type { Item, ParserResponse } from "../types";
+import { EmptyParserOutputError, ParserError } from "../errors.js";
+import type { Item, ParserResponse } from "../types.js";
 
 const debug = _debug("graphql-rss-parser:parsers:feedme");
 
@@ -96,6 +96,7 @@ export function parse(feed: string): Promise<ParserResponse> {
 				throw new Error("Failed to parse");
 			}
 
+			// @ts-ignore ---
 			const parser = new FeedMe(true);
 
 			parser.on("end", () => {
@@ -111,7 +112,7 @@ export function parse(feed: string): Promise<ParserResponse> {
 						description: unpack(parsed.description, "text"),
 						home_page_url: evaluateLink(parsed.link),
 						feed_url: undefined,
-						items: parsed.items.map((item): Item => {
+						items: parsed.items.map((item: any): Item => {
 							const pubDate = unpack(item.pubdate, "text");
 							return {
 								title: unpack(item.title, "text"),
@@ -133,7 +134,7 @@ export function parse(feed: string): Promise<ParserResponse> {
 				}
 			});
 
-			parser.on("error", (error) => {
+			parser.on("error", (error: any) => {
 				debug("parsing failed with error", error);
 				reject(new ParserError(error, "FEEDME"));
 			});

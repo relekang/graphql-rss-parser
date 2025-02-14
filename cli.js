@@ -1,17 +1,15 @@
 #!/usr/bin/env node
 
-const pkg = require("./package.json");
-const createServer = require("./dist").default;
-console.log("", createServer);
+import updateNotifier from "update-notifier";
+import { cli } from "./dist/cli.js";
+import createServer from "./dist/index.js";
+import pkg from "./package.json" with { type: "json" };
 
 try {
-	const updateNotifier = require("update-notifier");
 	updateNotifier({ pkg }).notify();
 } catch {}
 
-require("./dist/cli")
-	.cli({ version: pkg.version, createServer })
-	.catch((error) => {
-		console.error(error);
-		process.exit(1);
-	});
+cli({ version: pkg.version, createServer }).catch((error) => {
+	console.error(error);
+	process.exit(1);
+});

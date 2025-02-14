@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import { parseFromQuery } from "../feed";
+import { parseFromQuery } from "../feed.js";
 
 test("feed should filter based on both startTime and endTime", async () => {
 	const feeds = await parseFromQuery({

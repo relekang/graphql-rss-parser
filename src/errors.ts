@@ -2,7 +2,7 @@ import type { ApolloServerOptions } from "@apollo/server";
 import _debug from "debug";
 import type { GraphQLFormattedError } from "graphql";
 import { getReasonPhrase } from "http-status-codes";
-import type { ParserKey } from "./types";
+import type { ParserKey } from "./types.js";
 
 const debug = _debug("graphql-rss-parser:errors");
 const development =
@@ -73,7 +73,7 @@ export class UpstreamHttpError extends BaseError {
 	}
 }
 export class UpstreamEncryptionError extends BaseError {
-	cause: Error;
+	override cause: Error;
 	constructor(error: Error) {
 		super("Upstream encryption error", "upstream-encryption-error");
 		this.cause = error;
@@ -105,7 +105,7 @@ export class TimeoutError extends BaseError {
 }
 
 export class UnknownRequestError extends BaseError {
-	cause: Error;
+	override cause: Error;
 	constructor(cause: Error) {
 		super("Unknown error while requesting feed", "unknown-request-error");
 		this.cause = cause;
@@ -113,7 +113,7 @@ export class UnknownRequestError extends BaseError {
 }
 
 export class ParserError extends BaseError {
-	cause: Error;
+	override cause: Error;
 	parser: string;
 	constructor(cause: Error, parser: ParserKey) {
 		super(cause.message, "parser-error");
@@ -123,7 +123,7 @@ export class ParserError extends BaseError {
 }
 
 export class NotAFeedError extends BaseError {
-	cause?: Error;
+	override cause?: Error;
 	constructor(cause?: Error) {
 		super("Not a feed", "not-a-feed");
 		this.cause = cause;

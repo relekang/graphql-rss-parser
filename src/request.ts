@@ -11,7 +11,7 @@ import {
 	UnknownRequestError,
 	UpstreamEncryptionError,
 	UpstreamHttpError,
-} from "./errors";
+} from "./errors.js";
 
 const TIMEOUT = 30 * 1000;
 

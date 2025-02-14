@@ -1,7 +1,7 @@
-import createServer from "../";
-import { parserKeys } from "../parsers";
-import type { ParserKey } from "../types";
-import { listen } from "./utils";
+import createServer from "../index.js";
+import { parserKeys } from "../parsers/index.js";
+import type { ParserKey } from "../types.js";
+import { listen } from "./utils.js";
 
 describe("Same query should give same output for different parsers", () => {
 	let response: { data: { [key in ParserKey]: unknown }; errors: any[] };

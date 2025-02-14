@@ -1,7 +1,7 @@
 import { makeExecutableSchema } from "@graphql-tools/schema";
 import _debug from "debug";
-import * as feed from "./handlers/feed";
-import { findFeed } from "./handlers/findFeed";
+import * as feed from "./handlers/feed.js";
+import { findFeed } from "./handlers/findFeed.js";
 
 const debug = _debug("graphql-rss-parser:schema");
 

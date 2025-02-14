@@ -1,5 +1,6 @@
 import _debug from "debug";
-import type { ParserKey, ParserResponse } from "../types";
+import type { ParserKey, ParserResponse } from "../types.js";
+
 const debug = _debug("graphql-rss-parser:parsers:json-parser");
 
 export async function parse(input: string): Promise<ParserResponse> {

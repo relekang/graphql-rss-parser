@@ -1,6 +1,6 @@
-import request from "../../request";
+import request from "../../request.js";
 /* eslint-env jest */
-import { parse } from "../feedparser";
+import { parse } from "../feedparser.js";
 
 test("should parse string from rolflekang.com/feed.xml", async () => {
 	const { text } = await request("https://rolflekang.com/feed.xml");
