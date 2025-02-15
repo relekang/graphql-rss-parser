@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.1.0](https://github.com/relekang/graphql-rss-parser/compare/v4.0.1...v4.1.0) (2025-02-15)
+
+
+### Features
+
+* Add support for turning of csrf protection ([6182315](https://github.com/relekang/graphql-rss-parser/commit/6182315e4ab73280126e8d24798a7f594549fea0))
+
 ### [4.0.1](https://github.com/relekang/graphql-rss-parser/compare/v4.0.0...v4.0.1) (2025-02-15)
 
 
