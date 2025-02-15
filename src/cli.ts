@@ -54,7 +54,7 @@ export function cli({
 			console.log(`Starting graphql-rss-parser v${version}`);
 			const { url } = await startStandaloneServer(server, {
 				context: async ({ req }) => ({ token: req.headers.token }),
-				listen: { port: 4000 },
+				listen: { host: args.host, port: args.port },
 			});
 			console.log(`Running on ${url}`);
 		},
