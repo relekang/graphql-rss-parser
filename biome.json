@@ -7,7 +7,7 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"ignore": ["__fixtures__"]
+		"ignore": ["__fixtures__", "package.json", "package-lock.json"]
 	},
 	"formatter": {
 		"enabled": true,
