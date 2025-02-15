@@ -3,6 +3,7 @@ import _debug from "debug";
 import type { GraphQLFormattedError } from "graphql";
 import { getReasonPhrase } from "http-status-codes";
 import type { ParserKey } from "./types.js";
+import { logger } from "./logger.js";
 
 const debug = _debug("graphql-rss-parser:errors");
 const development =
@@ -184,13 +185,7 @@ export function createErrorFormatter(
 			});
 		}
 
-		console.error(
-			new Date().toISOString(),
-			"-",
-			(originalError ?? error).message,
-			originalError?.code ? "-" : "",
-			originalError?.code ? originalError.code : "",
-		);
+		logger.error(originalError ?? error);
 
 		return response;
 	};

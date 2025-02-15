@@ -7,7 +7,10 @@ describe("Same query should give same output for different parsers", () => {
 	let response: { data: { [key in ParserKey]: unknown }; errors: any[] };
 	let keys: ParserKey[] = [];
 	beforeAll(async () => {
-		const service = await createServer({ version: "version" });
+		const service = await createServer({
+			version: "version",
+			csrfPrevention: false,
+		});
 
 		const { url, close } = await listen(service);
 

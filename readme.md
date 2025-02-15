@@ -6,8 +6,6 @@ graphql-rss-parser
 A [graphql][] microservice that parses rss feeds and returns a JSON representation of the
 given feed. It uses different parses installed from npm. When a parser fail it will try the next following this order: [feedparser][], [rss-parser][], [feedme][], [rss-to-json][]. To specify a specific parser see example queries below.
 
-
-
 ## Installation
 
 ```shell
@@ -21,19 +19,17 @@ npm i -g graphql-rss-parser
 ```shell
 $ graphql-rss-parser --help
 
-  Usage: graphql-rss-parser [options] [command]
+OPTIONS:
+  --port, -p <number>    - Port to listen to [env: PORT] [optional]
+  --host, -H <str>       - Host to listen to [env: HOST] [optional]
+  --sentry-dsn, -D <str> - SENTRY DSN. This is used to configure logging with sentry.io [env: SENTRY_ENV] [optional]
+  --log-level, -L <str>  - "fatal" | "error" | "warn" | "info" | "debug" | "trace" | "silent" [env: LOG_LEVEL] [optional]
 
-  Commands:
-
-    help  Display help
-
-  Options:
-
-    -h, --help          Output usage information
-    -H, --host [value]  Host to listen on (defaults to "0.0.0.0")
-    -p, --port <n>      Port to listen on (defaults to 3000)
-    -D, --sentry-dsn    Sentry DSN. This is used to configure logging with sentry.io
-    -v, --version       Output the version number
+FLAGS:
+  --csrf-prevention, -C - Toggle for CSRF prevention [env: CSRF_PREVENTION]
+  --pretty-log, -P      - Log human readable instead of JSON [env: PRETTY_LOG]
+  --help, -h            - show help
+  --version, -v         - print the version
 ```
 
 ### Sentry integration
@@ -45,6 +41,7 @@ the goal of this error tracking is to catch errors in the code of the service.
 ### Example queries
 
 #### feed(url: String, [parser: Parser])
+
 ```graphql
 {
   feed(url: "https://rolflekang.com/feed.xml") {
@@ -58,7 +55,8 @@ the goal of this error tracking is to catch errors in the code of the service.
 }
 ```
 
-##### Specifying the parser.
+##### Specifying the parser
+
 graphql-rss-parser supports several of the rss parsers on npm. It can be specified with the parser option in a feed query as seen below.
 
 Available parsers:
@@ -79,8 +77,8 @@ Available parsers:
 }
 ```
 
-
 #### findFeed(url: String)
+
 ```graphql
 {
   findFeed(url: "https://rolflekang.com") {

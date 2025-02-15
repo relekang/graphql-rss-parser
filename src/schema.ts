@@ -48,13 +48,13 @@ const typeDefs = `
 
 const resolvers = {
 	Query: {
-		feed: (_: any, query: any) => {
-			debug("query-resolver feed, query:", query);
-			return feed.parseFromQuery(query);
+		feed: (_parent: any, args: any) => {
+			debug("query-resolver feed, query:", args);
+			return feed.parseFromQuery(args);
 		},
-		findFeed: (_: any, query: any) => {
-			debug("query-resolver findFeed, query:", query);
-			return findFeed(query);
+		findFeed: (_parent: any, args: any) => {
+			debug("query-resolver findFeed, query:", args);
+			return findFeed(args);
 		},
 	},
 };

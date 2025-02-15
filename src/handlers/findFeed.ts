@@ -6,6 +6,7 @@ import normalizeUrl from "normalize-url";
 import { BaseError } from "../errors.js";
 import request from "../request.js";
 import { parseFromQuery, parseFromString } from "./feed.js";
+import { logger } from "../logger.js";
 
 type FindFeedResponse = {
 	title: string;
@@ -48,13 +49,9 @@ async function findJsonFeedsInDom(
 					});
 					return { title, link: url };
 				} catch (error) {
-					if (
-						process.env.NODE_ENV !== "production" &&
-						process.env.NODE_ENV !== "test"
-					) {
-						console.log(error);
+					if (process.env.NODE_ENV !== "test") {
+						logger.warn(error);
 					}
-					console.error(url, error);
 					return undefined;
 				}
 			}),
@@ -79,11 +76,8 @@ async function findRssFeedsInDom(
 					const { title } = await parseFromQuery({ url });
 					return { title, link: url };
 				} catch (error) {
-					if (
-						process.env.NODE_ENV !== "production" &&
-						process.env.NODE_ENV !== "test"
-					) {
-						console.log(error);
+					if (process.env.NODE_ENV !== "test") {
+						logger.warn(error);
 					}
 					return undefined;
 				}
@@ -116,11 +110,8 @@ export async function findFeed({
 			const { title } = await parseFromString({ content });
 			return [{ title, link: normalizedUrl }];
 		} catch (error) {
-			if (
-				process.env.NODE_ENV !== "production" &&
-				process.env.NODE_ENV !== "test"
-			) {
-				console.log(error);
+			if (process.env.NODE_ENV !== "test") {
+				logger.warn(error);
 			}
 		}
 	}
@@ -135,11 +126,8 @@ export async function findFeed({
 			});
 			return [{ title, link: normalizedUrl }];
 		} catch (error) {
-			if (
-				process.env.NODE_ENV !== "production" &&
-				process.env.NODE_ENV !== "test"
-			) {
-				console.log(error);
+			if (process.env.NODE_ENV !== "test") {
+				logger.warn(error);
 			}
 		}
 	}
@@ -150,11 +138,8 @@ export async function findFeed({
 			const { title } = await parseFromString({ content });
 			return [{ title, link: normalizedUrl }];
 		} catch (error) {
-			if (
-				process.env.NODE_ENV !== "production" &&
-				process.env.NODE_ENV !== "test"
-			) {
-				console.log(error);
+			if (process.env.NODE_ENV !== "test") {
+				logger.warn(error);
 			}
 		}
 	}

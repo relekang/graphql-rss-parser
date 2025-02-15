@@ -51,6 +51,8 @@
 		"is-url": "^1.2.4",
 		"node-feedparser": "^1.0.1",
 		"normalize-url": "^6.0.1",
+		"pino": "^9.6.0",
+		"pino-pretty": "^13.0.0",
 		"rss-parser": "^3.12.0",
 		"rss-to-json": "github:relekang/rss-to-json#04b2c90",
 		"update-notifier": "^7.0.0"

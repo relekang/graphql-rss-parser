@@ -2,17 +2,21 @@ import { ApolloServer } from "@apollo/server";
 
 import { createErrorFormatter, sentryIgnoreErrors } from "./errors.js";
 import { schema } from "./schema.js";
+import { createLogger, type LoggingOptions } from "./logger.js";
 
 export type Options = {
 	version: string;
 	sentryDsn?: string;
 	csrfPrevention: boolean;
+	loggingOptions?: LoggingOptions;
 };
 
 export default async function createServer(
 	options: Options,
 ): Promise<ApolloServer> {
 	let Sentry;
+
+	const logger = createLogger(options.loggingOptions);
 
 	if (options.sentryDsn) {
 		Sentry = require("@sentry/node");
@@ -23,7 +27,7 @@ export default async function createServer(
 			ignoreErrors: sentryIgnoreErrors,
 			onFatalError(error: Error) {
 				// @ts-ignore error does not have response
-				console.error(error, error.response);
+				logger.error(error, error.response);
 			},
 			debug: process.env.DEBUG_SENTRY === "true",
 		});
@@ -35,6 +39,7 @@ export default async function createServer(
 		formatError,
 		persistedQueries: false,
 		csrfPrevention: options.csrfPrevention,
+		logger,
 	});
 
 	return apolloServer;

@@ -11,6 +11,7 @@ import {
 	string,
 } from "cmd-ts";
 import type { Options } from "./index.js";
+import { logger } from "./logger.js";
 
 export function cli({
 	version,
@@ -63,22 +64,42 @@ export function cli({
 					return false;
 				},
 			}),
+			logLevel: option({
+				type: optional(string),
+				short: "L",
+				long: "log-level",
+				description: `"fatal" | "error" | "warn" | "info" | "debug" | "trace" | "silent"`,
+				env: "LOG_LEVEL",
+				defaultValue() {
+					return "info";
+				},
+			}),
+			prettyLog: flag({
+				type: boolean,
+				short: "P",
+				long: "pretty-log",
+				description: "Log human readable instead of JSON",
+				env: "PRETTY_LOG",
+				defaultValue() {
+					return true;
+				},
+			}),
 		},
 		handler: async (args) => {
 			const server = await createServer({
 				version,
 				sentryDsn: args.sentryDsn,
 				csrfPrevention: args.csrfPrevention,
+				loggingOptions: { level: "info", pretty: true },
 			});
-
-			console.log(
+			logger.info(
 				`Starting graphql-rss-parser v${version} with ${JSON.stringify({ ...args }, null, 2)}`,
 			);
 			const { url } = await startStandaloneServer(server, {
 				context: async ({ req }) => ({ token: req.headers.token }),
 				listen: { host: args.host, port: args.port },
 			});
-			console.log(`Running on ${url}`);
+			server.logger.info(`Running on ${url}`);
 		},
 	});
 	return run(cmd, process.argv.slice(2));
