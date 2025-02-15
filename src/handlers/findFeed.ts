@@ -4,9 +4,9 @@ import type { Element, Node } from "domhandler";
 import normalizeUrl from "normalize-url";
 
 import { BaseError } from "../errors.js";
+import { logger } from "../logger.js";
 import request from "../request.js";
 import { parseFromQuery, parseFromString } from "./feed.js";
-import { logger } from "../logger.js";
 
 type FindFeedResponse = {
 	title: string;

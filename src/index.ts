@@ -1,8 +1,8 @@
 import { ApolloServer } from "@apollo/server";
 
 import { createErrorFormatter, sentryIgnoreErrors } from "./errors.js";
+import { type LoggingOptions, createLogger } from "./logger.js";
 import { schema } from "./schema.js";
-import { createLogger, type LoggingOptions } from "./logger.js";
 
 export type Options = {
 	version: string;
