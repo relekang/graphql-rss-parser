@@ -1,6 +1,15 @@
 import type { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
-import { command, number, option, optional, run, string } from "cmd-ts";
+import {
+	boolean,
+	command,
+	flag,
+	number,
+	option,
+	optional,
+	run,
+	string,
+} from "cmd-ts";
 import type { Options } from "./index.js";
 
 export function cli({
@@ -44,14 +53,27 @@ export function cli({
 					return undefined;
 				},
 			}),
+			csrfPrevention: flag({
+				type: boolean,
+				short: "C",
+				long: "csrf-prevention",
+				description: "Toggle for CSRF prevention",
+				env: "CSRF_PREVENTION",
+				defaultValue() {
+					return false;
+				},
+			}),
 		},
 		handler: async (args) => {
 			const server = await createServer({
 				version,
 				sentryDsn: args.sentryDsn,
+				csrfPrevention: args.csrfPrevention,
 			});
 
-			console.log(`Starting graphql-rss-parser v${version}`);
+			console.log(
+				`Starting graphql-rss-parser v${version} with ${JSON.stringify({ ...args }, null, 2)}`,
+			);
 			const { url } = await startStandaloneServer(server, {
 				context: async ({ req }) => ({ token: req.headers.token }),
 				listen: { host: args.host, port: args.port },

@@ -6,6 +6,7 @@ import { schema } from "./schema.js";
 export type Options = {
 	version: string;
 	sentryDsn?: string;
+	csrfPrevention: boolean;
 };
 
 export default async function createServer(
@@ -33,6 +34,7 @@ export default async function createServer(
 		schema,
 		formatError,
 		persistedQueries: false,
+		csrfPrevention: options.csrfPrevention,
 	});
 
 	return apolloServer;

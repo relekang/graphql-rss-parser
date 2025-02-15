@@ -25,12 +25,7 @@
 		"type": "git",
 		"url": "git+https://github.com/relekang/graphql-rss-parser.git"
 	},
-	"files": [
-		"dist",
-		"cli.js",
-		"license",
-		"readme.md"
-	],
+	"files": ["dist", "cli.js", "license", "readme.md"],
 	"author": "Rolf Erik Lekang",
 	"license": "MIT",
 	"bugs": {

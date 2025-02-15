@@ -187,9 +187,9 @@ export function createErrorFormatter(
 		console.error(
 			new Date().toISOString(),
 			"-",
-			originalError.message,
-			originalError.code ? "-" : "",
-			originalError.code ? originalError.code : "",
+			(originalError ?? error).message,
+			originalError?.code ? "-" : "",
+			originalError?.code ? originalError.code : "",
 		);
 
 		return response;
