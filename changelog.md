@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.0.1](https://github.com/relekang/graphql-rss-parser/compare/v4.0.0...v4.0.1) (2025-02-15)
+
+
+### Bug Fixes
+
+* Use port and host from cli args ([9ada4df](https://github.com/relekang/graphql-rss-parser/commit/9ada4dfb5dc22bd22e0e341ead07260ac7c4bb77))
+
 ## [4.0.0](https://github.com/relekang/graphql-rss-parser/compare/v3.0.4...v4.0.0) (2025-02-14)
 
 
