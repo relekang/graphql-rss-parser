@@ -1,6 +1,8 @@
 {
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"extends": ["config:recommended"],
+	"extends": [
+		"config:recommended"
+	],
 	"rebaseWhen": "behind-base-branch",
 	"prConcurrentLimit": 5,
 	"branchConcurrentLimit": 10,
@@ -13,20 +15,26 @@
 	"ignoreTests": false,
 	"dependencyDashboard": true,
 	"npm": {
-		"stabilityDays": 3
+		"minimumReleaseAge": "3 days"
 	},
 	"packageRules": [
 		{
-			"matchUpdateTypes": ["major"],
+			"matchUpdateTypes": [
+				"major"
+			],
 			"prPriority": -2,
 			"automerge": false
 		},
 		{
-			"matchDepTypes": ["dependencies"],
+			"matchDepTypes": [
+				"dependencies"
+			],
 			"prPriority": 2
 		},
 		{
-			"matchDepTypes": ["devDependencies"],
+			"matchDepTypes": [
+				"devDependencies"
+			],
 			"prPriority": -5
 		}
 	]
