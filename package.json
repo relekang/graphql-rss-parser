@@ -50,7 +50,7 @@
 		"http-status-codes": "^2.2.0",
 		"is-url": "^1.2.4",
 		"node-feedparser": "^1.0.1",
-		"normalize-url": "^6.0.1",
+		"normalize-url": "^8.0.0",
 		"pino": "^9.6.0",
 		"pino-pretty": "^13.0.0",
 		"rss-parser": "^3.12.0",
