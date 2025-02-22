@@ -335,9 +335,7 @@ exports[`
 `;
 
 exports[`
-  findFeed(url: "https://non--------existing-domain.com") {
-    link
-  }
+  findFeed(url: "https://non--------existing-domain.com") { link }
  1`] = `
 {
   "data": null,
@@ -364,9 +362,7 @@ exports[`
 `;
 
 exports[`
-  findFeed(url: "https://rolflekang.com") {
-    link
-  }
+  findFeed(url: "https://rolflekang.com") { link }
  1`] = `
 {
   "data": {
@@ -383,9 +379,7 @@ exports[`
 `;
 
 exports[`
-  findFeed(url: "not-a-url") {
-    link
-  }
+  findFeed(url: "not-a-url") { link }
  1`] = `
 {
   "data": null,

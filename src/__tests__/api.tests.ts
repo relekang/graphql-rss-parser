@@ -52,25 +52,19 @@ testGraphqlApi`
 `;
 
 testGraphqlApi`
-  findFeed(url: "${websiteUrl}") {
-    link
-  }
-`;
-
-testGraphqlApi`
   feed(url: "${url}", startTime: "2020-01-01", endTime: "2020-10-31") {
     items { title }
   }
 `;
 
 testGraphqlApi`
-  findFeed(url: "not-a-url") {
-    link
-  }
+  findFeed(url: "${websiteUrl}") { link }
 `;
 
 testGraphqlApi`
-  findFeed(url: "https://non--------existing-domain.com") {
-    link
-  }
+  findFeed(url: "not-a-url") { link }
+`;
+
+testGraphqlApi`
+  findFeed(url: "https://non--------existing-domain.com") { link }
 `;
