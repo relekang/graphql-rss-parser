@@ -139,6 +139,14 @@ export class ConnectionFailedError extends BaseError {
 	}
 }
 
+export class InvalidUrlError extends BaseError {
+	url: string;
+	constructor(url: string) {
+		super("Invalid url", "invalid-url");
+		this.url = url;
+	}
+}
+
 export function createErrorFormatter(
 	Sentry: any,
 ): ApolloServerOptions<any>["formatError"] {

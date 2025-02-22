@@ -335,6 +335,35 @@ exports[`
 `;
 
 exports[`
+  findFeed(url: "https://non--------existing-domain.com") {
+    link
+  }
+ 1`] = `
+{
+  "data": null,
+  "errors": [
+    {
+      "extensions": {
+        "code": "dns-lookup-error",
+        "message": "Could not find domain",
+        "type": "DnsLookupError",
+      },
+      "locations": [
+        {
+          "column": 3,
+          "line": 2,
+        },
+      ],
+      "message": "Could not find domain",
+      "path": [
+        "findFeed",
+      ],
+    },
+  ],
+}
+`;
+
+exports[`
   findFeed(url: "https://rolflekang.com") {
     link
   }
@@ -350,5 +379,34 @@ exports[`
       },
     ],
   },
+}
+`;
+
+exports[`
+  findFeed(url: "not-a-url") {
+    link
+  }
+ 1`] = `
+{
+  "data": null,
+  "errors": [
+    {
+      "extensions": {
+        "code": "invalid-url",
+        "message": "Invalid url",
+        "type": "InvalidUrlError",
+      },
+      "locations": [
+        {
+          "column": 3,
+          "line": 2,
+        },
+      ],
+      "message": "Invalid url",
+      "path": [
+        "findFeed",
+      ],
+    },
+  ],
 }
 `;

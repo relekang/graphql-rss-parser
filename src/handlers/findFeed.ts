@@ -3,10 +3,11 @@ import type { CheerioAPI } from "cheerio";
 import type { Element, Node } from "domhandler";
 import normalizeUrl from "normalize-url";
 
-import { BaseError } from "../errors.js";
+import { BaseError, InvalidUrlError } from "../errors.js";
 import { logger } from "../logger.js";
 import request from "../request.js";
 import { parseFromQuery, parseFromString } from "./feed.js";
+import isUrl from "is-url";
 
 type FindFeedResponse = {
 	title: string;
@@ -93,6 +94,10 @@ export async function findFeed({
 	url: string;
 	normalize?: boolean;
 }): Promise<FindFeedResponse[]> {
+	if (!isUrl(url)) {
+		throw new InvalidUrlError(url);
+	}
+
 	const normalizedUrl = normalize ? url : normalizeUrl(url, normalizeOptions);
 
 	if (!normalizedUrl) {

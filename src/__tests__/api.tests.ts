@@ -62,3 +62,15 @@ testGraphqlApi`
     items { title }
   }
 `;
+
+testGraphqlApi`
+  findFeed(url: "not-a-url") {
+    link
+  }
+`;
+
+testGraphqlApi`
+  findFeed(url: "https://non--------existing-domain.com") {
+    link
+  }
+`;
