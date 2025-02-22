@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.3.0](https://github.com/relekang/graphql-rss-parser/compare/v4.2.0...v4.3.0) (2025-02-22)
+
+
+### Features
+
+* Add url validation on feed ([820e6a8](https://github.com/relekang/graphql-rss-parser/commit/820e6a8a2926e26681e453827c77e3449c7202d9))
+* Add url validation on findFeed ([4620b01](https://github.com/relekang/graphql-rss-parser/commit/4620b01b2fec511f1abbd401cb1a839c00d06a93))
+
 ## [4.2.0](https://github.com/relekang/graphql-rss-parser/compare/v4.1.0...v4.2.0) (2025-02-15)
 
 
