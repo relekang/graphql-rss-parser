@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.4.0](https://github.com/relekang/graphql-rss-parser/compare/v4.3.0...v4.4.0) (2025-02-22)
+
+
+### Features
+
+* Add guesser fallback ([7829177](https://github.com/relekang/graphql-rss-parser/commit/78291772ab01b2fce0d406f86a01f2f68f0b00ce))
+* Add validation for protocol ([a9c62bf](https://github.com/relekang/graphql-rss-parser/commit/a9c62bf177e0de641ee603107ab6e1d0dd2f2bc3))
+
 ## [4.3.0](https://github.com/relekang/graphql-rss-parser/compare/v4.2.0...v4.3.0) (2025-02-22)
 
 
