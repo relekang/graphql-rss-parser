@@ -364,6 +364,33 @@ exports[`
 `;
 
 exports[`
+  findFeed(url: "ftp://example.com") { link }
+ 1`] = `
+{
+  "data": null,
+  "errors": [
+    {
+      "extensions": {
+        "code": "invalid-url",
+        "message": "Invalid url",
+        "type": "InvalidUrlError",
+      },
+      "locations": [
+        {
+          "column": 3,
+          "line": 2,
+        },
+      ],
+      "message": "Invalid url",
+      "path": [
+        "findFeed",
+      ],
+    },
+  ],
+}
+`;
+
+exports[`
   findFeed(url: "https://non--------existing-domain.com") { link }
  1`] = `
 {

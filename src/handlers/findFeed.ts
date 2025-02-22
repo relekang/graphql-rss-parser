@@ -3,7 +3,7 @@ import type { CheerioAPI } from "cheerio";
 import type { Element, Node } from "domhandler";
 import normalizeUrl from "normalize-url";
 
-import { BaseError, InvalidUrlError } from "../errors.js";
+import { InvalidUrlError } from "../errors.js";
 import { logger } from "../logger.js";
 import request from "../request.js";
 import { parseFromQuery, parseFromString } from "./feed.js";
@@ -90,18 +90,20 @@ async function findRssFeedsInDom(
 export async function findFeed({
 	url,
 	normalize = false,
+	withGuessFallback = false,
 }: {
 	url: string;
 	normalize?: boolean;
+	withGuessFallback?: boolean;
 }): Promise<FindFeedResponse[]> {
-	if (!isUrl(url)) {
+	if (!/^https?/.test(url) || !isUrl(url)) {
 		throw new InvalidUrlError(url);
 	}
 
 	const normalizedUrl = normalize ? url : normalizeUrl(url, normalizeOptions);
 
 	if (!normalizedUrl) {
-		throw new BaseError("Empty url is not allowed", "missing-url");
+		throw new InvalidUrlError(url);
 	}
 
 	const response = await request(normalizedUrl);

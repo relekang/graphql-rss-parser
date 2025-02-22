@@ -70,5 +70,9 @@ testGraphqlApi`
 `;
 
 testGraphqlApi`
+  findFeed(url: "ftp://example.com") { link }
+`;
+
+testGraphqlApi`
   findFeed(url: "https://non--------existing-domain.com") { link }
 `;

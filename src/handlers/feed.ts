@@ -55,7 +55,7 @@ export async function parseFromQuery({
 	endTime?: string;
 	startTime?: string;
 }): Promise<ParserResponse> {
-	if (!isUrl(url)) {
+	if (!/^https?/.test(url) || !isUrl(url)) {
 		throw new InvalidUrlError(url);
 	}
 	const response = await request(url);
