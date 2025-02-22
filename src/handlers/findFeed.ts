@@ -3,11 +3,11 @@ import type { CheerioAPI } from "cheerio";
 import type { Element, Node } from "domhandler";
 import normalizeUrl from "normalize-url";
 
+import isUrl from "is-url";
 import { InvalidUrlError } from "../errors.js";
 import { logger } from "../logger.js";
 import request from "../request.js";
 import { parseFromQuery, parseFromString } from "./feed.js";
-import isUrl from "is-url";
 
 type FindFeedResponse = {
 	title: string;
@@ -106,6 +106,8 @@ export async function findFeed({
 		throw new InvalidUrlError(url);
 	}
 
+	logger.info({ url, normalizedUrl, normalize, withGuessFallback }, "findFeed");
+
 	const response = await request(normalizedUrl);
 	const content = response.text;
 
@@ -151,13 +153,32 @@ export async function findFeed({
 		}
 	}
 
-	const result = [
+	let result = [
 		...(await findRssFeedsInDom(dom, normalizedUrl)),
 		...(await findJsonFeedsInDom(dom, normalizedUrl)),
 	];
 
 	if (result.length === 0 && normalize) {
 		return findFeed({ url, normalize: false });
+	}
+
+	if (result.length === 0 && withGuessFallback) {
+		const url = new URL(normalizedUrl);
+		url.pathname = "";
+		const urlWithoutPath = url.toString();
+		result = (
+			await Promise.all([
+				findFeed({ url: `${normalizedUrl}/feed.xml` }).catch(() => []),
+				findFeed({ url: `${normalizedUrl}/atom.xml` }).catch(() => []),
+				findFeed({ url: `${normalizedUrl}/rss.xml` }).catch(() => []),
+				findFeed({ url: `${normalizedUrl}/feed.json` }).catch(() => []),
+				//////////
+				findFeed({ url: `${urlWithoutPath}/feed.xml` }).catch(() => []),
+				findFeed({ url: `${urlWithoutPath}/atom.xml` }).catch(() => []),
+				findFeed({ url: `${urlWithoutPath}/rss.xml` }).catch(() => []),
+				findFeed({ url: `${urlWithoutPath}/feed.json` }).catch(() => []),
+			])
+		).flat();
 	}
 
 	return result;

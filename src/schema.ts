@@ -41,7 +41,7 @@ const typeDefs = `
   }
 
   type Query {
-    findFeed(url: String!): [FindFeedResult]!
+    findFeed(url: String!, withGuessFallback: Boolean): [FindFeedResult]!
     feed(url: String!, parser: Parser, startTime: String, endTime: String): Feed
   }
 `;

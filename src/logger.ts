@@ -18,3 +18,5 @@ export function createLogger(options?: LoggingOptions): pino.Logger {
 	});
 	return logger;
 }
+
+createLogger();
