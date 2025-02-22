@@ -52,6 +52,10 @@ testGraphqlApi`
 `;
 
 testGraphqlApi`
+  feed(url: "not-a-url") { title }
+`;
+
+testGraphqlApi`
   feed(url: "${url}", startTime: "2020-01-01", endTime: "2020-10-31") {
     items { title }
   }

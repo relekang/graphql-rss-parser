@@ -335,6 +335,35 @@ exports[`
 `;
 
 exports[`
+  feed(url: "not-a-url") { title }
+ 1`] = `
+{
+  "data": {
+    "feed": null,
+  },
+  "errors": [
+    {
+      "extensions": {
+        "code": "invalid-url",
+        "message": "Invalid url",
+        "type": "InvalidUrlError",
+      },
+      "locations": [
+        {
+          "column": 3,
+          "line": 2,
+        },
+      ],
+      "message": "Invalid url",
+      "path": [
+        "feed",
+      ],
+    },
+  ],
+}
+`;
+
+exports[`
   findFeed(url: "https://non--------existing-domain.com") { link }
  1`] = `
 {

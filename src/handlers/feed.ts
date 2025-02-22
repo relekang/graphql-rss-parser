@@ -1,6 +1,8 @@
+import isUrl from "is-url";
 import {
 	BaseError,
 	EmptyParserOutputError,
+	InvalidUrlError,
 	NotAFeedError,
 	ParserError,
 } from "../errors.js";
@@ -53,6 +55,9 @@ export async function parseFromQuery({
 	endTime?: string;
 	startTime?: string;
 }): Promise<ParserResponse> {
+	if (!isUrl(url)) {
+		throw new InvalidUrlError(url);
+	}
 	const response = await request(url);
 
 	const contentType =
