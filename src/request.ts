@@ -4,6 +4,7 @@ import _debug from "debug";
 const debug = _debug("graphql-rss-parser:request");
 
 import {
+	CloudflareBlockError,
 	ConnectionRefusedError,
 	DnsLookupError,
 	EmptyHttpResponseError,
@@ -43,6 +44,15 @@ export default async function request(url: string) {
 	} catch (error: any) {
 		debug(`request to ${url} failed with error`, error);
 		if (error.response?.status) {
+			if (error.response?.status === 403) {
+				const text = error.response.data.toString();
+				if (
+					text.includes("Enable JavaScript and cookies to continue") &&
+					text.includes("_cf_")
+				) {
+					throw new CloudflareBlockError();
+				}
+			}
 			throw new UpstreamHttpError("Upstream HTTP error", error.response.status);
 		}
 		if (error.code === "ENOTFOUND" || error.code === "EAI_AGAIN") {

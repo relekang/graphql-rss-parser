@@ -147,6 +147,12 @@ export class InvalidUrlError extends BaseError {
 	}
 }
 
+export class CloudflareBlockError extends BaseError {
+	constructor() {
+		super("Blocked by cloudflare", "cloudflare-block");
+	}
+}
+
 export function createErrorFormatter(
 	Sentry: any,
 ): ApolloServerOptions<any>["formatError"] {
