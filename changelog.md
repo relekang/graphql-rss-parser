@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.5.0](https://github.com/relekang/graphql-rss-parser/compare/v4.4.0...v4.5.0) (2025-02-25)
+
+
+### Features
+
+* Add custom error for cloudflare block ([0824952](https://github.com/relekang/graphql-rss-parser/commit/0824952b9c70d76963bd9048aee9b5e2a2d0b232))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @graphql-tools/schema to v10.0.19 ([#109](https://github.com/relekang/graphql-rss-parser/issues/109)) ([548fa05](https://github.com/relekang/graphql-rss-parser/commit/548fa0575345516757ec0c40cd5f37bda63e84d1))
+
 ## [4.4.0](https://github.com/relekang/graphql-rss-parser/compare/v4.3.0...v4.4.0) (2025-02-22)
 
 
