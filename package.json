@@ -58,7 +58,7 @@
 		"update-notifier": "^7.0.0"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^1.9.4",
+		"@biomejs/biome": "^2.0.0",
 		"@swc/core": "^1.10.16",
 		"@swc/jest": "^0.2.37",
 		"@types/debug": "^4.1.7",
