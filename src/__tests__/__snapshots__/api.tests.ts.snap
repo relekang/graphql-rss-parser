@@ -1,8 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`
-  feed(url: "https://non--------existing-domain.com") { title }
- 1`] = `
+exports[`\\n  feed(url: "https://non--------existing-domain.com") { title }\\n 1`] = `
 {
   "data": {
     "feed": null,
@@ -29,9 +27,7 @@ exports[`
 }
 `;
 
-exports[`
-  feed(url: "https://rolflekang.com/feed.json", parser: JSON_FEED_V1) { title }
- 1`] = `
+exports[`\\n  feed(url: "https://rolflekang.com/feed.json", parser: JSON_FEED_V1) { title }\\n 1`] = `
 {
   "data": {
     "feed": {
@@ -41,17 +37,37 @@ exports[`
 }
 `;
 
-exports[`
-  feed(url: "https://rolflekang.com/feed.xml") {
-    title
-    feed_url
-    items {
-      title
-      url
-      date_published
-    }
-  }
- 1`] = `
+exports[`\\n  feed(url: "https://rolflekang.com/feed.xml") { title }\\n 1`] = `
+{
+  "data": {
+    "feed": {
+      "title": "Writing by Rolf Erik Lekang",
+    },
+  },
+}
+`;
+
+exports[`\\n  feed(url: "https://rolflekang.com/feed.xml") { title, badField }\\n 1`] = `
+{
+  "errors": [
+    {
+      "extensions": {
+        "code": "GRAPHQL_VALIDATION_FAILED",
+        "type": "GraphQLError",
+      },
+      "locations": [
+        {
+          "column": 57,
+          "line": 2,
+        },
+      ],
+      "message": "Cannot query field "badField" on type "Feed".",
+    },
+  ],
+}
+`;
+
+exports[`\\n  feed(url: "https://rolflekang.com/feed.xml") {\\n    title\\n    feed_url\\n    items {\\n      title\\n      url\\n      date_published\\n    }\\n  }\\n 1`] = `
 {
   "data": {
     "feed": {
@@ -199,9 +215,7 @@ exports[`
 }
 `;
 
-exports[`
-  feed(url: "https://rolflekang.com/feed.xml") { title }
- 1`] = `
+exports[`\\n  feed(url: "https://rolflekang.com/feed.xml", parser: FEEDME) { title }\\n 1`] = `
 {
   "data": {
     "feed": {
@@ -211,31 +225,7 @@ exports[`
 }
 `;
 
-exports[`
-  feed(url: "https://rolflekang.com/feed.xml") { title, badField }
- 1`] = `
-{
-  "errors": [
-    {
-      "extensions": {
-        "code": "GRAPHQL_VALIDATION_FAILED",
-        "type": "GraphQLError",
-      },
-      "locations": [
-        {
-          "column": 57,
-          "line": 2,
-        },
-      ],
-      "message": "Cannot query field "badField" on type "Feed".",
-    },
-  ],
-}
-`;
-
-exports[`
-  feed(url: "https://rolflekang.com/feed.xml", parser: FEEDME) { title }
- 1`] = `
+exports[`\\n  feed(url: "https://rolflekang.com/feed.xml", parser: FEEDPARSER) { title }\\n 1`] = `
 {
   "data": {
     "feed": {
@@ -245,9 +235,7 @@ exports[`
 }
 `;
 
-exports[`
-  feed(url: "https://rolflekang.com/feed.xml", parser: FEEDPARSER) { title }
- 1`] = `
+exports[`\\n  feed(url: "https://rolflekang.com/feed.xml", parser: RSS_PARSER) { title }\\n 1`] = `
 {
   "data": {
     "feed": {
@@ -257,9 +245,7 @@ exports[`
 }
 `;
 
-exports[`
-  feed(url: "https://rolflekang.com/feed.xml", parser: RSS_PARSER) { title }
- 1`] = `
+exports[`\\n  feed(url: "https://rolflekang.com/feed.xml", parser: RSS_TO_JSON) { title }\\n 1`] = `
 {
   "data": {
     "feed": {
@@ -269,23 +255,7 @@ exports[`
 }
 `;
 
-exports[`
-  feed(url: "https://rolflekang.com/feed.xml", parser: RSS_TO_JSON) { title }
- 1`] = `
-{
-  "data": {
-    "feed": {
-      "title": "Writing by Rolf Erik Lekang",
-    },
-  },
-}
-`;
-
-exports[`
-  feed(url: "https://rolflekang.com/feed.xml", startTime: "2020-01-01", endTime: "2020-10-31") {
-    items { title }
-  }
- 1`] = `
+exports[`\\n  feed(url: "https://rolflekang.com/feed.xml", startTime: "2020-01-01", endTime: "2020-10-31") {\\n    items { title }\\n  }\\n 1`] = `
 {
   "data": {
     "feed": {
@@ -305,9 +275,7 @@ exports[`
 }
 `;
 
-exports[`
-  feed(url: "https://rolflekang.com/testing-simple-graphql-services") { title }
- 1`] = `
+exports[`\\n  feed(url: "https://rolflekang.com/testing-simple-graphql-services") { title }\\n 1`] = `
 {
   "data": {
     "feed": null,
@@ -334,9 +302,7 @@ exports[`
 }
 `;
 
-exports[`
-  feed(url: "not-a-url") { title }
- 1`] = `
+exports[`\\n  feed(url: "not-a-url") { title }\\n 1`] = `
 {
   "data": {
     "feed": null,
@@ -363,9 +329,7 @@ exports[`
 }
 `;
 
-exports[`
-  findFeed(url: "ftp://example.com") { link }
- 1`] = `
+exports[`\\n  findFeed(url: "ftp://example.com") { link }\\n 1`] = `
 {
   "data": null,
   "errors": [
@@ -390,9 +354,7 @@ exports[`
 }
 `;
 
-exports[`
-  findFeed(url: "https://non--------existing-domain.com") { link }
- 1`] = `
+exports[`\\n  findFeed(url: "https://non--------existing-domain.com") { link }\\n 1`] = `
 {
   "data": null,
   "errors": [
@@ -417,9 +379,7 @@ exports[`
 }
 `;
 
-exports[`
-  findFeed(url: "https://rolflekang.com") { link }
- 1`] = `
+exports[`\\n  findFeed(url: "https://rolflekang.com") { link }\\n 1`] = `
 {
   "data": {
     "findFeed": [
@@ -434,9 +394,7 @@ exports[`
 }
 `;
 
-exports[`
-  findFeed(url: "not-a-url") { link }
- 1`] = `
+exports[`\\n  findFeed(url: "not-a-url") { link }\\n 1`] = `
 {
   "data": null,
   "errors": [
