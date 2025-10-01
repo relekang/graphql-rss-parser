@@ -20,7 +20,7 @@ function getPubDate(entry: Parser.Item): string | undefined {
 		return entry.pubDate
 			? new Date(entry.pubDate?.replace(/CES?T/, "(CET)")).toISOString()
 			: entry.pubDate;
-	} catch (error) {
+	} catch (_error) {
 		return entry.pubDate;
 	}
 }

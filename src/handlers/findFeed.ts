@@ -1,9 +1,8 @@
-import * as cheerio from "cheerio";
 import type { CheerioAPI } from "cheerio";
+import * as cheerio from "cheerio";
 import type { Element, Node } from "domhandler";
-import normalizeUrl from "normalize-url";
-
 import isUrl from "is-url";
+import normalizeUrl from "normalize-url";
 import { InvalidUrlError } from "../errors.js";
 import { logger } from "../logger.js";
 import request from "../request.js";

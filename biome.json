@@ -1,5 +1,5 @@
 {
-	"$schema": "https://biomejs.dev/schemas/2.0.4/schema.json",
+	"$schema": "https://biomejs.dev/schemas/2.2.4/schema.json",
 	"vcs": {
 		"enabled": true,
 		"clientKind": "git",
@@ -7,7 +7,7 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"includes": ["!__fixtures__", "!package.json", "!package-lock.json"]
+		"includes": ["**", "!__fixtures__", "!package.json", "!package-lock.json"]
 	},
 	"formatter": {
 		"enabled": true,

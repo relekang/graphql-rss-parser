@@ -1,10 +1,9 @@
 import http from "node:http";
-import express from "express";
-
 import { format } from "node:url";
 import type { ApolloServer } from "@apollo/server";
 import { expressMiddleware } from "@apollo/server/express4";
 import type { AxiosResponse } from "axios";
+import express from "express";
 import createServer from "../index.js";
 
 export function testGraphqlApi(
@@ -49,7 +48,7 @@ export const listen = async (server: ApolloServer) => {
 
 	await server.start();
 
-	// @ts-ignore
+	// @ts-expect-error
 	app.use(express.json({ limit: "50mb" }), expressMiddleware(server));
 
 	return await new Promise<{ url: string; close: () => void }>(

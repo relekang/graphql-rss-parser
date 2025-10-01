@@ -51,7 +51,7 @@ function unpack(
 	required?: boolean,
 	key?: string,
 ): string | undefined {
-	let output = undefined;
+	let output;
 	if (input && Array.isArray(input)) {
 		// eslint-disable-next-line @typescript-eslint/no-use-before-define
 		output = unpackArray(input, attribute)[0];
@@ -59,9 +59,9 @@ function unpack(
 	if (typeof input === "string") {
 		output = input;
 	}
-	// @ts-ignore ---
+	// @ts-expect-error ---
 	if (typeof input === "object" && typeof input[attribute] === "string") {
-		// @ts-ignore ---
+		// @ts-expect-error ---
 		output = input[attribute] as string | undefined;
 	}
 
@@ -96,7 +96,7 @@ export function parse(feed: string): Promise<ParserResponse> {
 				throw new Error("Failed to parse");
 			}
 
-			// @ts-ignore ---
+			// @ts-expect-error ---
 			const parser = new FeedMe(true);
 
 			parser.on("end", () => {

@@ -59,7 +59,7 @@ export class UpstreamHttpError extends BaseError {
 		this.status = status;
 		try {
 			this.statusText = getReasonPhrase(status);
-		} catch (error) {
+		} catch (_error) {
 			this.statusText = `Unknown error (${status})`;
 		}
 	}

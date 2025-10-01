@@ -1,7 +1,7 @@
 import { ApolloServer } from "@apollo/server";
 
 import { createErrorFormatter, sentryIgnoreErrors } from "./errors.js";
-import { type LoggingOptions, createLogger } from "./logger.js";
+import { createLogger, type LoggingOptions } from "./logger.js";
 import { schema } from "./schema.js";
 
 export type Options = {
@@ -26,7 +26,7 @@ export default async function createServer(
 			environment: process.env.NODE_ENV,
 			ignoreErrors: sentryIgnoreErrors,
 			onFatalError(error: Error) {
-				// @ts-ignore error does not have response
+				// @ts-expect-error error does not have response
 				logger.error(error, error.response);
 			},
 			debug: process.env.DEBUG_SENTRY === "true",
