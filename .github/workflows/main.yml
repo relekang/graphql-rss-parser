@@ -8,38 +8,38 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x, 20.x, 22.x]
+        node-version: [22.x, 24.x]
 
     steps:
-    - uses: actions/checkout@v6
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v6
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm run build
-    - run: npm run test
-      env:
-        CI: true
+      - uses: actions/checkout@v6
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      - run: npm run build
+      - run: npm run test
+        env:
+          CI: true
 
   lint:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v6
-    - name: Use Node.js from .node-version
-      uses: actions/setup-node@v6
-      with:
-        node-version-file: .node-version
-    - run: npm ci
-    - run: npm run lint:ci
+      - uses: actions/checkout@v6
+      - name: Use Node.js from .node-version
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: .node-version
+      - run: npm ci
+      - run: npm run lint:ci
 
   docker:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v6
-      with:
-        fetch-depth: 1
-    - name: Build docker image
-      run: docker build -t relekang/graphql-rss-parser:${{ github.sha }} .
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+      - name: Build docker image
+        run: docker build -t relekang/graphql-rss-parser:${{ github.sha }} .
