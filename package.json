@@ -4,6 +4,7 @@
 	"description": "A microservice that parses rss feeds and makes it available as grahpql schema",
 	"type": "module",
 	"exports": "./dist/index.js",
+  "packageManager": "npm@11.7.0",
 	"engines": {
 		"node": ">=18"
 	},
