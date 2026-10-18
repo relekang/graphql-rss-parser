@@ -15,6 +15,17 @@ describe("request", () => {
 
 		expect(response.status).toEqual(200);
 		expect(response.text).toEqual("Success");
+		expect(response.contentType).toBeUndefined();
+	});
+
+	it("should return the content type header", async () => {
+		nock("http://example.com").get("/").reply(200, "Success", {
+			"Content-Type": "application/rss+xml; charset=utf-8",
+		});
+
+		const response = await request("http://example.com");
+
+		expect(response.contentType).toEqual("application/rss+xml; charset=utf-8");
 	});
 
 	it("should throw error for empty content", async () => {

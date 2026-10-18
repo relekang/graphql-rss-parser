@@ -35,10 +35,11 @@ export default async function request(url: string) {
 		if (!response.data) {
 			throw new EmptyHttpResponseError();
 		}
+		const contentType = response.headers["content-type"];
 		return {
 			text: response.data.toString(),
 			status: response.status,
-			contentType: response.headers["content-type"],
+			contentType: typeof contentType === "string" ? contentType : undefined,
 			headers: response.headers,
 		};
 	} catch (error: any) {
