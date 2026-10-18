@@ -130,8 +130,8 @@ export async function findFeed({
 		/application\/json/.test(response.contentType || "")
 	) {
 		try {
-			const { title } = await parseFromQuery({
-				url,
+			const { title } = await parseFromString({
+				content,
 				parser: "JSON_FEED_V1",
 			});
 			return [{ title, link: normalizedUrl }];
