@@ -38,6 +38,52 @@ function respond(text: string, contentType = "text/html") {
 	jest.mocked(request).mockResolvedValueOnce({ text, contentType });
 }
 
+test.each(["application/feed+json", "application/json"])(
+	"direct %s discovery uses one request to the normalized URL",
+	async (contentType) => {
+		const content = JSON.stringify({
+			version: "https://jsonfeed.org/version/1.1",
+			title: "JSON test",
+			items: [],
+		});
+		respond(content, contentType);
+		const parseJson = jest.spyOn(parsers, "JSON_FEED_V1");
+
+		await expect(findFeed({ url: `${url}//feed.json#top` })).resolves.toEqual([
+			{ title: "JSON test", link: `${url}/feed.json` },
+		]);
+
+		expect(request).toHaveBeenCalledTimes(1);
+		expect(request).toHaveBeenCalledWith(`${url}/feed.json`);
+		expect(parseJson).toHaveBeenCalledTimes(1);
+		expect(parseJson).toHaveBeenCalledWith(content);
+	},
+);
+
+test("invalid JSON returns no feeds without another request", async () => {
+	respond("{invalid JSON", "application/feed+json");
+
+	await expect(findFeed({ url })).resolves.toEqual([]);
+
+	expect(request).toHaveBeenCalledTimes(1);
+});
+
+test("failed JSON parsing still discovers alternate links", async () => {
+	respond(
+		'<html><head><link rel="alternate" type="application/rss+xml" href="/feed.xml"></head></html>',
+		"application/json",
+	);
+	respond(rss, "application/rss+xml");
+
+	await expect(findFeed({ url })).resolves.toEqual([
+		{ title: "RSS test", link: `${url}/feed.xml` },
+	]);
+
+	expect(request).toHaveBeenCalledTimes(2);
+	expect(request).toHaveBeenNthCalledWith(1, url);
+	expect(request).toHaveBeenNthCalledWith(2, `${url}/feed.xml`);
+});
+
 test("ordinary HTML does not call feed parsers", async () => {
 	respond(
 		"<html><head><title>Not a feed</title></head><body>Hello</body></html>",
