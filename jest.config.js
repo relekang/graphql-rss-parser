@@ -1,9 +1,9 @@
 export default {
 	transform: {
-		"^.+\\.(t|j)s$": "@swc/jest",
+		"^.+\\.(mjs|[tj]s)$": "@swc/jest",
 	},
 	transformIgnorePatterns: [
-		"/node_modules/(?!normalize-url/|cmd-ts/|chalk/|strip-ansi/|ansi-regex/)",
+		"/node_modules/(?!nock/|@mswjs/interceptors/|rettime/|@open-draft/until/|normalize-url/|cmd-ts/|chalk/|strip-ansi/|ansi-regex/)",
 	],
 	extensionsToTreatAsEsm: [".ts"],
 	testEnvironment: "node",

@@ -70,7 +70,7 @@
 		"@types/node": "^24.0.0",
 		"fs-extra-promise": "^1.0.1",
 		"jest": "^30.0.0",
-		"nock": "^14.0.0",
+		"nock": "^15.0.0",
 		"nodemon": "^3.0.0",
 		"commit-and-tag-version": "^9.3.2",
 		"typescript": "^7.0.0"
