@@ -109,11 +109,13 @@ export async function findFeed({
 
 	const response = await request(normalizedUrl);
 	const content = response.text;
+	let feedParseAttempted = false;
 
 	if (
-		/application\/(rss|atom)/.test(response.contentType || "") ||
+		/application\/(rss|atom|rdf\+xml)/.test(response.contentType || "") ||
 		/(application|text)\/xml/.test(response.contentType || "")
 	) {
+		feedParseAttempted = true;
 		try {
 			const { title } = await parseFromString({ content });
 			return [{ title, link: normalizedUrl }];
@@ -141,7 +143,7 @@ export async function findFeed({
 	}
 	const dom = cheerio.load(response.text);
 
-	if (dom("rss")) {
+	if (!feedParseAttempted && dom("rss, feed, rdf\\:RDF").length > 0) {
 		try {
 			const { title } = await parseFromString({ content });
 			return [{ title, link: normalizedUrl }];
