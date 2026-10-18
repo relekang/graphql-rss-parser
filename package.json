@@ -63,7 +63,7 @@
 		"@swc/core": "^1.10.16",
 		"@swc/jest": "^0.2.37",
 		"@types/debug": "^4.1.7",
-		"@types/feedparser": "^2.2.5",
+		"@types/feedparser": "2.2.8",
 		"@types/fs-extra-promise": "^1.0.10",
 		"@types/is-url": "^1.2.30",
 		"@types/jest": "^30.0.0",
