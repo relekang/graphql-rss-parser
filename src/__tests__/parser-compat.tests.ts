@@ -46,7 +46,7 @@ describe("Same query should give same output for different parsers", () => {
 
 			response = error.response.data;
 		}
-		close();
+		await close();
 
 		expect(response.errors).toEqual(undefined);
 

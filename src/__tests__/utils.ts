@@ -1,9 +1,6 @@
-import http from "node:http";
-import { format } from "node:url";
 import type { ApolloServer } from "@apollo/server";
-import { expressMiddleware } from "@apollo/server/express4";
+import { startStandaloneServer } from "@apollo/server/standalone";
 import type { AxiosResponse } from "axios";
-import express from "express";
 import createServer from "../index.js";
 
 export function testGraphqlApi(
@@ -37,45 +34,14 @@ export function testGraphqlApi(
 
 			response = error.response.data;
 		}
-		close();
+		await close();
 		expect(response).toMatchSnapshot();
 	});
 }
 
 export const listen = async (server: ApolloServer) => {
-	const app: express.Express = express();
-	const httpServer: http.Server = http.createServer(app);
-
-	await server.start();
-
-	// @ts-expect-error
-	app.use(express.json({ limit: "50mb" }), expressMiddleware(server));
-
-	return await new Promise<{ url: string; close: () => void }>(
-		(resolve, reject) => {
-			httpServer.on("error", reject);
-			httpServer.listen(() => {
-				const address = httpServer.address();
-				if (address && typeof address === "object") {
-					const hostname =
-						address.address === "" || address.address === "::"
-							? "localhost"
-							: address.address;
-					return resolve({
-						url: format({
-							protocol: "http",
-							hostname,
-							port: address.port,
-							pathname: "/",
-						}),
-						close: () => httpServer.close(),
-					});
-				}
-				if (typeof address === "string") {
-					return resolve({ url: address, close: () => httpServer.close() });
-				}
-				reject(`Unknown address type ${JSON.stringify(address)}`);
-			});
-		},
-	);
+	const { url } = await startStandaloneServer(server, {
+		listen: { port: 0 },
+	});
+	return { url, close: () => server.stop() };
 };
