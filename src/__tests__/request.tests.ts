@@ -60,8 +60,17 @@ describe("request", () => {
 		});
 	});
 
-	it("should throw unknown request error", async () => {
+	it("should throw an upstream error for an unmatched request", async () => {
 		nock("http://example.com");
+
+		await expect(request("http://example.com")).rejects.toMatchObject({
+			code: "upstream-http-error",
+			status: 501,
+		});
+	});
+
+	it("should throw unknown request error", async () => {
+		nock("http://example.com").get("/").replyWithError("Connection failed");
 
 		const promise = request("http://example.com");
 
