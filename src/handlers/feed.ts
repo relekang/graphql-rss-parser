@@ -8,13 +8,12 @@ import {
 } from "../errors.js";
 import { parserKeys, parsers } from "../parsers/index.js";
 import request from "../request.js";
-import transform from "../transform.js";
 import type { ParserKey, ParserResponse } from "../types.js";
 
 async function parse(parser: ParserKey, text: string) {
 	const parsed = await parsers[parser](text);
 	if (!parsed) throw new EmptyParserOutputError();
-	return transform(parsed);
+	return parsed;
 }
 
 export async function parseFromString({
