@@ -37,6 +37,7 @@ export default async function createServer(
 	const apolloServer = new ApolloServer({
 		schema,
 		formatError,
+		includeStacktraceInErrorResponses: process.env.NODE_ENV === "development",
 		persistedQueries: false,
 		csrfPrevention: options.csrfPrevention,
 		logger,
