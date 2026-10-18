@@ -2,6 +2,7 @@ export default {
 	transform: {
 		"^.+\\.(t|j)s$": "@swc/jest",
 	},
+	transformIgnorePatterns: ["/node_modules/(?!normalize-url/)"],
 	extensionsToTreatAsEsm: [".ts"],
 	testEnvironment: "node",
 	coverageDirectory: "./coverage/",
