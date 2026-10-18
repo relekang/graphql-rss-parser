@@ -24,6 +24,8 @@ xmlns="http://purl.org/rss/1.0/">
 </item></rdf:RDF>`;
 
 beforeEach(() => {
+	jest.replaceProperty(process, "env", { ...process.env });
+	delete process.env.FEED_DISCOVERY_MAX_CANDIDATES;
 	jest.mocked(request).mockReset();
 	for (const key of parserKeys) {
 		jest.spyOn(parsers, key);
@@ -82,6 +84,115 @@ test("failed JSON parsing still discovers alternate links", async () => {
 	expect(request).toHaveBeenCalledTimes(2);
 	expect(request).toHaveBeenNthCalledWith(1, url);
 	expect(request).toHaveBeenNthCalledWith(2, `${url}/feed.xml`);
+});
+
+test("alternate links are deduplicated without merging parser modes or queries", async () => {
+	respond(`<html><head>
+		<link rel="alternate" type="application/rss+xml" href="/feed?a=1">
+		<link rel="alternate" type="application/atom+xml" href="/feed?a=1">
+		<link rel="alternate" type="application/rss+xml" href="/feed?a=2">
+		<link rel="alternate" type="application/feed+json" href="/feed?a=1">
+	</head></html>`);
+	jest.mocked(request).mockResolvedValue({
+		text: JSON.stringify({ title: "Feed", items: [] }),
+		contentType: "application/json",
+	});
+
+	const feeds = await findFeed({ url });
+
+	expect(feeds.map((feed) => feed.link)).toEqual([
+		`${url}/feed?a=1`,
+		`${url}/feed?a=2`,
+		`${url}/feed?a=1`,
+	]);
+	expect(request).toHaveBeenCalledTimes(4);
+});
+
+test("root guesses request each normalized URL once", async () => {
+	jest
+		.mocked(request)
+		.mockResolvedValue({ text: "<html></html>", contentType: "text/html" });
+
+	await expect(findFeed({ url, withGuessFallback: true })).resolves.toEqual([]);
+
+	expect(jest.mocked(request).mock.calls.map(([url]) => url)).toEqual([
+		url,
+		`${url}/feed.xml`,
+		`${url}/atom.xml`,
+		`${url}/rss.xml`,
+		`${url}/feed.json`,
+	]);
+});
+
+test.each([
+	["2", 2],
+	["40", 40],
+	[undefined, 32],
+	["", 32],
+	["invalid", 32],
+	["0", 32],
+	["-1", 32],
+	["1.5", 32],
+	["Infinity", 32],
+	["9007199254740992", 32],
+] as const)(
+	"candidate limit %s checks %i candidates",
+	async (configuredLimit, expected) => {
+		if (configuredLimit !== undefined) {
+			process.env.FEED_DISCOVERY_MAX_CANDIDATES = configuredLimit;
+		}
+		respond(
+			`<html><head>${Array.from(
+				{ length: 40 },
+				(_, index) =>
+					`<link rel="alternate" type="application/feed+json" href="/feed-${index}">`,
+			).join("")}</head></html>`,
+		);
+		jest.mocked(request).mockResolvedValue({
+			text: JSON.stringify({ title: "Feed", items: [] }),
+			contentType: "application/json",
+		});
+
+		const feeds = await findFeed({ url });
+
+		expect(feeds).toHaveLength(expected);
+		expect(request).toHaveBeenCalledTimes(expected + 1);
+	},
+);
+
+test("candidate batches keep order and bound active work and candidate count", async () => {
+	respond(
+		`<html><head>${Array.from(
+			{ length: 40 },
+			(_, index) =>
+				`<link rel="alternate" type="application/feed+json" href="/feed-${index}">`,
+		).join("")}</head></html>`,
+	);
+	let active = 0;
+	let maximum = 0;
+	jest.mocked(request).mockImplementation(async (url) => {
+		active++;
+		maximum = Math.max(maximum, active);
+		await new Promise((resolve) =>
+			setTimeout(resolve, url.endsWith("-0") ? 20 : 1),
+		);
+		active--;
+		if (url.endsWith("-1")) throw new Error("Failed candidate");
+		return {
+			text: JSON.stringify({ title: url, items: [] }),
+			contentType: "application/json",
+		};
+	});
+
+	const feeds = await findFeed({ url });
+
+	expect(maximum).toBe(4);
+	expect(request).toHaveBeenCalledTimes(33);
+	expect(feeds.map((feed) => feed.link)).toEqual(
+		Array.from({ length: 32 }, (_, index) => `${url}/feed-${index}`).filter(
+			(link) => !link.endsWith("-1"),
+		),
+	);
 });
 
 test("ordinary HTML does not call feed parsers", async () => {

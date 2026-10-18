@@ -31,58 +31,61 @@ function mapLinkTagToUrl(normalizedUrl: string) {
 	};
 }
 
-async function findJsonFeedsInDom(
-	dom: CheerioAPI,
-	normalizedUrl: string,
-): Promise<FindFeedResponse[]> {
-	const linkTags = dom('link[rel="alternate"][type="application/feed+json"]');
-
-	const urls = linkTags.toArray().map(mapLinkTagToUrl(normalizedUrl));
-
-	return (
-		await Promise.all(
-			urls.map(async (url) => {
-				try {
-					const { title } = await parseFromQuery({
-						url,
-						parser: "JSON_FEED_V1",
-					});
-					return { title, link: url };
-				} catch (error) {
-					if (process.env.NODE_ENV !== "test") {
-						logger.warn(error);
-					}
-					return undefined;
-				}
-			}),
-		)
-	).filter((item): item is FindFeedResponse => !!item);
+async function mapCandidates<T, R>(
+	candidates: T[],
+	map: (candidate: T) => Promise<R>,
+): Promise<R[]> {
+	const results = new Array<R>(candidates.length);
+	const pending = candidates.entries();
+	await Promise.all(
+		Array.from({ length: Math.min(4, candidates.length) }, async () => {
+			for (const [index, candidate] of pending) {
+				results[index] = await map(candidate);
+			}
+		}),
+	);
+	return results;
 }
 
-async function findRssFeedsInDom(
+async function findFeedsInDom(
 	dom: CheerioAPI,
 	normalizedUrl: string,
 ): Promise<FindFeedResponse[]> {
-	const linkTags = dom('link[rel="alternate"][type="application/rss+xml"]').add(
+	const rssLinks = dom('link[rel="alternate"][type="application/rss+xml"]').add(
 		'link[rel="alternate"][type="application/atom+xml"]',
 	);
-
-	const urls = linkTags.toArray().map(mapLinkTagToUrl(normalizedUrl));
-
+	const jsonLinks = dom('link[rel="alternate"][type="application/feed+json"]');
+	const configuredLimit = Number(process.env.FEED_DISCOVERY_MAX_CANDIDATES);
+	const maxCandidates =
+		Number.isSafeInteger(configuredLimit) && configuredLimit > 0
+			? configuredLimit
+			: 32;
+	const seen = new Set<string>();
+	const candidates: { url: string; parser?: "JSON_FEED_V1" }[] = [];
+	for (const [links, parser] of [
+		[rssLinks, undefined],
+		[jsonLinks, "JSON_FEED_V1"],
+	] as const) {
+		for (const tag of links.toArray()) {
+			const url = mapLinkTagToUrl(normalizedUrl)(tag);
+			const key = `${parser || "XML"}:${url}`;
+			if (seen.has(key)) continue;
+			seen.add(key);
+			candidates.push({ url, parser });
+			if (candidates.length === maxCandidates) break;
+		}
+		if (candidates.length === maxCandidates) break;
+	}
 	return (
-		await Promise.all(
-			urls.map(async (url) => {
-				try {
-					const { title } = await parseFromQuery({ url });
-					return { title, link: url };
-				} catch (error) {
-					if (process.env.NODE_ENV !== "test") {
-						logger.warn(error);
-					}
-					return undefined;
-				}
-			}),
-		)
+		await mapCandidates(candidates, async ({ url, parser }) => {
+			try {
+				const { title } = await parseFromQuery({ url, parser });
+				return { title, link: url };
+			} catch (error) {
+				if (process.env.NODE_ENV !== "test") logger.warn(error);
+				return undefined;
+			}
+		})
 	).filter((item): item is FindFeedResponse => !!item);
 }
 
@@ -154,10 +157,7 @@ export async function findFeed({
 		}
 	}
 
-	let result = [
-		...(await findRssFeedsInDom(dom, normalizedUrl)),
-		...(await findJsonFeedsInDom(dom, normalizedUrl)),
-	];
+	let result = await findFeedsInDom(dom, normalizedUrl);
 
 	if (result.length === 0 && normalize) {
 		return findFeed({ url, normalize: false });
@@ -167,18 +167,17 @@ export async function findFeed({
 		const url = new URL(normalizedUrl);
 		url.pathname = "";
 		const urlWithoutPath = url.toString();
+		const guesses = new Set(
+			[normalizedUrl, urlWithoutPath].flatMap((base) =>
+				["feed.xml", "atom.xml", "rss.xml", "feed.json"].map((path) =>
+					normalizeUrl(`${base}/${path}`, normalizeOptions),
+				),
+			),
+		);
 		result = (
-			await Promise.all([
-				findFeed({ url: `${normalizedUrl}/feed.xml` }).catch(() => []),
-				findFeed({ url: `${normalizedUrl}/atom.xml` }).catch(() => []),
-				findFeed({ url: `${normalizedUrl}/rss.xml` }).catch(() => []),
-				findFeed({ url: `${normalizedUrl}/feed.json` }).catch(() => []),
-				//////////
-				findFeed({ url: `${urlWithoutPath}/feed.xml` }).catch(() => []),
-				findFeed({ url: `${urlWithoutPath}/atom.xml` }).catch(() => []),
-				findFeed({ url: `${urlWithoutPath}/rss.xml` }).catch(() => []),
-				findFeed({ url: `${urlWithoutPath}/feed.json` }).catch(() => []),
-			])
+			await mapCandidates([...guesses], (url) =>
+				findFeed({ url }).catch(() => []),
+			)
 		).flat();
 	}
 

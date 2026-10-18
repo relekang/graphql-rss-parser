@@ -38,6 +38,12 @@ The sentry integration can be enabled by passing the `-D/--sentry-dsn` cli optio
 that errors that happens because errors in parsers or http requests will be filtered out. This is because
 the goal of this error tracking is to catch errors in the code of the service.
 
+### Feed discovery limits
+
+Discovery checks the first 32 unique alternate-link candidates on each page by default, with at most four active candidates per batch. Set `FEED_DISCOVERY_MAX_CANDIDATES` to a positive safe integer to change the candidate limit. Unset or invalid values use the default of 32. RSS and Atom links share the default parser mode; JSON links use a separate mode. Results keep RSS/Atom link order, followed by JSON link order. Duplicate URLs in the same parser mode produce one result. Distinct query strings stay separate.
+
+Guessed feed paths are normalized and deduplicated, with at most four active guesses per batch. These are local batch limits, not process-wide resource limits. Concurrent discovery calls and linked pages can start separate batches.
+
 ### Example queries
 
 #### feed(url: String, [parser: Parser])
