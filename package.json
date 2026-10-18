@@ -6,7 +6,7 @@
 	"exports": "./dist/index.js",
   "packageManager": "npm@11.19.1",
 	"engines": {
-		"node": ">=18"
+		"node": ">=20"
 	},
 	"bin": {
 		"graphql-rss-parser": "./cli.js"
@@ -47,7 +47,7 @@
 		"cmd-ts": "^0.15.0",
 		"debug": "^4.2.0",
 		"feedme": "^2.0.2",
-		"graphql": "^16.6.0",
+		"graphql": "^16.11.0",
 		"http-status-codes": "^2.2.0",
 		"is-url": "^1.2.4",
 		"node-feedparser": "^1.0.1",
