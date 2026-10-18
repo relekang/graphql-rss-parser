@@ -17,6 +17,11 @@
 	},
 	"packageRules": [
 		{
+			"description": "Feedparser 1 requires type definitions. Version 2.3.0 is an empty stub.",
+			"matchPackageNames": ["@types/feedparser"],
+			"allowedVersions": "<2.3.0"
+		},
+		{
 			"matchUpdateTypes": ["major"],
 			"prPriority": -2,
 			"automerge": false
