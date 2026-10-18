@@ -20,7 +20,7 @@
 		"lint:ci": "biome ci .",
 		"format": "biome check --write .",
 		"format:unsafe": "biome check --write --unsafe .",
-		"release": "yarn build && standard-version -i changelog.md -m '%s'"
+		"release": "yarn build && commit-and-tag-version -i changelog.md -m '%s'"
 	},
 	"repository": {
 		"type": "git",
