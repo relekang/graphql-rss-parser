@@ -6,10 +6,6 @@ import { logger } from "./logger.js";
 import type { ParserKey } from "./types.js";
 
 const debug = _debug("graphql-rss-parser:errors");
-const development =
-	!process.env.NODE_ENV ||
-	process.env.NODE_ENV === "development" ||
-	process.env.NODE_ENV !== "test";
 
 export class BaseError extends Error {
 	code: string;
@@ -155,7 +151,8 @@ export class CloudflareBlockError extends BaseError {
 
 export function createErrorFormatter(
 	Sentry: any,
-): ApolloServerOptions<any>["formatError"] {
+): NonNullable<ApolloServerOptions<any>["formatError"]> {
+	const development = process.env.NODE_ENV === "development";
 	debug(
 		Sentry
 			? "creating error formatter with sentry"
@@ -165,7 +162,9 @@ export function createErrorFormatter(
 		formattedError: GraphQLFormattedError,
 		error: any,
 	): GraphQLFormattedError {
-		let extensions = formattedError.extensions;
+		let extensions = formattedError.extensions
+			? { ...formattedError.extensions }
+			: undefined;
 
 		const originalError = error.originalError;
 
@@ -173,12 +172,17 @@ export function createErrorFormatter(
 			extensions = originalError.toExtensions();
 		}
 
+		if (extensions && !development) {
+			delete extensions.stack;
+			delete extensions.stacktrace;
+		}
 		if (extensions && error.stack) {
+			const stack = error.stack.split("\n", development ? undefined : 1);
 			if (development) {
-				extensions.stack = error.stack.split("\n");
+				extensions.stack = stack;
 			}
 			try {
-				extensions.type = error.stack.split("\n")[0].split(":")[0];
+				extensions.type = stack[0].split(":")[0];
 			} catch (_error) {}
 		}
 		const response: GraphQLFormattedError = {

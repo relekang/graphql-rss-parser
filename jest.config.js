@@ -2,7 +2,9 @@ export default {
 	transform: {
 		"^.+\\.(t|j)s$": "@swc/jest",
 	},
-	transformIgnorePatterns: ["/node_modules/(?!normalize-url/)"],
+	transformIgnorePatterns: [
+		"/node_modules/(?!normalize-url/|cmd-ts/|chalk/|strip-ansi/|ansi-regex/)",
+	],
 	extensionsToTreatAsEsm: [".ts"],
 	testEnvironment: "node",
 	coverageDirectory: "./coverage/",

@@ -5,6 +5,7 @@ import {
 	command,
 	flag,
 	number,
+	oneOf,
 	option,
 	optional,
 	run,
@@ -65,13 +66,21 @@ export function cli({
 				},
 			}),
 			logLevel: option({
-				type: optional(string),
+				type: oneOf([
+					"fatal",
+					"error",
+					"warn",
+					"info",
+					"debug",
+					"trace",
+					"silent",
+				] as const),
 				short: "L",
 				long: "log-level",
 				description: `"fatal" | "error" | "warn" | "info" | "debug" | "trace" | "silent"`,
 				env: "LOG_LEVEL",
 				defaultValue() {
-					return "info";
+					return "info" as const;
 				},
 			}),
 			prettyLog: flag({
@@ -81,7 +90,7 @@ export function cli({
 				description: "Log human readable instead of JSON",
 				env: "PRETTY_LOG",
 				defaultValue() {
-					return true;
+					return false;
 				},
 			}),
 		},
@@ -90,7 +99,7 @@ export function cli({
 				version,
 				sentryDsn: args.sentryDsn,
 				csrfPrevention: args.csrfPrevention,
-				loggingOptions: { level: "info", pretty: true },
+				loggingOptions: { level: args.logLevel, pretty: args.prettyLog },
 			});
 			logger.info(
 				`Starting graphql-rss-parser v${version} with ${JSON.stringify({ ...args }, null, 2)}`,

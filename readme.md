@@ -32,6 +32,10 @@ FLAGS:
   --version, -v         - print the version
 ```
 
+The default log format is JSON at level `info`. Use `--log-level` or `LOG_LEVEL` to change the level. Use `--pretty-log` or `PRETTY_LOG=true` for human-readable logs; this starts the `pino-pretty` transport.
+
+Response error stacks are included only when `NODE_ENV=development`. Other modes, including an unset `NODE_ENV`, omit response stacks. Server-side error logging and Sentry reporting remain enabled.
+
 ### Sentry integration
 
 The sentry integration can be enabled by passing the `-D/--sentry-dsn` cli option. It is important to note
