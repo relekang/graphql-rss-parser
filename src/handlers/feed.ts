@@ -73,23 +73,15 @@ export async function parseFromQuery({
 			parser: isJsonFeed ? "JSON_FEED_V1" : parser,
 		});
 
+		const end = endTime ? Date.parse(endTime) : Number.NaN;
+		const start = startTime ? Date.parse(startTime) : Number.NaN;
 		parsed.items = parsed.items?.filter((item) => {
 			if (item == null) {
 				return false;
 			}
-			if (
-				item.date_published &&
-				endTime &&
-				new Date(endTime) < new Date(item.date_published)
-			) {
-				return false;
-			}
-			if (
-				item.date_published &&
-				startTime &&
-				new Date(startTime) > new Date(item.date_published)
-			) {
-				return false;
+			if (item.date_published && (endTime || startTime)) {
+				const published = Date.parse(item.date_published);
+				if (end < published || start > published) return false;
 			}
 			return true;
 		});
