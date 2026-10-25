@@ -8,6 +8,8 @@ given feed. It uses different parses installed from npm. When a parser fail it w
 
 ## Installation
 
+Requires Node.js 22.18.0 or later.
+
 ```shell
 npm i -g graphql-rss-parser
 ```

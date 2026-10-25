@@ -6,7 +6,7 @@
 	"exports": "./dist/index.js",
   "packageManager": "npm@12.2.1",
 	"engines": {
-		"node": ">=20"
+		"node": ">=22.18.0"
 	},
 	"bin": {
 		"graphql-rss-parser": "./cli.js"
@@ -40,7 +40,7 @@
 	"homepage": "https://github.com/relekang/graphql-rss-parser#readme",
 	"dependencies": {
 		"@apollo/server": "^5.0.0",
-		"@graphql-tools/schema": "^10.0.0",
+		"@graphql-tools/schema": "^11.0.0",
 		"@sentry/node": "^11.0.0",
 		"axios": "^1.2.2",
 		"cheerio": "^1.0.0-rc.10",
