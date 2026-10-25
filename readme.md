@@ -8,6 +8,8 @@ given feed. It uses different parses installed from npm. When a parser fail it w
 
 ## Installation
 
+Requires Node.js 22.18.0 or later.
+
 ```shell
 npm i -g graphql-rss-parser
 ```
@@ -54,14 +56,14 @@ Guessed feed paths are normalized and deduplicated, with at most four active gue
 
 ```graphql
 {
-  feed(url: "https://rolflekang.com/feed.xml") {
-    title
-    entries {
-      title
-      pubDate
-      link
-    }
-  }
+	feed(url: "https://rolflekang.com/feed.xml") {
+		title
+		entries {
+			title
+			pubDate
+			link
+		}
+	}
 }
 ```
 
@@ -70,20 +72,19 @@ Guessed feed paths are normalized and deduplicated, with at most four active gue
 graphql-rss-parser supports several of the rss parsers on npm. It can be specified with the parser option in a feed query as seen below.
 
 Available parsers:
-
-* `FEEDPARSER` - [feedparser][]
-* `RSS_PARSER` - [rss-parser][]
-* `FEEDME` - [feedme][]
-* `RSS_TO_JSON` - [rss-to-json][]
-* `JSON_FEED_V1` - internal see `src/parsers/jsonfeed-v1.ts`
+- `FEEDPARSER` - [feedparser][]
+- `RSS_PARSER` - [rss-parser][]
+- `FEEDME` - [feedme][]
+- `RSS_TO_JSON` - [rss-to-json][]
+- `JSON_FEED_V1` - internal see `src/parsers/jsonfeed-v1.ts`
 
 ```graphql
 {
-  feed(url: "https://rolflekang.com/feed.xml", parser: FEEDPARSER) {
-    entries {
-      link
-    }
-  }
+	feed(url: "https://rolflekang.com/feed.xml", parser: FEEDPARSER) {
+		entries {
+			link
+		}
+	}
 }
 ```
 
@@ -91,9 +92,9 @@ Available parsers:
 
 ```graphql
 {
-  findFeed(url: "https://rolflekang.com") {
-    link
-  }
+	findFeed(url: "https://rolflekang.com") {
+		link
+	}
 }
 ```
 
