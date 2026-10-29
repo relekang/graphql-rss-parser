@@ -4,7 +4,7 @@ exports[`should parse string from google.blogspot.com/feeds/posts/default 1`] = 
 {
   "description": null,
   "feed_url": undefined,
-  "home_page_url": "http://google.blogspot.com/",
+  "home_page_url": "http://google.blogspot.com",
   "items": [
     {
       "authors": [

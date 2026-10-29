@@ -52,7 +52,7 @@ export function parse(feed: string): Promise<ParserResponse> {
 					parser: "FEEDPARSER",
 					title: meta.title,
 					description: meta.description,
-					home_page_url: meta.link,
+					home_page_url: meta.link?.replace(/^(https?:\/\/[^/?#]+)\/$/, "$1"),
 					feed_url: undefined,
 					items,
 				});
