@@ -7,7 +7,13 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"includes": ["**", "!__fixtures__", "!package.json", "!package-lock.json"]
+		"includes": [
+			"**",
+			"!__fixtures__",
+			"!package.json",
+			"!package-lock.json",
+			"!changelog.md"
+		]
 	},
 	"formatter": {
 		"enabled": true,
