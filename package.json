@@ -1,11 +1,11 @@
 {
 	"name": "graphql-rss-parser",
-	"version": "4.5.0",
+	"version": "5.0.0",
 	"private": true,
 	"description": "A microservice that parses rss feeds and makes it available as grahpql schema",
 	"type": "module",
 	"exports": "./dist/index.js",
-  "packageManager": "npm@12.2.1",
+	"packageManager": "npm@12.2.1",
 	"engines": {
 		"node": ">=26.0.0"
 	},
