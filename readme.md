@@ -1,6 +1,6 @@
 <h1 style="text-align: center;">
 graphql-rss-parser
-<a href="https://www.npmjs.com/package/graphql-rss-parser"><img src="https://img.shields.io/npm/v/graphql-rss-parser.svg" alt="npm version"></a>
+<a href="https://github.com/relekang/graphql-rss-parser/releases"><img src="https://img.shields.io/github/v/release/relekang/graphql-rss-parser" alt="Latest release"></a>
 </h1>
 
 A [graphql][] microservice that parses rss feeds and returns a JSON representation of the
@@ -8,11 +8,33 @@ given feed. It uses different parses installed from npm. When a parser fail it w
 
 ## Installation
 
-Requires Node.js 22.18.0 or later.
+New releases are available as Docker images. npm publishing has stopped.
 
 ```shell
-npm i -g graphql-rss-parser
+docker run --rm -p 3000:3000 relekang/graphql-rss-parser:latest
 ```
+
+Use a version tag, such as `v4.5.0`, instead of `latest` to select a specific release. Check [GitHub releases](https://github.com/relekang/graphql-rss-parser/releases) for available versions.
+
+To run from source, use Node.js 22.18.0 or later:
+
+```shell
+npm ci
+npm run build
+npm start
+```
+
+## Releases
+
+Release Please opens and updates a release PR from Conventional Commits on `main`. The PR updates `package.json`, `package-lock.json`, and `changelog.md`. Merge the PR to create a version tag and a GitHub release. The same workflow then publishes the Docker image with the version tag and `latest`. It does not publish to npm. `package.json` also sets `private: true` to prevent accidental npm publishing.
+
+Configure these repository Actions secrets before you enable releases:
+
+- `RELEASE_PLEASE_TOKEN`: A fine-grained GitHub token with access to this repository, Contents read/write, and Pull requests read/write. A separate token lets release PRs and tags trigger CI workflows.
+- `DOCKERHUB_USERNAME`: The Docker Hub account name.
+- `DOCKERHUB_PASSWORD`: A Docker Hub access token with write access to `relekang/graphql-rss-parser`.
+
+The release workflow builds from the release tag. Docker publishing runs in the same workflow so it does not depend on a second tag-triggered workflow. If Docker publishing fails after a GitHub release is created, use **Re-run failed jobs** on that workflow run.
 
 ## Usage
 
