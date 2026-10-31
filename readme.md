@@ -16,7 +16,7 @@ docker run --rm -p 3000:3000 relekang/graphql-rss-parser:latest
 
 Use a version tag, such as `v4.5.0`, instead of `latest` to select a specific release. Check [GitHub releases](https://github.com/relekang/graphql-rss-parser/releases) for available versions.
 
-To run from source, use Node.js 22.18.0 or later:
+To run from source, use Node.js 26.0.0 or later:
 
 ```shell
 npm ci

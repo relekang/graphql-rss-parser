@@ -7,7 +7,7 @@
 	"exports": "./dist/index.js",
   "packageManager": "npm@12.2.1",
 	"engines": {
-		"node": ">=22.18.0"
+		"node": ">=26.0.0"
 	},
 	"bin": {
 		"graphql-rss-parser": "./cli.js"
