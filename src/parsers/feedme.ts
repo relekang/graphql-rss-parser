@@ -96,7 +96,6 @@ export function parse(feed: string): Promise<ParserResponse> {
 				throw new Error("Failed to parse");
 			}
 
-			// @ts-expect-error ---
 			const parser = new FeedMe(true);
 
 			parser.on("end", () => {
