@@ -94,6 +94,7 @@ Guessed feed paths are normalized and deduplicated, with at most four active gue
 graphql-rss-parser supports several of the rss parsers on npm. It can be specified with the parser option in a feed query as seen below.
 
 Available parsers:
+
 - `FEEDPARSER` - [feedparser][]
 - `RSS_PARSER` - [rss-parser][]
 - `FEEDME` - [feedme][]
